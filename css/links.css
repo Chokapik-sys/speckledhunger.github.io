@@ -1,0 +1,18 @@
+.hrefA{
+scrolling: yes;
+width: 800px;
+height: 600px;
+position: absolute;
+top: 120px;
+left: 10px;
+z-index: -1;
+}
+.hrefB{
+scrolling: yes;
+width: 800px;
+height: 600px;
+position: absolute;
+top: 720px;
+left: 10px;
+z-index: -1;
+}
