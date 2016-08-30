@@ -27,3 +27,10 @@ margin-left: 9px;
   background-color: #FFD700;
   border-radius: 5px;
 }
+
+.iconA{
+  position: absolute;
+  margin-top: 110px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
