@@ -5,7 +5,7 @@
   margin-left: 9px;
   margin-top: 105px;
   z-index: -10;
-  display: inline;
+  display: block;
 }
 .GameBauthor{
   font-family: Helvetica;
