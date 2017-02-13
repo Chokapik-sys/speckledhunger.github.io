@@ -1,4 +1,4 @@
-var num1 = prompt("Pick a number");
+var num1 = window.prompt("Pick a number");
 var num2 = prompt("Pick another number");
 var sign = prompt("Choose to multiply (*), add (+), divide (/) or minus (-)");
 var product = 0;
