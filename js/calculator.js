@@ -1,7 +1,7 @@
+init.load()
 var num1 = prompt("Pick a number")
 var num2 = prompt("Pick another number")
 var sign = prompt("Choose to multiply (*), add (+), divide (/) or minus (-)")
-num1
 var product = 0
 if (sign === ("*")){
   product = num1 * num2
