@@ -4,11 +4,11 @@
   var product = 0
   if (sign === "*"){
     product = num1 * num2
-  } elif (sign === "+"){
+  } elif (sign = "+"){
     product = num1 + num2
-  } elif (sign === "/"){
+  } elif (sign = "/"){
     product = num1 / num2
-  } elif (sign === "-"){
+  } elif (sign = "-"){
     product = num1 - num2
   }
   alert (num1 + " " + sign + " " + num2 + " " + "=" + " " + product)
