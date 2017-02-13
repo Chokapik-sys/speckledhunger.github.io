@@ -1,5 +1,5 @@
   var num1 = math.int(prompt("Pick a number"))
-  var num2 = prompt("Pick another number")
-  var sign = prompt("Choose to multiply (*), add (+), divide (/) or minus (-)")
-  var product = num1 + sign + num2
+  var num2 = math.int(prompt("Pick another number"))
+  var sign = math.int(prompt("Choose to multiply (*), add (+), divide (/) or minus (-)"))
+  var product = math.sum(num1 + sign + num2)
   alert (num1 + " " + sign + " " + num2 + " " + "=" + " " + product)
