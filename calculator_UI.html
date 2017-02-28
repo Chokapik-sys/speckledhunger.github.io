@@ -3,5 +3,36 @@
 <head>
 </head>
 <body>
+  <script>
+    var num = 1
+    function switchnum1(){
+      num = 1
+    }
+    function switchnum1(){
+      num = 2
+    }
+    function input1(){
+      if (num === 1){
+          document.getElementById("num1").innerHTML = 1
+          } else if (num === 2){
+            document.getElementById("num2").innerHTML = 1
+          }
+    }
+  </script>
+  <button onclick="switchnum1()">Number 1</button>
+  <button onclick="switchnum2()">Number 2</button>
+  <button onclick="input1()">1</button>
+  <button onclick="input2()">2</button>
+  <button onclick="input3()">3</button>
+  <button onclick="input4()">4</button>
+  <button onclick="input5()">5</button>
+  <button onlcick="input6()">6</button>
+  <button onclick="input7()">7</button>
+  <button onlcick="input8()">8</button>
+  <button onclick="input9()">9</button>
+  <button onclick="input0()">0</button>
+  <p id="num1"></p>
+  <p id="sign"></p>
+  <p id="num2"></p>
 </body>
 </html>
