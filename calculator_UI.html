@@ -84,6 +84,22 @@
     var answer = 0
     function multiply(){
       answer = document.getElementById("num1").innerHTML * document.getElementById("num2").innerHTML
+      document.getElementById("sign").innerHTML = "*"
+    }
+      function divide(){
+      answer = document.getElementById("num1").innerHTML / document.getElementById("num2").innerHTML
+      document.getElementById("sign").innerHTML = "/"
+      }
+      function add(){
+      answer = document.getElementById("num1").innerHTML + document.getElementById("num2").innerHTML
+      document.getElementById("sign").innerHTML = "+"
+    }
+      function subtract(){
+      answer = document.getElementById("num1").innerHTML - document.getElementById("num2").innerHTML
+      document.getElementById("sign").innerHTML = "-"
+    }
+    function solve(){
+      document.getElementById("calculate").innerHTML = answer
     }
    </script>
   <button onclick="switchnum1()">Number 1</button>
@@ -106,6 +122,7 @@
   <button id="num1"></button>
   <button id="sign"></button>
   <button id="num2"></button>
-  <button id="solve" onclick="solve()">Calculate</button>
+  <button onclick="solve()">Calculate</button>
+  <button id="calculate"></button>
 </body>
 </html>
