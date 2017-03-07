@@ -83,7 +83,7 @@
     }
     var answer = 0
     function multiply(){
-      answer = document.getElementById("num1").innerHTML * document.getElementById("num2").innerHTML
+      answer = parseInt(document.getElementById("num1").innerHTML) * parseInt(document.getElementById("num2").innerHTML)
       document.getElementById("sign").innerHTML = "*"
     }
       function divide(){
@@ -91,11 +91,11 @@
       document.getElementById("sign").innerHTML = "/"
       }
       function add(){
-      answer = document.getElementById("num1").innerHTML + document.getElementById("num2").innerHTML
+      answer = parseInt(document.getElementById("num1").innerHTML) + parseInt(document.getElementById("num2").innerHTML)
       document.getElementById("sign").innerHTML = "+"
     }
       function subtract(){
-      answer = document.getElementById("num1").innerHTML - document.getElementById("num2").innerHTML
+      answer = parseInt(document.getElementById("num1").innerHTML) - parseInt(document.getElementById("num2").innerHTML)
       document.getElementById("sign").innerHTML = "-"
     }
     function solve(){
