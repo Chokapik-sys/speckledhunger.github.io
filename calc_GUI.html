@@ -85,18 +85,22 @@
     function multiply(){
       answer = parseInt(document.getElementById("num1").innerHTML) * parseInt(document.getElementById("num2").innerHTML)
       document.getElementById("sign").innerHTML = "*"
+        switchnum2()
     }
       function divide(){
       answer = parseInt(document.getElementById("num1").innerHTML) / parseInt(document.getElementById("num2").innerHTML)
       document.getElementById("sign").innerHTML = "/"
+          switchnum2()
       }
       function add(){
       answer = parseInt(document.getElementById("num1").innerHTML) + parseInt(document.getElementById("num2").innerHTML)
       document.getElementById("sign").innerHTML = "+"
+          switchnum2()
     }
       function subtract(){
       answer = parseInt(document.getElementById("num1").innerHTML) - parseInt(document.getElementById("num2").innerHTML)
       document.getElementById("sign").innerHTML = "-"
+        switchnum2()
     }
     function solve(){
       document.getElementById("calculate").innerHTML = answer
@@ -105,8 +109,6 @@
   <style>
   
   </style>
-  <button onclick="switchnum1()">Number 1</button>
-  <button onclick="switchnum2()">Number 2</button>
   <button onclick="input1()">1</button>
   <button onclick="input2()">2</button>
   <button onclick="input3()">3</button>
@@ -121,9 +123,9 @@
   <button onclick="divide()">Divide</button>
   <button onclick="add()">Add</button>
   <button onclick="subtract()">Subtract</button>
-  <button id="num1"></button>
+  <button id="num1" onclick="switchnum1()"></button>
   <button id="sign"></button>
-  <button id="num2"></button>
+  <button id="num2" onclick="switchnum2()"></button>
   <button onclick="solve()">Calculate</button>
   <button id="calculate"></button>
 </body>
