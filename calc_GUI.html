@@ -106,17 +106,20 @@
     function solve(){
       if (answer === 1){
           answer = parseInt(document.getElementById("num1").innerHTML) * parseInt(document.getElementById("num2").innerHTML)
+         document.getElementById("calculate").innerHTML = answer
       }
       if (answer === 2){
           answer = parseInt(document.getElementById("num1").innerHTML) / parseInt(document.getElementById("num2").innerHTML)
+         document.getElementById("calculate").innerHTML = answer
       }
       if (answer === 3){
           answer = parseInt(document.getElementById("num1").innerHTML) + parseInt(document.getElementById("num2").innerHTML)
+         document.getElementById("calculate").innerHTML = answer
           }
       if (answer === 4){
           answer = parseInt(document.getElementById("num1").innerHTML) - parseInt(document.getElementById("num2").innerHTML)
+         document.getElementById("calculate").innerHTML = answer
           }
-      document.getElementById("calculate").innerHTML = answer
     }
    </script>
   <style>
