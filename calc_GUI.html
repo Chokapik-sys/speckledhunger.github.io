@@ -81,28 +81,41 @@
             document.getElementById("num2").innerHTML = document.getElementById("num2").innerHTML + "0"
           }
     }
+    var sign = 0
     var answer = 0
     function multiply(){
-      answer = parseInt(document.getElementById("num1").innerHTML) * parseInt(document.getElementById("num2").innerHTML)
+      sign = 1
       document.getElementById("sign").innerHTML = "*"
         switchnum2()
     }
       function divide(){
-      answer = parseInt(document.getElementById("num1").innerHTML) / parseInt(document.getElementById("num2").innerHTML)
+      sign = 2
       document.getElementById("sign").innerHTML = "/"
           switchnum2()
       }
       function add(){
-      answer = parseInt(document.getElementById("num1").innerHTML) + parseInt(document.getElementById("num2").innerHTML)
+      sign = 3
       document.getElementById("sign").innerHTML = "+"
           switchnum2()
     }
       function subtract(){
-      answer = parseInt(document.getElementById("num1").innerHTML) - parseInt(document.getElementById("num2").innerHTML)
+      sign = 4
       document.getElementById("sign").innerHTML = "-"
         switchnum2()
     }
     function solve(){
+      if (answer === 1){
+          answer = parseInt(document.getElementById("num1").innerHTML) * parseInt(document.getElementById("num2").innerHTML)
+      }
+      if (answer === 2){
+          answer = parseInt(document.getElementById("num1").innerHTML) / parseInt(document.getElementById("num2").innerHTML)
+      }
+      if (answer === 3){
+          answer = parseInt(document.getElementById("num1").innerHTML) + parseInt(document.getElementById("num2").innerHTML)
+          }
+      if (answer === 4){
+          answer = parseInt(document.getElementById("num1").innerHTML) - parseInt(document.getElementById("num2").innerHTML)
+          }
       document.getElementById("calculate").innerHTML = answer
     }
    </script>
