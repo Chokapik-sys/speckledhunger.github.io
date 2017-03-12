@@ -125,6 +125,12 @@
       document.getElementById("calculate").innerHTML = ""
       num = 1
     }
+    function resyc(){
+      document.getElementById("num1").innerHTML = document.getElementById("calculate").innerHTML
+      document.getElementById("sign").innerHTML = ""
+      document.getElementById("num2").innerHTML = ""
+      document.getElementById("calculate").innerHTML = "" 
+      }
    </script>
   <style>
   .output{
@@ -162,5 +168,6 @@
   <button onclick="solve()">Calculate</button>
   <button id="calculate"></button>
   <button onclick="reset()">Reset</button>
+  <button onclick="recyc()">Recycle numbers</button>
 </body>
 </html>
