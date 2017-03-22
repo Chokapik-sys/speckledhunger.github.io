@@ -282,6 +282,12 @@
     #num2 {
       top: 60px;
     }
+    #equals {
+      position: absolute;
+      left: 520px;
+      width: 200px;
+      height: 100px;
+    }
   </style>
   <button class="numinput-top" id="button1" onclick="input1()">1</button>
   <button class="numinput-top" id="button2" onclick="input2()">2</button>
@@ -301,7 +307,7 @@
   <button class="inputted" id="num1" onclick="switchnum1()"></button>
   <button id="sign"></button>
   <button class="inputted" id="num2" onclick="switchnum2()"></button>
-  <button onclick="solve()">Calculate</button>
+  <button id="equals" onclick="solve()">Calculate</button>
   <button id="calculate"></button>
   <button onclick="reset()">Reset</button>
   <button onclick="recyc()">Recycle numbers</button>
