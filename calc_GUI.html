@@ -108,6 +108,20 @@
         switchnum2()
     }
     function solve(){
+      if (document.getElementById("num2").innerHTML = Math.PI) {
+              if (sign === 1){
+          answer = parseInt(document.getElementById("num1").innerHTML) * document.getElementById("num2").innerHTML
+      }
+      if (sign === 2){
+          answer = parseInt(document.getElementById("num1").innerHTML) / document.getElementById("num2").innerHTML
+      }
+      if (sign === 3){
+          answer = parseInt(document.getElementById("num1").innerHTML) + document.getElementById("num2").innerHTML
+      }
+      if (sign === 4){
+          answer = parseInt(document.getElementById("num1").innerHTML) - document.getElementById("num2").innerHTML
+        }
+      }else {
       if (sign === 1){
           answer = parseInt(document.getElementById("num1").innerHTML) * parseInt(document.getElementById("num2").innerHTML)
       }
@@ -120,6 +134,7 @@
       if (sign === 4){
           answer = parseInt(document.getElementById("num1").innerHTML) - parseInt(document.getElementById("num2").innerHTML)
         }
+      }
       document.getElementById("calculate").innerHTML = answer
     }
     function reset(){
