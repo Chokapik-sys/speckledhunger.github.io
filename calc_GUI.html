@@ -9,10 +9,14 @@
     function switchnum1(){
       num = 1
       document.getElementById("num1").innerHTML = ""
+      document.getElementById("num1").class = "selected"
+      document.getElementById("num2").class = "inputted"
     }
     function switchnum2(){
       num = 2
       document.getElementById("num2").innerHTML = ""
+      document.getElementById("num1").class = "inputted"
+      document.getElementById("num2").class = "selected"
     }
     function input1(){
       if (num === 1){
@@ -193,6 +197,7 @@
       border-radius: 5px;
       font-size: 40px;
       text-align: center;
+      border-color: #FF0000;
     }
     .signinput{
       position: absolute;
@@ -346,7 +351,7 @@
   <button class="signinput" id="add" onclick="add()">Add</button>
   <button class="signinput" id="subtract" onclick="subtract()">Subtract</button>
   <button class="signinput" id="Pi" onclick="pi()">PI</button>
-  <button class="inputted" id="num1" onclick="switchnum1()"></button>
+  <button class="selected" id="num1" onclick="switchnum1()"></button>
   <button id="sign"></button>
   <button class="inputted" id="num2" onclick="switchnum2()"></button>
   <button class="edit" id="equals" onclick="solve()">Calculate</button>
