@@ -9,14 +9,14 @@
     function switchnum1(){
       num = 1
       document.getElementById("num1").innerHTML = ""
-      document.getElementById("num1").class = selected
-      document.getElementById("num2").class = inputted
+      document.getElementById("num1").className = "selected"
+      document.getElementById("num2").className = "inputted"
     }
     function switchnum2(){
       num = 2
       document.getElementById("num2").innerHTML = ""
-      document.getElementById("num1").class = inputted
-      document.getElementById("num2").class = selected
+      document.getElementById("num1").className = "inputted"
+      document.getElementById("num2").className = "selected"
     }
     function input1(){
       if (num === 1){
