@@ -6,17 +6,16 @@
   <script>
     function url1(){
     document.getElementById("frame1").src = document.getElementById("URL1").innerHTML
-    document.getElementById("test").innerHTML = document.getElementById("URL1").innerHTML
-  }
+    }
     function url2(){
       document.getElementById("frame2").src = document.getElementById("URL2").innerHTML
     }
   </script>
-  <textarea id="URL1" placeholder="Enter a URL"></textarea>
-  <button onclick="url1()">Submit</button>
+  <textarea id="URL1" placeholder="URL 1"></textarea>
+  <button onclick="url1()">Submit 1</button>
   <iframe id="frame1"></iframe>
-  <textarea id="URL2" placeholder="Enter a URL"></textarea>
-  <button onclick="url2()">Submit</button>
+  <textarea id="URL2" placeholder="URL 2"></textarea>
+  <button onclick="url2()">Submit 2</button>
   <iframe id="frame2"></iframe>
   <p id="test"></p>
 </body>
