@@ -6,6 +6,7 @@
   <script>
     function url1() {
     document.getElementById("frame1").src = document.getElementById("URL1").innerHTML
+    document.getElementById("test").innerHTML = document.getElementById("URL1").innerHTML
   }
     function url2() {
       document.getElementById("frame2").src = document.getElementById("URL2").innerHTML
@@ -17,5 +18,6 @@
   <input id="URL2" type="text" placeholder="Enter a URL">
   <button onclick="url2()">Submit</button>
   <iframe id="frame2"></iframe>
+  <p id="test"></p>
 </body>
 </html>
