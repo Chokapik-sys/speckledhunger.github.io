@@ -111,7 +111,7 @@
         switchnum2()
     }
     function solve(){
-      if (document.getElementById("num1").innerHTML === pi) {
+      if (document.getElementById("num1").innerHTML == 3.141592653589793) {
               if (sign === 1){
           answer = document.getElementById("num1").innerHTML * parseInt(document.getElementById("num2").innerHTML)
       }
@@ -124,7 +124,7 @@
       if (sign === 4){
           answer = document.getElementById("num1").innerHTML - parseInt(document.getElementById("num2").innerHTML)
         }
-      }else if (document.getElementById("num2").innerHTML === pi) {
+      }else if (document.getElementById("num2").innerHTML == 3.141592653589793) {
               if (sign === 1){
           answer = parseInt(document.getElementById("num1").innerHTML) * document.getElementById("num2").innerHTML
       }
@@ -169,12 +169,12 @@
       switchnum2()
       sign = 0
       }
-    var pi = 3.141592653589793
+
     function pi() {
             if (num === 1){
-          document.getElementById("num1").innerHTML = pi
+          document.getElementById("num1").innerHTML = Math.PI
           } else if (num === 2){
-            document.getElementById("num2").innerHTML = pi
+            document.getElementById("num2").innerHTML = Math.PI
           }
     }
 </script>
