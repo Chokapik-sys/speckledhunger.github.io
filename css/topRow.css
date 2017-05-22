@@ -5,10 +5,12 @@ margin-top: 10px;
 height: 60px;
 background-color: #61B7ED;
 margin-bottom: 10px;
-width: #title;
+width: .title;
 margin-left: 10px;
 }
-
+#description {
+  display: none;
+}
 body{
 background-color: #000000;
 }
