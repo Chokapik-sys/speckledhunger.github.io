@@ -1,3 +1,4 @@
+/*--row1--*/
 #_1_ {
   width: 50px;
   height:50px;
@@ -8,8 +9,51 @@
 #_2_ {
   width: 50px;
   height:50px;
-  background-color: #BAF7F9;
+  background-color: #D0FFB6;
   top: 5px;
   left: 155px;
 }
+#_3_ {
+  width: 50px;
+  height:50px;
+  background-color: #BAF7F9;
+  top: 5px;
+  left: 210px;
+}
+#_4_ {
+  width: 50px;
+  height:50px;
+  background-color: #D0FFB6;
+  top: 5px;
+  left: 265px;
+}
+#_5_ {
+  width: 50px;
+  height:50px;
+  background-color: #BAF7F9;
+  top: 5px;
+  left: 320px;
+}
+#_6_ {
+  width: 50px;
+  height:50px;
+  background-color: #D0FFB6;
+  top: 5px;
+  left: 375px;
+}
+#_7_ {
+  width: 50px;
+  height:50px;
+  background-color: #BAF7F9;
+  top: 5px;
+  left: 430px;
+}
+#_8_ {
+  width: 50px;
+  height:50px;
+  background-color: #D0FFB6;
+  top: 5px;
+  left: 485px;
+}
+/*--row2--*/
 
