@@ -1,1 +1,1 @@
-var size = 128px
+var size = "128px"
