@@ -1,66 +1,66 @@
 /*--row1--*/
 #_1_ {
-  width: 64px;
-  height: 64px;
+  width: 128px;
+  height: 128px;
   position: fixed;
   background-color: #BAF7F9;
-  top: 5px;
-  left: 5px;
+  top: 100px;
+  left: 100px;
 }
 #_2_ {
-  width: 64px;
-  height: 64px;
+  width: 128px;
+  height: 128px;
   position: fixed;
   background-color: #D0FFB6;
-  top: 5px;
-  left: 69px;
+  top: 100px;
+  left: 233px;
 }
 #_3_ {
-  width: 64px;
-  height: 64px;
+  width: 128px;
+  height: 128px;
   position: fixed;
   background-color: #BAF7F9;
-  top: 5px;
-  left: 138px;
+  top: 100px;
+  left: 366px;
 }
 #_4_ {
-  width: 64px;
-  height: 64px;
+  width: 128px;
+  height: 128px;
   position: fixed;
   background-color: #D0FFB6;
-  top: 5px;
-  left: 207px;
+  top: 100px;
+  left: 499px;
 }
 #_5_ {
-  width: 64px;
-  height: 64px;
+  width: 128px;
+  height: 128px;
   position: fixed;
   background-color: #BAF7F9;
-  top: 5px;
+  top: 100px;
   left: 632px;
 }
 #_6_ {
-  width: 64px;
-  height: 64px;
+  width: 128px;
+  height: 128px;
   position: fixed;
   background-color: #D0FFB6;
-  top: 5px;
+  top: 100px;
   left: 765px;
 }
 #_7_ {
-  width: 64px;
-  height: 64px;
+  width: 128px;
+  height: 128px;
   position: fixed;
   background-color: #BAF7F9;
-  top: 5px;
+  top: 100px;
   left: 898px;
 }
 #_8_ {
-  width: 64px;
-  height: 64px;
+  width: 128px;
+  height: 128px;
   position: fixed;
   background-color: #D0FFB6;
-  top: 5px;
+  top: 100px;
   left: 1031px;
 }
 /*--row2--*/
