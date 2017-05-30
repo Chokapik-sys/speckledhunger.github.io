@@ -1,16 +1,15 @@
 /*--Checkerboard--*/
 .A {
-
+background-color: #BAF7F9;
 }
 .B {
-
+background-color: #D0FFB6;
 }
 /*--row1--*/
 #_1_ {
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 100px;
   left: 100px;
 }
@@ -18,7 +17,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 100px;
   left: 233px;
 }
@@ -26,7 +24,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 100px;
   left: 366px;
 }
@@ -34,7 +31,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 100px;
   left: 499px;
 }
@@ -42,7 +38,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 100px;
   left: 632px;
 }
@@ -50,7 +45,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 100px;
   left: 765px;
 }
@@ -58,7 +52,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 100px;
   left: 898px;
 }
@@ -66,7 +59,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 100px;
   left: 1031px;
 }
@@ -75,7 +67,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 233px;
   left: 100px;
 }
@@ -83,7 +74,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 233px;
   left: 233px;
 }
@@ -91,7 +81,6 @@
   width: 128px;
   height:128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 233px;
   left: 366px;
 }
@@ -99,7 +88,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 233px;
   left: 499px;
 }
@@ -107,7 +95,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 233px;
   left: 632px;
 }
@@ -115,7 +102,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 233px;
   left: 765px;
 }
@@ -123,7 +109,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 233px;
   left: 898px;
 }
@@ -131,7 +116,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 233px;
   left: 1031px;
 }
@@ -140,7 +124,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 366px;
   left: 100px;
 }
@@ -148,7 +131,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 366px;
   left: 233px;
 }
@@ -156,7 +138,6 @@
   width: 128px;
   height:128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 366px;
   left: 366px;
 }
@@ -164,7 +145,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 366px;
   left: 499px;
 }
@@ -172,7 +152,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 366px;
   left: 632px;
 }
@@ -180,7 +159,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 366px;
   left: 765px;
 }
@@ -188,7 +166,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 366px;
   left: 898px;
 }
@@ -196,7 +173,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 366px;
   left: 1031px;
 }
@@ -205,7 +181,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 499px;
   left: 100px;
 }
@@ -213,7 +188,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 499px;
   left: 233px;
 }
@@ -221,7 +195,6 @@
   width: 128px;
   height:128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 499px;
   left: 366px;
 }
@@ -229,7 +202,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 499px;
   left: 499px;
 }
@@ -237,7 +209,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 499px;
   left: 632px;
 }
@@ -245,7 +216,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 499px;
   left: 765px;
 }
@@ -253,7 +223,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 499px;
   left: 898px;
 }
@@ -261,7 +230,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 499px;
   left: 1031px;
 }
@@ -270,7 +238,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 632px;
   left: 100px;
 }
@@ -278,7 +245,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 632px;
   left: 233px;
 }
@@ -286,7 +252,6 @@
   width: 128px;
   height:128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 632px;
   left: 366px;
 }
@@ -294,7 +259,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 632px;
   left: 499px;
 }
@@ -302,7 +266,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 632px;
   left: 632px;
 }
@@ -310,7 +273,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 632px;
   left: 765px;
 }
@@ -318,7 +280,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 632px;
   left: 898px;
 }
@@ -326,7 +287,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 632px;
   left: 1031px;
 }
@@ -335,7 +295,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 765px;
   left: 100px;
 }
@@ -343,7 +302,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 765px;
   left: 233px;
 }
@@ -351,7 +309,6 @@
   width: 128px;
   height:128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 765px;
   left: 366px;
 }
@@ -359,7 +316,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 765px;
   left: 499px;
 }
@@ -367,7 +323,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 765px;
   left: 632px;
 }
@@ -375,7 +330,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 765px;
   left: 765px;
 }
@@ -383,7 +337,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 765px;
   left: 898px;
 }
@@ -391,7 +344,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 765px;
   left: 1031px;
 }
@@ -400,7 +352,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 898px;
   left: 100px;
 }
@@ -408,7 +359,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 898px;
   left: 233px;
 }
@@ -416,7 +366,6 @@
   width: 128px;
   height:128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 898px;
   left: 366px;
 }
@@ -424,7 +373,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 898px;
   left: 499px;
 }
@@ -432,7 +380,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 898px;
   left: 632px;
 }
@@ -440,7 +387,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 898px;
   left: 765px;
 }
@@ -448,7 +394,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 898px;
   left: 898px;
 }
@@ -456,7 +401,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 898px;
   left: 1031px;
 }
@@ -465,7 +409,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 1031px;
   left: 100px;
 }
@@ -473,7 +416,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 1031px;
   left: 233px;
 }
@@ -481,7 +423,6 @@
   width: 128px;
   height:128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 1031px;
   left: 366px;
 }
@@ -489,7 +430,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 1031px;
   left: 499px;
 }
@@ -497,7 +437,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 1031px;
   left: 632px;
 }
@@ -505,7 +444,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 1031px;
   left: 765px;
 }
@@ -513,7 +451,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #D0FFB6;
   top: 1031px;
   left: 898px;
 }
@@ -521,7 +458,6 @@
   width: 128px;
   height: 128px;
   position: absolute;
-  background-color: #BAF7F9;
   top: 1031px;
   left: 1031px;
 }
