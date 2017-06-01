@@ -1,4 +1,5 @@
 var movecount = 1
+var piece_move = 0
 //row1
 function 1() {
   if (document.getElementById("_1_").innerHTML = "Black Rook" || document.getElementById("_1_").innerHTML = "White Rook") {
