@@ -1,7 +1,12 @@
 var movecount = 1
 //row1
 function 1() {
-  
+  if (document.getElementById("_1_").innerHTML = "Black Rook" || document.getElementById("_1_").innerHTML = "White Rook") {
+    
+  }
+  if (document.getElementById.innerHTML("_1_") = "Black Knight" || document.getElementById("_1_").innerHTML = "White Knight") {
+    
+  }
 }
 function 2() {
   
