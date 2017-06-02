@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <!--Tutorial followed from w3schools.com-->
+  <head>
+  </head>
+  <body>
   <script>
-  function startGame() {
-    myGameArea.start();
-}
-
-var myGameArea = {
-    canvas : document.createElement("canvas"),
-    start : function() {
-        this.canvas.width = 480;
-        this.canvas.height = 270;
-        this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-    }
-}
+  function up() {
+  document.getElementById("testCharacter").top = document.getElementById("testCharacter").top - 1
+  }
+  function down() {
+  document.getElementById("testCharacter").top = document.getElementById("testCharacter").top + 1
+  }
+  function left() {
+  document.getElementById("testCharacter").left = document.getElementById("testCharacter").left - 1
+  }
+  function right() {
+  document.getElementById("testCharacter").left = document.getElementById("testCharacter").left + 1
+  }
   </script>
+  <style>
+  #testCharacter {
+  left: 10px;
+  top: 100px;
+  }
+  </style>
+  <button onclick="up()">Up</button>
+  <button onclick="down()">Down</button>
+  <button onclick="left()">Left</button>
+  <button onclick="right()">Right</button>
+  <button id="testCharacter">Character test</button>
+  </body>
 </html>
