@@ -3,7 +3,13 @@ var piece_move = 0
 //row1
 function 1() {
   if (document.getElementById("_1_").innerHTML = "Black Rook" || document.getElementById("_1_").innerHTML = "White Rook") {
-    
+    document.getElementById("_2_").style.backgroundcolor = "#ffee00"
+    document.getElementById("_3_").style.backgroundcolor = "#ffee00"
+    document.getElementById("_4_").style.backgroundcolor = "#ffee00"
+    document.getElementById("_5_").style.backgroundcolor = "#ffee00"
+    document.getElementById("_6_").style.backgroundcolor = "#ffee00"
+    document.getElementById("_7_").style.backgroundcolor = "#ffee00"
+    document.getElementById("_8_").style.backgroundcolor = "#ffee00"
   }
   if (document.getElementById.innerHTML("_1_") = "Black Knight" || document.getElementById("_1_").innerHTML = "White Knight") {
     
