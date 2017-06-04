@@ -1,65 +1,57 @@
 var movecount = 1
-var piece_move = 0
+var square = 0
+function move() {
+  
+}
 //row1
 function 1() {
-  if (document.getElementById("_1_").innerHTML = "Black Rook" || document.getElementById("_1_").innerHTML = "White Rook") {
-    document.getElementById("_2_").style.background = "#FFEE00"
-    document.getElementById("_3_").style.background = "#FFEE00"
-    document.getElementById("_4_").style.background = "#FFEE00"
-    document.getElementById("_5_").style.background = "#FFEE00"
-    document.getElementById("_6_").style.background = "#FFEE00"
-    document.getElementById("_7_").style.background = "#FFEE00"
-    document.getElementById("_8_").style.background = "#FFEE00"
-  }
-  if (document.getElementById.innerHTML("_1_") = "Black Knight" || document.getElementById("_1_").innerHTML = "White Knight") {
-    
-  }
+  square = "1a"
 }
 function 2() {
-  
+  square = "2a"
 }
 function 3() {
-  
+  square = "3a"
 }
 function 4() {
-  
+  square = "4a"
 }
 function 5() {
-  
+  square = "5a"
 }
 function 6() {
-  
+  square = "6a"
 }
 function 7() {
-  
+  square = "7a"
 }
 function 8() {
-  
+  square = "8a"
 }
 //row2
 function 9() {
-  
+  square = "9a"
 }
 function 10() {
-  
+  square = "10a"
 }
 function 11() {
-  
+  square = "11a"
 }
 function 12() {
-  
+  square = "12a"
 }
 function 13() {
-  
+  square = "13a"
 }
 function 14() {
-  
+  square = "14a"
 }
 function 15() {
-  
+  square = "15a"
 }
 function 16() {
-  
+  square = "16a"
 }
 //row3
 function 17() {
