@@ -4,7 +4,7 @@ function move() {
   
 }
 //row1
-function 1() {
+function _1_() {
 if (square === "1a") {
 square = "2a"
 console.log(square)
