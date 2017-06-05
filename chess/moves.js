@@ -5,7 +5,13 @@ function move() {
 }
 //row1
 function 1() {
+if (square === "1a") {
+square = "2a"
+console.log(square)
+} else {
   square = "1a"
+  console.log(square)
+  }
 }
 function 2() {
   square = "2a"
