@@ -1,6 +1,6 @@
 var movecount = 1
 var square = 0
-function move() {
+function move(){
   if (document.getElementById(square) === "White Rook") {
   console.log(square + 1)
   console.log(square + 2)
@@ -11,7 +11,7 @@ function move() {
   }
 }
 //row1
-function square1() {
+function square1(){
 square = "_1_"
 move()
 }
