@@ -12,7 +12,7 @@ function move(){
 }
 //row1
 function square1(){
-square = "_1_"
+square = "_1_";
 move()
 }
 function 2() {
