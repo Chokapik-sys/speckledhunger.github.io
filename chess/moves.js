@@ -11,7 +11,7 @@ function move() {
   }
 }
 //row1
-function _1_() {
+function __1_() {
 square = "_1_"
 move()
 }
