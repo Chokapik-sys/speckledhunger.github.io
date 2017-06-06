@@ -11,7 +11,7 @@ function move(){
   }
 }
 //row1
-function square1(){
+function coord1(){
 square = "_1_"
 }
 function 2() {
