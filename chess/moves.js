@@ -11,3 +11,8 @@ function coord1(){
   console.log(square)
   move_piece()
 }
+function coord2(){
+  square = "_2_"
+  console.log(square)
+  move_piece()
+}
