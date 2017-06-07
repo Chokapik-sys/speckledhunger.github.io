@@ -14,4 +14,5 @@ function move(){
 function coord1(){
 square = "_1_"
   console.log(square)
+  move()
 }
