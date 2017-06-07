@@ -2,7 +2,7 @@ var movecount = 1
 var square = 0
 function move(){
   if (document.getElementById(square) === "White Rook") {
-  console.log("_" + parseint(square) + 1 + "_")
+  console.log("_" + parseInt(square) + "_")
   console.log(square + 2)
   console.log(square + 3)
   console.log(square + 4)
