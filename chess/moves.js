@@ -47,3 +47,4 @@ function coord8(){
   move_piece()
 }
 //row2
+
