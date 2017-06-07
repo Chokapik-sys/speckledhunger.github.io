@@ -47,3 +47,43 @@ function coord8(){
   move_piece()
 }
 //row2
+function coord9(){
+  square = "_9_"
+  console.log(square)
+  move_piece()
+}
+function coord10(){
+  square = "_10_"
+  console.log(square)
+  move_piece()
+}
+function coord11(){
+  square = "_11_"
+  console.log(square)
+  move_piece()
+}
+function coord12(){
+  square = "_12_"
+  console.log(square)
+  move_piece()
+}
+function coord13(){
+  square = "_13_"
+  console.log(square)
+  move_piece()
+}
+function coord14(){
+  square = "_14_"
+  console.log(square)
+  move_piece()
+}
+function coord15(){
+  square = "_15_"
+  console.log(square)
+  move_piece()
+}
+function coord16(){
+  square = "_16_"
+  console.log(square)
+  move_piece()
+}
