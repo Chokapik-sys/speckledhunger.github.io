@@ -13,5 +13,5 @@ function move(){
 //row1
 function coord1(){
 square = "_1_"
-  move()
+  console.log(square)
 }
