@@ -9,5 +9,5 @@ console.log(parseInt(square))
 function coord1(){
   square = "_1_"
   console.log(square)
-  movePiece()
+  movePiece();
 }
