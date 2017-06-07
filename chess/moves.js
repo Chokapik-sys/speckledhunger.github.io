@@ -12,7 +12,7 @@ function move(){
 }
 //row1
 function coord1(){
-square = "_1_"
+  square = "_1_"
   console.log(square)
   move()
 }
