@@ -1,6 +1,6 @@
 var movecount = 1
 var square = 0
-function move(){
+function movePiece(){
   if (document.getElementById(square) === "White Rook") {
 console.log(parseInt(square))
 }
@@ -9,5 +9,5 @@ console.log(parseInt(square))
 function coord1(){
   square = "_1_"
   console.log(square)
-  move()
+  movePiece()
 }
