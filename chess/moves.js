@@ -1,5 +1,6 @@
 var movecount = 1
 var square = 0
+var constant1 = "Square:" + square
 function move_piece(){
   if (document.getElementById(square) === "White Rook") {
 console.log(parseInt(square))
@@ -8,82 +9,164 @@ console.log(parseInt(square))
 //row1
 function coord1(){
   square = "_1_"
-  console.log(square)
+  console.log(constant1)
   move_piece()
 }
 function coord2(){
   square = "_2_"
-  console.log(square)
+  console.log(constant1)
   move_piece()
 }
 function coord3(){
   square = "_3_"
-  console.log(square)
+  console.log(constant1)
   move_piece()
 }
 function coord4(){
   square = "_4_"
-  console.log(square)
+  console.log(constant1)
   move_piece()
 }
 function coord5(){
   square = "_5_"
-  console.log(square)
+  console.log(constant1)
   move_piece()
 }
 function coord6(){
   square = "_6_"
-  console.log(square)
+  console.log(constant1)
   move_piece()
 }
 function coord7(){
   square = "_7_"
-  console.log(square)
+  console.log(constant1)
   move_piece()
 }
 function coord8(){
   square = "_8_"
-  console.log(square)
+  console.log(constant1)
   move_piece()
 }
 //row2
 function coord9(){
   square = "_9_"
-  console.log(square)
+  console.log(constant1)
   move_piece()
 }
 function coord10(){
   square = "_10_"
-  console.log(square)
+  console.log(constant1)
   move_piece()
 }
 function coord11(){
   square = "_11_"
-  console.log(square)
+  console.log(constant1)
   move_piece()
 }
 function coord12(){
   square = "_12_"
-  console.log(square)
+  console.log(constant1)
   move_piece()
 }
 function coord13(){
   square = "_13_"
-  console.log(square)
+  console.log(constant1)
   move_piece()
 }
 function coord14(){
   square = "_14_"
-  console.log(square)
+  console.log(constant1)
   move_piece()
 }
 function coord15(){
   square = "_15_"
-  console.log(square)
+  console.log(constant1)
   move_piece()
 }
 function coord16(){
   square = "_16_"
-  console.log(square)
+  console.log(constant1)
+  move_piece()
+}
+//row3
+function coord17(){
+  square = "_17_"
+  console.log(constant1)
+  move_piece()
+}
+function coord18(){
+  square = "_18_"
+  console.log(constant1)
+  move_piece()
+}
+function coord19(){
+  square = "_19_"
+  console.log(constant1)
+  move_piece()
+}
+function coord20(){
+  square = "_20_"
+  console.log(constant1)
+  move_piece()
+}
+function coord21(){
+  square = "_21_"
+  console.log(constant1)
+  move_piece()
+}
+function coord22(){
+  square = "_22_"
+  console.log(constant1)
+  move_piece()
+}
+function coord23(){
+  square = "_23_"
+  console.log(constant1)
+  move_piece()
+}
+function coord24(){
+  square = "_24_"
+  console.log(constant1)
+  move_piece()
+}
+//row4
+function coord25(){
+  square = "_25_"
+  console.log(constant1)
+  move_piece()
+}
+function coord26(){
+  square = "_26_"
+  console.log(constant1)
+  move_piece()
+}
+function coord27(){
+  square = "_27_"
+  console.log(constant1)
+  move_piece()
+}
+function coord28(){
+  square = "_28_"
+  console.log(constant1)
+  move_piece()
+}
+function coord29(){
+  square = "_29_"
+  console.log(constant1)
+  move_piece()
+}
+function coord30(){
+  square = "_30_"
+  console.log(constant1)
+  move_piece()
+}
+function coord31(){
+  square = "_31_"
+  console.log(constant1)
+  move_piece()
+}
+function coord32(){
+  square = "_32_"
+  console.log(constant1)
   move_piece()
 }
