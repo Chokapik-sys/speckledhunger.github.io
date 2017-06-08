@@ -132,41 +132,41 @@ function coord24(){
 //row4
 function coord25(){
   square = "_25_"
-  console.log(constant1)
+  console.log(constant1 + square)
   move_piece()
 }
 function coord26(){
   square = "_26_"
-  console.log(constant1)
+  console.log(constant1 + square)
   move_piece()
 }
 function coord27(){
   square = "_27_"
-  console.log(constant1)
+  console.log(constant1 + square)
   move_piece()
 }
 function coord28(){
   square = "_28_"
-  console.log(constant1)
+  console.log(constant1 + square)
   move_piece()
 }
 function coord29(){
   square = "_29_"
-  console.log(constant1)
+  console.log(constant1 + square)
   move_piece()
 }
 function coord30(){
   square = "_30_"
-  console.log(constant1)
+  console.log(constant1 + square)
   move_piece()
 }
 function coord31(){
   square = "_31_"
-  console.log(constant1)
+  console.log(constant1 + square)
   move_piece()
 }
 function coord32(){
   square = "_32_"
-  console.log(constant1)
+  console.log(constant1 + square)
   move_piece()
 }
