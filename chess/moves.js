@@ -1,5 +1,6 @@
 var movecount = 1
 var square = 0
+var phase = 0
 var constant1 = "Square: "
 var constant2 = "Phase: "
 function move_piece(){
@@ -8,7 +9,7 @@ console.log(parseInt(square))
 }
 }
 function phase_change(){
-  console.log(constant2 + "Hello")
+  console.log(constant2 + phase)
 }
 //row1
 function coord1(){
