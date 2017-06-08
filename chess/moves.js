@@ -91,42 +91,42 @@ function coord16(){
 //row3
 function coord17(){
   square = "_17_"
-  console.log(constant1)
+  console.log(constant1 + square)
   move_piece()
 }
 function coord18(){
   square = "_18_"
-  console.log(constant1)
+  console.log(constant1 + square)
   move_piece()
 }
 function coord19(){
   square = "_19_"
-  console.log(constant1)
+  console.log(constant1 + square)
   move_piece()
 }
 function coord20(){
   square = "_20_"
-  console.log(constant1)
+  console.log(constant1 + square)
   move_piece()
 }
 function coord21(){
   square = "_21_"
-  console.log(constant1)
+  console.log(constant1 + square)
   move_piece()
 }
 function coord22(){
   square = "_22_"
-  console.log(constant1)
+  console.log(constant1 + square)
   move_piece()
 }
 function coord23(){
   square = "_23_"
-  console.log(constant1)
+  console.log(constant1 + square)
   move_piece()
 }
 function coord24(){
   square = "_24_"
-  console.log(constant1)
+  console.log(constant1 + square)
   move_piece()
 }
 //row4
