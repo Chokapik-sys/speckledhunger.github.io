@@ -1,6 +1,6 @@
 var movecount = 1
 var square = 0
-var constant1 = "Square:" + square
+var constant1 = "Square: " + parse(square)
 function move_piece(){
   if (document.getElementById(square) === "White Rook") {
 console.log(parseInt(square))
