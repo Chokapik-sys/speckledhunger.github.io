@@ -1,14 +1,26 @@
 var movecount = 1
 var square = 0
+var phase = 0
+var constant1 = "Square: " + square
+var constant2 = "Phase: " + phase
 function move_piece(){
   if (document.getElementById(square) === "White Rook") {
 console.log(parseInt(square))
 }
 }
+function phase_shift() {
+  if (not phase === 2) {
+    phase = phase + 1
+  } if (phase === 2) {
+    phase = 0
+  }
+}
 //row1
 function coord1(){
   square = "_1_"
-  console.log(square)
+  console.log(constant1)
+  phase_shift()
+  console.log(constant2)
   move_piece()
 }
 function coord2(){
