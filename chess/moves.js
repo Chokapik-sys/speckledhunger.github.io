@@ -5,7 +5,7 @@ var constant1 = "Square: "
 var constant2 = "Phase: "
 function move_piece(){
   if (document.getElementById(square).innerHTML === "White Rook") {
-console.log(parseInt(square))
+console.log("White Rook in _1_")
 }
 }
 function phase_change(){
