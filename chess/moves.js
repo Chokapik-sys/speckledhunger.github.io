@@ -4,7 +4,7 @@ var phase = 0
 var constant1 = "Square: "
 var constant2 = "Phase: "
 function move_piece(){
-  if (document.getElementById(square) === "White Rook") {
+  if (document.getElementById(square).innerHTML === "White Rook") {
 console.log(parseInt(square))
 }
 }
