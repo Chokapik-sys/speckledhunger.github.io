@@ -9,7 +9,7 @@ console.log(parseInt(square))
 }
 }
 function phase_shift() {
-  if (not phase === 2) {
+  if ( phase != 2) {
     phase = phase + 1
   } if (phase === 2) {
     phase = 0
