@@ -1,15 +1,20 @@
 var movecount = 1
 var square = 0
 var constant1 = "Square: "
+var constant2 = "Phase: "
 function move_piece(){
   if (document.getElementById(square) === "White Rook") {
 console.log(parseInt(square))
 }
 }
+function phase_change(){
+  console.log(constant2 + "Hello")
+}
 //row1
 function coord1(){
   square = "_1_"
   console.log(constant1 + square)
+  phase_change()
   move_piece()
 }
 function coord2(){
