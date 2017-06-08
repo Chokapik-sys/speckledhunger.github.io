@@ -9,6 +9,11 @@ console.log(parseInt(square))
 }
 }
 function phase_change(){
+  if (phase === 2) {
+      phase = 0
+      } else {
+        phase = phase + 1
+      }
   console.log(constant2 + phase)
 }
 //row1
