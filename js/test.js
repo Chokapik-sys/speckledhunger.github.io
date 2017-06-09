@@ -1,6 +1,7 @@
+function alert() {
 alert("Welcome to the Games site");
 alert("Feel free to browse...");
-
+}
 function randomIframe(obj){
 var scratch = new Array();
 scratch[0] = "https://scratch.mit.edu/projects/embed/89672994/";
