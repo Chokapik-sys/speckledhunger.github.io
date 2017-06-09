@@ -4,6 +4,7 @@ var phase = 0
 var constant1 = "Square: "
 var constant2 = "Phase: "
 function move_piece(){
+  if (phase === 1) {
   if (document.getElementById(square).innerHTML === "White Rook") {
     console.log("White Rook in " + square)
 }
@@ -12,6 +13,7 @@ function move_piece(){
     console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) + 8) + "_")
     document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#fff370"
 }
+  }
 }
 function phase_change(){
   if (phase === 2) {
