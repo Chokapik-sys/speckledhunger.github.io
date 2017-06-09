@@ -10,6 +10,7 @@ function move_piece(){
   if (document.getElementById(square).innerHTML === "White Pawn") {
     console.log("White Pawn in " + square)
     console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) + 8) + "_")
+    document.getElementById(parseInt(square.replace("_", "")) + 8).color = ""
 }
 }
 function phase_change(){
