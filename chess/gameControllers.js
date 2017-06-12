@@ -4,6 +4,6 @@ function resetTurn() {
 }
 function phase_0() {
   if (phase === 0){
-  document.getElementsByClassName("").style.background = "#000000"
+  document.getElementsByClassName("").style.backgroundColor = "#000000"
   }
 }
