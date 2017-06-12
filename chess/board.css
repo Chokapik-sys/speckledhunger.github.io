@@ -9,6 +9,14 @@ background-color: #D0FFB6;
 width: 64px;
 height: 64px;
 }
+/*Control buttons*/
+#reset {
+  background-color: #FF8466;
+  width: 128px;
+  height: 64px;
+  top: 488px;
+  left: 488px;
+}
 /*--row1--*/
 #_1_ {
   position: absolute;
