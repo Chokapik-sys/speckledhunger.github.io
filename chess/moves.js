@@ -1,5 +1,6 @@
 var movecount = 1
 var square = 0
+var prev_square = 0
 var phase = 0
 var constant1 = "Square: "
 var constant2 = "Phase: "
