@@ -27,6 +27,9 @@ function phase_change(){
       }
   console.log(constant2 + phase)
 }
+function reset() {
+  phase = 0
+}
 //row1
 function coord1(){
   square = "_1_"
