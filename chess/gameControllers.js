@@ -4,6 +4,5 @@ function resetTurn() {
 }
 function phase_0() {
   if (phase === 0){
-  return(document.getElementsByClassName("A"))
   }
 }
