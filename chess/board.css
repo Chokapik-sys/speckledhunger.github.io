@@ -11,6 +11,7 @@ height: 64px;
 }
 /*Control buttons*/
 #reset {
+  position: absolute;
   background-color: #FF8466;
   width: 128px;
   height: 64px;
