@@ -4,6 +4,9 @@ var prev_square = 0
 var phase = 0
 var constant1 = "Square: "
 var constant2 = "Phase: "
+function phase_0() {
+  "board.css".reload()
+}
 function move_piece(){
   //phase1
   if (phase === 1) {
@@ -29,6 +32,7 @@ function phase_change(){
 }
 function reset() {
   phase = 0
+  phase_0
 }
 //row1
 function coord1(){
