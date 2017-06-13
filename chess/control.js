@@ -5,7 +5,7 @@ function resetTurn() {
 }
 function phase_0() {
   if (phase === 0){
-    for (var i = 0, i=64, i++) {
+    for (var i = 0; i=64; i++) {
       if (document.getElementById("_" + i + "_").class === "A"){
     document.getElementById("_" + i + "_").style.backgroundColor = A
       }
