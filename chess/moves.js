@@ -304,3 +304,44 @@ function coord40(){
   console.log(constant1 + square)
   move_piece()
 }
+//row6
+function coord41(){
+  square = "_41_"
+  console.log(constant1 + square)
+  move_piece()
+}
+function coord42(){
+  square = "_42_"
+  console.log(constant1 + square)
+  move_piece()
+}
+function coord43(){
+  square = "_43_"
+  console.log(constant1 + square)
+  move_piece()
+}
+function coord44(){
+  square = "_44_"
+  console.log(constant1 + square)
+  move_piece()
+}
+function coord45(){
+  square = "_45_"
+  console.log(constant1 + square)
+  move_piece()
+}
+function coord46(){
+  square = "_46_"
+  console.log(constant1 + square)
+  move_piece()
+}
+function coord47(){
+  square = "_47_"
+  console.log(constant1 + square)
+  move_piece()
+}
+function coord48(){
+  square = "_48_"
+  console.log(constant1 + square)
+  move_piece()
+}
