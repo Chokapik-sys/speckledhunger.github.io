@@ -1,4 +1,4 @@
-var i = 0
+var i = 1
 var A = "#BAF7F9"
 function resetTurn() {
   phase = 3
