@@ -6,8 +6,7 @@ function resetTurn() {
 }
 function phase_3() {
   if (phase === 3){
-    while (i < 65) {
-      i = i + 1
+    for (i = 1; i < 65; i++) {
       if (document.getElementById("_" + i + "_").className === "A"){
     document.getElementById("_" + i + "_").style.backgroundColor = A
       }
