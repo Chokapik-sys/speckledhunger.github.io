@@ -6,9 +6,10 @@ function resetTurn() {
 }
 function phase_3() {
   if (phase === 3){
-    for (i = 0; i == 64; i++) {
+    while (i < 65) {
+      i = i + 1
       if (document.getElementById("_" + i + "_").class === "A"){
-    document.getElementById("_" + i + "_").style.backgroundColor = "#BAF7F9"
+    document.getElementById("_" + i + "_").style.backgroundColor = A
       }
          }
   }
