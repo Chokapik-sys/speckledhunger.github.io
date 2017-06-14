@@ -1,11 +1,11 @@
 /*--Checkerboard--*/
 .A {
-background-color: #BAF7F9;
+background-color: A;
 width: 64px;
 height: 64px;
 }
 .B {
-background-color: #D0FFB6;
+background-color: B;
 width: 64px;
 height: 64px;
 }
