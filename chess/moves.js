@@ -20,7 +20,7 @@ function move_piece(){
   //phase2
 }
 function phase_change(){
-  if (phase === 2) {
+  if (phase === 3) {
       phase = 0
       } else {
         phase = phase + 1
