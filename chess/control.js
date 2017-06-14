@@ -8,7 +8,7 @@ function phase_3() {
   if (phase === 3){
     while (i < 65) {
       i = i + 1
-      if (document.getElementById("_" + i + "_").class === "A"){
+      if (document.getElementById("_" + i + "_").className === "A"){
     document.getElementById("_" + i + "_").style.backgroundColor = A
       }
     }
