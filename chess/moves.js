@@ -22,7 +22,7 @@ function move_piece(){
   }
   //phase2
   if (phase === 2) {
-    if (document.getElementById(square).style.backgroundColor === "#fff370" && document.getElementById(square).innerHTML === "") {
+    if (document.getElementById(square).style.backgroundColor === "#fff370") {
       document.getElementById(prev_square).innerHTML = ""
       document.getElementById(square).innerHTML = piece
       phase_change()
