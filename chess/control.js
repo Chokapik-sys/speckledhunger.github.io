@@ -14,7 +14,7 @@ function phase_3() {
       if (document.getElementById("_" + i + "_").className === "B"){
     document.getElementById("_" + i + "_").style.backgroundColor = B
       }
-      phase = 0
+      phase_change()
     }
   }
 }
