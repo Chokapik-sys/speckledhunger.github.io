@@ -10,7 +10,7 @@ function move_piece(){
   if (phase === 1) {
   if (document.getElementById(square).innerHTML === "White Rook") {
     console.log("White Rook in " + square)
-}
+  }
   if (document.getElementById(square).innerHTML === "White Pawn") {
     console.log("White Pawn in " + square)
     console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) + 8) + "_")
@@ -18,7 +18,7 @@ function move_piece(){
     piece = "White Pawn"
     prev_square = square
     phase_change()
-}
+  }
   }
   //phase2
   if (phase === 2) {
