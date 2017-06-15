@@ -5,6 +5,7 @@ var piece = ""
 var phase = 0
 var constant1 = "Square: "
 var constant2 = "Phase: "
+var constant3 = "Moving from:"
 function move_piece(){
   //phase1
   if (phase === 1) {
@@ -17,6 +18,7 @@ function move_piece(){
     document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
     piece = "White Pawn"
     prev_square = square
+    console.log(constant3 + prev_square)
     phase_change()
   }
   }
