@@ -1,6 +1,7 @@
 var movecount = 1
 var square = 0
 var prev_square = 0
+var piece = ""
 var phase = 0
 var constant1 = "Square: "
 var constant2 = "Phase: "
@@ -14,10 +15,20 @@ function move_piece(){
     console.log("White Pawn in " + square)
     console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) + 8) + "_")
     document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#fff370"
+    piece = "White Pawn"
+    prev_square = square
     phase_change()
 }
   }
   //phase2
+  if (phase === 2) {
+    if (document.getElementById(square).style.backgroundColor === "#fff370" && document.getElementById(square).innerHTML === "") {
+      document.getElementById(prev_square).innerHTML = ""
+      document.getElementById(square).innerHTML = piece
+      phase_change()
+      phase_3()
+    }
+  }
 }
 function phase_change(){
   if (phase === 3) {
