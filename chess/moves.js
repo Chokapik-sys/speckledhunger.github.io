@@ -14,7 +14,7 @@ function move_piece(){
   if (document.getElementById(square).innerHTML === "White Pawn") {
     console.log("White Pawn in " + square)
     console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) + 8) + "_")
-    document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#fff370"
+    document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
     piece = "White Pawn"
     prev_square = square
     phase_change()
@@ -22,7 +22,7 @@ function move_piece(){
   }
   //phase2
   if (phase === 2) {
-    if (document.getElementById(square).style.backgroundColor === "#fff370") {
+    if (document.getElementById(square).style.backgroundColor === "#FFF370") {
       document.getElementById(prev_square).innerHTML = ""
       document.getElementById(square).innerHTML = piece
       phase_change()
