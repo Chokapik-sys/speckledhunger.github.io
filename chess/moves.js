@@ -22,7 +22,7 @@ function move_piece(){
     }
   }
     //Black Pieces
-        if (document.getElementById(square).innerHTML === "Black Pawn") {
+    if (document.getElementById(square).innerHTML === "Black Pawn") {
     console.log("Black Pawn in " + square)
     if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === ""){
     console.log("Black pawn can move to " + "_" + (parseInt(square.replace("_", "")) - 8) + "_")
@@ -31,6 +31,7 @@ function move_piece(){
     prev_square = square
     console.log(constant3 + prev_square)
     phase_change()
+    }
     }
   }
   //phase2
