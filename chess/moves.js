@@ -9,10 +9,8 @@ var constant3 = "Moving from:"
 function move_piece(){
   //phase1
   if (phase === 1) {
-  if (document.getElementById(square).innerHTML === "White Rook") {
-    console.log("White Rook in " + square)
-  }
-  if (document.getElementById(square).innerHTML === "White Pawn") {
+    //White Pieces
+    if (document.getElementById(square).innerHTML === "White Pawn") {
     console.log("White Pawn in " + square)
     if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === ""){
     console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) + 8) + "_")
@@ -23,6 +21,17 @@ function move_piece(){
     phase_change()
     }
   }
+    //Black Pieces
+        if (document.getElementById(square).innerHTML === "Black Pawn") {
+    console.log("Black Pawn in " + square)
+    if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === ""){
+    console.log("Black pawn can move to " + "_" + (parseInt(square.replace("_", "")) - 8) + "_")
+    document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
+    piece = "Black Pawn"
+    prev_square = square
+    console.log(constant3 + prev_square)
+    phase_change()
+    }
   }
   //phase2
   if (phase === 2) {
