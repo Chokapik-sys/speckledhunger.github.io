@@ -548,24 +548,24 @@ function coord61(){
   }
   move_piece()
 }
-function coord54(){
-  square = "_54_"
+function coord62(){
+  square = "_62_"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
   }
   move_piece()
 }
-function coord55(){
-  square = "_55_"
+function coord63(){
+  square = "_63_"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
   }
   move_piece()
 }
-function coord56(){
-  square = "_56_"
+function coord64(){
+  square = "_64_"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
