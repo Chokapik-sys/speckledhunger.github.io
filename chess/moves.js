@@ -408,3 +408,44 @@ function coord48(){
   console.log(constant1 + square)
   move_piece()
 }
+//row7
+function coord49(){
+  square = "_49_"
+  console.log(constant1 + square)
+  move_piece()
+}
+function coord50(){
+  square = "_50_"
+  console.log(constant1 + square)
+  move_piece()
+}
+function coord51(){
+  square = "_51_"
+  console.log(constant1 + square)
+  move_piece()
+}
+function coord52(){
+  square = "_52_"
+  console.log(constant1 + square)
+  move_piece()
+}
+function coord53(){
+  square = "_53_"
+  console.log(constant1 + square)
+  move_piece()
+}
+function coord54(){
+  square = "_54_"
+  console.log(constant1 + square)
+  move_piece()
+}
+function coord55(){
+  square = "_55_"
+  console.log(constant1 + square)
+  move_piece()
+}
+function coord56(){
+  square = "_56_"
+  console.log(constant1 + square)
+  move_piece()
+}
