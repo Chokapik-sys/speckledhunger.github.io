@@ -304,41 +304,65 @@ function coord32(){
 function coord33(){
   square = "_33_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord34(){
   square = "_34_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord35(){
   square = "_35_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord36(){
   square = "_36_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord37(){
   square = "_37_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord38(){
   square = "_38_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord39(){
   square = "_39_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord40(){
   square = "_40_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 //row6
