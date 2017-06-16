@@ -381,81 +381,129 @@ function coord40(){
 function coord41(){
   square = "_41_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord42(){
   square = "_42_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord43(){
   square = "_43_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord44(){
   square = "_44_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord45(){
   square = "_45_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord46(){
   square = "_46_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord47(){
   square = "_47_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord48(){
   square = "_48_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 //row7
 function coord49(){
   square = "_49_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord50(){
   square = "_50_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord51(){
   square = "_51_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord52(){
   square = "_52_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord53(){
   square = "_53_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord54(){
   square = "_54_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord55(){
   square = "_55_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
 function coord56(){
   square = "_56_"
   console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
   move_piece()
 }
