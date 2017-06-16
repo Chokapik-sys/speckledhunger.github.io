@@ -21,8 +21,8 @@ function move_piece(){
     phase_change()
     }
   }
-     if (document.getElementById(square).innerHTML === "White Bishop") {
-       console.log("White Bishop in " + square)
+     if (document.getElementById(square).innerHTML === "White Knight") {
+       console.log("White Knight in " + square)
      }
     //Black Pieces
     if (document.getElementById(square).innerHTML === "Black Pawn") {
