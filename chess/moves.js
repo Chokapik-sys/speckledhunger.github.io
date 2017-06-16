@@ -26,7 +26,7 @@ function move_piece(){
     console.log("Black Pawn in " + square)
     if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === ""){
     console.log("Black pawn can move to " + "_" + (parseInt(square.replace("_", "")) - 8) + "_")
-    document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
+    document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
     piece = "Black Pawn"
     prev_square = square
     console.log(constant3 + prev_square)
