@@ -507,3 +507,68 @@ function coord56(){
   }
   move_piece()
 }
+//row8
+function coord57(){
+  square = "_57_"
+  console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
+  move_piece()
+}
+function coord58(){
+  square = "_58_"
+  console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
+  move_piece()
+}
+function coord59(){
+  square = "_59_"
+  console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
+  move_piece()
+}
+function coord60(){
+  square = "_60_"
+  console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
+  move_piece()
+}
+function coord61(){
+  square = "_61_"
+  console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
+  move_piece()
+}
+function coord54(){
+  square = "_54_"
+  console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
+  move_piece()
+}
+function coord55(){
+  square = "_55_"
+  console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
+  move_piece()
+}
+function coord56(){
+  square = "_56_"
+  console.log(constant1 + square)
+  if (phase === 0) {
+  phase_change()
+  }
+  move_piece()
+}
