@@ -14,14 +14,12 @@ function move_piece(){
   }
   if (document.getElementById(square).innerHTML === "White Pawn") {
     console.log("White Pawn in " + square)
-    if document.getElementById( "_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === "") {
     console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) + 8) + "_")
     document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
     piece = "White Pawn"
     prev_square = square
     console.log(constant3 + prev_square)
     phase_change()
-    }
   }
   }
   //phase2
