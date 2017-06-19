@@ -50,7 +50,7 @@ function move_piece(){
          piece = "White Pawn"
          prev_square = square
          console.log(constant3 + prev_square)
-         phase = 2phase = 2
+         phase = 2
        } 
      }
     //Black Pieces
