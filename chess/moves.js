@@ -1,5 +1,5 @@
 var movecount = 1
-var square = 0
+var square = "_0_"
 var prev_square = 0
 var piece = ""
 var phase = 0
