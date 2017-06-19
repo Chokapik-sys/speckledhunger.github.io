@@ -37,7 +37,21 @@ function move_piece(){
          prev_square = square
          console.log(constant3 + prev_square)
          phase_change()
-       }  
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === ""){
+         console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) - 6) + "_")
+         document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").style.backgroundColor = "#FFF370"
+         piece = "White Pawn"
+         prev_square = square
+         console.log(constant3 + prev_square)
+         phase_change()
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === ""){
+         console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) + 6) + "_")
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").style.backgroundColor = "#FFF370"
+         piece = "White Pawn"
+         prev_square = square
+         console.log(constant3 + prev_square)
+         phase_change()
+       } 
      }
     //Black Pieces
     if (document.getElementById(square).innerHTML === "Black Pawn") {
