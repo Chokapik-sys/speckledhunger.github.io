@@ -9,6 +9,10 @@ background-color: #D0FFB6;
 width: 64px;
 height: 64px;
 }
+/*Boundaries*/
+.none {
+  display: none;
+}
 /*Control buttons*/
 #resetTurn {
   position: absolute;
