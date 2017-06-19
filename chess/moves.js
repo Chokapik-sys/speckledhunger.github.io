@@ -26,14 +26,14 @@ function move_piece(){
        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === ""){
          console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) - 10) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").style.backgroundColor = "#FFF370"
-         piece = "White Pawn"
+         piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
          phase_change()
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === ""){
-         console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) - 10) + "_")
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").style.backgroundColor = "#FFF370"
-         piece = "White Pawn"
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === ""){
+         console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) + 10) + "_")
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").style.backgroundColor = "#FFF370"
+         piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
          phase_change()
