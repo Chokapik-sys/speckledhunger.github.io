@@ -51,30 +51,30 @@ function move_piece(){
          prev_square = square
          console.log(constant3 + prev_square)
          phase = 2
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 9) + "_").innerHTML === ""){
-         console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) - 9) + "_")
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 9) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML === ""){
+         console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) - 17) + "_")
+         document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").style.backgroundColor = "#FFF370"
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
          phase = 2
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 9) + "_").innerHTML === ""){
-         console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) + 9) + "_")
-         document.getElementById("_" + (parseInt(square.replace("_", "")) + 9) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML === ""){
+         console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) + 17) + "_")
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").style.backgroundColor = "#FFF370"
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
          phase = 2
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 7) + "_").innerHTML === ""){
-         console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) - 7) + "_")
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 7) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === ""){
+         console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) - 15) + "_")
+         document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").style.backgroundColor = "#FFF370"
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
          phase = 2
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 7) + "_").innerHTML === ""){
-         console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) + 7) + "_")
-         document.getElementById("_" + (parseInt(square.replace("_", "")) + 7) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML === ""){
+         console.log("White pawn can move to " + "_" + (parseInt(square.replace("_", "")) + 15) + "_")
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").style.backgroundColor = "#FFF370"
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
