@@ -23,7 +23,7 @@ function move_piece(){
   }
      if (document.getElementById(square).innerHTML === "White Knight") {
        if (parseInt(square.replace("_", "") % 8 == "1") {
-           
+           console.log("Your piece is at the beginning of the board")
            } else {
        console.log("White Knight in " + square)
        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === ""){
