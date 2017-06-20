@@ -22,6 +22,9 @@ function move_piece(){
     }
   }
      if (document.getElementById(square).innerHTML === "White Knight") {
+       if () {
+           
+           } else {
        console.log("White Knight in " + square)
        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 10) + "_")
@@ -80,6 +83,7 @@ function move_piece(){
          console.log(constant3 + prev_square)
          phase = 2
        }
+     }
      }
     //Black Pieces
     if (document.getElementById(square).innerHTML === "Black Pawn") {
