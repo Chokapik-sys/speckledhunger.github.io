@@ -22,7 +22,7 @@ function move_piece(){
     }
   }
      if (document.getElementById(square).innerHTML === "White Knight") {
-       if () {
+       if (parseInt(square.replace("_", "") % 8 == "1") {
            
            } else {
        console.log("White Knight in " + square)
