@@ -50,7 +50,7 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
-         edge = 1
+         edge()
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 6) + "_")
@@ -58,7 +58,7 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
-         edge = 1
+         edge()
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 17) + "_")
@@ -66,7 +66,7 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
-         edge = 1
+         edge()
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 17) + "_")
@@ -74,7 +74,7 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
-         edge = 1
+         edge()
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 15) + "_")
@@ -82,7 +82,7 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
-         edge = 1
+         edge()
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 15) + "_")
@@ -90,7 +90,7 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
-         edge = 1
+         edge()
          phase = 2
        }
        }
@@ -125,6 +125,9 @@ function phase_change(){
         phase = phase + 1
       }
   console.log(constant2 + phase)
+}
+function edge() {
+  edge = 1
 }
 //row1
 function coord1(){
