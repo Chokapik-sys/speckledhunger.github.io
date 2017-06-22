@@ -6,7 +6,6 @@ var phase = 0
 var constant1 = "Square: "
 var constant2 = "Phase: "
 var constant3 = "Moving from:"
-var edge = 0
 function move_piece(){
   //phase1
   if (phase === 1) {
@@ -23,10 +22,10 @@ function move_piece(){
     }
   }
      if (document.getElementById(square).innerHTML === "White Knight") {
-       if (edge = 1 && (parseInt(square.replace("_", "")) % 8 == "7" || parseInt(square.replace("_", "")) % 8 == "0")) {
+       if (parseInt(square.replace("_", "")) % 8 == "7" || parseInt(square.replace("_", "")) % 8 == "0") {
          console.log("Success")
-         edge = 0
-       } else {
+         document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === "This worked"
+       }
        console.log("White Knight in " + square)
        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 10) + "_")
@@ -34,7 +33,6 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
-         edge = 1
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 10) + "_")
@@ -42,7 +40,6 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
-         edge = 1
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 6) + "_")
@@ -50,7 +47,6 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
-         edge()
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 6) + "_")
@@ -58,7 +54,6 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
-         edge()
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 17) + "_")
@@ -66,7 +61,6 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
-         edge()
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 17) + "_")
@@ -74,7 +68,6 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
-         edge()
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 15) + "_")
@@ -82,7 +75,6 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
-         edge()
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 15) + "_")
@@ -90,7 +82,6 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
-         edge()
          phase = 2
        }
        }
@@ -105,7 +96,6 @@ function move_piece(){
     prev_square = square
     console.log(constant3 + prev_square)
     phase = 2
-    }
     }
   }
   //phase2
@@ -125,9 +115,6 @@ function phase_change(){
         phase = phase + 1
       }
   console.log(constant2 + phase)
-}
-function edge() {
-  edge = 1
 }
 //row1
 function coord1(){
