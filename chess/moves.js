@@ -25,7 +25,7 @@ function move_piece(){
        if (parseInt(square.replace("_", "")) % 8 == "7" || parseInt(square.replace("_", "")) % 8 == "0") {
          console.log("Success")
          if (parseInt(square.replace("_", "")) % 8 == "7") {
-         document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML = "This worked"
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML = "Test"
          }
        }
        console.log("White Knight in " + square)
