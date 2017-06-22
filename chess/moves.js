@@ -6,6 +6,7 @@ var phase = 0
 var constant1 = "Square: "
 var constant2 = "Phase: "
 var constant3 = "Moving from:"
+var edge = 0
 function move_piece(){
   //phase1
   if (phase === 1) {
@@ -22,7 +23,7 @@ function move_piece(){
     }
   }
      if (document.getElementById(square).innerHTML === "White Knight") {
-       if (parseInt(square.replace("_", "")) % 8 == "7" || parseInt(square.replace("_", "")) % 8 == "0") {
+       if ((parseInt(square.replace("_", "")) % 8 == "7" || parseInt(square.replace("_", "")) % 8 == "0") && edge = 1) {
          console.log("Success")
        } else {
        console.log("White Knight in " + square)
@@ -32,6 +33,7 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
+         edge = 1
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 10) + "_")
@@ -39,6 +41,7 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
+         edge = 1
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 6) + "_")
@@ -46,6 +49,7 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
+         edge = 1
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 6) + "_")
@@ -53,6 +57,7 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
+         edge = 1
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 17) + "_")
@@ -60,6 +65,7 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
+         edge = 1
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 17) + "_")
@@ -67,6 +73,7 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
+         edge = 1
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 15) + "_")
@@ -74,6 +81,7 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
+         edge = 1
          phase = 2
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 15) + "_")
@@ -81,6 +89,7 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
+         edge = 1
          phase = 2
        }
        }
