@@ -26,7 +26,11 @@ function move_piece(){
          console.log("Success")
          if (parseInt(square.replace("_", "")) % 8 == "7") {
          if(document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === ""){
-           document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML = ""
+           if(document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").className === "A"){
+             document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").style.backgroundColor = A
+           } if(document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").className === "B"){
+             document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").style.backgroundColor = B
+           }
          }
          }
        }
