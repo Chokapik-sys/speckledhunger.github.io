@@ -27,9 +27,9 @@ function move_piece(){
          if (parseInt(square.replace("_", "")) % 8 == "7") {
          if(document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === ""){
            if(document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").className === "A"){
-             document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").style.backgroundColor = A
+             document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").style.backgroundColor = "#BAF7F9"
            } if(document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").className === "B"){
-             document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").style.backgroundColor = B
+             document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").style.backgroundColor = "#D0FFB6"
            }
          }
          }
