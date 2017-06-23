@@ -26,8 +26,7 @@ function move_piece(){
          console.log("Success")
          if (parseInt(square.replace("_", "")) % 8 == "7") {
          if(document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === ""){
-           document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === " "
-           document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === ""
+           console.log(document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML)
          }
          }
        }
