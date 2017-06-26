@@ -26,9 +26,9 @@ function move_piece(){
          console.log("Success")
          if (parseInt(square.replace("_", "")) % 8 == "7") {
           if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === ""){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML = ""
+         console.log("Unable to move to" + ("_" + (parseInt(square.replace("_", "")) - 15) + "_"))
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === ""){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 16 + "_").innerHTML = ""
+       console.log("Unable to move to" + ("_" + (parseInt(square.replace("_", "")) - 6) + "_"))
        }
          }
          }
