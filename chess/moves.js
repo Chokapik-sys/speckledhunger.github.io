@@ -24,6 +24,7 @@ function move_piece(){
      if (document.getElementById(square).innerHTML === "White Knight") {
        if (parseInt(square.replace("_", "")) % 8 == "7" || parseInt(square.replace("_", "")) % 8 == "0") {
          console.log("Success")
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML = "Test"
          if (parseInt(square.replace("_", "")) % 8 == "7") {
          if(document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === ""){
            console.log(document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML)
