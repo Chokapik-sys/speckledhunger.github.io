@@ -25,30 +25,10 @@ function move_piece(){
        if (parseInt(square.replace("_", "")) % 8 == "7" || parseInt(square.replace("_", "")) % 8 == "0") {
          console.log("Success")
          if (parseInt(square.replace("_", "")) % 8 == "7") {
-          if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === ""){
-         console.log("Unable to move to" + ("_" + (parseInt(square.replace("_", "")) - 15) + "_"))
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === ""){
-       console.log("Unable to move to" + ("_" + (parseInt(square.replace("_", "")) - 6) + "_"))
-       }
+         if(document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === ""){
+           console.log(document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML)
          }
          }
-       } else{
-         if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === ""){
-         console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 15) + "_")
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").style.backgroundColor = "#FFF370"
-         piece = "White Knight"
-         prev_square = square
-         console.log(constant3 + prev_square)
-         phase = 2
-       }
-         if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === ""){
-         console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 6) + "_")
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").style.backgroundColor = "#FFF370"
-         piece = "White Knight"
-         prev_square = square
-         console.log(constant3 + prev_square)
-         phase = 2
-       }
        }
        console.log("White Knight in " + square)
        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === ""){
@@ -61,6 +41,13 @@ function move_piece(){
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 10) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").style.backgroundColor = "#FFF370"
+         piece = "White Knight"
+         prev_square = square
+         console.log(constant3 + prev_square)
+         phase = 2
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === ""){
+         console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 6) + "_")
+         document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").style.backgroundColor = "#FFF370"
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
@@ -82,6 +69,13 @@ function move_piece(){
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 17) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").style.backgroundColor = "#FFF370"
+         piece = "White Knight"
+         prev_square = square
+         console.log(constant3 + prev_square)
+         phase = 2
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === ""){
+         console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 15) + "_")
+         document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").style.backgroundColor = "#FFF370"
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
