@@ -23,11 +23,11 @@ function move_piece(){
   }
      if (document.getElementById(square).innerHTML === "White Knight") {
        if ((parseInt(square.replace("_", "")) % 8 == "7") && (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === "")) {
-         console.log("Success")
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML = " "
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML = ""
        } if ((parseInt(square.replace("_", "")) % 8 == "7") && (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === "")) {
-         console.log("Success")
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML = ""
+         document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML = " "
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML = ""
        }
        console.log("White Knight in " + square)
        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === ""){
