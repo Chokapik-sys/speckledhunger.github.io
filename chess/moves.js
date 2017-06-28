@@ -100,7 +100,9 @@ function move_piece(){
        }
      }
   if (document.getElementById(square).innerHTML === "White Rook") {
-    
+    if ((parseInt(square.replace("_", "")) % 8 === "0"){
+        console.log("White Rook on right hand side")
+        }
   }
     //Black Pieces
     if (document.getElementById(square).innerHTML === "Black Pawn") {
