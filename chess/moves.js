@@ -101,14 +101,21 @@ function move_piece(){
      }
   if (document.getElementById(square).innerHTML === "White Rook") {
     if ((parseInt(square.replace("_", ""))) % 8 == "0"){
-        console.log("White Rook on right hand side")
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 1) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }
         }
   }
     //Black Pieces
     if (document.getElementById(square).innerHTML === "Black Pawn") {
     console.log("Black Pawn in " + square)
     if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === ""){
-    console.log("Black pawn can move to " + "_" + (parseInt(square.replace("_", "")) - 8) + "_")
+    console.log("Black Pawn can move to " + "_" + (parseInt(square.replace("_", "")) - 8) + "_")
     document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
     piece = "Black Pawn"
     prev_square = square
