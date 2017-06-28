@@ -30,6 +30,14 @@ function move_piece(){
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML = " "
        } if ((parseInt(square.replace("_", "")) % 8 == "0") && (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML === "")) {
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML = " "
+       } if ((parseInt(square.replace("_", "")) % 8 == "2" || parseInt(square.replace("_", "")) % 8 == "1") && (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === "")) {
+         document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML = " "
+       } if ((parseInt(square.replace("_", "")) % 8 == "2" || parseInt(square.replace("_", "")) % 8 == "1") && (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === "")) {
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML = " "
+       } if ((parseInt(square.replace("_", "")) % 8 == "1") && (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML === "")) {
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML = " "
+       } if ((parseInt(square.replace("_", "")) % 8 == "1") && (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML === "")) {
+         document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML = " "
        }
        console.log("White Knight in " + square)
        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === ""){
