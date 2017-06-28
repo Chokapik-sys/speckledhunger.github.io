@@ -99,6 +99,9 @@ function move_piece(){
        }
        }
      }
+  if (document.getElementById(square).innerHTML === "White Rook") {
+    
+  }
     //Black Pieces
     if (document.getElementById(square).innerHTML === "Black Pawn") {
     console.log("Black Pawn in " + square)
