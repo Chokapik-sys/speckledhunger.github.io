@@ -195,14 +195,15 @@ function move_piece(){
           prev_square = square
           console.log(constant3 + prev_square)
           phase = 2
-        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "") {
+        }}}}}}
+          if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "") {
           console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 1) + "_")
           document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").style.backgroundColor = "#FFF370"
           piece = "White Rook"
           prev_square = square
           console.log(constant3 + prev_square)
           phase = 2
-        }}}}}}} 
+        }
         }
   }
     //Black Pieces
