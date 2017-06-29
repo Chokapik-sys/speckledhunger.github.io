@@ -242,16 +242,16 @@ function move_piece(){
           console.log(constant3 + prev_square)
           phase = 2
         }}}}}
-          if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 2) + "_").innerHTML === "") {
-          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 2) + "_")
-          document.getElementById("_" + (parseInt(square.replace("_", "")) - 2) + "_").style.backgroundColor = "#FFF370"
+          if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 1) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").style.backgroundColor = "#FFF370"
           piece = "White Rook"
           prev_square = square
           console.log(constant3 + prev_square)
           phase = 2
-            if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "") {
-              console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 1) + "_")
-              document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").style.backgroundColor = "#FFF370"
+            if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 2) + "_").innerHTML === "") {
+              console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 2) + "_")
+              document.getElementById("_" + (parseInt(square.replace("_", "")) - 2) + "_").style.backgroundColor = "#FFF370"
               piece = "White Rook"
               prev_square = square
               console.log(constant3 + prev_square)
