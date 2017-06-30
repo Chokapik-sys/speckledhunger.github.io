@@ -522,7 +522,7 @@ function move_piece(){
           phase = 2
         }}}}}}} 
         }
-    if ((parseInt(square.replace("_", "")) - ((parseInt(square.replace("_", ""))) % 8)) / 8 == "0"){
+    if ((parseInt(square.replace("_", "") - 1) - ((parseInt(square.replace("_", "")) - 1) % 8)) / 8 == "0"){
         if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === "") {
           console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 8) + "_")
           document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
