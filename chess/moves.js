@@ -574,7 +574,7 @@ function move_piece(){
           phase = 2
         }}}}}}} 
         }
-        if ((parseInt(square.replace("_", ""))) % 8 == "1"){
+        if (((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "1"){
         if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "") {
           console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 1) + "_")
           document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").style.backgroundColor = "#FFF370"
@@ -627,7 +627,7 @@ function move_piece(){
           phase = 2
         }
         }
-    if ((parseInt(square.replace("_", ""))) % 8 == "2"){
+    if (((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "2"){
         if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "") {
           console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 1) + "_")
           document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").style.backgroundColor = "#FFF370"
@@ -680,7 +680,7 @@ function move_piece(){
               phase = 2
         }}
         }
-        if ((parseInt(square.replace("_", ""))) % 8 == "3"){
+        if (((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "3"){
         if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "") {
           console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 1) + "_")
           document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").style.backgroundColor = "#FFF370"
@@ -733,7 +733,7 @@ function move_piece(){
                 phase = 2
         }}}
         }
-    if ((parseInt(square.replace("_", ""))) % 8 == "4"){
+    if (((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "4"){
         if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "") {
           console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 1) + "_")
           document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").style.backgroundColor = "#FFF370"
@@ -786,7 +786,7 @@ function move_piece(){
                   phase = 2
         }}}}
         }
-    if ((parseInt(square.replace("_", ""))) % 8 == "5"){
+    if (((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "5"){
         if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "") {
           console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 1) + "_")
           document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").style.backgroundColor = "#FFF370"
@@ -839,7 +839,7 @@ function move_piece(){
                     phase = 2
         }}}}}
         }
-    if ((parseInt(square.replace("_", ""))) % 8 == "6"){
+    if (((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "6"){
         if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "") {
           console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 1) + "_")
           document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").style.backgroundColor = "#FFF370"
@@ -892,7 +892,7 @@ function move_piece(){
           phase = 2
         }
         }
-    if ((parseInt(square.replace("_", ""))) % 8 == "7"){
+    if (((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "7"){
         if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "") {
           console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 1) + "_")
           document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").style.backgroundColor = "#FFF370"
