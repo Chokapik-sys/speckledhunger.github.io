@@ -98,7 +98,6 @@ function move_piece(){
          phase = 2
        }
        }
-     }
   if (document.getElementById(square).innerHTML === "White Rook") {
     if ((parseInt(square.replace("_", ""))) % 8 == "1"){
         if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "") {
@@ -957,6 +956,7 @@ function move_piece(){
     phase = 2
     }
   }
+  }  
   //phase2
   if (phase === 2) {
     if (document.getElementById(square).style.backgroundColor == "rgb(255, 243, 112)") {
