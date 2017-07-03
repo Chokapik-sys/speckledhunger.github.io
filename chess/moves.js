@@ -945,6 +945,9 @@ function move_piece(){
         }}}}}}} 
         }
   }
+    if (document.getElementById(square).innerHTML === "White Bishop"){
+        console.log("White Bishop in " + square)
+        }
     //Black Pieces
     if (document.getElementById(square).innerHTML === "Black Pawn") {
     console.log("Black Pawn in " + square)
