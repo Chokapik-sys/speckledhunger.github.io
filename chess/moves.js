@@ -3,6 +3,7 @@ var square = "_0_"
 var prev_square = 0
 var piece = ""
 var phase = 0
+var x = 0
 var constant1 = "Square: "
 var constant2 = "Phase: "
 var constant3 = "Moving from:"
@@ -947,6 +948,17 @@ function move_piece(){
   }
     if (document.getElementById(square).innerHTML === "White Bishop"){
         console.log("White Bishop in " + square)
+      for (x = parseInt(square.replace("_", "")), x <= 8, x){
+        if (document.getElementById("_" + x + "_").innnerHTML === ""){
+          console.log("Black Pawn can move to " + "_" + x + "_")
+          document.getElementById("_" + x + "_").style.backgroundColor = "#FFF370"
+          piece = "White Bishop"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }
+        x = x - 10
+      }
         }
     //Black Pieces
     if (document.getElementById(square).innerHTML === "Black Pawn") {
