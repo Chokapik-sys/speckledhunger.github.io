@@ -948,7 +948,7 @@ function move_piece(){
   }
     if (document.getElementById(square).innerHTML === "White Bishop"){
         console.log("White Bishop in " + square)
-      for (x = parseInt(square.replace("_", "")); x <= 8; x){
+      for (x = parseInt(square.replace("_", "")); x <= 8; x = x - 10){
         if (document.getElementById("_" + x + "_").innnerHTML === ""){
           console.log("Black Pawn can move to " + "_" + x + "_")
           document.getElementById("_" + x + "_").style.backgroundColor = "#FFF370"
@@ -957,7 +957,6 @@ function move_piece(){
           console.log(constant3 + prev_square)
           phase = 2
         }
-        x = x - 10
       }
         }
     //Black Pieces
