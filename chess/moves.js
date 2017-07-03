@@ -99,6 +99,7 @@ function move_piece(){
        }
        }
   if (document.getElementById(square).innerHTML === "White Rook") {
+    console.log("White Rook in " + square)
     if ((parseInt(square.replace("_", ""))) % 8 == "1"){
         if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "") {
           console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 1) + "_")
