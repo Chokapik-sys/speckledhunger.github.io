@@ -948,7 +948,7 @@ function move_piece(){
   }
     if (document.getElementById(square).innerHTML === "White Bishop"){
         console.log("White Bishop in " + square)
-      for (x = parseInt(square.replace("_", "")), x <= 8, x){
+      for (x = parseInt(square.replace("_", "")); x <= 8; x){
         if (document.getElementById("_" + x + "_").innnerHTML === ""){
           console.log("Black Pawn can move to " + "_" + x + "_")
           document.getElementById("_" + x + "_").style.backgroundColor = "#FFF370"
