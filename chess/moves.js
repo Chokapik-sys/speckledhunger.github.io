@@ -3,7 +3,6 @@ var square = "_0_"
 var prev_square = 0
 var piece = ""
 var phase = 0
-var x = 0
 var constant1 = "Square: "
 var constant2 = "Phase: "
 var constant3 = "Moving from:"
