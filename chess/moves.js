@@ -19,6 +19,15 @@ function move_piece(){
     prev_square = square
     console.log(constant3 + prev_square)
     phase = 2
+      if (((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "2"){
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").innerHTML === ""){
+          console.log("White Pawn can move to " + "_" + (parseInt(square.replace("_", "")) + 16) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Pawn"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+      }
     }
   }
      if (document.getElementById(square).innerHTML === "White Knight") {
