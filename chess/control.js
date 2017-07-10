@@ -23,8 +23,9 @@ function phase_3() {
   }
 }
 function clearboard(){
-  resetTurn()
   for (cb = 1; cb < 65; cb++) {
     document.getElementById("_" + cb + "_").innnerHTML = ""
   }
+  resetTurn()
+  clear()
 }
