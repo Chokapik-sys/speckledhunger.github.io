@@ -23,9 +23,8 @@ function phase_3() {
   }
 }
 function clearboard(){
-  phase = 3
-  phase_3()
-  for (cb = 1; cb < 65; cb++){
+  resetTurn()
+  for (cb = 1; cb < 65; cb++) {
     document.getElementById("_" + cb + "_").innnerHTML = ""
   }
 }
