@@ -1,5 +1,6 @@
 var cc = 1
-var  = "#BAF7F9"
+var cb = 1
+var A = "#BAF7F9"
 var B = "#D0FFB6"
 function resetTurn() {
   phase = 3
@@ -19,5 +20,12 @@ function phase_3() {
       }
       phase = 0
     }
+  }
+}
+function clearboard(){
+  phase = 3
+  phase_3()
+  for (cb = 1; cb < 65; cb++){
+    document.getElementById("_" + cb + "_").innnerHTML = ""
   }
 }
