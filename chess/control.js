@@ -26,4 +26,6 @@ function clearboard(){
   for (cb = 1; cb < 65; cb++) {
     document.getElementById("_" + cb + "_").innerHTML = ""
   }
+  resetTurn()
+  clear()
 }
