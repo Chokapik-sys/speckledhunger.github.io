@@ -1,4 +1,5 @@
 var movecount = 1
+var mb = 1
 var square = "_0_"
 var prev_square = 0
 var piece = ""
@@ -945,6 +946,10 @@ function move_piece(){
         }}}}}}} 
         }
   }
+    if (document.getElementById(square).innerHTML === "White Bishop") {
+        for (mb = 0; mb < 65; mb++)
+          
+        }  
     //Black Pieces
     if (document.getElementById(square).innerHTML === "Black Pawn") {
     console.log("Black Pawn in " + square)
