@@ -27,5 +27,4 @@ function clboard(){
     document.getElementById("_" + cb + "_").innnerHTML = "Test"
   }
   resetTurn()
-  clear()
 }
