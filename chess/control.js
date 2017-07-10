@@ -22,7 +22,7 @@ function phase_3() {
     }
   }
 }
-function clearboard(){
+function clboard(){
   for (cb = 1; cb < 65; cb++) {
     if (document.getElementById("_" + cb + "_").innerHTML !== ""){
     document.getElementById("_" + cb + "_").innnerHTML = ""
