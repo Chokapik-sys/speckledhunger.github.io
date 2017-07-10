@@ -22,8 +22,8 @@ function phase_3() {
     }
   }
 }
-function clboard(){
+function clearboard(){
   for (cb = 1; cb < 65; cb++) {
-    document.getElementById("_" + cb + "_").innnerHTML = "Test"
+    document.getElementById("_" + cb + "_").innerHTML = ""
   }
 }
