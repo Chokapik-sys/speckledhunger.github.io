@@ -1,5 +1,5 @@
-var i = 1
-var A = "#BAF7F9"
+var cc = 1
+var  = "#BAF7F9"
 var B = "#D0FFB6"
 function resetTurn() {
   phase = 3
@@ -7,15 +7,15 @@ function resetTurn() {
 }
 function phase_3() {
   if (phase === 3){
-    for (i = 1; i < 65; i++) {
-      if (document.getElementById("_" + i + "_").className === "A"){
-    document.getElementById("_" + i + "_").style.backgroundColor = A
+    for (cc = 1; cc < 65; cc++) {
+      if (document.getElementById("_" + cc + "_").className === "A"){
+    document.getElementById("_" + cc + "_").style.backgroundColor = A
       }
-      if (document.getElementById("_" + i + "_").className === "B"){
-    document.getElementById("_" + i + "_").style.backgroundColor = B
+      if (document.getElementById("_" + cc + "_").className === "B"){
+    document.getElementById("_" + cc + "_").style.backgroundColor = B
       }
-      if (document.getElementById("_" + i + "_").innerHTML === " "){
-    document.getElementById("_" + i + "_").innerHTML = ""
+      if (document.getElementById("_" + cc + "_").innerHTML === " "){
+    document.getElementById("_" + cc + "_").innerHTML = ""
       }
       phase = 0
     }
