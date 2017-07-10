@@ -24,8 +24,6 @@ function phase_3() {
 }
 function clboard(){
   for (cb = 1; cb < 65; cb++) {
-    document.getElementById("_" + cb + "_").innnerHTML += "Test"
+    document.getElementById("_" + cb + "_").innnerHTML = "Test"
   }
-  resetTurn()
-  clear()
 }
