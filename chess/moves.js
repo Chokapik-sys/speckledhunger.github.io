@@ -957,6 +957,12 @@ function move_piece(){
         } for (mb2 = -9; (parseInt(square.replace("_", "")) + mb2) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").innerHTML == ""; mb2 += -9) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").style.backgroundColor = "#FFF370"
           bishopmove = 1
+        } for (mb3 = 11; (parseInt(square.replace("_", "")) + mb3 - 11) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").innerHTML == ""; mb3 += 11) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").style.backgroundColor = "#FFF370"
+          bishopmove = 1
+        } for (mb4 = -11; (parseInt(square.replace("_", "")) + mb4) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").innerHTML == ""; mb4 += -11) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").style.backgroundColor = "#FFF370"
+          bishopmove = 1
         }
       if (bishopmove == 1) {
         piece = "White Bishop"
