@@ -1,4 +1,5 @@
 var movecount = 1
+var bishopmove = 0
 var mb1 = 0
 var mb2 = 0
 var mb3 = 0
@@ -952,9 +953,18 @@ function move_piece(){
     if (document.getElementById(square).innerHTML === "White Bishop") {
         for (mb1 = 9; (parseInt(square.replace("_", "")) + mb1 - 9) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").innerHTML == ""; mb1 += 9) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").style.backgroundColor = "#FFF370"
+          bishopmove = 1
         } for (mb2 = -9; (parseInt(square.replace("_", "")) + mb2) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").innerHTML == ""; mb2 += -9) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").style.backgroundColor = "#FFF370"
+          bishopmove = 1
         }
+      if (bishopmove == 1) {
+        piece = "White Bishop"
+        prev_square = square
+        console.log(constant3 + prev_square)
+        phase = 2
+        bishopmove = 0
+      }
         }  
     //Black Pieces
     if (document.getElementById(square).innerHTML === "Black Pawn") {
