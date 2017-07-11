@@ -1,10 +1,5 @@
 var movecount = 1
-var rookmove = 0
 var bishopmove = 0
-var mr1 = 0
-var mr2 = 0
-var mr3 = 0
-var mr4 = 0
 var mb1 = 0
 var mb2 = 0
 var mb3 = 0
@@ -109,26 +104,851 @@ function move_piece(){
        }
        }
   if (document.getElementById(square).innerHTML === "White Rook") {
-    for (mr1 = 1; (parseInt(square.replace("_", "")) + mr1 - 1) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").style.backgroundColor = "#FFF370"
-          rookmove = 1
-        } for (mr2 = -1; (parseInt(square.replace("_", "")) + mr2) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML == ""; mr2 += -1) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").style.backgroundColor = "#FFF370"
-          rookmove = 1
-        } for (mr3 = 8; (parseInt(square.replace("_", "")) + mr3 - 1) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").innerHTML == ""; mr3 += 8) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").style.backgroundColor = "#FFF370"
-          rookmove = 1
-        } for (mr4 = -8; (parseInt(square.replace("_", "")) + mr4) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").innerHTML == ""; mr4 += -8) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").style.backgroundColor = "#FFF370"
-          rookmove = 1
+    console.log("White Rook in " + square)
+    if ((parseInt(square.replace("_", ""))) % 8 == "1"){
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 1) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 2) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 2) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 2) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 3) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 3) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 3) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 4) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 4) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 4) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 5) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 5) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 5) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 6) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 7) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 7) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 7) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }}}}}}} 
         }
-      if (rookmove == 1) {
-        piece = "White Rook"
-        prev_square = square
-        console.log(constant3 + prev_square)
-        phase = 2
-        rookmove = 0
-      }
+        if ((parseInt(square.replace("_", ""))) % 8 == "2"){
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 1) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 2) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 2) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 2) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 3) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 3) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 3) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 4) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 4) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 4) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 5) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 5) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 5) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 6) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }}}}}}
+          if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 1) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }
+        }
+    if ((parseInt(square.replace("_", ""))) % 8 == "3"){
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 1) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 2) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 2) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 2) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 3) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 3) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 3) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 4) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 4) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 4) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 5) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 5) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 5) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }}}}}
+          if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 1) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+            if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 2) + "_").innerHTML === "") {
+              console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 2) + "_")
+              document.getElementById("_" + (parseInt(square.replace("_", "")) - 2) + "_").style.backgroundColor = "#FFF370"
+              piece = "White Rook"
+              prev_square = square
+              console.log(constant3 + prev_square)
+              phase = 2
+        }}
+        }
+        if ((parseInt(square.replace("_", ""))) % 8 == "4"){
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 1) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 2) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 2) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 2) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 3) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 3) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 3) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 4) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 4) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 4) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }}}}
+          if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 1) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+            if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 2) + "_").innerHTML === "") {
+              console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 2) + "_")
+              document.getElementById("_" + (parseInt(square.replace("_", "")) - 2) + "_").style.backgroundColor = "#FFF370"
+              piece = "White Rook"
+              prev_square = square
+              console.log(constant3 + prev_square)
+              phase = 2
+              if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 3) + "_").innerHTML === "") {
+                console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 3) + "_")
+                document.getElementById("_" + (parseInt(square.replace("_", "")) - 3) + "_").style.backgroundColor = "#FFF370"
+                piece = "White Rook"
+                prev_square = square
+                console.log(constant3 + prev_square)
+                phase = 2
+        }}}
+        }
+    if ((parseInt(square.replace("_", ""))) % 8 == "5"){
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 1) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 2) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 2) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 2) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 3) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 3) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 3) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }}}
+          if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 1) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+            if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 2) + "_").innerHTML === "") {
+              console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 2) + "_")
+              document.getElementById("_" + (parseInt(square.replace("_", "")) - 2) + "_").style.backgroundColor = "#FFF370"
+              piece = "White Rook"
+              prev_square = square
+              console.log(constant3 + prev_square)
+              phase = 2
+              if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 3) + "_").innerHTML === "") {
+                console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 3) + "_")
+                document.getElementById("_" + (parseInt(square.replace("_", "")) - 3) + "_").style.backgroundColor = "#FFF370"
+                piece = "White Rook"
+                prev_square = square
+                console.log(constant3 + prev_square)
+                phase = 2
+                if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 4) + "_").innerHTML === "") {
+                  console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 4) + "_")
+                  document.getElementById("_" + (parseInt(square.replace("_", "")) - 4) + "_").style.backgroundColor = "#FFF370"
+                  piece = "White Rook"
+                  prev_square = square
+                  console.log(constant3 + prev_square)
+                  phase = 2
+        }}}}
+        }
+    if ((parseInt(square.replace("_", ""))) % 8 == "6"){
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 1) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 2) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 2) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 2) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }}
+          if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 1) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+            if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 2) + "_").innerHTML === "") {
+              console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 2) + "_")
+              document.getElementById("_" + (parseInt(square.replace("_", "")) - 2) + "_").style.backgroundColor = "#FFF370"
+              piece = "White Rook"
+              prev_square = square
+              console.log(constant3 + prev_square)
+              phase = 2
+              if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 3) + "_").innerHTML === "") {
+                console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 3) + "_")
+                document.getElementById("_" + (parseInt(square.replace("_", "")) - 3) + "_").style.backgroundColor = "#FFF370"
+                piece = "White Rook"
+                prev_square = square
+                console.log(constant3 + prev_square)
+                phase = 2
+                if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 4) + "_").innerHTML === "") {
+                  console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 4) + "_")
+                  document.getElementById("_" + (parseInt(square.replace("_", "")) - 4) + "_").style.backgroundColor = "#FFF370"
+                  piece = "White Rook"
+                  prev_square = square
+                  console.log(constant3 + prev_square)
+                  phase = 2
+                  if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 5) + "_").innerHTML === "") {
+                    console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 5) + "_")
+                    document.getElementById("_" + (parseInt(square.replace("_", "")) - 5) + "_").style.backgroundColor = "#FFF370"
+                    piece = "White Rook"
+                    prev_square = square
+                    console.log(constant3 + prev_square)
+                    phase = 2
+        }}}}}
+        }
+    if ((parseInt(square.replace("_", ""))) % 8 == "7"){
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 1) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 2) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 2) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 2) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 3) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 3) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 3) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 4) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 4) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 4) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 5) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 5) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 5) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 6) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }}}}}}
+          if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 1) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }
+        }
+    if ((parseInt(square.replace("_", ""))) % 8 == "0"){
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 1) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 2) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 2) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 2) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 3) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 3) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 3) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 4) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 4) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 4) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 5) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 5) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 5) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 6) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 7) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 7) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 7) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }}}}}}} 
+        }
+    if (((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "0"){
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 8) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 16) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 24) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 24) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 24) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 32) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 32) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 32) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 40) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 40) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 40) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 48) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 48) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 48) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 56) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 56) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 56) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }}}}}}} 
+        }
+        if (((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "1"){
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 8) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 16) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 24) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 24) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 24) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 32) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 32) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 32) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 40) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 40) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 40) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 48) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 48) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 48) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }}}}}}
+          if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 8) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }
+        }
+    if (((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "2"){
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 8) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 16) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 24) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 24) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 24) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 32) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 32) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 32) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 40) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 40) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 40) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }}}}}
+          if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 8) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+            if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").innerHTML === "") {
+              console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 16) + "_")
+              document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").style.backgroundColor = "#FFF370"
+              piece = "White Rook"
+              prev_square = square
+              console.log(constant3 + prev_square)
+              phase = 2
+        }}
+        }
+        if (((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "3"){
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 8) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 16) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 24) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 24) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 24) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 32) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 32) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 32) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }}}}
+          if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 8) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+            if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").innerHTML === "") {
+              console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 16) + "_")
+              document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").style.backgroundColor = "#FFF370"
+              piece = "White Rook"
+              prev_square = square
+              console.log(constant3 + prev_square)
+              phase = 2
+              if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 24) + "_").innerHTML === "") {
+                console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 24) + "_")
+                document.getElementById("_" + (parseInt(square.replace("_", "")) - 24) + "_").style.backgroundColor = "#FFF370"
+                piece = "White Rook"
+                prev_square = square
+                console.log(constant3 + prev_square)
+                phase = 2
+        }}}
+        }
+    if (((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "4"){
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 8) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 16) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 24) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 24) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 24) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }}}
+          if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 8) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+            if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").innerHTML === "") {
+              console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 16) + "_")
+              document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").style.backgroundColor = "#FFF370"
+              piece = "White Rook"
+              prev_square = square
+              console.log(constant3 + prev_square)
+              phase = 2
+              if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 24) + "_").innerHTML === "") {
+                console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 24) + "_")
+                document.getElementById("_" + (parseInt(square.replace("_", "")) - 24) + "_").style.backgroundColor = "#FFF370"
+                piece = "White Rook"
+                prev_square = square
+                console.log(constant3 + prev_square)
+                phase = 2
+                if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 32) + "_").innerHTML === "") {
+                  console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 32) + "_")
+                  document.getElementById("_" + (parseInt(square.replace("_", "")) - 32) + "_").style.backgroundColor = "#FFF370"
+                  piece = "White Rook"
+                  prev_square = square
+                  console.log(constant3 + prev_square)
+                  phase = 2
+        }}}}
+        }
+    if (((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "5"){
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 8) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 16) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }}
+          if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 8) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+            if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").innerHTML === "") {
+              console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 16) + "_")
+              document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").style.backgroundColor = "#FFF370"
+              piece = "White Rook"
+              prev_square = square
+              console.log(constant3 + prev_square)
+              phase = 2
+              if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 24) + "_").innerHTML === "") {
+                console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 24) + "_")
+                document.getElementById("_" + (parseInt(square.replace("_", "")) - 24) + "_").style.backgroundColor = "#FFF370"
+                piece = "White Rook"
+                prev_square = square
+                console.log(constant3 + prev_square)
+                phase = 2
+                if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 32) + "_").innerHTML === "") {
+                  console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 32) + "_")
+                  document.getElementById("_" + (parseInt(square.replace("_", "")) - 32) + "_").style.backgroundColor = "#FFF370"
+                  piece = "White Rook"
+                  prev_square = square
+                  console.log(constant3 + prev_square)
+                  phase = 2
+                  if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 40) + "_").innerHTML === "") {
+                    console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 40) + "_")
+                    document.getElementById("_" + (parseInt(square.replace("_", "")) - 40) + "_").style.backgroundColor = "#FFF370"
+                    piece = "White Rook"
+                    prev_square = square
+                    console.log(constant3 + prev_square)
+                    phase = 2
+        }}}}}
+        }
+    if (((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "6"){
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 8) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 16) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 24) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 24) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 24) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 32) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 32) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 32) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 40) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 40) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 40) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 48) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 48) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 48) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }}}}}}
+          if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) + 8) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }
+        }
+    if (((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "7"){
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 8) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 16) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 24) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 24) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 24) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 32) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 32) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 32) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 40) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 40) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 40) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 48) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 48) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 48) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 56) + "_").innerHTML === "") {
+          console.log("White Rook can move to " + "_" + (parseInt(square.replace("_", "")) - 56) + "_")
+          document.getElementById("_" + (parseInt(square.replace("_", "")) - 56) + "_").style.backgroundColor = "#FFF370"
+          piece = "White Rook"
+          prev_square = square
+          console.log(constant3 + prev_square)
+          phase = 2
+        }}}}}}} 
+        }
   }
     if (document.getElementById(square).innerHTML === "White Bishop") {
         for (mb1 = 9; (parseInt(square.replace("_", "")) + mb1 - 9) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").innerHTML == ""; mb1 += 9) {
