@@ -1,5 +1,5 @@
 var movecount = 1
-var mb = 1
+var mb1 = 1
 var square = "_0_"
 var prev_square = 0
 var piece = ""
@@ -947,8 +947,8 @@ function move_piece(){
         }
   }
     if (document.getElementById(square).innerHTML === "White Bishop") {
-        for (mb = 0; ((parseInt(square.replace("_", "")) + (mb * 9)) % 8 == "0"); mb++) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + (mb * 9)) + "_").style.backgroundColor = "Red"
+        for (mb1 = 0; ((parseInt(square.replace("_", "")) + (mb1 * 9)) % 8 == "0"); mb1++) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + (mb1 * 9)) + "_").style.backgroundColor = "Red"
         }
         }  
     //Black Pieces
