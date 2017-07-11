@@ -115,11 +115,11 @@ function move_piece(){
         } for (mr2 = -1; (parseInt(square.replace("_", "")) + mr2) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML == ""; mr2 += -1) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").style.backgroundColor = "#FFF370"
           rookmove = 1
-        } for (mr1 = 8; (parseInt(square.replace("_", "")) + mr1 - 1) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 8) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").style.backgroundColor = "#FFF370"
+        } for (mr3 = 8; (parseInt(square.replace("_", "")) + mr3 - 1) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").style.backgroundColor = "#FFF370"
           rookmove = 1
-        } for (mr2 = -8; (parseInt(square.replace("_", "")) + mr2) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML == ""; mb2 += -8) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").style.backgroundColor = "#FFF370"
+        } for (mr4 = -8; (parseInt(square.replace("_", "")) + mr4) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").style.backgroundColor = "#FFF370"
           rookmove = 1
         }
       if (rookmove == 1) {
