@@ -947,7 +947,7 @@ function move_piece(){
         }
   }
     if (document.getElementById(square).innerHTML === "White Bishop") {
-        for (mb = 0; mb < 3; mb++) {
+        for (mb = 0; (mb * 9) % 8 == "0"; mb++) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + (mb * 9)) + "_").style.backgroundColor = "Red"
         }
         }  
