@@ -950,7 +950,7 @@ function move_piece(){
         }
   }
     if (document.getElementById(square).innerHTML === "White Bishop") {
-        for (mb1 = 9; (parseInt(square.replace("_", "")) + mb1 - 9) % 8 != "0" || document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").innerHTML !== ""; mb1 += 9) {
+        for (mb1 = 9; (parseInt(square.replace("_", "")) + mb1 - 9) % 8 != "0" || document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1 - 9) + "_").innerHTML !== ""; mb1 += 9) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").style.backgroundColor = "#FFF370"
         } for (mb2 = -9; (parseInt(square.replace("_", "")) + mb2) % 8 != "0" || document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").innerHTML !== ""; mb2 += -9) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").style.backgroundColor = "#FFF370"
