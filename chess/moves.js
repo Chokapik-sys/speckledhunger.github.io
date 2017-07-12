@@ -1,5 +1,6 @@
 var movecount = 1
 var bishopmove = 0
+var test = 0
 var mb1 = 0
 var mb2 = 0
 var mb3 = 0
@@ -964,6 +965,22 @@ function move_piece(){
         console.log(constant3 + prev_square)
         phase = 2
         bishopmove = 0
+      }
+        }
+    if (document.getElementById(square).innerHTML === "Test") {
+        for (mb3 = 7; (parseInt(square.replace("_", "")) + mb3 - 9) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").style.backgroundColor = "#FFF370"
+          bishopmove = 1
+        } for (mb4 = -7; (parseInt(square.replace("_", "")) + mb4) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").style.backgroundColor = "#FFF370"
+          bishopmove = 1
+        }
+      if (test == 1) {
+        piece = "White_Bishop"
+        prev_square = square
+        console.log(constant3 + prev_square)
+        phase = 2
+        test = 0
       }
         }  
     //Black Pieces
