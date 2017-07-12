@@ -976,7 +976,7 @@ function move_piece(){
           test = 1
         }
       if (test == 1) {
-        piece = "White_Bishop"
+        piece = "Test"
         prev_square = square
         console.log(constant3 + prev_square)
         phase = 2
