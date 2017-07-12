@@ -960,7 +960,7 @@ function move_piece(){
         } for (mb3 = 7; (parseInt(square.replace("_", "")) + mb3) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").innerHTML == ""; mb3 += 7) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").style.backgroundColor = "#FFF370"
           bishopmove = 1
-        } for (mb4 = -7; (parseInt(square.replace("_", "")) + mb4) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").innerHTML == ""; mb4 += -7) {
+        } for (mb4 = -7; (parseInt(square.replace("_", "")) + mb4 + 7) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").innerHTML == ""; mb4 += -7) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").style.backgroundColor = "#FFF370"
           bishopmove = 1
         }
