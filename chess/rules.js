@@ -7,13 +7,14 @@ function phase_2() {
       capture = 1
     }
     if (capture === 1 || pawnmove === 1 || knightmove === 1 || bishopmove === 1 || rookmove === 1 || queenmove === 1) {
-  phase = 3
-  move_piece()
-  capture = 0
+      phase = 3
+      move_piece()
   }
-    else {
-      phase = 4
-      phase_4()
-    }
+    pawnmove = 0
+    rookmove = 0
+    knightmove = 0
+    bishopmove = 0
+    queenmove = 0
   }
+}
 }
