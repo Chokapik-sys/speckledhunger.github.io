@@ -958,6 +958,12 @@ function move_piece(){
         } for (mb2 = -9; ((parseInt(square.replace("_", ""))) + mb2) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").innerHTML == ""; mb2 += -9) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").style.backgroundColor = "#FFF370"
           bishopmove = 1
+        } for (mb3 = 7; (parseInt(square.replace("_", "")) + mb3) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").style.backgroundColor = "#FFF370"
+          bishopmove = 1
+        } for (mb4 = -7; (parseInt(square.replace("_", "")) + mb4) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").style.backgroundColor = "#FFF370"
+          bishopmove = 1
         }
       if (bishopmove == 1) {
         piece = "White Bishop"
@@ -967,22 +973,6 @@ function move_piece(){
         bishopmove = 0
       }
         }
-    if (document.getElementById(square).innerHTML === "Test") {
-        for (mb3 = 7; (parseInt(square.replace("_", "")) + mb3) % 8 != "0", document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").innerHTML == ""; mb3 += 7) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").style.backgroundColor = "#FFF370"
-          test = 1
-        } for (mb4 = -7; (parseInt(square.replace("_", "")) + mb4 - 7) % 8 != "1", document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").innerHTML == ""; mb4 += -7) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").style.backgroundColor = "#FFF370"
-          test = 1
-        }
-      if (test == 1) {
-        piece = "Test"
-        prev_square = square
-        console.log(constant3 + prev_square)
-        phase = 2
-        test = 0
-      }
-        }  
     //Black Pieces
     if (document.getElementById(square).innerHTML === "Black Pawn") {
     console.log("Black Pawn in " + square)
