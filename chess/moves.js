@@ -305,9 +305,9 @@ function move_piece(){
       phase_change()
       phase_4()
     } if (document.getElementById(square).style.backgroundColor == "rgb(255, 132, 102)") {
-      document.getElementById(prev_square).innerHTML = ""
       piecetaken = document.getElementById(square).innerHTML
       document.getElementById(square).innerHTML = piece
+      document.getElementById(prev_square).innerHTML = ""
       console.log(piecetaken + " has been taken")
       phase_change()
       phase_4()
