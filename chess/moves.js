@@ -311,18 +311,18 @@ function move_piece(){
       }
     }
   }  
-  //phase2
-  if (phase === 2) {
+  //phase3
+  if (phase === 3) {
     if (document.getElementById(square).style.backgroundColor == "rgb(255, 243, 112)") {
       document.getElementById(prev_square).innerHTML = ""
       document.getElementById(square).innerHTML = piece
       phase_change()
-      phase_3()
+      phase_4()
     }
   }
 }
 function phase_change(){
-  if (phase === 3) {
+  if (phase === 4) {
       phase = 0
       } else {
         phase = phase + 1
