@@ -24,8 +24,8 @@ function move_piece(){
   if (phase === 1) {
     //White Pieces
     if (document.getElementById(square).innerHTML === "White Pawn") {
-      if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === ""){
-        document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
+      if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === ""){
+        document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
         pawnmove = 1
     } if (pawnmove === 1) {
     piece = "White Pawn"
