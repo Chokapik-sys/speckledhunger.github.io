@@ -167,12 +167,17 @@ function move_piece(){
     }
     //Black Pieces
     if (document.getElementById(square).innerHTML === "Black Pawn") {
-    if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === ""){
-    document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
-    piece = "Black Pawn"
-    prev_square = square
-    console.log(constant3 + prev_square)
-    phase = 2
+      if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === ""){
+        document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
+        pawnmove = 1
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").innerHTML === "" && ((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 6) % 8)) / 8 == "1"){
+        document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").style.backgroundColor = "#FFF370"
+        pawnmove = 1
+    } if (pawnmove === 1) {
+      piece = "Black Pawn"
+      prev_square = square
+      console.log(constant3 + prev_square)
+      phase = 2
     }
   }
     if (document.getElementById(square).innerHTML === "Black Knight") {
