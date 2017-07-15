@@ -11,7 +11,7 @@ function phase_2() {
   move_piece()
   }
     pawnmove = 0
-    rooktmove = 0
+    rookmove = 0
     knightmove = 0
     bishopmove = 0
     queenmove = 0
