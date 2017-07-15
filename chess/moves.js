@@ -23,9 +23,7 @@ function move_piece(){
   if (phase === 1) {
     //White Pieces
     if (document.getElementById(square).innerHTML === "White Pawn") {
-    console.log("White Pawn in " + square)
     if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === ""){
-    console.log("White Pawn can move to " + "_" + (parseInt(square.replace("_", "")) + 8) + "_")
     document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
     piece = "White Pawn"
     prev_square = square
@@ -51,37 +49,28 @@ function move_piece(){
        } if ((parseInt(square.replace("_", "")) % 8 == "1") && (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML === "")) {
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML = " "
        }
-       console.log("White Knight in " + square)
        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === ""){
-         console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 10) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === ""){
-         console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 10) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === ""){
-         console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 6) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === ""){
-         console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 6) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML === ""){
-         console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 17) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML === ""){
-         console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 17) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === ""){
-         console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 15) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML === ""){
-         console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 15) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
        } if (knightmove == 1) {
@@ -172,9 +161,7 @@ function move_piece(){
     }
     //Black Pieces
     if (document.getElementById(square).innerHTML === "Black Pawn") {
-    console.log("Black Pawn in " + square)
     if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === ""){
-    console.log("Black Pawn can move to " + "_" + (parseInt(square.replace("_", "")) - 8) + "_")
     document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
     piece = "Black Pawn"
     prev_square = square
@@ -182,6 +169,134 @@ function move_piece(){
     phase = 2
     }
   }
+    if (document.getElementById(square).innerHTML === "Black Knight") {
+       if ((parseInt(square.replace("_", "")) % 8 == "7" || parseInt(square.replace("_", "")) % 8 == "0") && (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === "")) {
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML = " "
+       } if ((parseInt(square.replace("_", "")) % 8 == "7" || parseInt(square.replace("_", "")) % 8 == "0") && (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === "")) {
+         document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML = " "
+       } if ((parseInt(square.replace("_", "")) % 8 == "0") && (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === "")) {
+         document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML = " "
+       } if ((parseInt(square.replace("_", "")) % 8 == "0") && (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML === "")) {
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML = " "
+       } if ((parseInt(square.replace("_", "")) % 8 == "2" || parseInt(square.replace("_", "")) % 8 == "1") && (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === "")) {
+         document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML = " "
+       } if ((parseInt(square.replace("_", "")) % 8 == "2" || parseInt(square.replace("_", "")) % 8 == "1") && (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === "")) {
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML = " "
+       } if ((parseInt(square.replace("_", "")) % 8 == "1") && (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML === "")) {
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML = " "
+       } if ((parseInt(square.replace("_", "")) % 8 == "1") && (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML === "")) {
+         document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML = " "
+       }
+       if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === ""){
+         document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").style.backgroundColor = "#FFF370"
+         knightmove = 1
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === ""){
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").style.backgroundColor = "#FFF370"
+         knightmove = 1
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === ""){
+         document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").style.backgroundColor = "#FFF370"
+         knightmove = 1
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === ""){
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").style.backgroundColor = "#FFF370"
+         knightmove = 1
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML === ""){
+         document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").style.backgroundColor = "#FFF370"
+         knightmove = 1
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML === ""){
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").style.backgroundColor = "#FFF370"
+         knightmove = 1
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === ""){
+         document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").style.backgroundColor = "#FFF370"
+         knightmove = 1
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML === ""){
+         document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").style.backgroundColor = "#FFF370"
+         knightmove = 1
+       } if (knightmove == 1) {
+         piece = "Black Knight"
+         prev_square = square
+         console.log(constant3 + prev_square)
+         phase = 2
+         knightmove = 0
+       }
+       }
+    if (document.getElementById(square).innerHTML === "Black Rook") {
+        for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").style.backgroundColor = "#FFF370"
+          rookmove = 1
+        } for (mr2 = -1; ((parseInt(square.replace("_", ""))) + mr2) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").style.backgroundColor = "#FFF370"
+          rookmove = 1
+        } for (mr3 = 8; document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").style.backgroundColor = "#FFF370"
+          rookmove = 1
+        } for (mr4 = -8; document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").style.backgroundColor = "#FFF370"
+          rookmove = 1
+        }
+      if (rookmove == 1) {
+        piece = "Black Rook"
+        prev_square = square
+        console.log(constant3 + prev_square)
+        phase = 2
+        rookmove = 0
+      }
+        }
+    if (document.getElementById(square).innerHTML === "Black Bishop") {
+        for (mb1 = 9; ((parseInt(square.replace("_", ""))) + mb1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").style.backgroundColor = "#FFF370"
+          bishopmove = 1
+        } for (mb2 = -9; ((parseInt(square.replace("_", ""))) + mb2) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").style.backgroundColor = "#FFF370"
+          bishopmove = 1
+        } for (mb3 = 7; (parseInt(square.replace("_", "")) + mb3) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").style.backgroundColor = "#FFF370"
+          bishopmove = 1
+        } for (mb4 = -7; (parseInt(square.replace("_", "")) + mb4) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").style.backgroundColor = "#FFF370"
+          bishopmove = 1
+        }
+      if (bishopmove == 1) {
+        piece = "Black Bishop"
+        prev_square = square
+        console.log(constant3 + prev_square)
+        phase = 2
+        bishopmove = 0
+      }
+        }
+    if (document.getElementById(square).innerHTML === "Black Queen") {
+      for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").style.backgroundColor = "#FFF370"
+          queenmove = 1
+        } for (mr2 = -1; ((parseInt(square.replace("_", ""))) + mr2) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").style.backgroundColor = "#FFF370"
+          queenmove = 1
+        } for (mr3 = 8; document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").style.backgroundColor = "#FFF370"
+          queenmove = 1
+        } for (mr4 = -8; document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").style.backgroundColor = "#FFF370"
+          queenmove = 1
+        } for (mb1 = 9; ((parseInt(square.replace("_", ""))) + mb1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").style.backgroundColor = "#FFF370"
+          queenmove = 1
+        } for (mb2 = -9; ((parseInt(square.replace("_", ""))) + mb2) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").style.backgroundColor = "#FFF370"
+          queenmove = 1
+        } for (mb3 = 7; (parseInt(square.replace("_", "")) + mb3) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").style.backgroundColor = "#FFF370"
+          queenmove = 1
+        } for (mb4 = -7; (parseInt(square.replace("_", "")) + mb4) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").style.backgroundColor = "#FFF370"
+          queenmove = 1
+        }
+      if (queenmove == 1) {
+        piece = "Black Queen"
+        prev_square = square
+        console.log(constant3 + prev_square)
+        phase = 2
+        queenmove = 0
+      }
+    }
   }  
   //phase2
   if (phase === 2) {
