@@ -303,7 +303,7 @@ function move_piece(){
   }
   //phase2
   if (phase === 2) {
-    phase_2
+    phase_2()
   }
   //phase3
   if (phase === 3) {
