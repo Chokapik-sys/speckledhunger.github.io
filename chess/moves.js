@@ -310,9 +310,8 @@ function move_piece(){
         queenmove = 0
       }
     }
+    phase_2()
   }
-  //phase2
-  phase_2()
   //phase3
   if (phase === 3) {
     if (document.getElementById(square).style.backgroundColor == "rgb(255, 243, 112)") {
