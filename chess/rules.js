@@ -1,5 +1,7 @@
 function phase_2() {
-  console.log(square)
+  if (piece === "White Pawn") {
+    console.log(square)
+  }
   phase = 3
   move_piece()
 }
