@@ -35,6 +35,7 @@ function move_piece(){
       prev_square = square
       console.log(constant3 + prev_square)
       phase = 2
+      pawnmove = 0
     }
   }
      if (document.getElementById(square).innerHTML === "White Knight") {
