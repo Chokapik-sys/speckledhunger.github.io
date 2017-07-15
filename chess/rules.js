@@ -1,3 +1,3 @@
-function phase_3() {
+function phase_2() {
   phase = 3
 }
