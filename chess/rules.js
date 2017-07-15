@@ -11,11 +11,11 @@ function phase_2() {
   } else {
     resetTurn()
   }
-    pawnmove = 0
-    rookmove = 0
-    knightmove = 0
-    bishopmove = 0
-    queenmove = 0
   }
 }
+  pawnmove = 0
+  rookmove = 0
+  knightmove = 0
+  bishopmove = 0
+  queenmove = 0
 }
