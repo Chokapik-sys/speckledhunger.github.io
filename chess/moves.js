@@ -310,7 +310,11 @@ function move_piece(){
         queenmove = 0
       }
     }
-  }  
+  }
+  //phase2
+  if (phase === 2) {
+    phase_3()
+  }
   //phase3
   if (phase === 3) {
     if (document.getElementById(square).style.backgroundColor == "rgb(255, 243, 112)") {
