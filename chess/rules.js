@@ -10,5 +10,9 @@ function phase_2() {
   phase = 3
   move_piece()
   }
+    pawnmove = 0
+    knightmove = 0
+    rookmove = 0
+    queenmove = 0
   }
 }
