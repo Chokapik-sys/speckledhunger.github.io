@@ -34,7 +34,6 @@ function move_piece(){
       piece = "White Pawn"
       prev_square = square
       console.log(constant3 + prev_square)
-      phase = 2
     }
   }
      if (document.getElementById(square).innerHTML === "White Knight") {
@@ -83,7 +82,6 @@ function move_piece(){
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
-         phase = 2
        }
        }
     if (document.getElementById(square).innerHTML === "White Rook") {
@@ -125,7 +123,6 @@ function move_piece(){
         piece = "White Bishop"
         prev_square = square
         console.log(constant3 + prev_square)
-        phase = 2
       }
         }
     if (document.getElementById(square).innerHTML === "White Queen") {
@@ -158,7 +155,6 @@ function move_piece(){
         piece = "White Queen"
         prev_square = square
         console.log(constant3 + prev_square)
-        phase = 2
       }
     }
     //Black Pieces
@@ -173,7 +169,6 @@ function move_piece(){
       piece = "Black Pawn"
       prev_square = square
       console.log(constant3 + prev_square)
-      phase = 2
     }
   }
     if (document.getElementById(square).innerHTML === "Black Knight") {
@@ -222,7 +217,6 @@ function move_piece(){
          piece = "Black Knight"
          prev_square = square
          console.log(constant3 + prev_square)
-         phase = 2
        }
        }
     if (document.getElementById(square).innerHTML === "Black Rook") {
@@ -243,7 +237,6 @@ function move_piece(){
         piece = "Black Rook"
         prev_square = square
         console.log(constant3 + prev_square)
-        phase = 2
       }
         }
     if (document.getElementById(square).innerHTML === "Black Bishop") {
@@ -264,7 +257,6 @@ function move_piece(){
         piece = "Black Bishop"
         prev_square = square
         console.log(constant3 + prev_square)
-        phase = 2
       }
         }
     if (document.getElementById(square).innerHTML === "Black Queen") {
@@ -297,9 +289,9 @@ function move_piece(){
         piece = "Black Queen"
         prev_square = square
         console.log(constant3 + prev_square)
-        phase = 2
       }
     }
+    phase = 2
   }
   //phase2
   if (phase === 2) {
