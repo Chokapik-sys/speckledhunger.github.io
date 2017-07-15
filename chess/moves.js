@@ -1,6 +1,7 @@
 var movecount = 1
 var bishopmove = 0
 var rookmove = 0
+var knightmove = 0
 var mb1 = 0
 var mb2 = 0
 var mb3 = 0
@@ -53,59 +54,41 @@ function move_piece(){
        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 10) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").style.backgroundColor = "#FFF370"
-         piece = "White Knight"
-         prev_square = square
-         console.log(constant3 + prev_square)
-         phase = 2
+         knightmove = 1
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 10) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").style.backgroundColor = "#FFF370"
-         piece = "White Knight"
-         prev_square = square
-         console.log(constant3 + prev_square)
-         phase = 2
+         knightmove = 1
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 6) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").style.backgroundColor = "#FFF370"
-         piece = "White Knight"
-         prev_square = square
-         console.log(constant3 + prev_square)
-         phase = 2
+         knightmove = 1
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 6) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").style.backgroundColor = "#FFF370"
-         piece = "White Knight"
-         prev_square = square
-         console.log(constant3 + prev_square)
-         phase = 2
+         knightmove = 1
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 17) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").style.backgroundColor = "#FFF370"
-         piece = "White Knight"
-         prev_square = square
-         console.log(constant3 + prev_square)
-         phase = 2
+         knightmove = 1
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 17) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").style.backgroundColor = "#FFF370"
-         piece = "White Knight"
-         prev_square = square
-         console.log(constant3 + prev_square)
-         phase = 2
+         knightmove = 1
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) - 15) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").style.backgroundColor = "#FFF370"
-         piece = "White Knight"
-         prev_square = square
-         console.log(constant3 + prev_square)
-         phase = 2
+         knightmove = 1
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML === ""){
          console.log("White Knight can move to " + "_" + (parseInt(square.replace("_", "")) + 15) + "_")
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").style.backgroundColor = "#FFF370"
+         knightmove = 1
+       } if (knightmove == 1) {
          piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
          phase = 2
+         knightmove = 0
        }
        }
     if (document.getElementById(square).innerHTML === "White Rook") {
