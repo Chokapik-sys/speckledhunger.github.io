@@ -109,10 +109,10 @@ function move_piece(){
        }
        }
     if (document.getElementById(square).innerHTML === "White Rook") {
-        for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
+        for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").style.backgroundColor = "#FFF370"
           rookmove = 1
-        } for (mr2 = -1; ((parseInt(square.replace("_", ""))) + mr2) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML == ""; mr2 += -1) {
+        } for (mr2 = -1; ((parseInt(square.replace("_", ""))) + mr2) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML == ""; mr2 += -1) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").style.backgroundColor = "#FFF370"
           rookmove = 1
         } for (mr3 = 8; (parseInt(square.replace("_", "")) + mr3) - ((parseInt(square.replace("_", "")) + mr3) % 8) / 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").innerHTML == ""; mr3 += 8) {
