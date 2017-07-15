@@ -170,7 +170,7 @@ function move_piece(){
       if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === ""){
         document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
         pawnmove = 1
-    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").innerHTML === "" && ((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 6) % 8)) / 8 == "1"){
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").innerHTML === "" && ((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "6"){
         document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").style.backgroundColor = "#FFF370"
         pawnmove = 1
     } if (pawnmove === 1) {
