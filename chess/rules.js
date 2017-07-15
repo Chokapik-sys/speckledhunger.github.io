@@ -10,13 +10,10 @@ function phase_2() {
   phase = 3
   move_piece()
   capture = 0
-  } else {
-      resetTurn()
+  }
+    else {
+      phase = 4
+      phase_4()
     }
-    pawnmove = 0
-    rookmove = 0
-    knightmove = 0
-    bishopmove = 0
-    queenmove = 0
   }
 }
