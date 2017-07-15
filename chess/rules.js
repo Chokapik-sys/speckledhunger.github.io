@@ -1,3 +1,3 @@
 function phase_3() {
-  phase = 4
+  phase = 3
 }
