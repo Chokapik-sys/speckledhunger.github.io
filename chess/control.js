@@ -3,10 +3,10 @@ var cb = 1
 var A = "#BAF7F9"
 var B = "#D0FFB6"
 function resetTurn() {
-  phase = 3
-  phase_3()
+  phase = 4
+  phase_4()
 }
-function phase_3() {
+function phase_4() {
   if (phase === 3){
     for (cc = 1; cc < 65; cc++) {
       if (document.getElementById("_" + cc + "_").className === "A"){
