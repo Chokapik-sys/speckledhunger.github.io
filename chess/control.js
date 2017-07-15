@@ -18,6 +18,7 @@ function phase_3() {
       if (document.getElementById("_" + cc + "_").innerHTML === " "){
     document.getElementById("_" + cc + "_").innerHTML = ""
       }
+      queenmove = 0
       phase = 0
     }
   }
