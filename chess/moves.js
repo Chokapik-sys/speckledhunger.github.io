@@ -1,4 +1,4 @@
-var movecount = 1
+var piecetaken = ""
 var pawnmove = 0
 var knightmove = 0
 var rookmove = 0
@@ -319,8 +319,16 @@ function move_piece(){
       document.getElementById(square).innerHTML = piece
       phase_change()
       phase_4()
+    } if (document.getElementById(square).style.backgroundColor == "rgb(255, 132, 102)") {
+      document.getElementById(prev_square).innerHTML = ""
+      piecetaken = document.getElementById(square).innerHTML
+      document.getElementById(square).innerHTML = piece
+      console.log(piecetaken + " has been taken")
+      phase_change()
+      phase_4()
     }
   }
+  //end of phase3
 }
 function phase_change(){
   if (phase === 4) {
