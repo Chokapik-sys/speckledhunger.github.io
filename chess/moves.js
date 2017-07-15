@@ -1,7 +1,8 @@
 var movecount = 1
-var bishopmove = 0
-var rookmove = 0
+var pawnmove = 0
 var knightmove = 0
+var rookmove = 0
+var bishpmove = 0
 var queenmove = 0
 var mb1 = 0
 var mb2 = 0
@@ -25,10 +26,15 @@ function move_piece(){
     if (document.getElementById(square).innerHTML === "White Pawn") {
     if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === ""){
     document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
-    piece = "White Pawn"
-    prev_square = square
-    console.log(constant3 + prev_square)
-    phase = 2
+    pawnmove = 1
+    } if (movecount === "Test"){
+    document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
+    pawnmove = 1
+    } if (pawnmove == 1) {
+      piece = "White Pawn"
+      console.log(constant3 + prev_square)
+      phase = 2
+      pawnmove = 0
     }
   }
      if (document.getElementById(square).innerHTML === "White Knight") {
