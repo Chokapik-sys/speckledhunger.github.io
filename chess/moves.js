@@ -35,7 +35,6 @@ function move_piece(){
       prev_square = square
       console.log(constant3 + prev_square)
       phase = 2
-      pawnmove = 0
     }
   }
      if (document.getElementById(square).innerHTML === "White Knight") {
@@ -85,7 +84,6 @@ function move_piece(){
          prev_square = square
          console.log(constant3 + prev_square)
          phase = 2
-         knightmove = 0
        }
        }
     if (document.getElementById(square).innerHTML === "White Rook") {
@@ -107,7 +105,6 @@ function move_piece(){
         prev_square = square
         console.log(constant3 + prev_square)
         phase = 2
-        rookmove = 0
       }
         }
     if (document.getElementById(square).innerHTML === "White Bishop") {
@@ -129,7 +126,6 @@ function move_piece(){
         prev_square = square
         console.log(constant3 + prev_square)
         phase = 2
-        bishopmove = 0
       }
         }
     if (document.getElementById(square).innerHTML === "White Queen") {
@@ -163,7 +159,6 @@ function move_piece(){
         prev_square = square
         console.log(constant3 + prev_square)
         phase = 2
-        queenmove = 0
       }
     }
     //Black Pieces
@@ -179,7 +174,6 @@ function move_piece(){
       prev_square = square
       console.log(constant3 + prev_square)
       phase = 2
-      pawnmove = 0
     }
   }
     if (document.getElementById(square).innerHTML === "Black Knight") {
@@ -229,7 +223,6 @@ function move_piece(){
          prev_square = square
          console.log(constant3 + prev_square)
          phase = 2
-         knightmove = 0
        }
        }
     if (document.getElementById(square).innerHTML === "Black Rook") {
@@ -251,7 +244,6 @@ function move_piece(){
         prev_square = square
         console.log(constant3 + prev_square)
         phase = 2
-        rookmove = 0
       }
         }
     if (document.getElementById(square).innerHTML === "Black Bishop") {
@@ -273,7 +265,6 @@ function move_piece(){
         prev_square = square
         console.log(constant3 + prev_square)
         phase = 2
-        bishopmove = 0
       }
         }
     if (document.getElementById(square).innerHTML === "Black Queen") {
@@ -307,7 +298,6 @@ function move_piece(){
         prev_square = square
         console.log(constant3 + prev_square)
         phase = 2
-        queenmove = 0
       }
     }
   }
