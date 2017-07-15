@@ -27,11 +27,14 @@ function move_piece(){
       if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === ""){
         document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
         pawnmove = 1
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").innerHTML === ""){
+        document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
+        pawnmove = 1
     } if (pawnmove === 1) {
-    piece = "White Pawn"
-    prev_square = square
-    console.log(constant3 + prev_square)
-    phase = 2
+      piece = "White Pawn"
+      prev_square = square
+      console.log(constant3 + prev_square)
+      phase = 2
     }
   }
      if (document.getElementById(square).innerHTML === "White Knight") {
