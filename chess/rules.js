@@ -7,6 +7,7 @@ function phase_2() {
       capture = 1
     } if (capture === 1 || pawnmove === 1 || knightmove === 1 || bishopmove === 1 || rookmove === 1 || queenmove === 1) {
       phase = 3
+      prev_square = square
       move_piece()
   } else {
     resetTurn()
