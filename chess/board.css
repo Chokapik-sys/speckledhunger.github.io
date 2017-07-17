@@ -1,5 +1,5 @@
 /*--Checkerboard--*/
-* {
+.A , .B , #resetTurn , #reportbox {
   border-color: #898989;
   border-style: solid;
   boarder-width: 2px;
