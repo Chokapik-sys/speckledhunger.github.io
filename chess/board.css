@@ -28,6 +28,9 @@ height: 64px;
   width: 271px;
   background-color: #E0E5E4;
 }
+#report {
+  text-align: center;
+}
 /*--row1--*/
 #_1_ {
   position: absolute;
