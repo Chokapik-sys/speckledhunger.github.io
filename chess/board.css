@@ -22,9 +22,11 @@ height: 64px;
   top: 488px;
   left: 557px;
 }
-#record {
+#reportbox {
   position: absolute;
   left: 626px;
+  width: 4411px;
+  background-color: #E0E5E4;
 }
 /*--row1--*/
 #_1_ {
