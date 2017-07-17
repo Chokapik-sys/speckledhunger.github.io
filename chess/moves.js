@@ -308,7 +308,7 @@ function move_piece(){
       piecetaken = document.getElementById(square).innerHTML
       document.getElementById(square).innerHTML = piece
       document.getElementById(prev_square).innerHTML = ""
-      console.log(piecetaken + " has been taken by " + piece)
+      document.getElementById("report").innerHTML += (piecetaken + " has been taken by " + piece <br>)
       phase_change()
       phase_4()
     }
