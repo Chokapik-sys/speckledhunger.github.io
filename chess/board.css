@@ -22,7 +22,7 @@ height: 64px;
   top: 488px;
   left: 557px;
 }
-#record * {
+#record > h3 {
   position: absolute;
   left: 626px;
 }
