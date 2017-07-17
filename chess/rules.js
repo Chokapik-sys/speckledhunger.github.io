@@ -18,29 +18,29 @@ function phase_2() {
     }
   }
     if (piece === "White Rook") {
-    if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1 + 1) + "_").innerHTML === "Black King"){
+    if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML === "Black King"){
       blackcheck = 1
       console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1 + 1) + "_").innerHTML[0] === "B"){
-      document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1 + 1) + "_").style.backgroundColor = "#FF8466"
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML[0] === "B"){
+      document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").style.backgroundColor = "#FF8466"
       capture = 1
-    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2 - 1) + "_").innerHTML === "Black King"){
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML === "Black King"){
       blackcheck = 1
       console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2 - 1) + "_").innerHTML[0] === "B"){
-      document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2 - 1) + "_").style.backgroundColor = "#FF8466"
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML[0] === "B"){
+      document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").style.backgroundColor = "#FF8466"
       capture = 1
-    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3 + 1) + "_").innerHTML === "Black King"){
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").innerHTML === "Black King"){
       blackcheck = 1
       console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3 + 8) + "_").innerHTML[0] === "B"){
-      document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3 + 8) + "_").style.backgroundColor = "#FF8466"
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").innerHTML[0] === "B"){
+      document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").style.backgroundColor = "#FF8466"
       capture = 1
-    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4 - 8) + "_").innerHTML === "Black King"){
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").innerHTML === "Black King"){
       blackcheck = 1
       console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4 - 8) + "_").innerHTML[0] === "B"){
-      document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4 - 8) + "_").style.backgroundColor = "#FF8466"
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").innerHTML[0] === "B"){
+      document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     }
   }
