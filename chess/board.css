@@ -1,13 +1,15 @@
 /*--Checkerboard--*/
+.A , .B {
+  border-color: #000000;
+  border-style: solid;
+  width: 64px;
+  height: 64px;
+}
 .A {
-background-color: #BAF7F9;
-width: 64px;
-height: 64px;
+  background-color: #BAF7F9;
 }
 .B {
-background-color: #D0FFB6;
-width: 64px;
-height: 64px;
+  background-color: #D0FFB6;
 }
 /*Boundaries*/
 .none {
