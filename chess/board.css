@@ -22,6 +22,10 @@ height: 64px;
   top: 488px;
   left: 557px;
 }
+#record {
+  position: absolute;
+  left: 626px;
+}
 /*--row1--*/
 #_1_ {
   position: absolute;
