@@ -1,6 +1,6 @@
 /*--Checkerboard--*/
 .A , .B {
-  border-color: #000000;
+  border-color: #898989;
   border-style: solid;
   width: 64px;
   height: 64px;
@@ -29,6 +29,7 @@
   left: 690px;
   width: 271px;
   background-color: #E0E5E4;
+  border-color: #898989;
   text-align: center;
 }
 /*--row1--*/
