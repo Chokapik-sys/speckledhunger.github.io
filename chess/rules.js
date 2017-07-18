@@ -1,5 +1,5 @@
 var capture = 0
-var balckcheck = 0
+var blackcheck = 0
 function phase_2() {
   if (phase === 2) {
   if (piece === "White Pawn") {
