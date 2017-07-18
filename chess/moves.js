@@ -157,6 +157,9 @@ function move_piece(){
       }
       piece = "White Queen"
     }
+    if (document.getElementById(square).innerHTML === "White King") {
+      piece = "White King"
+    }
     //Black Pieces
     if (document.getElementById(square).innerHTML === "Black Pawn") {
       if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === ""){
