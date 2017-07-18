@@ -294,6 +294,9 @@ function move_piece(){
       }
       piece = "Black Queen"
     }
+    if (document.getElementById(square).innerHTML === "Black King") {
+      piece = "Black King"
+    }
     phase = 2
   }
   //phase2
