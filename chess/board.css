@@ -2,7 +2,7 @@
 .A , .B , #resetTurn , #reportbox {
   border-color: #898989;
   border-style: solid;
-  boarder-width: 1px;
+  border-width: 1px;
 }
 .A , .B {
   border-style: solid;
