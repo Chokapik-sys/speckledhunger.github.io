@@ -31,10 +31,10 @@ function move_piece(){
         document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").style.backgroundColor = "#FFF370"
         pawnmove = 1
     }} if (pawnmove === 1) {
-      piece = "White Pawn"
       prev_square = square
       console.log(constant3 + prev_square)
     }
+      piece = "White Pawn"
   }
      if (document.getElementById(square).innerHTML === "White Knight") {
        if ((parseInt(square.replace("_", "")) % 8 == "7" || parseInt(square.replace("_", "")) % 8 == "0") && (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === "")) {
@@ -79,10 +79,10 @@ function move_piece(){
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
        } if (knightmove == 1) {
-         piece = "White Knight"
          prev_square = square
          console.log(constant3 + prev_square)
        }
+       piece = "White Knight"
        }
     if (document.getElementById(square).innerHTML === "White Rook") {
         for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
@@ -99,11 +99,11 @@ function move_piece(){
           rookmove = 1
         }
       if (rookmove == 1) {
-        piece = "White Rook"
         prev_square = square
         console.log(constant3 + prev_square)
         phase = 2
       }
+      piece = "White Rook"
         }
     if (document.getElementById(square).innerHTML === "White Bishop") {
         for (mb1 = 9; ((parseInt(square.replace("_", ""))) + mb1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").innerHTML == ""; mb1 += 9) {
@@ -120,10 +120,10 @@ function move_piece(){
           bishopmove = 1
         }
       if (bishopmove == 1) {
-        piece = "White Bishop"
         prev_square = square
         console.log(constant3 + prev_square)
       }
+      piece = "White Bishop"
         }
     if (document.getElementById(square).innerHTML === "White Queen") {
       for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
@@ -152,10 +152,10 @@ function move_piece(){
           queenmove = 1
         }
       if (queenmove == 1) {
-        piece = "White Queen"
         prev_square = square
         console.log(constant3 + prev_square)
       }
+      piece = "White Queen"
     }
     //Black Pieces
     if (document.getElementById(square).innerHTML === "Black Pawn") {
@@ -166,10 +166,10 @@ function move_piece(){
         document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").style.backgroundColor = "#FFF370"
         pawnmove = 1
     }} if (pawnmove === 1) {
-      piece = "Black Pawn"
       prev_square = square
       console.log(constant3 + prev_square)
     }
+      piece = "Black Pawn"
   }
     if (document.getElementById(square).innerHTML === "Black Knight") {
        if ((parseInt(square.replace("_", "")) % 8 == "7" || parseInt(square.replace("_", "")) % 8 == "0") && (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === "")) {
@@ -214,10 +214,10 @@ function move_piece(){
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
        } if (knightmove == 1) {
-         piece = "Black Knight"
          prev_square = square
          console.log(constant3 + prev_square)
        }
+      piece = "Black Knight"
        }
     if (document.getElementById(square).innerHTML === "Black Rook") {
         for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
@@ -234,10 +234,10 @@ function move_piece(){
           rookmove = 1
         }
       if (rookmove == 1) {
-        piece = "Black Rook"
         prev_square = square
         console.log(constant3 + prev_square)
       }
+      piece = "Black Rook"
         }
     if (document.getElementById(square).innerHTML === "Black Bishop") {
         for (mb1 = 9; ((parseInt(square.replace("_", ""))) + mb1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").innerHTML == ""; mb1 += 9) {
@@ -254,10 +254,10 @@ function move_piece(){
           bishopmove = 1
         }
       if (bishopmove == 1) {
-        piece = "Black Bishop"
         prev_square = square
         console.log(constant3 + prev_square)
       }
+      piece = "Black Bishop"
         }
     if (document.getElementById(square).innerHTML === "Black Queen") {
       for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
@@ -286,10 +286,10 @@ function move_piece(){
           queenmove = 1
         }
       if (queenmove == 1) {
-        piece = "Black Queen"
         prev_square = square
         console.log(constant3 + prev_square)
       }
+      piece = "Black Queen"
     }
     phase = 2
   }
