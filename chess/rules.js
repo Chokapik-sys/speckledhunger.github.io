@@ -17,6 +17,15 @@ function phase_2() {
       capture = 1
     }
   }
+    if (piece === "White Knight") {
+    if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) - 10) % 8 != "1" && (parseInt(square.replace("_", "")) - 10) % 8 != "2") {
+      blackcheck = 1
+      console.log("Black King in check")
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) - 10) % 8 != "1" && (parseInt(square.replace("_", "")) - 10) % 8 != "2") {
+      blackcheck = 1
+      console.log("Black King in check")
+    }
+    }
     if (piece === "White Rook") {
     if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) + mr1) % 8 != "1"){
       blackcheck = 1
