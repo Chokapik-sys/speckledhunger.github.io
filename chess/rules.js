@@ -179,6 +179,16 @@ function phase_2() {
     }
       newevent = 1
   }
+    if (piece === "White King") {
+      if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === "Black King"){
+      blackcheck = 1
+      console.log("Black King in check")
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML[0] === "B"){
+      document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").style.backgroundColor = "#FF8466"
+      capture = 1
+    }
+      newevent = 1
+    }
 if (capture === 1 || pawnmove === 1 || knightmove === 1 || bishopmove === 1 || rookmove === 1 || queenmove === 1) {
       phase = 3
       prev_square = square
