@@ -1,6 +1,6 @@
 var capture = 0
 var blackcheck = 0
-var event = 0
+var newevent = 0
 function phase_2() {
   if (phase === 2) {
   if (piece === "White Pawn") {
@@ -17,7 +17,7 @@ function phase_2() {
       document.getElementById("_" + (parseInt(square.replace("_", "")) + 7) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     }
-    event = 1
+    newevent = 1
   }
     if (piece === "White Knight") {
     if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) - 10) % 8 != "7" && (parseInt(square.replace("_", "")) - 10) % 8 != "0") {
@@ -69,7 +69,7 @@ function phase_2() {
       document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     }
-      event = 1
+      newevent = 1
     }
     if (piece === "White Rook") {
     if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) + mr1) % 8 != "1"){
@@ -97,7 +97,7 @@ function phase_2() {
       document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     }
-      event = 1
+      newevent = 1
   }
     if (piece === "White Bishop") {
     if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) + mb1) % 8 != "1"){
@@ -125,7 +125,7 @@ function phase_2() {
       document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     }
-      event = 1
+      newevent = 1
   }
     if (piece === "White Queen") {
     if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) + mr1) % 8 != "1"){
@@ -177,7 +177,7 @@ function phase_2() {
       document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     }
-      event = 1
+      newevent = 1
   }
 if (capture === 1 || pawnmove === 1 || knightmove === 1 || bishopmove === 1 || rookmove === 1 || queenmove === 1) {
       phase = 3
@@ -191,6 +191,6 @@ if (capture === 1 || pawnmove === 1 || knightmove === 1 || bishopmove === 1 || r
   knightmove = 0
   bishopmove = 0
   queenmove = 0
-  event = 0
+  newevent = 0
 }
 }
