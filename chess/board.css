@@ -31,6 +31,7 @@
 #reportbox {
   position: absolute;
   left: 690px;
+  right: 5px;
   width: 271px;
   background-color: #E0E5E4;
   text-align: center;
