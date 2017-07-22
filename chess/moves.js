@@ -4,6 +4,7 @@ var knightmove = 0
 var rookmove = 0
 var bishopmove = 0
 var queenmove = 0
+var kingmove = 0
 var mb1 = 9
 var mb2 = -9
 var mb3 = 7
