@@ -3,6 +3,11 @@ var blackcheck = 0
 var newevent = 0
 function phase_2() {
   if (phase === 2) {
+    //Blank Square
+    if (piece === "") {
+      newevent = 1
+    }
+    //White Pieces
   if (piece === "White Pawn") {
     if  (document.getElementById("_" + (parseInt(square.replace("_", "")) + 9) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) + 9) % 8 != "1"){
       blackcheck = 1
