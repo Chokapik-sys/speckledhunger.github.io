@@ -22,6 +22,10 @@ var constant3 = "Moving from:"
 function move_piece(){
   //phase1
   if (phase === 1) {
+    //Blank Square
+    if (document.getElementById(square).innerHTML === "") {
+      piece = ""
+    }
     //White Pieces
     if (document.getElementById(square).innerHTML === "White Pawn") {
       if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === ""){
