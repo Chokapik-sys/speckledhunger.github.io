@@ -191,6 +191,12 @@ function phase_2() {
     } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML[0] === "B"){
       document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FF8466"
       capture = 1
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === "Black King"){
+      blackcheck = 1
+      console.log("Black King in check")
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML[0] === "B"){
+      document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FF8466"
+      capture = 1
     }
       newevent = 1
     }
