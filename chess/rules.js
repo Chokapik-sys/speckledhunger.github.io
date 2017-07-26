@@ -253,53 +253,53 @@ function phase_2() {
     }
     newevent = 1
   }
-    if (piece === "White Knight") {
-    if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) - 10) % 8 != "7" && (parseInt(square.replace("_", "")) - 10) % 8 != "0") {
-      blackcheck = 1
-      console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) - 10) % 8 != "7" && (parseInt(square.replace("_", "")) - 10) % 8 != "0") {
+    if (piece === "Black Knight") {
+    if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === "White King" && (parseInt(square.replace("_", "")) - 10) % 8 != "7" && (parseInt(square.replace("_", "")) - 10) % 8 != "0") {
+      whitecheck = 1
+      console.log("White King in check")
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML[0] === "W" && (parseInt(square.replace("_", "")) - 10) % 8 != "7" && (parseInt(square.replace("_", "")) - 10) % 8 != "0") {
       document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").style.backgroundColor = "#FF8466"
       capture = 1
-    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) + 10) % 8 != "1" && (parseInt(square.replace("_", "")) + 10) % 8 != "2") {
-      blackcheck = 1
-      console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) + 10) % 8 != "1" && (parseInt(square.replace("_", "")) + 10) % 8 != "2") {
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === "White King" && (parseInt(square.replace("_", "")) + 10) % 8 != "1" && (parseInt(square.replace("_", "")) + 10) % 8 != "2") {
+      whitecheck = 1
+      console.log("White King in check")
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML[0] === "W" && (parseInt(square.replace("_", "")) + 10) % 8 != "1" && (parseInt(square.replace("_", "")) + 10) % 8 != "2") {
       document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").style.backgroundColor = "#FF8466"
       capture = 1
-    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) - 6) % 8 != "1" && (parseInt(square.replace("_", "")) - 6) % 8 != "2") {
-      blackcheck = 1
-      console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) - 6) % 8 != "1" && (parseInt(square.replace("_", "")) - 6) % 8 != "2") {
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === "White King" && (parseInt(square.replace("_", "")) - 6) % 8 != "1" && (parseInt(square.replace("_", "")) - 6) % 8 != "2") {
+      whitecheck = 1
+      console.log("White King in check")
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML[0] === "W" && (parseInt(square.replace("_", "")) - 6) % 8 != "1" && (parseInt(square.replace("_", "")) - 6) % 8 != "2") {
       document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").style.backgroundColor = "#FF8466"
       capture = 1
-    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) + 6) % 8 != "7" && (parseInt(square.replace("_", "")) + 6) % 8 != "0") {
-      blackcheck = 1
-      console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) + 6) % 8 != "7" && (parseInt(square.replace("_", "")) + 6) % 8 != "0") {
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === "White King" && (parseInt(square.replace("_", "")) + 6) % 8 != "7" && (parseInt(square.replace("_", "")) + 6) % 8 != "0") {
+      whitecheck = 1
+      console.log("White King in check")
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML[0] === "W" && (parseInt(square.replace("_", "")) + 6) % 8 != "7" && (parseInt(square.replace("_", "")) + 6) % 8 != "0") {
       document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").style.backgroundColor = "#FF8466"
       capture = 1
-    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) - 17) % 8 != "0") {
-      blackcheck = 1
-      console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) - 17) % 8 != "0") {
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML === "White King" && (parseInt(square.replace("_", "")) - 17) % 8 != "0") {
+      whitecheck = 1
+      console.log("White King in check")
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML[0] === "W" && (parseInt(square.replace("_", "")) - 17) % 8 != "0") {
       document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").style.backgroundColor = "#FF8466"
       capture = 1
-    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) + 17) % 8 != "1") {
-      blackcheck = 1
-      console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) + 17) % 8 != "1") {
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML === "White King" && (parseInt(square.replace("_", "")) + 17) % 8 != "1") {
+      whitecheck = 1
+      console.log("White King in check")
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML[0] === "W" && (parseInt(square.replace("_", "")) + 17) % 8 != "1") {
       document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").style.backgroundColor = "#FF8466"
       capture = 1
-    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) - 15) % 8 != "1") {
-      blackcheck = 1
-      console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) - 15) % 8 != "1") {
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === "White King" && (parseInt(square.replace("_", "")) - 15) % 8 != "1") {
+      whitecheck = 1
+      console.log("White King in check")
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML[0] === "W" && (parseInt(square.replace("_", "")) - 15) % 8 != "1") {
       document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").style.backgroundColor = "#FF8466"
       capture = 1
-    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) + 15) % 8 != "0") {
-      blackcheck = 1
-      console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) + 15) % 8 != "0") {
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML === "White King" && (parseInt(square.replace("_", "")) + 15) % 8 != "0") {
+      whitecheck = 1
+      console.log("White King in check")
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML[0] === "W" && (parseInt(square.replace("_", "")) + 15) % 8 != "0") {
       document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     }
