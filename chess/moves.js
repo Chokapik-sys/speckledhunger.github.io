@@ -42,10 +42,10 @@ function move_piece(){
       piece = "White Pawn"
   }
      if (document.getElementById(square).innerHTML === "White Knight") {
-       if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === ""){
+       if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) - 10) % 8 != "7" && (parseInt(square.replace("_", "")) - 10) % 8 != "0"){
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === ""){
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) + 10) % 8 != "1" && (parseInt(square.replace("_", "")) + 10) % 8 != "2"){
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
        } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === ""){
