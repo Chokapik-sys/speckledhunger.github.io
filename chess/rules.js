@@ -217,6 +217,22 @@ function phase_2() {
     } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 9) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) - 9) % 8 != "0"){
       document.getElementById("_" + (parseInt(square.replace("_", "")) - 9) + "_").style.backgroundColor = "#FF8466"
       capture = 1
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 7) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) + 7) % 8 != "0"){
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 7) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) + 7) % 8 != "0"){
+      document.getElementById("_" + (parseInt(square.replace("_", "")) + 7) + "_").style.backgroundColor = "#FF8466"
+      capture = 1
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 7) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) - 7) % 8 != "1"){
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 7) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) - 7) % 8 != "1"){
+      document.getElementById("_" + (parseInt(square.replace("_", "")) - 7) + "_").style.backgroundColor = "#FF8466"
+      capture = 1
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) + 1) % 8 != "1"){
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) + 1) % 8 != "1"){
+      document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").style.backgroundColor = "#FF8466"
+      capture = 1
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) - 1) % 8 != "0"){
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) - 1) % 8 != "0"){
+      document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").style.backgroundColor = "#FF8466"
+      capture = 1
     }
       newevent = 1
     }
