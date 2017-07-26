@@ -163,45 +163,28 @@ function move_piece(){
       piece = "Black Pawn"
   }
     if (document.getElementById(square).innerHTML === "Black Knight") {
-       if ((parseInt(square.replace("_", "")) % 8 == "7" || parseInt(square.replace("_", "")) % 8 == "0") && (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === "")) {
-         document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML = " "
-       } if ((parseInt(square.replace("_", "")) % 8 == "7" || parseInt(square.replace("_", "")) % 8 == "0") && (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === "")) {
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML = " "
-       } if ((parseInt(square.replace("_", "")) % 8 == "0") && (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === "")) {
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML = " "
-       } if ((parseInt(square.replace("_", "")) % 8 == "0") && (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML === "")) {
-         document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML = " "
-       } if ((parseInt(square.replace("_", "")) % 8 == "2" || parseInt(square.replace("_", "")) % 8 == "1") && (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === "")) {
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML = " "
-       } if ((parseInt(square.replace("_", "")) % 8 == "2" || parseInt(square.replace("_", "")) % 8 == "1") && (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === "")) {
-         document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML = " "
-       } if ((parseInt(square.replace("_", "")) % 8 == "1") && (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML === "")) {
-         document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML = " "
-       } if ((parseInt(square.replace("_", "")) % 8 == "1") && (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML === "")) {
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML = " "
-       }
-       if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === ""){
+       if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) - 10) % 8 != "7" && (parseInt(square.replace("_", "")) - 10) % 8 != "0"){
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === ""){
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) + 10) % 8 != "1" && (parseInt(square.replace("_", "")) + 10) % 8 != "2"){
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === ""){
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) - 6) % 8 != "1" && (parseInt(square.replace("_", "")) - 6) % 8 != "2"){
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === ""){
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) + 6) % 8 != "7" && (parseInt(square.replace("_", "")) + 6) % 8 != "0"){
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML === ""){
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) - 17) % 8 != "0"){
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML === ""){
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) + 17) % 8 != "1"){
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === ""){
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) - 15) % 8 != "1"){
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML === ""){
+       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) + 15) % 8 != "0"){
          document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
        } if (knightmove == 1) {
