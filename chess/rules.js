@@ -237,18 +237,18 @@ function phase_2() {
       newevent = 1
     }
 //Black Pieces
-    if (piece === "White Pawn") {
-    if  (document.getElementById("_" + (parseInt(square.replace("_", "")) + 9) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) + 9) % 8 != "1"){
-      NW_blackcheck = 1
-      console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 9) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) + 9) % 8 != "1"){
-      document.getElementById("_" + (parseInt(square.replace("_", "")) + 9) + "_").style.backgroundColor = "#FF8466"
+    if (piece === "Black Pawn") {
+    if  (document.getElementById("_" + (parseInt(square.replace("_", "")) - 9) + "_").innerHTML === "White King" && (parseInt(square.replace("_", "")) - 9) % 8 != "0"){
+      SE_whitecheck = 1
+      console.log("White King in check")
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 9) + "_").innerHTML[0] === "W" && (parseInt(square.replace("_", "")) - 9) % 8 != "0"){
+      document.getElementById("_" + (parseInt(square.replace("_", "")) - 9) + "_").style.backgroundColor = "#FF8466"
       capture = 1
-    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 7) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) + 7) % 8 != "0"){
-      NE_blackcheck = 1
-      console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 7) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) + 7) % 8 != "0"){
-      document.getElementById("_" + (parseInt(square.replace("_", "")) + 7) + "_").style.backgroundColor = "#FF8466"
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 7) + "_").innerHTML === "White King" && (parseInt(square.replace("_", "")) - 7) % 8 != "1"){
+      SW_whitecheck = 1
+      console.log("White King in check")
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 7) + "_").innerHTML[0] === "W" && (parseInt(square.replace("_", "")) - 7) % 8 != "1"){
+      document.getElementById("_" + (parseInt(square.replace("_", "")) - 7) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     }
     newevent = 1
