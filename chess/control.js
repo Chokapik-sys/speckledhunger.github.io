@@ -19,6 +19,7 @@ function phase_4() {
     document.getElementById("_" + cc + "_").innerHTML = ""
       }
       queenmove = 0
+      capture = 0
       phase = 0
     }
   }
