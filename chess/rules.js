@@ -8,6 +8,14 @@ var NE_blackcheck = 0
 var SE_blackcheck = 0
 var SW_blackcheck  = 0
 var NW_blackcheck = 0
+var N_whitecheck = 0
+var E_whitecheck = 0
+var S_whitecheck = 0
+var W_whitecheck = 0
+var NE_whitecheck = 0
+var SE_whitecheck = 0
+var SW_whitecheck  = 0
+var NW_whitecheck = 0
 var newevent = 0
 function phase_2() {
   if (phase === 2) {
