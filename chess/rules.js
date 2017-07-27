@@ -305,11 +305,11 @@ function phase_2() {
     }
       newevent = 1
     }
-    if (piece === "White Rook") {
-    if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) + mr1) % 8 != "1"){
+    if (piece === "Black Rook") {
+    if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML === "White King" && (parseInt(square.replace("_", "")) + mr1) % 8 != "1"){
       W_blackcheck = 1
-      console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) + mr1) % 8 != "1"){
+      console.log("White King in check")
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML[0] === "W" && (parseInt(square.replace("_", "")) + mr1) % 8 != "1"){
       document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) + mr2) % 8 != "0"){
