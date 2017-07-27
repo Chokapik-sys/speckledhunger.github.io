@@ -307,27 +307,27 @@ function phase_2() {
     }
     if (piece === "Black Rook") {
     if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML === "White King" && (parseInt(square.replace("_", "")) + mr1) % 8 != "1"){
-      W_blackcheck = 1
+      W_whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML[0] === "W" && (parseInt(square.replace("_", "")) + mr1) % 8 != "1"){
       document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").style.backgroundColor = "#FF8466"
       capture = 1
-    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML === "Black King" && (parseInt(square.replace("_", "")) + mr2) % 8 != "0"){
-      E_blackcheck = 1
-      console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML[0] === "B" && (parseInt(square.replace("_", "")) + mr2) % 8 != "0"){
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML === "White King" && (parseInt(square.replace("_", "")) + mr2) % 8 != "0"){
+      E_whitecheck = 1
+      console.log("White King in check")
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML[0] === "W" && (parseInt(square.replace("_", "")) + mr2) % 8 != "0"){
       document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").style.backgroundColor = "#FF8466"
       capture = 1
-    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").innerHTML === "Black King"){
-      N_blackcheck = 1
-      console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").innerHTML[0] === "B"){
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").innerHTML === "White King"){
+      N_whitecheck = 1
+      console.log("White King in check")
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").innerHTML[0] === "W"){
       document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").style.backgroundColor = "#FF8466"
       capture = 1
-    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").innerHTML === "Black King"){
-      S_blackcheck = 1
-      console.log("Black King in check")
-    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").innerHTML[0] === "B"){
+    } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").innerHTML === "White King"){
+      S_whitecheck = 1
+      console.log("White King in check")
+    } else if (document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").innerHTML[0] === "W"){
       document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     }
