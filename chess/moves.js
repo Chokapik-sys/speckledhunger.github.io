@@ -23,6 +23,7 @@ var constant3 = "Moving from:"
 function move_piece(){
   //phase1
   if (phase === 1) {
+    king()
     //Blank Square
     if (document.getElementById(square).innerHTML === "") {
       piece = ""
@@ -146,10 +147,7 @@ function move_piece(){
       piece = "White Queen"
     }
     if (document.getElementById(square).innerHTML === "White King") {
-      if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === "" && S_whitecheck != "1") {
-        document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
-      }
-      if (queenmove == 1) {
+      if (kingmove == 1) {
         prev_square = square
         console.log(constant3 + prev_square)
       }
@@ -273,6 +271,10 @@ function move_piece(){
       piece = "Black Queen"
     }
     if (document.getElementById(square).innerHTML === "Black King") {
+      if (kingmove == 1) {
+        prev_square = square
+        console.log(constant3 + prev_square)
+      }
       piece = "Black King"
     }
     phase = 2
