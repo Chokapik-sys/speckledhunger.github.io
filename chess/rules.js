@@ -452,9 +452,9 @@ if (capture === 1 || pawnmove === 1 || knightmove === 1 || bishopmove === 1 || r
 }
 }
 function king() {
-  if (piece === "White King") {
+  if (document.getElementById(square).innerHTML === "White King") {
     console.log("WHITE KING")
-  } if (piece === "Black King") {
+  } if (document.getElementById(square).innerHTML === "Black King") {
     console.log("BLACK KING")
   } 
 }
