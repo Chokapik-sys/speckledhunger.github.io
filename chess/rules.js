@@ -2,6 +2,7 @@ var capture = 0
 var blackcheck = 0
 var whitecheck = 0
 var newevent = 0
+var r = 1
 function phase_2() {
   if (phase === 2) {
     //Blank Square
@@ -451,5 +452,9 @@ if (capture === 1 || pawnmove === 1 || knightmove === 1 || bishopmove === 1 || r
 }
 }
 function king() {
-  console.log("KING")
+  if (piece === "White King") {
+    console.log("WHITE KING")
+  } if (piece === "Black King") {
+    console.log("BLACK KING")
+  } 
 }
