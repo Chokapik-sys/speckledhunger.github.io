@@ -453,7 +453,17 @@ if (capture === 1 || pawnmove === 1 || knightmove === 1 || bishopmove === 1 || r
 }
 function king() {
   if (document.getElementById(square).innerHTML === "White King") {
-    console.log("WHITE KING")
+    for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1 - 1) + "_").innerHTML == ""; mr1 += 1) {
+      if (document.getElementById("_" + ((parseInt(square.replace("_", ""))) + mr1) + "_").innerHTML === "Black Rook") {
+        console.log("White King in jeopardy from Black Pawn")
+      }
+        } for (mr2 = -1; ((parseInt(square.replace("_", ""))) + mr2) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2 + 1) + "_").innerHTML == ""; mr2 += -1) {
+          
+        } for (mr3 = 8; document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3 - 8) + "_").innerHTML == ""; mr3 += 8) {
+          
+        } for (mr4 = -8; document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4 + 8) + "_").innerHTML == ""; mr4 += -8) {
+
+        }
   } if (document.getElementById(square).innerHTML === "Black King") {
     console.log("BLACK KING")
   } 
