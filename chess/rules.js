@@ -438,7 +438,7 @@ if (capture === 1 || pawnmove === 1 || knightmove === 1 || bishopmove === 1 || r
       phase = 3
       prev_square = square
       move_piece()
-} if (event = 1 && capture === 0 && pawnmove === 0 && knightmove === 0 && bishopmove === 0 && rookmove === 0 && queenmove === 0 && kingmove === 0) {
+} if (newevent = 1 && capture === 0 && pawnmove === 0 && knightmove === 0 && bishopmove === 0 && rookmove === 0 && queenmove === 0 && kingmove === 0) {
     resetTurn()
   }
     pawnmove = 0
