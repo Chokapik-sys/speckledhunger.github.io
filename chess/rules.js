@@ -469,6 +469,22 @@ function king() {
           if (document.getElementById("_" + ((parseInt(square.replace("_", ""))) + mr4 - 8) + "_").innerHTML === "Black Rook") {
             console.log("White King in jeopardy from Black Rook")
       }
+        } for (mb1 = 9; ((parseInt(square.replace("_", ""))) + mb1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          if (document.getElementById("_" + ((parseInt(square.replace("_", ""))) + mb1 + 9) + "_").innerHTML === "Black Bishop") {
+            console.log("White King in jeopardy from Black Bishop")
+      }
+        } for (mb2 = -9; ((parseInt(square.replace("_", ""))) + mb2) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          if (document.getElementById("_" + ((parseInt(square.replace("_", ""))) + mb2 - 9) + "_").innerHTML === "Black Bishop") {
+            console.log("White King in jeopardy from Black Bishop")
+      }
+        } for (mb3 = 7; (parseInt(square.replace("_", "")) + mb3) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          if (document.getElementById("_" + ((parseInt(square.replace("_", ""))) + mb3 + 7) + "_").innerHTML === "Black Bishop") {
+            console.log("White King in jeopardy from Black Bishop")
+      }
+        } for (mb4 = -7; (parseInt(square.replace("_", "")) + mb4) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          if (document.getElementById("_" + ((parseInt(square.replace("_", ""))) + mb4 - 7) + "_").innerHTML === "Black Bishop") {
+            console.log("White King in jeopardy from Black Bishop")
+      }
         }
   } if (document.getElementById(square).innerHTML === "Black King") {
     console.log("BLACK KING")
