@@ -290,6 +290,7 @@ function move_piece(){
       document.getElementById(square).innerHTML = piece
       phase_change()
       phase_4()
+      king()
     } if (document.getElementById(square).style.backgroundColor == "rgb(255, 132, 102)") {
       piecetaken = document.getElementById(square).innerHTML
       document.getElementById(square).innerHTML = piece
@@ -297,10 +298,10 @@ function move_piece(){
       document.getElementById("report").innerHTML += "<br>" + piecetaken + " has been taken by " + piece
       phase_change()
       phase_4()
+      king()
     }
   }
   //end of phase3
-  king()
 }
 function phase_change(){
   if (phase === 4) {
