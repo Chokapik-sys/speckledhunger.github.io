@@ -300,6 +300,7 @@ function move_piece(){
     }
   }
   //end of phase3
+  king()
 }
 function phase_change(){
   if (phase === 4) {
