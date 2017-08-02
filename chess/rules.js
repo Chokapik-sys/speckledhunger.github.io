@@ -471,7 +471,6 @@ if (capture === 1 || pawnmove === 1 || knightmove === 1 || bishopmove === 1 || r
 function king() {
   for (wk = 0; wk < 65; wk ++) {
     if (document.getElementById("_" + wk + "_").innerHTML === "White King") {
-      console.log("White King in " + "_" + wk + "_")
       break
     }
   }
