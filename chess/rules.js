@@ -475,7 +475,7 @@ function king() {
       console.log("_" + wk "_")
     }
   }
-  if (document.getElementById(sl).innerHTML === "White King") {
+  if (document.getElementById("" + wk + "_").innerHTML === "White King") {
     for (mr1 = 1; (wk + mr1) % 8 != "1" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Rook") {
         console.log("White King in jeopardy from Black Rook")
