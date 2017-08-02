@@ -472,7 +472,7 @@ function king() {
   for (wk = 0; wk < 65; wk ++) {
     if (document.getElementById("_" + wk + "_").innerHTML === "White King") {
       break
-      console.log("_" + wk "_")
+      console.log("_" + wk + "_")
     }
   }
   if (document.getElementById("_" + wk + "_").innerHTML === "White King") {
