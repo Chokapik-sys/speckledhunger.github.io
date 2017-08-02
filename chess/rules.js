@@ -18,7 +18,8 @@ var SE_whitecheck = 0
 var SW_whitecheck  = 0
 var NW_whitecheck = 0
 var newevent = 0
-var r = 1
+var wk = 1
+var bk = 1
 function phase_2() {
   if (phase === 2) {
     //Blank Square
@@ -468,9 +469,15 @@ if (capture === 1 || pawnmove === 1 || knightmove === 1 || bishopmove === 1 || r
 }
 }
 function king() {
-  if (document.getElementById(square).innerHTML === "White King") {
-    for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
-      if (document.getElementById("_" + ((parseInt(square.replace("_", ""))) + mr1 + 1) + "_").innerHTML === "Black Rook") {
+  for (wk = 0; wk < 65; wk ++) {
+    if (document.getElementById("_" + wk + "_").innerHTML === "White King") {
+      break
+      console.log("_" + wk "_")
+    }
+  }
+  if (document.getElementById(sl).innerHTML === "White King") {
+    for (mr1 = 1; (wk + mr1) % 8 != "1" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
+      if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Rook") {
         console.log("White King in jeopardy from Black Rook")
       }
         } for (mr2 = -1; ((parseInt(square.replace("_", ""))) + mr2) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML == ""; mr2 += -1) {
