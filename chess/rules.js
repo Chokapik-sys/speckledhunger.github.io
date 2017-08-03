@@ -492,50 +492,42 @@ function king() {
   }
   if (document.getElementById("_" + wk + "_").innerHTML === "White King") {
     for (mr1 = 1; (wk + mr1) % 8 != "1" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
-      if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Rook") {
-        console.log("White King in jeopardy from Black Rook")
+      if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Queen") {
         E_whitecheck = 1
       } else {
         E_whitecheck = 0
       }} for (mr2 = -1; (wk + mr2) % 8 != "0" && document.getElementById("_" + (wk + mr2) + "_").innerHTML == ""; mr2 += -1) {
-          if (document.getElementById("_" + (wk + mr2 - 1) + "_").innerHTML === "Black Rook") {
-            console.log("White King in jeopardy from Black Rook")
+          if (document.getElementById("_" + (wk + mr2 - 1) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr2 - 1) + "_").innerHTML === "Black Queen") {
       W_whitecheck = 1
       } else {
         W_whitecheck = 0
       }} for (mr3 = 8; document.getElementById("_" + (wk + mr3) + "_").innerHTML == ""; mr3 += 8) {
-          if (document.getElementById("_" + (wk + mr3 + 8) + "_").innerHTML === "Black Rook") {
-            console.log("White King in jeopardy from Black Rook")
+          if (document.getElementById("_" + (wk + mr3 + 8) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr3 + 8) + "_").innerHTML === "Black Queen") {
       S_whitecheck = 1
       } else {
         S_whitecheck = 0
       }} for (mr4 = -8; document.getElementById("_" + (wk + mr4) + "_").innerHTML == ""; mr4 += -8) {
-          if (document.getElementById("_" + (wk + mr4 - 8) + "_").innerHTML === "Black Rook") {
-            console.log("White King in jeopardy from Black Rook")
+          if (document.getElementById("_" + (wk + mr4 - 8) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr4 - 8) + "_").innerHTML === "Black Queen") {
       N_whitecheck = 1
       } else {
         N_whitecheck = 0
       }} for (mb1 = 9; (wk + mb1) % 8 != "1" && document.getElementById("_" + (wk + mb1) + "_").innerHTML == ""; mb1 += 9) {
-          if (document.getElementById("_" + (wk + mb1 + 9) + "_").innerHTML === "Black Bishop") {
-            console.log("White King in jeopardy from Black Bishop")
+          if (document.getElementById("_" + (wk + mb1 + 9) + "_").innerHTML === "Black Bishop" || document.getElementById("_" + (wk + mb1 + 9) + "_").innerHTML === "Black Queen") {
       NE_whitecheck = 1
       } else {
         NE_whitecheck = 0
       }} for (mb2 = -9; (wk + mb2) % 8 != "0" && document.getElementById("_" + (wk + mb2) + "_").innerHTML == ""; mb2 += -9) {
-          if (document.getElementById("_" + (wk + mb2 - 9) + "_").innerHTML === "Black Bishop") {
-            console.log("White King in jeopardy from Black Bishop")
+          if (document.getElementById("_" + (wk + mb2 - 9) + "_").innerHTML === "Black Bishop" || document.getElementById("_" + (wk + mb2 - 9) + "_").innerHTML === "Black Queen") {
       NW_whitecheck = 1
       } else {
         NW_whitecheck = 0
       }} for (mb3 = 7; (wk + mb3) % 8 != "0" && document.getElementById("_" + (wk + mb3) + "_").innerHTML == ""; mb3 += 7) {
-          if (document.getElementById("_" + (wk + mb3 + 7) + "_").innerHTML === "Black Bishop") {
-            console.log("White King in jeopardy from Black Bishop")
+          if (document.getElementById("_" + (wk + mb3 + 7) + "_").innerHTML === "Black Bishop" || document.getElementById("_" + (wk + mb3 + 7) + "_").innerHTML === "Black Queen") {
       SW_whitecheck = 1
       } else {
         SW_whitecheck = 0
       }} for (mb4 = -7; (wk + mb4) % 8 != "1" && document.getElementById("_" + (wk + mb4) + "_").innerHTML == ""; mb4 += -7) {
-          if (document.getElementById("_" + (wk + mb4 - 7) + "_").innerHTML === "Black Bishop") {
-            console.log("White King in jeopardy from Black Bishop")
+          if (document.getElementById("_" + (wk + mb4 - 7) + "_").innerHTML === "Black Bishop" || document.getElementById("_" + (wk + mb4 - 7) + "_").innerHTML === "Black Queen") {
       NE_whitecheck = 1
       } else {
         NE_whitecheck = 0
