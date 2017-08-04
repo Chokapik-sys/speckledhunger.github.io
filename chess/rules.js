@@ -480,6 +480,7 @@ if (capture === 1 || pawnmove === 1 || knightmove === 1 || bishopmove === 1 || r
     knightmove = 0
     bishopmove = 0
     queenmove = 0
+    kingmove = 0
     newevent = 0
     capture = 0
 }
