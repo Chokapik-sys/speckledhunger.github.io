@@ -147,6 +147,10 @@ function move_piece(){
       piece = "White Queen"
     }
     if (document.getElementById(square).innerHTML === "White King") {
+      if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === "" && S_whitecheck == "0") {
+        document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
+        kingmove = 1
+      }
       if (kingmove == 1) {
         prev_square = square
         console.log(constant3 + prev_square)
