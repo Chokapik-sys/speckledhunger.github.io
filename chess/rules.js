@@ -508,6 +508,7 @@ function king() {
     }
   }
   if (document.getElementById("_" + wk + "_").innerHTML === "White King") {
+    /Immediate Threat
     for (mr1 = 1; (wk + mr1) % 8 != "1" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Queen") {
         E_whitecheck = 1
@@ -548,6 +549,13 @@ function king() {
       NE_whitecheck = 1
       } else {
         NE_whitecheck = 0
+      }}
+    //Possible Future Threat
+    for (mr1 = -9; (wk + mr1) % 8 != "1" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
+      if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Queen") {
+        EX_NW_whitecheck = 1
+      } else {
+        EX_NW_whitecheck = 0
       }}
   } if (document.getElementById(square).innerHTML === "Black King") {
     console.log("BLACK KING")
