@@ -153,22 +153,22 @@ function move_piece(){
       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === "" && N_whitecheck == "0") {
         document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
         kingmove = 1
-      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "" && E_whitecheck == "0") {
+      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "" && E_whitecheck == "0" && (parseInt(square.replace("_", "")) + 1) % 8 != "1") {
         document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").style.backgroundColor = "#FFF370"
         kingmove = 1
-      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "" && W_whitecheck == "0") {
+      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "" && W_whitecheck == "0"" && (parseInt(square.replace("_", "")) - 1) % 8 != "0") {
         document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").style.backgroundColor = "#FFF370"
         kingmove = 1
-      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 7) + "_").innerHTML === "" && SW_whitecheck == "0") {
+      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 7) + "_").innerHTML === "" && SW_whitecheck == "0" && (parseInt(square.replace("_", "")) + 7) % 8 != "0") {
         document.getElementById("_" + (parseInt(square.replace("_", "")) + 7) + "_").style.backgroundColor = "#FFF370"
         kingmove = 1
-      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 7) + "_").innerHTML === "" && NE_whitecheck == "0") {
+      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 7) + "_").innerHTML === "" && NE_whitecheck == "0" && (parseInt(square.replace("_", "")) - 7) % 8 != "1") {
         document.getElementById("_" + (parseInt(square.replace("_", "")) - 7) + "_").style.backgroundColor = "#FFF370"
         kingmove = 1
-      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 9) + "_").innerHTML === "" && SE_whitecheck == "0") {
+      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 9) + "_").innerHTML === "" && SE_whitecheck == "0" && (parseInt(square.replace("_", "")) + 9) % 8 != "1") {
         document.getElementById("_" + (parseInt(square.replace("_", "")) + 9) + "_").style.backgroundColor = "#FFF370"
         kingmove = 1
-      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 9) + "_").innerHTML === "" && NW_whitecheck == "0") {
+      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 9) + "_").innerHTML === "" && NW_whitecheck == "0" && (parseInt(square.replace("_", "")) - 9) % 8 != "0") {
         document.getElementById("_" + (parseInt(square.replace("_", "")) - 9) + "_").style.backgroundColor = "#FFF370"
         kingmove = 1
       }
