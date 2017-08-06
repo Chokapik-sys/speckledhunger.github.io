@@ -509,12 +509,12 @@ function king() {
   }
   if (document.getElementById("_" + wk + "_").innerHTML === "White King") {
     //Immediate Threat
-    for (mr1 = 1; (wk + mr1) % 8 != "1" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
+    for (mr1 = 1; (wk + mr1) % 8 != "7" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Queen") {
         E_whitecheck = 1
       } else {
         E_whitecheck = 0
-      }} for (mr2 = -1; (wk + mr2) % 8 != "0" && document.getElementById("_" + (wk + mr2) + "_").innerHTML == ""; mr2 += -1) {
+      }} for (mr2 = -1; (wk + mr2) % 8 != "2" && document.getElementById("_" + (wk + mr2) + "_").innerHTML == ""; mr2 += -1) {
           if (document.getElementById("_" + (wk + mr2 - 1) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr2 - 1) + "_").innerHTML === "Black Queen") {
       W_whitecheck = 1
       } else {
@@ -529,29 +529,29 @@ function king() {
       N_whitecheck = 1
       } else {
         N_whitecheck = 0
-      }} for (mb1 = 9; (wk + mb1) % 8 != "1" && document.getElementById("_" + (wk + mb1) + "_").innerHTML == ""; mb1 += 9) {
+      }} for (mb1 = 9; (wk + mb1) % 8 != "7" && document.getElementById("_" + (wk + mb1) + "_").innerHTML == ""; mb1 += 9) {
           if (document.getElementById("_" + (wk + mb1 + 9) + "_").innerHTML === "Black Bishop" || document.getElementById("_" + (wk + mb1 + 9) + "_").innerHTML === "Black Queen") {
       NE_whitecheck = 1
       } else {
         NE_whitecheck = 0
-      }} for (mb2 = -9; (wk + mb2) % 8 != "0" && document.getElementById("_" + (wk + mb2) + "_").innerHTML == ""; mb2 += -9) {
+      }} for (mb2 = -9; (wk + mb2) % 8 != "2" && document.getElementById("_" + (wk + mb2) + "_").innerHTML == ""; mb2 += -9) {
           if (document.getElementById("_" + (wk + mb2 - 9) + "_").innerHTML === "Black Bishop" || document.getElementById("_" + (wk + mb2 - 9) + "_").innerHTML === "Black Queen") {
       NW_whitecheck = 1
       } else {
         NW_whitecheck = 0
-      }} for (mb3 = 7; (wk + mb3) % 8 != "0" && document.getElementById("_" + (wk + mb3) + "_").innerHTML == ""; mb3 += 7) {
+      }} for (mb3 = 7; (wk + mb3) % 8 != "7" && document.getElementById("_" + (wk + mb3) + "_").innerHTML == ""; mb3 += 7) {
           if (document.getElementById("_" + (wk + mb3 + 7) + "_").innerHTML === "Black Bishop" || document.getElementById("_" + (wk + mb3 + 7) + "_").innerHTML === "Black Queen") {
       SW_whitecheck = 1
       } else {
         SW_whitecheck = 0
-      }} for (mb4 = -7; (wk + mb4) % 8 != "1" && document.getElementById("_" + (wk + mb4) + "_").innerHTML == ""; mb4 += -7) {
+      }} for (mb4 = -7; (wk + mb4) % 8 != "2" && document.getElementById("_" + (wk + mb4) + "_").innerHTML == ""; mb4 += -7) {
           if (document.getElementById("_" + (wk + mb4 - 7) + "_").innerHTML === "Black Bishop" || document.getElementById("_" + (wk + mb4 - 7) + "_").innerHTML === "Black Queen") {
       NE_whitecheck = 1
       } else {
         NE_whitecheck = 0
       }}
     //Possible Future Threat
-    for (mr1 = -9; (wk + mr1) % 8 != "1" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
+    for (mr1 = -9; (wk + mr1) % 8 != "2" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Queen") {
         EX_NW_whitecheck = 1
       } else {
