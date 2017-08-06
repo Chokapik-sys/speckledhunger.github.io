@@ -515,7 +515,7 @@ function king() {
       } else {
         E_whitecheck = 0
       }} for (mr2 = -1; (wk + mr2) % 8 != "2" && document.getElementById("_" + (wk + mr2) + "_").innerHTML == ""; mr2 += -1) {
-          if (document.getElementById("_" + (wk + mr2 - 1) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr2 - 1) + "_").innerHTML === "Black Queen") {
+          if ((document.getElementById("_" + (wk + mr2 - 1) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr2 - 1) + "_").innerHTML === "Black Queen") && (wk + mr2 - 1) % 8 != "0") {
       W_whitecheck = 1
       } else {
         W_whitecheck = 0
