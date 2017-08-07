@@ -509,12 +509,12 @@ function king() {
   }
   if (document.getElementById("_" + wk + "_").innerHTML === "White King") {
     //Immediate Threat
-    for (mr1 = 1; (wk + mr1) % 8 != "7" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
+    for (mr1 = 1; && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if ((document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Queen") && (wk + mr1 + 1) % 8 != "1") {
         E_whitecheck = 1
       } else {
         E_whitecheck = 0
-      }} for (mr2 = -1; (wk + mr2) % 8 != "2" && document.getElementById("_" + (wk + mr2) + "_").innerHTML == ""; mr2 += -1) {
+      }} for (mr2 = -1; document.getElementById("_" + (wk + mr2) + "_").innerHTML == ""; mr2 += -1) {
           if ((document.getElementById("_" + (wk + mr2 - 1) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr2 - 1) + "_").innerHTML === "Black Queen") && (wk + mr2 - 1) % 8 != "0") {
       W_whitecheck = 1
       } else {
