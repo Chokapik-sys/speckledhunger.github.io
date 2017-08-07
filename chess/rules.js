@@ -509,7 +509,7 @@ function king() {
   }
   if (document.getElementById("_" + wk + "_").innerHTML === "White King") {
     //Immediate Threat
-    for (mr1 = 1; && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
+    for (mr1 = 1; document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if ((document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Queen") && (wk + mr1 + 1) % 8 != "1") {
         E_whitecheck = 1
       } else {
