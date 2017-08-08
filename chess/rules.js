@@ -529,22 +529,22 @@ function king() {
       N_whitecheck = 1
       } else {
         N_whitecheck = 0
-      }} for (mb1 = 9; (wk + mb1) % 8 != "7" && document.getElementById("_" + (wk + mb1) + "_").innerHTML == ""; mb1 += 9) {
+      }} for (mb1 = 9; (wk + mb1) % 8 != "1" && document.getElementById("_" + (wk + mb1) + "_").innerHTML == ""; mb1 += 9) {
           if (document.getElementById("_" + (wk + mb1 + 9) + "_").innerHTML === "Black Bishop" || document.getElementById("_" + (wk + mb1 + 9) + "_").innerHTML === "Black Queen") {
       NE_whitecheck = 1
       } else {
         NE_whitecheck = 0
-      }} for (mb2 = -9; (wk + mb2) % 8 != "2" && document.getElementById("_" + (wk + mb2) + "_").innerHTML == ""; mb2 += -9) {
+      }} for (mb2 = -9; (wk + mb2) % 8 != "0" && document.getElementById("_" + (wk + mb2) + "_").innerHTML == ""; mb2 += -9) {
           if (document.getElementById("_" + (wk + mb2 - 9) + "_").innerHTML === "Black Bishop" || document.getElementById("_" + (wk + mb2 - 9) + "_").innerHTML === "Black Queen") {
       NW_whitecheck = 1
       } else {
         NW_whitecheck = 0
-      }} for (mb3 = 7; (wk + mb3) % 8 != "7" && document.getElementById("_" + (wk + mb3) + "_").innerHTML == ""; mb3 += 7) {
+      }} for (mb3 = 7; (wk + mb3) % 8 != "0" && document.getElementById("_" + (wk + mb3) + "_").innerHTML == ""; mb3 += 7) {
           if (document.getElementById("_" + (wk + mb3 + 7) + "_").innerHTML === "Black Bishop" || document.getElementById("_" + (wk + mb3 + 7) + "_").innerHTML === "Black Queen") {
       SW_whitecheck = 1
       } else {
         SW_whitecheck = 0
-      }} for (mb4 = -7; (wk + mb4) % 8 != "2" && document.getElementById("_" + (wk + mb4) + "_").innerHTML == ""; mb4 += -7) {
+      }} for (mb4 = -7; (wk + mb4) % 8 != "1" && document.getElementById("_" + (wk + mb4) + "_").innerHTML == ""; mb4 += -7) {
           if (document.getElementById("_" + (wk + mb4 - 7) + "_").innerHTML === "Black Bishop" || document.getElementById("_" + (wk + mb4 - 7) + "_").innerHTML === "Black Queen") {
       NE_whitecheck = 1
       } else {
