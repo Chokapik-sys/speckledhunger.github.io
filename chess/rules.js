@@ -551,8 +551,12 @@ function king() {
         NE_whitecheck = 0
       }}
     //Possible Future Threat
-    if (document.getElementById("_" + (wk - 26) + "_").innerHTML === "Black Knight" || document.getElementById("_" + (wk - 26) + "_").innerHTML === "Black Knight") {
-         KN_NW_whitecheck = 1 
+    if (document.getElementById("_" + (wk - 26) + "_").innerHTML !== "X") {
+      if (document.getElementById("_" + (wk - 26) + "_").innerHTML === "Black Knight") {
+        KN_NW_whitecheck = 1
+      } else {
+        KN_NW_whitecheck = 1
+      }
         }
     for (mr1 = -9; (wk + mr1) % 8 != "2" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Queen") {
