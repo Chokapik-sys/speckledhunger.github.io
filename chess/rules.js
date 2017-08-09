@@ -555,7 +555,7 @@ function king() {
       if (document.getElementById("_" + (wk - 26) + "_").innerHTML === "Black Knight") {
         KN_NW_whitecheck = 1
       } else {
-        KN_NW_whitecheck = 1
+        KN_NW_whitecheck = 0
       }
         }
     for (mr1 = -9; (wk + mr1) % 8 != "2" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
