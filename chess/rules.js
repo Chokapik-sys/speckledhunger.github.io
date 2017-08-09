@@ -551,13 +551,11 @@ function king() {
         NE_whitecheck = 0
       }}
     //Possible Future Threat
-    if ((document.getElementById("_" + (wk - 26) + "_").innerHTML !== "X" && (wk - 26) % 8 != "0") || (document.getElementById("_" + (wk - 19) + "_").innerHTML !== "X" && (wk - 19) % 8 != "0")) {
-      if (document.getElementById("_" + (wk - 26) + "_").innerHTML === "Black Knight" || document.getElementById("_" + (wk - 19) + "_").innerHTML === "Black Knight") {
-        KN_NW_whitecheck = 1
-      } else {
-        KN_NW_whitecheck = 0
-      }
-        }
+    if ((document.getElementById("_" + (wk - 26) + "_").innerHTML === "Black Knight" && (wk - 26) % 8 != "0") || (document.getElementById("_" + (wk - 19) + "_").innerHTML === "Black Knight" && (wk - 19) % 8 != "0")) {
+    KN_NW_whitecheck = 1
+    } if ((document.getElementById("_" + (wk - 26) + "_").innerHTML !== "Black Knight" && (wk - 26) % 8 != "0") || (document.getElementById("_" + (wk - 19) + "_").innerHTML !== "Black Knight" && (wk - 19) % 8 != "0")) {
+    KN_NW_whitecheck = 0
+    }
     for (mr1 = -9; (wk + mr1) % 8 != "2" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Queen") {
         EX_NW_whitecheck = 1
