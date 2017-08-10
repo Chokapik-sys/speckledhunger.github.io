@@ -52,10 +52,10 @@ ul#navmenu .sub2 a{
 margin-left: 1px;
 }
 ul#navmenu li:hover > a{
-background-color: #F0F0F0;
+background-color: #E1E1E1;
 }
 ul#navmenu li:hover a:hover{
-background-color: #FAFAFA
+background-color: #F0F0F0
 }
 ul#navmenu ul.sub1{
 display: none;
