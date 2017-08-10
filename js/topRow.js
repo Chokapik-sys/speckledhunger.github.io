@@ -1,5 +1,4 @@
 var scrsize = window.innerWidth
-updatesize()
 while (True) {
     if (scrsize != window.innerWidth) {
     updatesize()
