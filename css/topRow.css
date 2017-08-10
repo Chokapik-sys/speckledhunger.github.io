@@ -6,7 +6,7 @@ height: 60px;
 background-color: #61B7ED;
 margin-bottom: 10px;
 width: .title;
-margin-left: 10px;
+left: 50%;
 }
 #description {
   display: none;
