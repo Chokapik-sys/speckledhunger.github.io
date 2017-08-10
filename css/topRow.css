@@ -44,20 +44,19 @@ width: 125px;
 height: 25px;
 line-height: 25px;
 background-color: #FFF;
-border: 1px solid #CCC;
-border-radius: 5px;
+border: 1px solid #EDEDED;
 }
 ul#navmenu .sub1 a{
 margin-top: 5px;
 }
 ul#navmenu .sub2 a{
-margin-left: 10px;
+margin-left: 1px;
 }
 ul#navmenu li:hover > a{
-background-color: #CFC;
+background-color: #D6D6D6;
 }
 ul#navmenu li:hover a:hover{
-background-color: #FF0
+background-color: #EDEDED
 }
 ul#navmenu ul.sub1{
 display: none;
