@@ -1,1 +1,1 @@
-document.getElementById("box").style.left =  (0.5 * screen.width) - document.getElementById("title").style.width + "px"
+document.getElementById("box").style.left =  (0.5 * window.innerWidth) - document.getElementById("title").style.width + "px"
