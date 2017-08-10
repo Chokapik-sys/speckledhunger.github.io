@@ -43,8 +43,7 @@ display: block;
 width: 125px;
 height: 25px;
 line-height: 25px;
-background-color: #FFF;
-border: 1px solid #EDEDED;
+background-color: #EDEDED;
 }
 ul#navmenu .sub1 a{
 margin-top: 5px;
@@ -53,10 +52,10 @@ ul#navmenu .sub2 a{
 margin-left: 1px;
 }
 ul#navmenu li:hover > a{
-background-color: #D6D6D6;
+background-color: #CCCCCC;
 }
 ul#navmenu li:hover a:hover{
-background-color: #EDEDED
+background-color: #D6D6D6
 }
 ul#navmenu ul.sub1{
 display: none;
