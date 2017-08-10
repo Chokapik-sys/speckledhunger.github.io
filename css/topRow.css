@@ -1,15 +1,10 @@
-.box {
+#box {
 z-index: 1;
 position: absolute;
 margin-top: 10px;
 height: 60px;
 background-color: #61B7ED;
 margin-bottom: 10px;
-width: .title;
-left: calc(50% - .title);
-}
-#description {
-  display: none;
 }
 body{
 background-color: #FEFEFE;
@@ -91,7 +86,7 @@ top: 6px;
 right: 4px;
 }
 /* Navigation Menu End*/
-.topRow{
+#topRow{
 background-color: #01AEBB;
 width: 100%-10px;
 height: 60px;
