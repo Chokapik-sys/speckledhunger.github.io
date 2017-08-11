@@ -551,7 +551,7 @@ function king() {
         NE_whitecheck = 0
       }}
     //Future Threat
-    if ((document.getElementById("_" + (wk - 26) + "_").innerHTML === "Black Knight" && (wk - 26) % 8 != "0") || (document.getElementById("_" + (wk - 19) + "_").innerHTML === "Black Knight" && (wk - 19) % 8 != "0") || (document.getElementById("_" + (wk - 17) + "_").innerHTML === "Black Knight" && (wk - 17) % 8 != "0") || (document.getElementById("_" + (wk - 16) + "_").innerHTML === "Black Knight")) {
+    if ((document.getElementById("_" + (wk - 26) + "_").innerHTML === "Black Knight" && (wk - 26) % 8 != "0") || (document.getElementById("_" + (wk - 19) + "_").innerHTML === "Black Knight" && (wk - 19) % 8 != "0") || (document.getElementById("_" + (wk - 15) + "_").innerHTML === "Black Knight" && (wk - 15) % 8 != "0") || (document.getElementById("_" + (wk - 16) + "_").innerHTML === "Black Knight")) {
       KN_NW_whitecheck = 1
     } else {
       KN_NW_whitecheck = 0
