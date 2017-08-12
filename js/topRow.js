@@ -7,8 +7,10 @@ function updatesize() {
   if (document.getElementById("title").offsetWidth / parseInt(document.getElementById("title").style.fontSize) != 11.551724137931034) {
     if (document.getElementById("title").offsetWidth / parseInt(document.getElementById("title").style.fontSize) > 11.551724137931034) {
       fontheight += 1
+      break
     } if (document.getElementById("title").offsetWidth / parseInt(document.getElementById("title").style.fontSize) < 11.551724137931034) {
       fontheight -= 1
+      break
       }
   }
   document.getElementById("title").style.fontSize = fontheight + "px"
