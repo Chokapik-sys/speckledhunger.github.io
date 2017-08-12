@@ -40,8 +40,7 @@ width: 125px;
 height: 25px;
 line-height: 25px;
 background-color: #FEFEFE;
-border-bottom: 10px;
-border-color: #ABABAB;
+border-bottom: 10px solid #ABABAB;
 }
 ul#navmenu .sub1 a{
 margin-top: 5px;
