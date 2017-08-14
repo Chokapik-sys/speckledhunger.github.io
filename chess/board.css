@@ -8,7 +8,6 @@
   cursor: pointer;
 }
 .A , .B {
-  border-style: solid;
   width: 64px;
   height: 64px;
 }
