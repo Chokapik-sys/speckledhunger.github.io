@@ -74,7 +74,7 @@ function load() {
         if (cname === "WRO") {
           document.getElementById(val3).innerHTML = "White Rook"
           } if (cname === "WPA") {
-          document.getElementById(val3).innerHTML = "White Rook"
+          document.getElementById(val3).innerHTML = "White Pawn"
           }
       }
     }
