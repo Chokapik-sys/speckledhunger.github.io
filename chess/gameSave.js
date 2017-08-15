@@ -64,6 +64,7 @@ function save() {
   WROcur = 0
 }
 function load() {
+  clearboard()
   readc = document.cookie.split("; ")
   if (readc !== [""]) {
     for (i = 0; i < readc.length; i++) {
