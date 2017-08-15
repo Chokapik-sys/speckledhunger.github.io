@@ -9,7 +9,6 @@ var WQUcur = 0
 var i = 1
 var date = new Date()
 function save() {
-  date = new Date()
   date.setFullYear(date.getUTCFullYear + 1)
   for (i = 1; i < 65; i++) {
     if (document.getElementById("_" + i + "_").innerHTML === "Black Pawn") {
