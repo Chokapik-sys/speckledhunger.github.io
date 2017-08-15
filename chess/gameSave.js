@@ -8,6 +8,7 @@ var WPAcur = 0
 var WQUcur = 0
 var i = 1
 var expire = new Date()
+var changevar = 0
 function save() {
   expire = new Date()
   expire.setUTCFullYear(expire.getUTCFullYear() + 1)
@@ -15,23 +16,35 @@ function save() {
     if (document.getElementById("_" + i + "_").innerHTML === "Black Pawn") {
       if (BPAcur === 0) {
         document.cookie = ("BPA1=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
       } else if (BPAcur === 1) {
         document.cookie = ("BPA2=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
       } else if (BPAcur === 2) {
         document.cookie = ("BPA3=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
       } else if (BPAcur === 3) {
         document.cookie = ("BPA4=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
       } else if (BPAcur === 4) {
         document.cookie = ("BPA5=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
       } else if (BPAcur === 5) {
         document.cookie = ("BPA6=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
       } else if (BPAcur === 6) {
         document.cookie = ("BPA7=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
       } else if (BPAcur === 7) {
         document.cookie = ("BPA8=" + "_" + i + "_; expires=" + expire)
-      } BPAcur ++
+        changevar = 1
+      } if (changevar === 1) {
+        BPAcur ++
+        changevar = 0
+      }
     }
   }
+  BPAcur = 0
 }
 function load() {
   
