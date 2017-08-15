@@ -7,7 +7,6 @@ var WROcur = 0
 var WPAcur = 0
 var WQUcur = 0
 function save() {
-  clearboard()
   for (var i = 1; i < 65; i++) {
     if (document.getElementById("_" + i + "_").innerHTML === "Black Pawn") {
       if (BPAcur === 0) {
