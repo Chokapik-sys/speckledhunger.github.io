@@ -6,11 +6,12 @@ var WKNcur = 0
 var WROcur = 0
 var WPAcur = 0
 var WQUcur = 0
+var i = 1
 var date = new Date()
 function save() {
   date = new Date()
   date.setFullYear(date.getUTCFullYear + 1)
-  for (var i = 1; i < 65; i++) {
+  for (i = 1; i < 65; i++) {
     if (document.getElementById("_" + i + "_").innerHTML === "Black Pawn") {
       if (BPAcur === 0) {
         document.cookie = ("BPA1=" + "_" + i + "_; expires=" + date.toUTCString())
