@@ -58,10 +58,22 @@ function save() {
         WROcur ++
         changevar = 0
       }
-    }
+    } if (document.getElementById("_" + i + "_").innerHTML === "White Knight") {
+      if (WKNcur === 0) {
+        document.cookie = ("WKN1=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } else if (WKNcur === 1) {
+        document.cookie = ("WKN2=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } if (changevar === 1) {
+        WKNcur ++
+        changevar = 0
+      }
+    } 
   }
   WPAcur = 0
   WROcur = 0
+  WKNcur = 0
 }
 function load() {
   clearboard()
@@ -76,12 +88,16 @@ function load() {
           document.getElementById(val4).innerHTML = "White Rook"
           } if (cname === "WPA") {
           document.getElementById(val4).innerHTML = "White Pawn"
+          } if (cname === "WKN") {
+          document.getElementById(val4).innerHTML = "White Knight"
           }
       } if (readc[i][readc[i].length - 3] === "_") {
         if (cname === "WRO") {
           document.getElementById(val3).innerHTML = "White Rook"
           } if (cname === "WPA") {
           document.getElementById(val3).innerHTML = "White Pawn"
+          } if (cname === "WKN") {
+          document.getElementById(val3).innerHTML = "White Knight"
           }
       }
     }
