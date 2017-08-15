@@ -7,7 +7,7 @@ var WROcur = 0
 var WPAcur = 0
 var WQUcur = 0
 var i = 1
-var expire = 0
+var expire = new Date()
 function save() {
   expire = new Date()
   expire.setFullYear(expire.getUTCFullYear + 1)
