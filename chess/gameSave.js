@@ -72,6 +72,12 @@ function load() {
       val4 = readc[i][5] + readc[i][6] + readc[i][7] + readc[i][8]
       if (readc[i][readc[i].length - 3] !== "_") {
         if (cname === "WRO") {
+          document.getElementById(val4).innerHTML = "White Rook"
+          } if (cname === "WPA") {
+          document.getElementById(val4).innerHTML = "White Pawn"
+          }
+      } if (readc[i][readc[i].length - 3] === "_") {
+        if (cname === "WRO") {
           document.getElementById(val3).innerHTML = "White Rook"
           } if (cname === "WPA") {
           document.getElementById(val3).innerHTML = "White Pawn"
