@@ -9,8 +9,7 @@ var WQUcur = 0
 var i = 1
 var expire = new Date()
 function save() {
-  expire = new Date()
-  expire.setFullYear(expire.getUTCFullYear + 1)
+  expire.setUTCFullYear(expire.getUTCFullYear + 1)
   for (i = 1; i < 65; i++) {
     if (document.getElementById("_" + i + "_").innerHTML === "Black Pawn") {
       if (BPAcur === 0) {
