@@ -66,12 +66,14 @@ function save() {
 function load() {
   readc = document.cookie.split("; ")
   if (readc !== [""]) {
-    for (i = 0; i < readc.length - 1; i++) {
+    for (i = 0; i < readc.length; i++) {
       cname = readc[i][0] + readc[i][1] + readc[i][2]
       val3 = readc[i][5] + readc[i][6] + readc[i][7]
       val4 = readc[i][5] + readc[i][6] + readc[i][7] + readc[i][8]
       if (readc[i][readc[i].length - 3] !== "_") {
         if (cname === "WRO") {
+          document.getElementById(val3).innerHTML = "White Rook"
+          } if (cname === "WPA") {
           document.getElementById(val3).innerHTML = "White Rook"
           }
       }
