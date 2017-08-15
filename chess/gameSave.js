@@ -13,38 +13,51 @@ function save() {
   expire = new Date()
   expire.setUTCFullYear(expire.getUTCFullYear() + 1)
   for (i = 1; i < 65; i++) {
-    if (document.getElementById("_" + i + "_").innerHTML === "Black Pawn") {
-      if (BPAcur === 0) {
-        document.cookie = ("BPA1=" + "_" + i + "_; expires=" + expire)
+    //White Piece Cookies
+    if (document.getElementById("_" + i + "_").innerHTML === "White Pawn") {
+      if (WPAcur === 0) {
+        document.cookie = ("WPA1=" + "_" + i + "_; expires=" + expire)
         changevar = 1
-      } else if (BPAcur === 1) {
-        document.cookie = ("BPA2=" + "_" + i + "_; expires=" + expire)
+      } else if (WPAcur === 1) {
+        document.cookie = ("WPA2=" + "_" + i + "_; expires=" + expire)
         changevar = 1
-      } else if (BPAcur === 2) {
-        document.cookie = ("BPA3=" + "_" + i + "_; expires=" + expire)
+      } else if (WPAcur === 2) {
+        document.cookie = ("WPA3=" + "_" + i + "_; expires=" + expire)
         changevar = 1
-      } else if (BPAcur === 3) {
-        document.cookie = ("BPA4=" + "_" + i + "_; expires=" + expire)
+      } else if (WPAcur === 3) {
+        document.cookie = ("WPA4=" + "_" + i + "_; expires=" + expire)
         changevar = 1
-      } else if (BPAcur === 4) {
-        document.cookie = ("BPA5=" + "_" + i + "_; expires=" + expire)
+      } else if (WPAcur === 4) {
+        document.cookie = ("WPA5=" + "_" + i + "_; expires=" + expire)
         changevar = 1
-      } else if (BPAcur === 5) {
-        document.cookie = ("BPA6=" + "_" + i + "_; expires=" + expire)
+      } else if (WPAcur === 5) {
+        document.cookie = ("WPA6=" + "_" + i + "_; expires=" + expire)
         changevar = 1
-      } else if (BPAcur === 6) {
-        document.cookie = ("BPA7=" + "_" + i + "_; expires=" + expire)
+      } else if (WPAcur === 6) {
+        document.cookie = ("WPA7=" + "_" + i + "_; expires=" + expire)
         changevar = 1
-      } else if (BPAcur === 7) {
-        document.cookie = ("BPA8=" + "_" + i + "_; expires=" + expire)
+      } else if (WPAcur === 7) {
+        document.cookie = ("WPA8=" + "_" + i + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
-        BPAcur ++
+        WPAcur ++
+        changevar = 0
+      }
+    } if (document.getElementById("_" + i + "_").innerHTML === "White Rook") {
+      if (WROcur === 0) {
+        document.cookie = ("WRO1=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } if (WROcur === 1) {
+        document.cookie = ("WRO2=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } if (changevar === 1) {
+        WROcur ++
         changevar = 0
       }
     }
   }
-  BPAcur = 0
+  WPAcur = 0
+  WROcur = 0
 }
 function load() {
   
