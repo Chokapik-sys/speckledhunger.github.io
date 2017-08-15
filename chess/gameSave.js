@@ -9,6 +9,10 @@ var WQUcur = 0
 var i = 1
 var expire = new Date()
 var changevar = 0
+var readc = ""
+var cname = ""
+var val3 = 0
+var val4 = 0
 function save() {
   expire = new Date()
   expire.setUTCFullYear(expire.getUTCFullYear() + 1)
@@ -60,7 +64,19 @@ function save() {
   WROcur = 0
 }
 function load() {
-  
+  readc = document.cookie.split("; ")
+  if (readc !== [""]) {
+    for (i = 0; i < readc.length - 1; i++) {
+      cname = readc[i][0] + readc[i][1] + readc[i][2]
+      val3 = readc[i][5] + readc[i][6] + readc[i][7]
+      val4 = readc[i][5] + readc[i][6] + readc[i][7] + readc[i][8]
+      if (readc[i][readc[i].length - 3] !== "_") {
+        if (cname === "WRO") {
+          document.getElementById(val3).innerHTML = "White Rook"
+          }
+      }
+    }
+  }
 }
 function clearsave() {
   
