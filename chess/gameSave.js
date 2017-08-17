@@ -113,9 +113,9 @@ function save() {
   WKIcur = 0
 }
 function load() {
-  clearboard()
   readc = document.cookie.split("; ")
   if (readc !== [""]) {
+    clearboard()
     for (i = 0; i < readc.length; i++) {
       cname = readc[i][0] + readc[i][1] + readc[i][2]
       val3 = readc[i][5] + readc[i][6] + readc[i][7]
