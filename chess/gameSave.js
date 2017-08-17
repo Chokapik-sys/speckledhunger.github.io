@@ -97,7 +97,7 @@ function save() {
       }
     } if (document.getElementById("_" + i + "_").innerHTML === "White King") {
       if (WKIcur === 0) {
-        document.cookie = ("WKI=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WKI1=" + "_" + i + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         WKIcur ++
