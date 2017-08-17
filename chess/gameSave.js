@@ -114,7 +114,7 @@ function save() {
 }
 function load() {
   readc = document.cookie.split("; ")
-  if (readc !== [""]) {
+  if (readc.toString() !== "") {
     clearboard()
     for (i = 0; i < readc.length; i++) {
       cname = readc[i][0] + readc[i][1] + readc[i][2]
