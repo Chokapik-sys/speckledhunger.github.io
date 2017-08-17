@@ -82,11 +82,24 @@ function save() {
         WBIcur ++
         changevar = 0
       }
-    }
+    } if (document.getElementById("_" + i + "_").innerHTML === "White Queen") {
+      if (WQUcur === 0) {
+        document.cookie = ("WQU1=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } else if (WQUcur === 1) {
+        document.cookie = ("WQU2=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } if (changevar === 1) {
+        WQUcur ++
+        changevar = 0
+      }
+    } 
   }
   WPAcur = 0
   WROcur = 0
   WKNcur = 0
+  WBIcur = 0
+  wQUcur = 0
 }
 function load() {
   clearboard()
@@ -105,6 +118,8 @@ function load() {
           document.getElementById(val4).innerHTML = "White Knight"
           } if (cname === "WBI") {
             document.getElementById(val4).innerHTML = "White Bishop"
+          } if (cname === "WQU") {
+            document.getElementById(val4).innerHTML = "White Queen"
           }
       } if (readc[i][readc[i].length - 3] === "_") {
         if (cname === "WRO") {
@@ -115,6 +130,8 @@ function load() {
           document.getElementById(val3).innerHTML = "White Knight"
           } if (cname === "WBI") {
             document.getElementById(val3).innerHTML = "White Bishop"
+          } if (cname === "WQU") {
+            document.getElementById(val3).innerHTML = "White Queen"
           }
       }
     }
