@@ -115,6 +115,7 @@ function save() {
   document.cookie = ("isSaved=Yes; expires=" + expire)
 }
 function load() {
+  document.cookie = "isSaved=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
   readc = document.cookie.split("; ")
   if (readc.toString() !== "") {
     clearboard()
