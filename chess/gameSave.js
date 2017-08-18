@@ -17,7 +17,6 @@ var readc = ""
 var cname = ""
 var val3 = 0
 var val4 = 0
-var loadonload = setTimeout(refresh, 500)
 function save() {
   clearsave()
   expire = new Date()
@@ -193,13 +192,4 @@ function clearsave() {
   document.cookie = "BQU2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
   document.cookie = "BKI1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
   location.reload()
-}
-function refresh() {
-  readc = document.cookie.split("; ")
-  for (i = 0; i < readc.length; i++) {
-  if (readc[i][0] === "i") {
-    load()
-    document.cookie = "isSaved=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  }
-}
 }
