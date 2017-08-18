@@ -199,7 +199,6 @@ function refresh() {
   for (i = 0; i < readc.length; i++) {
   if (readc[i][0] === "i") {
     load()
-    document.cookie = "isSaved=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
   }
 }
 }
