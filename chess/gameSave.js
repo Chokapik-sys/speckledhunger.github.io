@@ -112,7 +112,7 @@ function save() {
   WBIcur = 0
   WQUcur = 0
   WKIcur = 0
-  load()
+  document.getElementsByTagname("BODY").onload = load()
 }
 function load() {
   readc = document.cookie.split("; ")
