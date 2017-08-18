@@ -102,26 +102,8 @@ function save() {
       } if (changevar === 1) {
         WKIcur ++
         changevar = 0
-      } //Delete Unused Cookies
-    } if ( document.getElementById("_" + i + "_").innerHTML !== "White Pawn") {
-      if (WPAcur === 0) {
-        document.cookie = ("WPA1=; expires=Thu, 01 Jan 1970 00:00:00 UTC")
-      } else if (WPAcur === 1) {
-        document.cookie = ("WPA2=; expires=Thu, 01 Jan 1970 00:00:00 UTC")
-      } else if (WPAcur === 2) {
-        document.cookie = ("WPA3=; expires=Thu, 01 Jan 1970 00:00:00 UTC")
-      } else if (WPAcur === 3) {
-        document.cookie = ("WPA4=; expires=Thu, 01 Jan 1970 00:00:00 UTC")
-      } else if (WPAcur === 4) {
-        document.cookie = ("WPA5=; expires=Thu, 01 Jan 1970 00:00:00 UTC")
-      } else if (WPAcur === 5) {
-        document.cookie = ("WPA6=; expires=Thu, 01 Jan 1970 00:00:00 UTC")
-      } else if (WPAcur === 6) {
-        document.cookie = ("WPA7=; expires=Thu, 01 Jan 1970 00:00:00 UTC")
-      } else if (WPAcur === 7) {
-        document.cookie = ("WPA8=; expires=Thu, 01 Jan 1970 00:00:00 UTC")
       }
-    } 
+    }
   }
   WPAcur = 0
   WROcur = 0
