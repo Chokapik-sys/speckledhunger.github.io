@@ -13,10 +13,16 @@ var WKIcur = 0
 var i = 1
 var expire = new Date()
 var changevar = 0
-var readc = ""
+var readc = document.cookie.split("; ")
 var cname = ""
 var val3 = 0
 var val4 = 0
+for (i = 0; i > readc.length; i++) {
+  if (readc[i][0] === "i") {
+    load()
+    document.cookie = "isSaved=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  }
+}
 function save() {
   clearsave()
   expire = new Date()
@@ -112,7 +118,7 @@ function save() {
   WBIcur = 0
   WQUcur = 0
   WKIcur = 0
-  document.getElementsByTagname("BODY").onload = load()
+  document.cookie = ("isSaved=Yes; expires=" + expire)
 }
 function load() {
   readc = document.cookie.split("; ")
