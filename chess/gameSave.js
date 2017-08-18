@@ -12,6 +12,7 @@ var WBIcur = 0
 var WKIcur = 0
 var i = 1
 var expire = new Date()
+var del = new Date()
 var changevar = 0
 var readc = ""
 var cname = ""
@@ -20,6 +21,8 @@ var val4 = 0
 function save() {
   expire = new Date()
   expire.setUTCFullYear(expire.getUTCFullYear() + 1)
+  del = new Date()
+  del.setUTCFullYear(del.getUTCFullYear() - 1)
   for (i = 1; i < 65; i++) {
     //White Piece Cookies
     if (document.getElementById("_" + i + "_").innerHTML === "White Pawn") {
@@ -50,6 +53,24 @@ function save() {
       } if (changevar === 1) {
         WPAcur ++
         changevar = 0
+      }
+    } if ( document.getElementById("_" + i + "_").innerHTML !== "White Pawn") {
+      if (WPAcur === 0) {
+        document.cookie = ("WPA1=; expires=" + del)
+      } else if (WPAcur === 1) {
+        document.cookie = ("WPA2=; expires=" + del)
+      } else if (WPAcur === 2) {
+        document.cookie = ("WPA3=; expires=" + del)
+      } else if (WPAcur === 3) {
+        document.cookie = ("WPA4=; expires=" + del)
+      } else if (WPAcur === 4) {
+        document.cookie = ("WPA5=; expires=" + del)
+      } else if (WPAcur === 5) {
+        document.cookie = ("WPA6=; expires=" + del)
+      } else if (WPAcur === 6) {
+        document.cookie = ("WPA7=; expires=" + del)
+      } else if (WPAcur === 7) {
+        document.cookie = ("WPA8=; expires=" + del)
       }
     } if (document.getElementById("_" + i + "_").innerHTML === "White Rook") {
       if (WROcur === 0) {
