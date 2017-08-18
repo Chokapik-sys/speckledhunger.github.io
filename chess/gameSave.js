@@ -13,16 +13,11 @@ var WKIcur = 0
 var i = 1
 var expire = new Date()
 var changevar = 0
-var readc = document.cookie.split("; ")
+var readc = ""
 var cname = ""
 var val3 = 0
 var val4 = 0
-for (i = 0; i > readc.length; i++) {
-  if (readc[i][0] === "i") {
-    load()
-    document.cookie = "isSaved=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  }
-}
+var loadonload = setTimeOut(refresh, 10)
 function save() {
   clearsave()
   expire = new Date()
@@ -198,4 +193,13 @@ function clearsave() {
   document.cookie = "BQU2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
   document.cookie = "BKI1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
   location.reload()
+}
+function refresh() {
+  readc = document.cookie.split("; ")
+  for (i = 0; i > readc.length; i++) {
+  if (readc[i][0] === "i") {
+    load()
+    document.cookie = "isSaved=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  }
+}
 }
