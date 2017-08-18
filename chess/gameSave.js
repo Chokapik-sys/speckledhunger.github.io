@@ -18,6 +18,7 @@ var cname = ""
 var val3 = 0
 var val4 = 0
 function save() {
+  clearsave()
   expire = new Date()
   expire.setUTCFullYear(expire.getUTCFullYear() + 1)
   for (i = 1; i < 65; i++) {
@@ -153,5 +154,41 @@ function load() {
   }
 }
 function clearsave() {
-  
+  //Clear White Cookies
+  document.cookie = "WPA1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "WPA2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "WPA3=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "WPA4=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "WPA5=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "WPA6=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "WPA7=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "WPA8=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "WRO1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "WRO2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "WKN1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "WKN2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "WBI1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "WBI2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "WQU1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "WQU2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "WKI1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  //Clear Black Cookies
+  document.cookie = "BPA1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "BPA2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "BPA3=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "BPA4=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "BPA5=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "BPA6=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "BPA7=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "BPA8=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "BRO1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "BRO2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "BKN1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "BKN2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "BBI1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "BBI2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "BQU1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "BQU2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = "BKI1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  location.reload()
 }
