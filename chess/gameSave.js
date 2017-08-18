@@ -112,10 +112,8 @@ function save() {
   WBIcur = 0
   WQUcur = 0
   WKIcur = 0
-  document.cookie = ("isSaved=Yes; expires=" + expire)
 }
 function load() {
-  document.cookie = "isSaved=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
   readc = document.cookie.split("; ")
   if (readc.toString() !== "") {
     clearboard()
@@ -192,5 +190,4 @@ function clearsave() {
   document.cookie = "BQU1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
   document.cookie = "BQU2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
   document.cookie = "BKI1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  location.reload()
 }
