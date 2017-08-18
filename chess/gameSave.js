@@ -17,7 +17,7 @@ var readc = ""
 var cname = ""
 var val3 = 0
 var val4 = 0
-var loadonload = setTimeout(refresh, 10)
+var loadonload = setTimeout(refresh, 100)
 function save() {
   clearsave()
   expire = new Date()
