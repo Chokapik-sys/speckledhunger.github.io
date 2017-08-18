@@ -17,7 +17,7 @@ var readc = ""
 var cname = ""
 var val3 = 0
 var val4 = 0
-var loadonload = setTimeout(refresh, 100)
+var loadonload = setTimeout(refresh, 500)
 function save() {
   clearsave()
   expire = new Date()
@@ -199,6 +199,7 @@ function refresh() {
   for (i = 0; i < readc.length; i++) {
   if (readc[i][0] === "i") {
     load()
+    document.cookie = "isSaved=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
   }
 }
 }
