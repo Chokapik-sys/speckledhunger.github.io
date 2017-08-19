@@ -104,6 +104,88 @@ function save() {
         WKIcur ++
         changevar = 0
       }
+    }  //Black Piece Cookies
+    if (document.getElementById("_" + i + "_").innerHTML === "Black Pawn") {
+      if (BPAcur === 0) {
+        document.cookie = ("BPA1=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } else if (BPAcur === 1) {
+        document.cookie = ("BPA2=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } else if (BPAcur === 2) {
+        document.cookie = ("BPA3=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } else if (BPAcur === 3) {
+        document.cookie = ("BPA4=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } else if (BPAcur === 4) {
+        document.cookie = ("BPA5=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } else if (BPAcur === 5) {
+        document.cookie = ("BPA6=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } else if (BPAcur === 6) {
+        document.cookie = ("BPA7=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } else if (BPAcur === 7) {
+        document.cookie = ("BPA8=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } if (changevar === 1) {
+        BPAcur ++
+        changevar = 0
+      }
+    } if (document.getElementById("_" + i + "_").innerHTML === "Black Rook") {
+      if (BROcur === 0) {
+        document.cookie = ("BRO1=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } if (BROcur === 1) {
+        document.cookie = ("BRO2=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } if (changevar === 1) {
+        BROcur ++
+        changevar = 0
+      }
+    } if (document.getElementById("_" + i + "_").innerHTML === "Black Knight") {
+      if (BKNcur === 0) {
+        document.cookie = ("BKN1=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } else if (BKNcur === 1) {
+        document.cookie = ("BKN2=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } if (changevar === 1) {
+        BKNcur ++
+        changevar = 0
+      }
+    } if (document.getElementById("_" + i + "_").innerHTML === "Black Bishop") {
+      if (BBIcur === 0) {
+        document.cookie = ("BBI1=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } else if (BBIcur === 1) {
+        document.cookie = ("BBI2=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } if (changevar === 1) {
+        BBIcur ++
+        changevar = 0
+      }
+    } if (document.getElementById("_" + i + "_").innerHTML === "Black Queen") {
+      if (BQUcur === 0) {
+        document.cookie = ("BQU1=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } else if (BQUcur === 1) {
+        document.cookie = ("BQU2=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } if (changevar === 1) {
+        BQUcur ++
+        changevar = 0
+      }
+    } if (document.getElementById("_" + i + "_").innerHTML === "Black King") {
+      if (BKIcur === 0) {
+        document.cookie = ("BKI1=" + "_" + i + "_; expires=" + expire)
+        changevar = 1
+      } if (changevar === 1) {
+        BKIcur ++
+        changevar = 0
+      }
     }
   }
   WPAcur = 0
@@ -112,6 +194,12 @@ function save() {
   WBIcur = 0
   WQUcur = 0
   WKIcur = 0
+  BPAcur = 0
+  BROcur = 0
+  BKNcur = 0
+  BBIcur = 0
+  BQUcur = 0
+  BKIcur = 0
 }
 function load() {
   readc = document.cookie.split("; ")
@@ -134,6 +222,18 @@ function load() {
             document.getElementById(val4).innerHTML = "White Queen"
           } if (cname === "WKI") {
             document.getElementById(val4).innerHTML = "White King"
+          } if (cname === "BRO") {
+          document.getElementById(val4).innerHTML = "Black Rook"
+          } if (cname === "BPA") {
+          document.getElementById(val4).innerHTML = "Black Pawn"
+          } if (cname === "BKN") {
+          document.getElementById(val4).innerHTML = "Black Knight"
+          } if (cname === "BBI") {
+            document.getElementById(val4).innerHTML = "Black Bishop"
+          } if (cname === "BQU") {
+            document.getElementById(val4).innerHTML = "Black Queen"
+          } if (cname === "BKI") {
+            document.getElementById(val4).innerHTML = "Black King"
           }
       } if (readc[i][readc[i].length - 3] === "_") {
         if (cname === "WRO") {
@@ -148,6 +248,18 @@ function load() {
             document.getElementById(val3).innerHTML = "White Queen"
           } if (cname === "WKI") {
             document.getElementById(val3).innerHTML = "White King"
+          } if (cname === "BRO") {
+          document.getElementById(val3).innerHTML = "Black Rook"
+          } if (cname === "BPA") {
+          document.getElementById(val3).innerHTML = "Black Pawn"
+          } if (cname === "BKN") {
+          document.getElementById(val3).innerHTML = "Black Knight"
+          } if (cname === "BBI") {
+            document.getElementById(val3).innerHTML = "Black Bishop"
+          } if (cname === "BQU") {
+            document.getElementById(val3).innerHTML = "Black Queen"
+          } if (cname === "BKI") {
+            document.getElementById(val3).innerHTML = "Black King"
           }
       }
     }
