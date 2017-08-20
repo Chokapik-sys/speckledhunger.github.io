@@ -29,3 +29,10 @@ function clearboard(){
   resetTurn()
   clear()
 }
+function showOption() {
+  if (document.getElementById("selectOption").checked) {
+    document.getElementById("hiddenOption").style.display = "block"
+  } else {
+    document.getElementById("hiddenOption").style.display = "none"
+  }
+}
