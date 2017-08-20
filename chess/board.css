@@ -1,10 +1,10 @@
 /*--Checkerboard--*/
-.A , .B , #resetTurn , #reportbox {
+.A , .B , #resetTurn , #reportbox , #advanced{
   border-color: #898989;
   border-style: solid;
   border-width: 1px;
 }
-.A , .B , #resetTurn {
+.A , .B , #resetTurn , #selectOption{
   cursor: pointer;
 }
 .A , .B {
@@ -36,6 +36,13 @@
   width: 271px;
   background-color: #E0E5E4;
   text-align: center;
+}
+#advanced {
+  position: absolute;
+  left: 750px;
+  width: 100px;
+  background-color: #CBF2EE;
+  text-align: left;
 }
 /*--row1--*/
 #_1_ {
