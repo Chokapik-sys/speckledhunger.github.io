@@ -42,7 +42,9 @@
   left: 980px;
   width: 200px;
   background-color: #CBF2EE;
-  height: 52px;
+}
+#selectOption {
+  position: absolute;
 }
 /*--row1--*/
 #_1_ {
