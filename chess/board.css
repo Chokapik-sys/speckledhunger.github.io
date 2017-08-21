@@ -43,6 +43,9 @@
   width: 271px;
   background-color: #CBF2EE;
 }
+#central {
+  text-align: center;
+}
 #hiddenOption {
   height: 100px;
 }
