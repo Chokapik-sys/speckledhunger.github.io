@@ -45,6 +45,7 @@
 }
 #central {
   text-align: center;
+  height: 50px;
 }
 #hiddenOption {
   height: 100px;
