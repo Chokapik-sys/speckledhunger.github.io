@@ -314,5 +314,6 @@ function fullread() {
       for (cn = 0; cn > readc[cl].indexOf("="); cn++) {
            cname += readc[cl][cn]
     } console.log("Cookie " + cname + " found")
+    }
   }
 }
