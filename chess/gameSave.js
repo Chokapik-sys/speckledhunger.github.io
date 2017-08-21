@@ -311,7 +311,7 @@ function fullread() {
   if (readc.toString() !== "") {
     for (cl = 0; cl < readc.length; cl++) {
       cname = ""
-      for (cn = 0; cn > readc[cl].indexOf("="); cn++) {
+      for (cn = 0; cn < readc[cl].indexOf("="); cn++) {
            cname += readc[cl][cn]
     } console.log("Cookie " + cname + " found")
     }
