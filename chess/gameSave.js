@@ -10,177 +10,180 @@ var WPAcur = 0
 var WQUcur = 0
 var WBIcur = 0
 var WKIcur = 0
-var i = 1
+var cl = 0
+var cw = 0
+var cn = 0
 var expire = new Date()
 var changevar = 0
 var readc = ""
 var cname = ""
+var cacr = ""
 var val3 = 0
 var val4 = 0
 function save() {
   clearsave()
   expire = new Date()
   expire.setUTCFullYear(expire.getUTCFullYear() + 1)
-  for (i = 1; i < 65; i++) {
+  for (cw = 1; cw < 65; cw++) {
     //White Piece Cookies
-    if (document.getElementById("_" + i + "_").innerHTML === "White Pawn") {
+    if (document.getElementById("_" + cw + "_").innerHTML === "White Pawn") {
       if (WPAcur === 0) {
-        document.cookie = ("WPA1=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WPA1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WPAcur === 1) {
-        document.cookie = ("WPA2=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WPA2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WPAcur === 2) {
-        document.cookie = ("WPA3=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WPA3=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WPAcur === 3) {
-        document.cookie = ("WPA4=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WPA4=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WPAcur === 4) {
-        document.cookie = ("WPA5=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WPA5=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WPAcur === 5) {
-        document.cookie = ("WPA6=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WPA6=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WPAcur === 6) {
-        document.cookie = ("WPA7=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WPA7=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WPAcur === 7) {
-        document.cookie = ("WPA8=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WPA8=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         WPAcur ++
         changevar = 0
       }
-    } if (document.getElementById("_" + i + "_").innerHTML === "White Rook") {
+    } if (document.getElementById("_" + cw + "_").innerHTML === "White Rook") {
       if (WROcur === 0) {
-        document.cookie = ("WRO1=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WRO1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (WROcur === 1) {
-        document.cookie = ("WRO2=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WRO2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         WROcur ++
         changevar = 0
       }
-    } if (document.getElementById("_" + i + "_").innerHTML === "White Knight") {
+    } if (document.getElementById("_" + cw + "_").innerHTML === "White Knight") {
       if (WKNcur === 0) {
-        document.cookie = ("WKN1=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WKN1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WKNcur === 1) {
-        document.cookie = ("WKN2=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WKN2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         WKNcur ++
         changevar = 0
       }
-    } if (document.getElementById("_" + i + "_").innerHTML === "White Bishop") {
+    } if (document.getElementById("_" + cw + "_").innerHTML === "White Bishop") {
       if (WBIcur === 0) {
-        document.cookie = ("WBI1=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WBI1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WBIcur === 1) {
-        document.cookie = ("WBI2=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WBI2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         WBIcur ++
         changevar = 0
       }
-    } if (document.getElementById("_" + i + "_").innerHTML === "White Queen") {
+    } if (document.getElementById("_" + cw + "_").innerHTML === "White Queen") {
       if (WQUcur === 0) {
-        document.cookie = ("WQU1=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WQU1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WQUcur === 1) {
-        document.cookie = ("WQU2=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WQU2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         WQUcur ++
         changevar = 0
       }
-    } if (document.getElementById("_" + i + "_").innerHTML === "White King") {
+    } if (document.getElementById("_" + cw + "_").innerHTML === "White King") {
       if (WKIcur === 0) {
-        document.cookie = ("WKI1=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("WKI1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         WKIcur ++
         changevar = 0
       }
     }  //Black Piece Cookies
-    if (document.getElementById("_" + i + "_").innerHTML === "Black Pawn") {
+    if (document.getElementById("_" + cw + "_").innerHTML === "Black Pawn") {
       if (BPAcur === 0) {
-        document.cookie = ("BPA1=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("BPA1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BPAcur === 1) {
-        document.cookie = ("BPA2=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("BPA2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BPAcur === 2) {
-        document.cookie = ("BPA3=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("BPA3=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BPAcur === 3) {
-        document.cookie = ("BPA4=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("BPA4=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BPAcur === 4) {
-        document.cookie = ("BPA5=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("BPA5=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BPAcur === 5) {
-        document.cookie = ("BPA6=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("BPA6=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BPAcur === 6) {
-        document.cookie = ("BPA7=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("BPA7=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BPAcur === 7) {
-        document.cookie = ("BPA8=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("BPA8=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         BPAcur ++
         changevar = 0
       }
-    } if (document.getElementById("_" + i + "_").innerHTML === "Black Rook") {
+    } if (document.getElementById("_" + cw + "_").innerHTML === "Black Rook") {
       if (BROcur === 0) {
-        document.cookie = ("BRO1=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("BRO1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (BROcur === 1) {
-        document.cookie = ("BRO2=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("BRO2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         BROcur ++
         changevar = 0
       }
-    } if (document.getElementById("_" + i + "_").innerHTML === "Black Knight") {
+    } if (document.getElementById("_" + cw + "_").innerHTML === "Black Knight") {
       if (BKNcur === 0) {
-        document.cookie = ("BKN1=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("BKN1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BKNcur === 1) {
-        document.cookie = ("BKN2=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("BKN2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         BKNcur ++
         changevar = 0
       }
-    } if (document.getElementById("_" + i + "_").innerHTML === "Black Bishop") {
+    } if (document.getElementById("_" + cw + "_").innerHTML === "Black Bishop") {
       if (BBIcur === 0) {
-        document.cookie = ("BBI1=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("BBI1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BBIcur === 1) {
-        document.cookie = ("BBI2=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("BBI2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         BBIcur ++
         changevar = 0
       }
-    } if (document.getElementById("_" + i + "_").innerHTML === "Black Queen") {
+    } if (document.getElementById("_" + cw + "_").innerHTML === "Black Queen") {
       if (BQUcur === 0) {
-        document.cookie = ("BQU1=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("BQU1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BQUcur === 1) {
-        document.cookie = ("BQU2=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("BQU2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         BQUcur ++
         changevar = 0
       }
-    } if (document.getElementById("_" + i + "_").innerHTML === "Black King") {
+    } if (document.getElementById("_" + cw + "_").innerHTML === "Black King") {
       if (BKIcur === 0) {
-        document.cookie = ("BKI1=" + "_" + i + "_; expires=" + expire)
+        document.cookie = ("BKI1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         BKIcur ++
@@ -205,60 +208,60 @@ function load() {
   readc = document.cookie.split("; ")
   if (readc.toString() !== "") {
     clearboard()
-    for (i = 0; i < readc.length; i++) {
-      cname = readc[i][0] + readc[i][1] + readc[i][2]
-      val3 = readc[i][5] + readc[i][6] + readc[i][7]
-      val4 = readc[i][5] + readc[i][6] + readc[i][7] + readc[i][8]
-      if (readc[i][readc[i].length - 3] !== "_") {
-        if (cname === "WRO") {
+    for (cl = 0; cl < readc.length; cl++) {
+      cacr = readc[cl][0] + readc[cl][1] + readc[cl][2]
+      val3 = readc[cl][5] + readc[cl][6] + readc[cl][7]
+      val4 = readc[cl][5] + readc[cl][6] + readc[cl][7] + readc[cl][8]
+      if (readc[cl][readc[cl].length - 3] !== "_") {
+        if (cacr === "WRO") {
           document.getElementById(val4).innerHTML = "White Rook"
-          } if (cname === "WPA") {
+          } if (cacr === "WPA") {
           document.getElementById(val4).innerHTML = "White Pawn"
-          } if (cname === "WKN") {
+          } if (cacr === "WKN") {
           document.getElementById(val4).innerHTML = "White Knight"
-          } if (cname === "WBI") {
+          } if (cacr === "WBI") {
             document.getElementById(val4).innerHTML = "White Bishop"
-          } if (cname === "WQU") {
+          } if (cacr === "WQU") {
             document.getElementById(val4).innerHTML = "White Queen"
-          } if (cname === "WKI") {
+          } if (cacr === "WKI") {
             document.getElementById(val4).innerHTML = "White King"
-          } if (cname === "BRO") {
+          } if (cacr === "BRO") {
           document.getElementById(val4).innerHTML = "Black Rook"
-          } if (cname === "BPA") {
+          } if (cacr === "BPA") {
           document.getElementById(val4).innerHTML = "Black Pawn"
-          } if (cname === "BKN") {
+          } if (cacr === "BKN") {
           document.getElementById(val4).innerHTML = "Black Knight"
-          } if (cname === "BBI") {
+          } if (cacr === "BBI") {
             document.getElementById(val4).innerHTML = "Black Bishop"
-          } if (cname === "BQU") {
+          } if (cacr === "BQU") {
             document.getElementById(val4).innerHTML = "Black Queen"
-          } if (cname === "BKI") {
+          } if (cacr === "BKI") {
             document.getElementById(val4).innerHTML = "Black King"
           }
-      } if (readc[i][readc[i].length - 3] === "_") {
-        if (cname === "WRO") {
+      } if (readc[cl][readc[cl].length - 3] === "_") {
+        if (cacr === "WRO") {
           document.getElementById(val3).innerHTML = "White Rook"
-          } if (cname === "WPA") {
+          } if (cacr === "WPA") {
           document.getElementById(val3).innerHTML = "White Pawn"
-          } if (cname === "WKN") {
+          } if (cacr === "WKN") {
           document.getElementById(val3).innerHTML = "White Knight"
-          } if (cname === "WBI") {
+          } if (cacr === "WBI") {
             document.getElementById(val3).innerHTML = "White Bishop"
-          } if (cname === "WQU") {
+          } if (cacr === "WQU") {
             document.getElementById(val3).innerHTML = "White Queen"
-          } if (cname === "WKI") {
+          } if (cacr === "WKI") {
             document.getElementById(val3).innerHTML = "White King"
-          } if (cname === "BRO") {
+          } if (cacr === "BRO") {
           document.getElementById(val3).innerHTML = "Black Rook"
-          } if (cname === "BPA") {
+          } if (cacr === "BPA") {
           document.getElementById(val3).innerHTML = "Black Pawn"
-          } if (cname === "BKN") {
+          } if (cacr === "BKN") {
           document.getElementById(val3).innerHTML = "Black Knight"
-          } if (cname === "BBI") {
+          } if (cacr === "BBI") {
             document.getElementById(val3).innerHTML = "Black Bishop"
-          } if (cname === "BQU") {
+          } if (cacr === "BQU") {
             document.getElementById(val3).innerHTML = "Black Queen"
-          } if (cname === "BKI") {
+          } if (cacr === "BKI") {
             document.getElementById(val3).innerHTML = "Black King"
           }
       }
@@ -302,4 +305,7 @@ function clearsave() {
   document.cookie = "BQU1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
   document.cookie = "BQU2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
   document.cookie = "BKI1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+}
+function fullread() {
+  
 }
