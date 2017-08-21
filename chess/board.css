@@ -35,6 +35,7 @@
   left: 690px;
   width: 271px;
   background-color: #E0E5E4;
+  text-align: center;
 }
 #advanced {
   position: absolute;
@@ -42,9 +43,12 @@
   width: 271px;
   background-color: #CBF2EE;
 }
-#central , #top{
+#central{
   text-align: center;
   height: 50px;
+}
+#top {
+  height: 32px;
 }
 #hiddenOption {
   height: 100px;
