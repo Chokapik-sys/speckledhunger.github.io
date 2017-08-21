@@ -307,5 +307,13 @@ function clearsave() {
   document.cookie = "BKI1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
 }
 function fullread() {
-  
+  readc = document.cookie.split("; ")
+  if (readc.toString() !== "") {
+    clearboard()
+    for (cl = 0; cl < readc.length; cl++) {
+      cname = ""
+      for (cn = 0; cn > readc[cl].indexOf("="); cn++) {
+           cname += readc[cl][cn]
+    } console.log("Cookie " + cname + " found")
+  }
 }
