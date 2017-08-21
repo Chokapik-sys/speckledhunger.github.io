@@ -13,6 +13,9 @@ var WKIcur = 0
 var cl = 0
 var cw = 0
 var cn = 0
+var cnumset = 001
+var cnumget = 001
+var cnumfetch = ""
 var expire = new Date()
 var changevar = 0
 var readc = ""
@@ -28,28 +31,28 @@ function save() {
     //White Piece Cookies
     if (document.getElementById("_" + cw + "_").innerHTML === "White Pawn") {
       if (WPAcur === 0) {
-        document.cookie = ("WPA1=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "WPA1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WPAcur === 1) {
-        document.cookie = ("WPA2=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "WPA2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WPAcur === 2) {
-        document.cookie = ("WPA3=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "WPA3=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WPAcur === 3) {
-        document.cookie = ("WPA4=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "WPA4=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WPAcur === 4) {
-        document.cookie = ("WPA5=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "WPA5=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WPAcur === 5) {
-        document.cookie = ("WPA6=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "WPA6=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WPAcur === 6) {
-        document.cookie = ("WPA7=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "WPA7=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WPAcur === 7) {
-        document.cookie = ("WPA8=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "WPA8=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         WPAcur ++
@@ -57,10 +60,10 @@ function save() {
       }
     } if (document.getElementById("_" + cw + "_").innerHTML === "White Rook") {
       if (WROcur === 0) {
-        document.cookie = ("WRO1=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "WRO1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (WROcur === 1) {
-        document.cookie = ("WRO2=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "WRO2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         WROcur ++
@@ -68,10 +71,10 @@ function save() {
       }
     } if (document.getElementById("_" + cw + "_").innerHTML === "White Knight") {
       if (WKNcur === 0) {
-        document.cookie = ("WKN1=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "WKN1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WKNcur === 1) {
-        document.cookie = ("WKN2=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "WKN2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         WKNcur ++
@@ -79,10 +82,10 @@ function save() {
       }
     } if (document.getElementById("_" + cw + "_").innerHTML === "White Bishop") {
       if (WBIcur === 0) {
-        document.cookie = ("WBI1=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "WBI1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WBIcur === 1) {
-        document.cookie = ("WBI2=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "WBI2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         WBIcur ++
@@ -90,10 +93,10 @@ function save() {
       }
     } if (document.getElementById("_" + cw + "_").innerHTML === "White Queen") {
       if (WQUcur === 0) {
-        document.cookie = ("WQU1=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "WQU1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (WQUcur === 1) {
-        document.cookie = ("WQU2=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "WQU2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         WQUcur ++
@@ -101,7 +104,7 @@ function save() {
       }
     } if (document.getElementById("_" + cw + "_").innerHTML === "White King") {
       if (WKIcur === 0) {
-        document.cookie = ("WKI1=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "WKI1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         WKIcur ++
@@ -110,28 +113,28 @@ function save() {
     }  //Black Piece Cookies
     if (document.getElementById("_" + cw + "_").innerHTML === "Black Pawn") {
       if (BPAcur === 0) {
-        document.cookie = ("BPA1=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "BPA1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BPAcur === 1) {
-        document.cookie = ("BPA2=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "BPA2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BPAcur === 2) {
-        document.cookie = ("BPA3=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "BPA3=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BPAcur === 3) {
-        document.cookie = ("BPA4=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "BPA4=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BPAcur === 4) {
-        document.cookie = ("BPA5=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "BPA5=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BPAcur === 5) {
-        document.cookie = ("BPA6=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "BPA6=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BPAcur === 6) {
-        document.cookie = ("BPA7=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "BPA7=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BPAcur === 7) {
-        document.cookie = ("BPA8=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "BPA8=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         BPAcur ++
@@ -139,10 +142,10 @@ function save() {
       }
     } if (document.getElementById("_" + cw + "_").innerHTML === "Black Rook") {
       if (BROcur === 0) {
-        document.cookie = ("BRO1=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "BRO1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (BROcur === 1) {
-        document.cookie = ("BRO2=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "BRO2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         BROcur ++
@@ -150,10 +153,10 @@ function save() {
       }
     } if (document.getElementById("_" + cw + "_").innerHTML === "Black Knight") {
       if (BKNcur === 0) {
-        document.cookie = ("BKN1=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "BKN1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BKNcur === 1) {
-        document.cookie = ("BKN2=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "BKN2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         BKNcur ++
@@ -161,10 +164,10 @@ function save() {
       }
     } if (document.getElementById("_" + cw + "_").innerHTML === "Black Bishop") {
       if (BBIcur === 0) {
-        document.cookie = ("BBI1=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "BBI1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BBIcur === 1) {
-        document.cookie = ("BBI2=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "BBI2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         BBIcur ++
@@ -172,10 +175,10 @@ function save() {
       }
     } if (document.getElementById("_" + cw + "_").innerHTML === "Black Queen") {
       if (BQUcur === 0) {
-        document.cookie = ("BQU1=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "BQU1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } else if (BQUcur === 1) {
-        document.cookie = ("BQU2=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "BQU2=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         BQUcur ++
@@ -183,7 +186,7 @@ function save() {
       }
     } if (document.getElementById("_" + cw + "_").innerHTML === "Black King") {
       if (BKIcur === 0) {
-        document.cookie = ("BKI1=" + "_" + cw + "_; expires=" + expire)
+        document.cookie = (cnumset + "BKI1=" + "_" + cw + "_; expires=" + expire)
         changevar = 1
       } if (changevar === 1) {
         BKIcur ++
@@ -209,9 +212,15 @@ function load() {
   if (readc.toString() !== "") {
     clearboard()
     for (cl = 0; cl < readc.length; cl++) {
-      cacr = readc[cl][0] + readc[cl][1] + readc[cl][2]
-      val3 = readc[cl][5] + readc[cl][6] + readc[cl][7]
-      val4 = readc[cl][5] + readc[cl][6] + readc[cl][7] + readc[cl][8]
+      cname = ""
+      for (cn = 0; cn < readc[cl].indexOf("="); cn++) {
+           cname += readc[cl][cn]
+    } cacr = cname[3] + cname[4] + cname[5]
+      cnumfetch = cname[0] + cname[1] + cname[2]
+      readc[cl] = readc[cl].replace(cname + "=", "")
+      val3 = readc[cl][0] + readc[cl][1] + readc[cl][2]
+      val4 = readc[cl][0] + readc[cl][1] + readc[cl][2] + readc[cl][3]
+      if (cnumget == cnumfetch) {
       if (readc[cl][readc[cl].length - 3] !== "_") {
         if (cacr === "WRO") {
           document.getElementById(val4).innerHTML = "White Rook"
@@ -264,6 +273,7 @@ function load() {
           } if (cacr === "BKI") {
             document.getElementById(val3).innerHTML = "Black King"
           }
+      }
       }
     }
   }
