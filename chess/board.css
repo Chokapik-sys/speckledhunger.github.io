@@ -53,6 +53,11 @@
 #extension {
   height: 10px;
 }
+#colour {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+}
 /*--row1--*/
 #_1_ {
   position: absolute;
