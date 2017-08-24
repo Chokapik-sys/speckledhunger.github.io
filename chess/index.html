@@ -11,6 +11,7 @@
 </head>
 <body>
     <!--Boundaries-->
+  <div id="boardcont">
   <button id="_-25_" class="none">A</button>
   <button id="_-24_" class="none">A</button>
   <button id="_-23_" class="none">A</button>
@@ -136,13 +137,14 @@
   <button id="_62_" class="A" onclick="coord62()">Black Bishop</button>
   <button id="_63_" class="B" onclick="coord63()">Black Knight</button>
   <button id="_64_" class="A" onclick="coord64()">Black Rook</button>
+  </div>
   <!--End of board-->
   <button id="resetTurn" onclick="resetTurn()">Reset Turn</button>
   <div id="reportbox"><div id ="report"><b>Attack Log</b></div><div id="top"></div></div>
   <div id="advanced"><div id="central"><b>Advanced Options:</b><input type="checkbox" id="selectOption" onclick="showOption()"></div>
     <div id="hiddenOption" class="none">
       <select id="colour"><option>White</option><option>Black</option></select>
-      <select id="piece"><option>Rook</option><option>Knight</option><option>Pawn</option><option>Bishop</option><option>King</option><option>Queen</option></select>
+      <select id="piece"><option>Rook</option><option>Pawn</option><option>Knight</option><option>Bishop</option><option>King</option><option>Queen</option></select>
       <div id="extension"></div></div></div>
 </body>
 </html>
