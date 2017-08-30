@@ -192,7 +192,10 @@ function save() {
         BKIcur ++
         changevar = 0
       }
-    } document.cookie = (cnumset + "log=" + document.getElementById("report").innerHTML + "; expires=" + expire)
+    }
+  }
+  if (document.getElementById("report").innerHTML !== "<b>Attack Log</b>") {
+    document.cookie = (cnumset + "log=" + document.getElementById("report").innerHTML + "; expires=" + expire)
   }
   WPAcur = 0
   WROcur = 0
