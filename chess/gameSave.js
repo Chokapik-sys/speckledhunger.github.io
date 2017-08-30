@@ -192,7 +192,7 @@ function save() {
         BKIcur ++
         changevar = 0
       }
-    }
+    } document.cookie = (cnumset + "log=" + document.getElementById("report").innerHTML + "; expires=" + expire)
   }
   WPAcur = 0
   WROcur = 0
@@ -221,6 +221,9 @@ function load() {
       val3 = readc[cl][0] + readc[cl][1] + readc[cl][2]
       val4 = readc[cl][0] + readc[cl][1] + readc[cl][2] + readc[cl][3]
       if (cnumget == cnumfetch) {
+        if (cacr === "log") {
+          document.getElementById("report").innerHTML = readc[cl]
+        }
       if (readc[cl][readc[cl].length - 3] !== "_") {
         if (cacr === "WRO") {
           document.getElementById(val4).innerHTML = "White Rook"
@@ -315,6 +318,8 @@ function clearsave() {
   document.cookie = cnumset + "BQU1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
   document.cookie = cnumset + "BQU2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
   document.cookie = cnumset + "BKI1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  //Clear Attack Log Cookie
+  document.cookie = cnumset + "log=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
 }
 function fullread() {
   readc = document.cookie.split("; ")
