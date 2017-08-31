@@ -66,6 +66,16 @@
   width: 128px;
   height: 64px;
   left: 557px;
+  display: none;
+}
+#save {
+  top: 281px;
+}
+#load {
+  top: 350px;
+}
+#delete {
+  top: 419px;
 }
 /*--row1--*/
 #_1_ {
