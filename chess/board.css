@@ -1,10 +1,10 @@
 /*--Checkerboard--*/
-.A , .B , #resetTurn , #reportbox , #advanced{
+.A , .B , #resetTurn , #reportbox , #advanced , .saveoption{
   border-color: #898989;
   border-style: solid;
   border-width: 1px;
 }
-.A , .B , #resetTurn , #selectOption{
+.A , .B , #resetTurn , #selectOption, .saveoption{
   cursor: pointer;
 }
 .A , .B {
@@ -59,6 +59,13 @@
   position: absolute;
   top: 30px;
   left: 10px;
+}
+.saveoption {
+  position: absolute;
+  background-color: #A4F9E6;
+  width: 128px;
+  height: 64px;
+  left: 557px;
 }
 /*--row1--*/
 #_1_ {
