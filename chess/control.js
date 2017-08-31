@@ -27,7 +27,7 @@ function clearboard(){
     document.getElementById("_" + cb + "_").innerHTML = ""
   }
   resetTurn()
-  clear()
+  console.clear()
 }
 function showOption() {
   if (document.getElementById("selectOption").checked) {
