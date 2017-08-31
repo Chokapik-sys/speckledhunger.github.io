@@ -335,3 +335,23 @@ function fullread() {
     }
   }
 }
+function enablebeta() {
+  expire = new Date()
+  expire.setUTCFullYear(expire.getUTCFullYear() + 1)
+  document.cookie = ("beta=true; expires=" + expires)
+  checkbeta()
+}
+function checkbeta() {
+  readc = document.cookie.split("; ")
+  if (readc.toString() !== "") {
+    for (cl = 0; cl < readc.length; cl++) {
+      cname = ""
+      for (cn = 0; cn < readc[cl].indexOf("="); cn++) {
+           cname += readc[cl][cn]
+    } readc[cl] = readc[cl].replace(cname + "=", "")
+      if (cname === "beta" && readc[cl] === "true") {
+        console.log("Beta active")
+      }
+    }
+  }
+}
