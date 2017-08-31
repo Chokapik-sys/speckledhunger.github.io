@@ -338,7 +338,7 @@ function fullread() {
 function enablebeta() {
   expire = new Date()
   expire.setUTCFullYear(expire.getUTCFullYear() + 1)
-  document.cookie = ("beta=true; expires=" + expires)
+  document.cookie = ("beta=true; expires=" + expire)
   checkbeta()
 }
 function checkbeta() {
