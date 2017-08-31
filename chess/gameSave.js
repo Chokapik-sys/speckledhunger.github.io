@@ -351,6 +351,9 @@ function checkbeta() {
     } readc[cl] = readc[cl].replace(cname + "=", "")
       if (cname === "beta" && readc[cl] === "true") {
         console.log("Beta active")
+        document.getElementById("save").style.display = "block"
+        document.getElementById("load").style.display = "block"
+        document.getElementById("delete").style.display = "block"
       }
     }
   }
