@@ -23,6 +23,7 @@ var cname = ""
 var cacr = ""
 var val3 = 0
 var val4 = 0
+var checksave = 0
 function save() {
   clearsave()
   expire = new Date()
@@ -220,6 +221,18 @@ function load() {
            cname += readc[cl][cn]
     } cacr = cname[3] + cname[4] + cname[5]
       cnumfetch = cname[0] + cname[1] + cname[2]
+      if (cnumget === cnumfetch) {
+        checksave = 1
+      }
+    }
+  if (checksave === 1) {
+    clearboard()
+    for (cl = 0; cl < readc.length; cl++) {
+      cname = ""
+      for (cn = 0; cn < readc[cl].indexOf("="); cn++) {
+           cname += readc[cl][cn]
+    } cacr = cname[3] + cname[4] + cname[5]
+      cnumfetch = cname[0] + cname[1] + cname[2]
       readc[cl] = readc[cl].replace(cname + "=", "")
       val3 = readc[cl][0] + readc[cl][1] + readc[cl][2]
       val4 = readc[cl][0] + readc[cl][1] + readc[cl][2] + readc[cl][3]
@@ -283,6 +296,7 @@ function load() {
       }
     }
   }
+    checksave = 0
 }
 function clearsave() {
   //Clear White Cookies
