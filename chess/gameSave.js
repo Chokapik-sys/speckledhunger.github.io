@@ -225,6 +225,7 @@ function load() {
         checksave = 1
       }
     }
+  }
   if (checksave === 1) {
     clearboard()
     for (cl = 0; cl < readc.length; cl++) {
