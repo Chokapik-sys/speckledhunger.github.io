@@ -59,9 +59,12 @@
   position: absolute;
   top: 30px;
   left: 10px;
+  width: 69px;
+  height: 19px;
 }
 #piece {
-  
+  width: 69px;
+  height: 19px;
 }
 .saveoption {
   position: absolute;
