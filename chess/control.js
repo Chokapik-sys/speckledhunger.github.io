@@ -27,6 +27,7 @@ function clearboard(){
     document.getElementById("_" + cb + "_").innerHTML = ""
   }
   resetTurn()
+  document.getElementById("report").innerHTML = "<b>Attack Log</b>"
   console.clear()
 }
 function showOption() {
