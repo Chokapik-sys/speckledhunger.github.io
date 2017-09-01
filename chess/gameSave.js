@@ -214,7 +214,6 @@ function save() {
 function load() {
   readc = document.cookie.split("; ")
   if (readc.toString() !== "") {
-    clearboard()
     for (cl = 0; cl < readc.length; cl++) {
       cname = ""
       for (cn = 0; cn < readc[cl].indexOf("="); cn++) {
