@@ -38,7 +38,7 @@ function showOption() {
   }
 }
 function checkkey() {
-  if (1 < document.getElementById("num").value < 999) {
+  if (1 < parseInt(document.getElementById("num").value) < 999) {
   } else {
     document.getElementById("num").value = document.getElementById("num").value.replace(document.getElementById("num").value[document.getElementById("num").value.length - 1], "")
   }
