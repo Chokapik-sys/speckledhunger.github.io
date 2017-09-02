@@ -2,6 +2,7 @@ var cc = 1
 var cb = 1
 var A = "#BAF7F9"
 var B = "#D0FFB6"
+var char = ""
 function resetTurn() {
   phase = 4
   phase_4()
@@ -38,8 +39,8 @@ function showOption() {
   }
 }
 function checkkey() {
-  if (1 < parseInt(document.getElementById("num").value) < 999) {
-  } else {
-    document.getElementById("num").value = document.getElementById("num").value.replace(document.getElementById("num").value[document.getElementById("num").value.length - 1], "")
+  char = document.getElementById("num").value[document.getElementById("num").value.length - 1]
+  if (char !== "1" || char !== "2" || char !== "3" || char !== "4" || char !== "5" || char !== "6" || char !== "7" || char !== "8" || char !== "9") {
+      document.getElementById("num").value = document.getElementById("num").value.replace(char, "")
   }
 }
