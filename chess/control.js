@@ -40,7 +40,7 @@ function showOption() {
 }
 function checkkey() {
   char = document.getElementById("num").value[document.getElementById("num").value.length - 1]
-  if (char !== "1" || char !== "2" || char !== "3" || char !== "4" || char !== "5" || char !== "6" || char !== "7" || char !== "8" || char !== "9") {
+  if (char !== "1" && char !== "2" && char !== "3" && char !== "4" && char !== "5" && char !== "6" && char !== "7" && char !== "8" && char !== "9") {
       document.getElementById("num").value = document.getElementById("num").value.replace(char, "")
   }
 }
