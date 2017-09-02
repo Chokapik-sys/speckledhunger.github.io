@@ -2,6 +2,7 @@ var cc = 1
 var cb = 1
 var A = "#BAF7F9"
 var B = "#D0FFB6"
+var checknum = ""
 function resetTurn() {
   phase = 4
   phase_4()
@@ -35,5 +36,11 @@ function showOption() {
     document.getElementById("hiddenOption").style.display = "block"
   } else {
     document.getElementById("hiddenOption").style.display = "none"
+  }
+}
+function checkkey() {
+  if (1 < document.getElementById("num").value < 999) {
+  } else {
+    document.getElementById("num").value.replace(document.getElementById("num").value[document.getElementById("num").value.length + 1], "")
   }
 }
