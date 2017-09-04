@@ -44,7 +44,7 @@ function checkkey() {
   charcoord = document.getElementById("coord").value[document.getElementById("num").value.length - 1]
   if (charnum !== "0" && charnum !== "1" && charnum !== "2" && charnum !== "3" && charnum !== "4" && charnum !== "5" && charnum !== "6" && charnum !== "7" && charnum !== "8" && charnum !== "9") {
       document.getElementById("num").value = document.getElementById("num").value.replace(charnum, "")
-  } if (charcoord !== "_" && charcoord !== "1" && charcoord !== "2" && charcoord !== "3" && charcoord !== "4" && charcoord !== "5" && charcoord !== "6" && charcoord !== "7" && charcoord !== "8" && charcoord !== "9") {
+  } if (charcoord !== "_" && charcoord !== "0" && charcoord !== "1" && charcoord !== "2" && charcoord !== "3" && charcoord !== "4" && charcoord !== "5" && charcoord !== "6" && charcoord !== "7" && charcoord !== "8" && charcoord !== "9") {
       document.getElementById("coord").value = document.getElementById("coord").value.replace(charcoord, "")
   }
 }
