@@ -49,6 +49,9 @@
   text-align: center;
   height: 50px;
 }
+#container {
+  height: 100px;
+}
 #top {
   height: 32px;
 }
