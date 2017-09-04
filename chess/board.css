@@ -42,7 +42,7 @@
   position: absolute;
   left: 972px;
   top: 5px;
-  width: 306px;
+  width: 316px;
   background-color: #CBF2EE;
 }
 #central{
@@ -80,7 +80,7 @@
   position: absolute;
   width: 26px;
   height: 14px;
-  top: 30px;
+  top: 40px;
   left: 171px;
 }
 #customsave {
@@ -90,7 +90,7 @@
   width: 42px;
   height: 20px;
   top: 30px;
-  left: 203px;
+  left: 213px;
 }
 #customdelete {
   position: absolute;
@@ -99,7 +99,7 @@
   width: 49px;
   height: 20px;
   top: 30px;
-  left: 247px;
+  left: 257px;
 }
 .saveoption {
   position: absolute;
