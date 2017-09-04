@@ -42,7 +42,7 @@
   position: absolute;
   left: 972px;
   top: 5px;
-  width: 289px;
+  width: 274px;
   background-color: #CBF2EE;
 }
 #central{
@@ -59,14 +59,14 @@
   position: absolute;
   top: 30px;
   left: 10px;
-  width: 70px;
+  width: 60px;
   height: 20px;
 }
 #piece {
   position: absolute;
   top: 30px;
-  left: 82px;
-  width: 70px;
+  left: 72px;
+  width: 65px;
   height: 20px;
 }
 #num {
@@ -74,7 +74,7 @@
   width: 26px;
   height: 14px;
   top: 30px;
-  left: 154px;
+  left: 139px;
 }
 #customsave {
   position: absolute;
@@ -83,7 +83,7 @@
   width: 42px;
   height: 20px;
   top: 30px;
-  left: 186px;
+  left: 171px;
 }
 #customdelete {
   position: absolute;
@@ -92,7 +92,7 @@
   width: 49px;
   height: 20px;
   top: 30px;
-  left: 230px;
+  left: 215px;
 }
 .saveoption {
   position: absolute;
