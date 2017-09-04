@@ -375,5 +375,8 @@ function checkbeta() {
 function customsave() {
   expire = new Date()
   expire.setUTCFullYear(expire.getUTCFullYear + 1)
-  document.cookie = (cnumset + document.getElementById("colour").value + document.getElementById("piece").value + document.getElementById("num").value + "=")
+  document.cookie = (cnumset + document.getElementById("colour").value + document.getElementById("piece").value + document.getElementById("num").value + "=" + document.getElementById("coord").value + "; expires=" + expire)
+}
+function customdelete() {
+  document.cookie = (cnumset + document.getElementById("colour").value + document.getElementById("piece").value + document.getElementById("num").value + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC")
 }
