@@ -112,7 +112,7 @@
   width: 42px;
   height: 20px;
   top: 55px;
-  left: 38px;
+  left: 42px;
 }
 #savefileload {
   position: absolute;
@@ -120,7 +120,7 @@
   width: 42px;
   height: 20px;
   top: 55px;
-  left: 82px;
+  left: 86px;
 }
 #savefiledelete {
   position: absolute;
@@ -128,7 +128,7 @@
   width: 49px;
   height: 20px;
   top: 55px;
-  left: 126px;
+  left: 130px;
 }
 .saveoption {
   position: absolute;
