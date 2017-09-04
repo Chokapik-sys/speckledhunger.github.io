@@ -144,6 +144,7 @@
   <div id="reportbox"><div id ="report"><b>Attack Log</b></div><div id="top"></div></div>
   <div id="advanced"><div id="central"><b>Advanced Options:</b><input type="checkbox" id="selectOption" onclick="showOption()"></div>
     <div id="hiddenOption" class="none">
+      <div id="container">
       <select id="colour"><option value="W">White</option><option value="B">Black</option></select>
       <select id="piece"><option value="RO">Rook</option><option value="PA">Pawn</option><option value="KN">Knight</option><option value="BI">Bishop</option><option value="KI">King</option><option value="QU">Queen</option></select>
       <input type="text" id="num" maxlength="3" onkeyup="checkkey()" onkeydown="checkkey()" onkeypress="checkkey()" placeholder="#">
@@ -154,6 +155,7 @@
       <button id="savefilesave" onclick="">Save</button>
       <button id="savefileload" onclick="">Load</button>
       <button id="savefiledelete" onclick="">Delete</button>
+      </div>
       <div id="extension"></div></div></div>
 </body>
 </html>
