@@ -42,7 +42,7 @@
   position: absolute;
   left: 972px;
   top: 5px;
-  width: 283px;
+  width: 289px;
   background-color: #CBF2EE;
 }
 #central{
@@ -80,7 +80,7 @@
   position: absolute;
   text-align: center;
   background-color: #A4F9E6;
-  width: 40px;
+  width: 42px;
   height: 20px;
   top: 30px;
   left: 186px;
@@ -89,10 +89,10 @@
   position: absolute;
   text-align: center;
   background-color: #A4F9E6;
-  width: 45px;
+  width: 49px;
   height: 20px;
   top: 30px;
-  left: 228px;
+  left: 230px;
 }
 .saveoption {
   position: absolute;
