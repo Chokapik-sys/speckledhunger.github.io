@@ -1,10 +1,10 @@
 /*--Checkerboard--*/
-.A , .B , #resetTurn , #reportbox , #advanced , .saveoption{
+.A , .B , #resetTurn , #reportbox , #advanced , .saveoption , #customsave , #customdelete{
   border-color: #898989;
   border-style: solid;
   border-width: 1px;
 }
-.A , .B , #resetTurn , #selectOption, .saveoption{
+.A , .B , #resetTurn , #selectOption, .saveoption , #customsave , #customdelete{
   cursor: pointer;
 }
 .A , .B {
@@ -75,6 +75,22 @@
   height: 14px;
   top: 30px;
   left: 170px;
+}
+#customsave {
+  position: absolute;
+  background-color: #A4F9E6;
+  width: 52px;
+  height: 20px;
+  top: 30px;
+  left: 210px;
+}
+#customdelete {
+  position: absolute;
+  background-color: #A4F9E6;
+  width: 52px;
+  height: 20px;
+  top: 30px;
+  left: 272px;
 }
 .saveoption {
   position: absolute;
