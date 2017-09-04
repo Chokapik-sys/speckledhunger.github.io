@@ -1,10 +1,10 @@
 /*--Checkerboard--*/
-.A , .B , #resetTurn , #reportbox , #advanced , .saveoption , #customsave , #customdelete{
+.A , .B , #resetTurn , #reportbox , #advanced , .saveoption , #customsave , #customdelete , #savefilesave , #savefileload , #savefiledelete{
   border-color: #898989;
   border-style: solid;
   border-width: 1px;
 }
-.A , .B , #resetTurn , #selectOption, .saveoption , #customsave , #customdelete{
+.A , .B , #resetTurn , #selectOption, .saveoption , #customsave , #customdelete , #savefilesave , #savefileload , #savefiledelete{
   cursor: pointer;
 }
 .A , .B {
@@ -102,9 +102,33 @@
 #savefile {
   position: absolute;
   width: 26px;
-  height: 20px;
+  height: 14px;
   top: 55px;
   left: 10px;
+}
+#savefilesave {
+  position: absolute;
+  background-color: #A4F9E6;
+  width: 42px;
+  height: 20px;
+  top: 55px;
+  left: 38px;
+}
+#savefileload {
+  position: absolute;
+  background-color: #A4F9E6;
+  width: 42px;
+  height: 20px;
+  top: 55px;
+  left: 82px;
+}
+#savefiledelete {
+  position: absolute;
+  background-color: #A4F9E6;
+  width: 49px;
+  height: 20px;
+  top: 55px;
+  left: 126px;
 }
 .saveoption {
   position: absolute;
@@ -123,6 +147,7 @@
 #delete {
   top: 419px;
 }
+/*Main Board*/
 /*--row1--*/
 #_1_ {
   position: absolute;
