@@ -85,7 +85,6 @@
 }
 #customsave {
   position: absolute;
-  text-align: center;
   background-color: #A4F9E6;
   width: 42px;
   height: 20px;
@@ -94,12 +93,18 @@
 }
 #customdelete {
   position: absolute;
-  text-align: center;
   background-color: #A4F9E6;
   width: 49px;
   height: 20px;
   top: 30px;
   left: 257px;
+}
+#savefile {
+  position: absolute;
+  width: 26px;
+  height: 20px;
+  top: 55px;
+  left: 10px;
 }
 .saveoption {
   position: absolute;
