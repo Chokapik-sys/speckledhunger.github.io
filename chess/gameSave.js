@@ -372,3 +372,8 @@ function checkbeta() {
     }
   }
 }
+function customsave() {
+  expire = new Date()
+  expire.setUTCFullYear(expire.getUTCFullYear + 1)
+  document.cookie = (cnumset + document.getElementById("colour").value + document.getElementById("piece").value + document.getElementById("num").value + "=")
+}
