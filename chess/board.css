@@ -130,6 +130,14 @@
   top: 55px;
   left: 130px;
 }
+#selectfile {
+  position: absolute;
+  background-color: #A4F9E6;
+  width: 79px;
+  height: 20px;
+  top: 55px;
+  left: 181px;
+}
 .saveoption {
   position: absolute;
   background-color: #A4F9E6;
