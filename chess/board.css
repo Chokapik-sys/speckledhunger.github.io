@@ -1,10 +1,10 @@
 /*--Checkerboard--*/
-.A , .B , #resetTurn , #reportbox , #advanced , .saveoption , #customsave , #customdelete , #savefilesave , #savefileload , #savefiledelete{
+.A , .B , #resetTurn , #reportbox , #advanced , .saveoption , #customsave , #customdelete , #savefilesave , #savefileload , #savefiledelete , #selectfile{
   border-color: #898989;
   border-style: solid;
   border-width: 1px;
 }
-.A , .B , #resetTurn , #selectOption, .saveoption , #customsave , #customdelete , #savefilesave , #savefileload , #savefiledelete{
+.A , .B , #resetTurn , #selectOption, .saveoption , #customsave , #customdelete , #savefilesave , #savefileload , #savefiledelete , #selectfile{
   cursor: pointer;
 }
 .A , .B {
