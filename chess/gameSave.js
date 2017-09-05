@@ -16,6 +16,7 @@ var cn = 0
 var cnumset = "001"
 var cnumget = "001"
 var cnumfetch = ""
+var curfile = ""
 var expire = new Date()
 var changevar = 0
 var readc = ""
@@ -379,4 +380,34 @@ function customsave() {
 }
 function customdelete() {
   document.cookie = (cnumset + document.getElementById("colour").value + document.getElementById("piece").value + document.getElementById("num").value + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC")
+}
+function savefilesave() {
+  curfile = document.getElementById("savefile").value
+  if (curfile.length === 1) {
+    cnumset = "00" + curfile
+  } if (curfile.length === 2) {
+    cnumset = "0" + curfile
+  } if (curfile.length === 3) {
+    cnumset = curfile
+  } save()
+}
+function savefileload() {
+  curfile = document.getElementById("savefile").value
+  if (curfile.length === 1) {
+    cnumget = "00" + curfile
+  } if (curfile.length === 2) {
+    cnumget = "0" + curfile
+  } if (curfile.length === 3) {
+    cnumget = curfile
+  } load()
+}
+function savefiledelete() {
+  curfile = document.getElementById("savefile").value
+  if (curfile.length === 1) {
+    cnumset = "00" + curfile
+  } if (curfile.length === 2) {
+    cnumset = "0" + curfile
+  } if (curfile.length === 3) {
+    cnumset = curfile
+  } clearsave()
 }
