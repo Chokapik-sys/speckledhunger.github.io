@@ -370,6 +370,12 @@ function checkbeta() {
     }
   }
 }
+function default_layout() {
+  cnumget = "000"
+  load()
+  cnumget = "001"
+  checkbeta()
+}
 function customsave() {
   expire = new Date()
   expire.setUTCFullYear(expire.getUTCFullYear + 1)
