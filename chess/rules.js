@@ -592,6 +592,12 @@ function king() {
       }} for (mr2 = -10; (wk + mr2) % 8 != "0" && document.getElementById("_" + (wk + mr2) + "_").innerHTML == ""; mr2 += -1) {
           if ((document.getElementById("_" + (wk + mr2 - 1) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr2 - 1) + "_").innerHTML === "Black Queen") && (wk + mr2 - 1) % 8 != "0") {
       EX_NW_whitecheck = 1
+      }} for (mr3 = -1; document.getElementById("_" + (wk + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          if (document.getElementById("_" + (wk + mr3 + 8) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr3 + 8) + "_").innerHTML === "Black Queen") {
+      EX_NW_whitecheck = 1
+      }} for (mr4 = -17; document.getElementById("_" + (wk + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          if (document.getElementById("_" + (wk + mr4 - 8) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr4 - 8) + "_").innerHTML === "Black Queen") {
+      EX_NW_whitecheck = 1
       }}
   } if (document.getElementById(square).innerHTML === "Black King") {
     console.log("BLACK KING")
