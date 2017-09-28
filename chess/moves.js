@@ -1,4 +1,3 @@
-//Edit King check
 var piecetaken = ""
 var pawnmove = 0
 var knightmove = 0
