@@ -1,3 +1,4 @@
+//Edit square variable
 var piecetaken = ""
 var pawnmove = 0
 var knightmove = 0
