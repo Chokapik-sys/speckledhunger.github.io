@@ -14,7 +14,7 @@ var mr1 = 1
 var mr2 = -1
 var mr3 = 8
 var mr4 = -8
-var square = "_0_"
+var square = "0"
 var prev_square = 0
 var piece = ""
 var phase = 0
@@ -412,7 +412,7 @@ function coord9(){
   move_piece()
 }
 function coord10(){
-  square = "_10_"
+  square = "10"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -420,7 +420,7 @@ function coord10(){
   move_piece()
 }
 function coord11(){
-  square = "_11_"
+  square = "11"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -428,7 +428,7 @@ function coord11(){
   move_piece()
 }
 function coord12(){
-  square = "_12_"
+  square = "12"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -436,7 +436,7 @@ function coord12(){
   move_piece()
 }
 function coord13(){
-  square = "_13_"
+  square = "13"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -444,7 +444,7 @@ function coord13(){
   move_piece()
 }
 function coord14(){
-  square = "_14_"
+  square = "14"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -452,7 +452,7 @@ function coord14(){
   move_piece()
 }
 function coord15(){
-  square = "_15_"
+  square = "15"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -460,7 +460,7 @@ function coord15(){
   move_piece()
 }
 function coord16(){
-  square = "_16_"
+  square = "16"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -469,7 +469,7 @@ function coord16(){
 }
 //row3
 function coord17(){
-  square = "_17_"
+  square = "17"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -477,7 +477,7 @@ function coord17(){
   move_piece()
 }
 function coord18(){
-  square = "_18_"
+  square = "18"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -485,7 +485,7 @@ function coord18(){
   move_piece()
 }
 function coord19(){
-  square = "_19_"
+  square = "19"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -493,7 +493,7 @@ function coord19(){
   move_piece()
 }
 function coord20(){
-  square = "_20_"
+  square = "20"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -501,7 +501,7 @@ function coord20(){
   move_piece()
 }
 function coord21(){
-  square = "_21_"
+  square = "21"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -509,7 +509,7 @@ function coord21(){
   move_piece()
 }
 function coord22(){
-  square = "_22_"
+  square = "22"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -517,7 +517,7 @@ function coord22(){
   move_piece()
 }
 function coord23(){
-  square = "_23_"
+  square = "23"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -525,7 +525,7 @@ function coord23(){
   move_piece()
 }
 function coord24(){
-  square = "_24_"
+  square = "24"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
