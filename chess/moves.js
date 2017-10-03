@@ -794,7 +794,7 @@ function coord56(){
 }
 //row8
 function coord57(){
-  square = "_57_"
+  square = "57"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -802,7 +802,7 @@ function coord57(){
   move_piece()
 }
 function coord58(){
-  square = "_58_"
+  square = "58"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -810,7 +810,7 @@ function coord58(){
   move_piece()
 }
 function coord59(){
-  square = "_59_"
+  square = "59"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -818,7 +818,7 @@ function coord59(){
   move_piece()
 }
 function coord60(){
-  square = "_60_"
+  square = "60"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -826,7 +826,7 @@ function coord60(){
   move_piece()
 }
 function coord61(){
-  square = "_61_"
+  square = "61"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -834,7 +834,7 @@ function coord61(){
   move_piece()
 }
 function coord62(){
-  square = "_62_"
+  square = "62"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -842,7 +842,7 @@ function coord62(){
   move_piece()
 }
 function coord63(){
-  square = "_63_"
+  square = "63"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
@@ -850,7 +850,7 @@ function coord63(){
   move_piece()
 }
 function coord64(){
-  square = "_64_"
+  square = "64"
   console.log(constant1 + square)
   if (phase === 0) {
   phase_change()
