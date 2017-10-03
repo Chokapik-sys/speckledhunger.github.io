@@ -19,7 +19,7 @@ var piece = ""
 var phase = 0
 var constant1 = "Square: "
 var constant2 = "Phase: "
-var constant3 = "Moving from:"
+var constant3 = "Moving from: "
 function move_piece(){
   //phase1
   if (phase === 1) {
