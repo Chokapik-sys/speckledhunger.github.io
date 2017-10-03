@@ -311,7 +311,7 @@ function move_piece(){
   //phase3
   if (phase === 3) {
     if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 243, 112)") {
-      document.getElementById("_" + prev_square "_").innerHTML = ""
+      document.getElementById("_" + prev_square + "_").innerHTML = ""
       document.getElementById("_" + square + "_").innerHTML = piece
       phase_change()
       phase_4()
