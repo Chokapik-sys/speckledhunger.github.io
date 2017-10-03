@@ -577,7 +577,7 @@ function king() {
           if ((document.getElementById("_" + (wk + mb4 - 7) + "_").innerHTML === "Black Bishop" || document.getElementById("_" + (wk + mb4 - 7) + "_").innerHTML === "Black Queen") && (wk + mb4 - 7) % 8 != "1") {
       N_whitecheck = 1
       }}
-  } if (document.getElementById(square).innerHTML === "Black King") {
+  } if (document.getElementById("_" + square + "_").innerHTML === "Black King") {
     console.log("BLACK KING")
   } 
 }
