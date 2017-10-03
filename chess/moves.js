@@ -26,11 +26,11 @@ function move_piece(){
   if (phase === 1) {
     king()
     //Blank Square
-    if (document.getElementById(square).innerHTML === "") {
+    if (document.getElementById("_" + square + "_").innerHTML === "") {
       piece = ""
     }
     //White Pieces
-    if (document.getElementById(square).innerHTML === "White Pawn") {
+    if (document.getElementById("_" + square + "_").innerHTML === "White Pawn") {
       if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === ""){
         document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
         pawnmove = 1
@@ -43,7 +43,7 @@ function move_piece(){
     }
       piece = "White Pawn"
   }
-     if (document.getElementById(square).innerHTML === "White Knight") {
+     if (document.getElementById("_" + square + "_").innerHTML === "White Knight") {
        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) - 10) % 8 != "7" && (parseInt(square.replace("_", "")) - 10) % 8 != "0"){
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
@@ -74,7 +74,7 @@ function move_piece(){
        }
        piece = "White Knight"
        }
-    if (document.getElementById(square).innerHTML === "White Rook") {
+    if (document.getElementById("_" + square + "_").innerHTML === "White Rook") {
         for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").style.backgroundColor = "#FFF370"
           rookmove = 1
@@ -95,7 +95,7 @@ function move_piece(){
       }
       piece = "White Rook"
         }
-    if (document.getElementById(square).innerHTML === "White Bishop") {
+    if (document.getElementById("_" + square + "_").innerHTML === "White Bishop") {
         for (mb1 = 9; ((parseInt(square.replace("_", ""))) + mb1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").innerHTML == ""; mb1 += 9) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").style.backgroundColor = "#FFF370"
           bishopmove = 1
@@ -115,7 +115,7 @@ function move_piece(){
       }
       piece = "White Bishop"
         }
-    if (document.getElementById(square).innerHTML === "White Queen") {
+    if (document.getElementById("_" + square + "_").innerHTML === "White Queen") {
       for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
@@ -147,7 +147,7 @@ function move_piece(){
       }
       piece = "White Queen"
     }
-    if (document.getElementById(square).innerHTML === "White King") {
+    if (document.getElementById("_" + square + "_").innerHTML === "White King") {
       if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === "" && S_whitecheck == "0") {
         document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
         kingmove = 1
@@ -180,7 +180,7 @@ function move_piece(){
       piece = "White King"
     }
     //Black Pieces
-    if (document.getElementById(square).innerHTML === "Black Pawn") {
+    if (document.getElementById("_" + square + "_").innerHTML === "Black Pawn") {
       if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === ""){
         document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
         pawnmove = 1
@@ -193,7 +193,7 @@ function move_piece(){
     }
       piece = "Black Pawn"
   }
-    if (document.getElementById(square).innerHTML === "Black Knight") {
+    if (document.getElementById("_" + square + "_").innerHTML === "Black Knight") {
        if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) - 10) % 8 != "7" && (parseInt(square.replace("_", "")) - 10) % 8 != "0"){
          document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
@@ -224,7 +224,7 @@ function move_piece(){
        }
       piece = "Black Knight"
        }
-    if (document.getElementById(square).innerHTML === "Black Rook") {
+    if (document.getElementById("_" + square + "_").innerHTML === "Black Rook") {
         for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").style.backgroundColor = "#FFF370"
           rookmove = 1
@@ -244,7 +244,7 @@ function move_piece(){
       }
       piece = "Black Rook"
         }
-    if (document.getElementById(square).innerHTML === "Black Bishop") {
+    if (document.getElementById("_" + square + "_").innerHTML === "Black Bishop") {
         for (mb1 = 9; ((parseInt(square.replace("_", ""))) + mb1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").innerHTML == ""; mb1 += 9) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").style.backgroundColor = "#FFF370"
           bishopmove = 1
@@ -264,7 +264,7 @@ function move_piece(){
       }
       piece = "Black Bishop"
         }
-    if (document.getElementById(square).innerHTML === "Black Queen") {
+    if (document.getElementById("_" + square + "_").innerHTML === "Black Queen") {
       for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
           document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
@@ -296,7 +296,7 @@ function move_piece(){
       }
       piece = "Black Queen"
     }
-    if (document.getElementById(square).innerHTML === "Black King") {
+    if (document.getElementById("_" + square + "_").innerHTML === "Black King") {
       if (kingmove == 1) {
         prev_square = square
         console.log(constant3 + prev_square)
@@ -311,16 +311,16 @@ function move_piece(){
   }
   //phase3
   if (phase === 3) {
-    if (document.getElementById(square).style.backgroundColor == "rgb(255, 243, 112)") {
-      document.getElementById(prev_square).innerHTML = ""
-      document.getElementById(square).innerHTML = piece
+    if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 243, 112)") {
+      document.getElementById("_" + prev_square "_").innerHTML = ""
+      document.getElementById("_" + square + "_").innerHTML = piece
       phase_change()
       phase_4()
       king()
-    } if (document.getElementById(square).style.backgroundColor == "rgb(255, 132, 102)") {
-      piecetaken = document.getElementById(square).innerHTML
-      document.getElementById(square).innerHTML = piece
-      document.getElementById(prev_square).innerHTML = ""
+    } if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 132, 102)") {
+      piecetaken = document.getElementById("_" + square + "_").innerHTML
+      document.getElementById("_" + square + "_").innerHTML = piece
+      document.getElementById("_" + prev_square + "_").innerHTML = ""
       document.getElementById("report").innerHTML += "<br>" + piecetaken + " has been taken by " + piece
       phase_change()
       phase_4()
