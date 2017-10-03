@@ -1,4 +1,3 @@
-//Edit square variable
 var piecetaken = ""
 var pawnmove = 0
 var knightmove = 0
@@ -31,11 +30,11 @@ function move_piece(){
     }
     //White Pieces
     if (document.getElementById("_" + square + "_").innerHTML === "White Pawn") {
-      if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === ""){
-        document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
+      if (document.getElementById("_" + (square + 8) + "_").innerHTML === ""){
+        document.getElementById("_" + (square + 8) + "_").style.backgroundColor = "#FFF370"
         pawnmove = 1
-     if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").innerHTML === "" && ((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "1"){
-        document.getElementById("_" + (parseInt(square.replace("_", "")) + 16) + "_").style.backgroundColor = "#FFF370"
+     if (document.getElementById("_" + (square + 16) + "_").innerHTML === "" && ((square - 1) - (((square) - 1) % 8)) / 8 == "1"){
+        document.getElementById("_" + (square + 16) + "_").style.backgroundColor = "#FFF370"
         pawnmove = 1
     }} if (pawnmove === 1) {
       prev_square = square
@@ -44,29 +43,29 @@ function move_piece(){
       piece = "White Pawn"
   }
      if (document.getElementById("_" + square + "_").innerHTML === "White Knight") {
-       if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) - 10) % 8 != "7" && (parseInt(square.replace("_", "")) - 10) % 8 != "0"){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").style.backgroundColor = "#FFF370"
+       if (document.getElementById("_" + (square - 10) + "_").innerHTML === "" && (square - 10) % 8 != "7" && (square - 10) % 8 != "0"){
+         document.getElementById("_" + (square - 10) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) + 10) % 8 != "1" && (parseInt(square.replace("_", "")) + 10) % 8 != "2"){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (square + 10) + "_").innerHTML === "" && (square + 10) % 8 != "1" && (square + 10) % 8 != "2"){
+         document.getElementById("_" + (square + 10) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) - 6) % 8 != "1" && (parseInt(square.replace("_", "")) - 6) % 8 != "2"){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (square - 6) + "_").innerHTML === "" && (square - 6) % 8 != "1" && (square - 6) % 8 != "2"){
+         document.getElementById("_" + (square - 6) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) + 6) % 8 != "7" && (parseInt(square.replace("_", "")) + 6) % 8 != "0"){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (square + 6) + "_").innerHTML === "" && (square + 6) % 8 != "7" && (square + 6) % 8 != "0"){
+         document.getElementById("_" + (square + 6) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) - 17) % 8 != "0"){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (square - 17) + "_").innerHTML === "" && (square - 17) % 8 != "0"){
+         document.getElementById("_" + (square - 17) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) + 17) % 8 != "1"){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (square + 17) + "_").innerHTML === "" && (square + 17) % 8 != "1"){
+         document.getElementById("_" + (square + 17) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) - 15) % 8 != "1"){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (square - 15) + "_").innerHTML === "" && (square - 15) % 8 != "1"){
+         document.getElementById("_" + (square - 15) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) + 15) % 8 != "0"){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (square + 15) + "_").innerHTML === "" && (square + 15) % 8 != "0"){
+         document.getElementById("_" + (square + 15) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
        } if (knightmove == 1) {
          prev_square = square
@@ -75,17 +74,17 @@ function move_piece(){
        piece = "White Knight"
        }
     if (document.getElementById("_" + square + "_").innerHTML === "White Rook") {
-        for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").style.backgroundColor = "#FFF370"
+        for (mr1 = 1; ((square) + mr1) % 8 != "1" && document.getElementById("_" + (square + mr1) + "_").innerHTML == ""; mr1 += 1) {
+          document.getElementById("_" + (square + mr1) + "_").style.backgroundColor = "#FFF370"
           rookmove = 1
-        } for (mr2 = -1; ((parseInt(square.replace("_", ""))) + mr2) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML == ""; mr2 += -1) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").style.backgroundColor = "#FFF370"
+        } for (mr2 = -1; ((square) + mr2) % 8 != "0" && document.getElementById("_" + (square + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          document.getElementById("_" + (square + mr2) + "_").style.backgroundColor = "#FFF370"
           rookmove = 1
-        } for (mr3 = 8; document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").innerHTML == ""; mr3 += 8) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").style.backgroundColor = "#FFF370"
+        } for (mr3 = 8; document.getElementById("_" + (square + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          document.getElementById("_" + (square + mr3) + "_").style.backgroundColor = "#FFF370"
           rookmove = 1
-        } for (mr4 = -8; document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").innerHTML == ""; mr4 += -8) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").style.backgroundColor = "#FFF370"
+        } for (mr4 = -8; document.getElementById("_" + (square + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          document.getElementById("_" + (square + mr4) + "_").style.backgroundColor = "#FFF370"
           rookmove = 1
         }
       if (rookmove == 1) {
@@ -96,17 +95,17 @@ function move_piece(){
       piece = "White Rook"
         }
     if (document.getElementById("_" + square + "_").innerHTML === "White Bishop") {
-        for (mb1 = 9; ((parseInt(square.replace("_", ""))) + mb1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").innerHTML == ""; mb1 += 9) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").style.backgroundColor = "#FFF370"
+        for (mb1 = 9; ((square) + mb1) % 8 != "1" && document.getElementById("_" + (square + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          document.getElementById("_" + (square + mb1) + "_").style.backgroundColor = "#FFF370"
           bishopmove = 1
-        } for (mb2 = -9; ((parseInt(square.replace("_", ""))) + mb2) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").innerHTML == ""; mb2 += -9) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").style.backgroundColor = "#FFF370"
+        } for (mb2 = -9; ((square) + mb2) % 8 != "0" && document.getElementById("_" + (square + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          document.getElementById("_" + (square + mb2) + "_").style.backgroundColor = "#FFF370"
           bishopmove = 1
-        } for (mb3 = 7; (parseInt(square.replace("_", "")) + mb3) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").innerHTML == ""; mb3 += 7) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").style.backgroundColor = "#FFF370"
+        } for (mb3 = 7; (square + mb3) % 8 != "0" && document.getElementById("_" + (square + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          document.getElementById("_" + (square + mb3) + "_").style.backgroundColor = "#FFF370"
           bishopmove = 1
-        } for (mb4 = -7; (parseInt(square.replace("_", "")) + mb4) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").innerHTML == ""; mb4 += -7) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").style.backgroundColor = "#FFF370"
+        } for (mb4 = -7; (square + mb4) % 8 != "1" && document.getElementById("_" + (square + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          document.getElementById("_" + (square + mb4) + "_").style.backgroundColor = "#FFF370"
           bishopmove = 1
         }
       if (bishopmove == 1) {
@@ -116,29 +115,29 @@ function move_piece(){
       piece = "White Bishop"
         }
     if (document.getElementById("_" + square + "_").innerHTML === "White Queen") {
-      for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").style.backgroundColor = "#FFF370"
+      for (mr1 = 1; ((square) + mr1) % 8 != "1" && document.getElementById("_" + (square + mr1) + "_").innerHTML == ""; mr1 += 1) {
+          document.getElementById("_" + (square + mr1) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
-        } for (mr2 = -1; ((parseInt(square.replace("_", ""))) + mr2) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML == ""; mr2 += -1) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").style.backgroundColor = "#FFF370"
+        } for (mr2 = -1; ((square) + mr2) % 8 != "0" && document.getElementById("_" + (square + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          document.getElementById("_" + (square + mr2) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
-        } for (mr3 = 8; document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").innerHTML == ""; mr3 += 8) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").style.backgroundColor = "#FFF370"
+        } for (mr3 = 8; document.getElementById("_" + (square + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          document.getElementById("_" + (square + mr3) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
-        } for (mr4 = -8; document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").innerHTML == ""; mr4 += -8) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").style.backgroundColor = "#FFF370"
+        } for (mr4 = -8; document.getElementById("_" + (square + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          document.getElementById("_" + (square + mr4) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
-        } for (mb1 = 9; ((parseInt(square.replace("_", ""))) + mb1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").innerHTML == ""; mb1 += 9) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").style.backgroundColor = "#FFF370"
+        } for (mb1 = 9; ((square) + mb1) % 8 != "1" && document.getElementById("_" + (square + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          document.getElementById("_" + (square + mb1) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
-        } for (mb2 = -9; ((parseInt(square.replace("_", ""))) + mb2) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").innerHTML == ""; mb2 += -9) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").style.backgroundColor = "#FFF370"
+        } for (mb2 = -9; ((square) + mb2) % 8 != "0" && document.getElementById("_" + (square + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          document.getElementById("_" + (square + mb2) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
-        } for (mb3 = 7; (parseInt(square.replace("_", "")) + mb3) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").innerHTML == ""; mb3 += 7) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").style.backgroundColor = "#FFF370"
+        } for (mb3 = 7; (square + mb3) % 8 != "0" && document.getElementById("_" + (square + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          document.getElementById("_" + (square + mb3) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
-        } for (mb4 = -7; (parseInt(square.replace("_", "")) + mb4) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").innerHTML == ""; mb4 += -7) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").style.backgroundColor = "#FFF370"
+        } for (mb4 = -7; (square + mb4) % 8 != "1" && document.getElementById("_" + (square + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          document.getElementById("_" + (square + mb4) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
         }
       if (queenmove == 1) {
@@ -148,29 +147,29 @@ function move_piece(){
       piece = "White Queen"
     }
     if (document.getElementById("_" + square + "_").innerHTML === "White King") {
-      if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").innerHTML === "" && S_whitecheck == "0") {
-        document.getElementById("_" + (parseInt(square.replace("_", "")) + 8) + "_").style.backgroundColor = "#FFF370"
+      if (document.getElementById("_" + (square + 8) + "_").innerHTML === "" && S_whitecheck == "0") {
+        document.getElementById("_" + (square + 8) + "_").style.backgroundColor = "#FFF370"
         kingmove = 1
-      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === "" && N_whitecheck == "0") {
-        document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
+      } if (document.getElementById("_" + (square - 8) + "_").innerHTML === "" && N_whitecheck == "0") {
+        document.getElementById("_" + (square - 8) + "_").style.backgroundColor = "#FFF370"
         kingmove = 1
-      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").innerHTML === "" && E_whitecheck == "0" && (parseInt(square.replace("_", "")) + 1) % 8 != "1") {
-        document.getElementById("_" + (parseInt(square.replace("_", "")) + 1) + "_").style.backgroundColor = "#FFF370"
+      } if (document.getElementById("_" + (square + 1) + "_").innerHTML === "" && E_whitecheck == "0" && (square + 1) % 8 != "1") {
+        document.getElementById("_" + (square + 1) + "_").style.backgroundColor = "#FFF370"
         kingmove = 1
-      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").innerHTML === "" && W_whitecheck == "0" && (parseInt(square.replace("_", "")) - 1) % 8 != "0") {
-        document.getElementById("_" + (parseInt(square.replace("_", "")) - 1) + "_").style.backgroundColor = "#FFF370"
+      } if (document.getElementById("_" + (square - 1) + "_").innerHTML === "" && W_whitecheck == "0" && (square - 1) % 8 != "0") {
+        document.getElementById("_" + (square - 1) + "_").style.backgroundColor = "#FFF370"
         kingmove = 1
-      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 7) + "_").innerHTML === "" && SW_whitecheck == "0" && (parseInt(square.replace("_", "")) + 7) % 8 != "0") {
-        document.getElementById("_" + (parseInt(square.replace("_", "")) + 7) + "_").style.backgroundColor = "#FFF370"
+      } if (document.getElementById("_" + (square + 7) + "_").innerHTML === "" && SW_whitecheck == "0" && (square + 7) % 8 != "0") {
+        document.getElementById("_" + (square + 7) + "_").style.backgroundColor = "#FFF370"
         kingmove = 1
-      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 7) + "_").innerHTML === "" && NE_whitecheck == "0" && (parseInt(square.replace("_", "")) - 7) % 8 != "1") {
-        document.getElementById("_" + (parseInt(square.replace("_", "")) - 7) + "_").style.backgroundColor = "#FFF370"
+      } if (document.getElementById("_" + (square - 7) + "_").innerHTML === "" && NE_whitecheck == "0" && (square - 7) % 8 != "1") {
+        document.getElementById("_" + (square - 7) + "_").style.backgroundColor = "#FFF370"
         kingmove = 1
-      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 9) + "_").innerHTML === "" && SE_whitecheck == "0" && (parseInt(square.replace("_", "")) + 9) % 8 != "1") {
-        document.getElementById("_" + (parseInt(square.replace("_", "")) + 9) + "_").style.backgroundColor = "#FFF370"
+      } if (document.getElementById("_" + (square + 9) + "_").innerHTML === "" && SE_whitecheck == "0" && (square + 9) % 8 != "1") {
+        document.getElementById("_" + (square + 9) + "_").style.backgroundColor = "#FFF370"
         kingmove = 1
-      } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 9) + "_").innerHTML === "" && NW_whitecheck == "0" && (parseInt(square.replace("_", "")) - 9) % 8 != "0") {
-        document.getElementById("_" + (parseInt(square.replace("_", "")) - 9) + "_").style.backgroundColor = "#FFF370"
+      } if (document.getElementById("_" + (square - 9) + "_").innerHTML === "" && NW_whitecheck == "0" && (square - 9) % 8 != "0") {
+        document.getElementById("_" + (square - 9) + "_").style.backgroundColor = "#FFF370"
         kingmove = 1
       }
       if (kingmove == 1) {
@@ -181,11 +180,11 @@ function move_piece(){
     }
     //Black Pieces
     if (document.getElementById("_" + square + "_").innerHTML === "Black Pawn") {
-      if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").innerHTML === ""){
-        document.getElementById("_" + (parseInt(square.replace("_", "")) - 8) + "_").style.backgroundColor = "#FFF370"
+      if (document.getElementById("_" + (square - 8) + "_").innerHTML === ""){
+        document.getElementById("_" + (square - 8) + "_").style.backgroundColor = "#FFF370"
         pawnmove = 1
-     if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").innerHTML === "" && ((parseInt(square.replace("_", "")) - 1) - (((parseInt(square.replace("_", ""))) - 1) % 8)) / 8 == "6"){
-        document.getElementById("_" + (parseInt(square.replace("_", "")) - 16) + "_").style.backgroundColor = "#FFF370"
+     if (document.getElementById("_" + (square - 16) + "_").innerHTML === "" && ((square - 1) - (((square) - 1) % 8)) / 8 == "6"){
+        document.getElementById("_" + (square - 16) + "_").style.backgroundColor = "#FFF370"
         pawnmove = 1
     }} if (pawnmove === 1) {
       prev_square = square
@@ -194,29 +193,29 @@ function move_piece(){
       piece = "Black Pawn"
   }
     if (document.getElementById("_" + square + "_").innerHTML === "Black Knight") {
-       if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) - 10) % 8 != "7" && (parseInt(square.replace("_", "")) - 10) % 8 != "0"){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 10) + "_").style.backgroundColor = "#FFF370"
+       if (document.getElementById("_" + (square - 10) + "_").innerHTML === "" && (square - 10) % 8 != "7" && (square - 10) % 8 != "0"){
+         document.getElementById("_" + (square - 10) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) + 10) % 8 != "1" && (parseInt(square.replace("_", "")) + 10) % 8 != "2"){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) + 10) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (square + 10) + "_").innerHTML === "" && (square + 10) % 8 != "1" && (square + 10) % 8 != "2"){
+         document.getElementById("_" + (square + 10) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) - 6) % 8 != "1" && (parseInt(square.replace("_", "")) - 6) % 8 != "2"){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 6) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (square - 6) + "_").innerHTML === "" && (square - 6) % 8 != "1" && (square - 6) % 8 != "2"){
+         document.getElementById("_" + (square - 6) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) + 6) % 8 != "7" && (parseInt(square.replace("_", "")) + 6) % 8 != "0"){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) + 6) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (square + 6) + "_").innerHTML === "" && (square + 6) % 8 != "7" && (square + 6) % 8 != "0"){
+         document.getElementById("_" + (square + 6) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) - 17) % 8 != "0"){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 17) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (square - 17) + "_").innerHTML === "" && (square - 17) % 8 != "0"){
+         document.getElementById("_" + (square - 17) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) + 17) % 8 != "1"){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) + 17) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (square + 17) + "_").innerHTML === "" && (square + 17) % 8 != "1"){
+         document.getElementById("_" + (square + 17) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) - 15) % 8 != "1"){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) - 15) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (square - 15) + "_").innerHTML === "" && (square - 15) % 8 != "1"){
+         document.getElementById("_" + (square - 15) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
-       } if (document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").innerHTML === "" && (parseInt(square.replace("_", "")) + 15) % 8 != "0"){
-         document.getElementById("_" + (parseInt(square.replace("_", "")) + 15) + "_").style.backgroundColor = "#FFF370"
+       } if (document.getElementById("_" + (square + 15) + "_").innerHTML === "" && (square + 15) % 8 != "0"){
+         document.getElementById("_" + (square + 15) + "_").style.backgroundColor = "#FFF370"
          knightmove = 1
        } if (knightmove == 1) {
          prev_square = square
@@ -225,17 +224,17 @@ function move_piece(){
       piece = "Black Knight"
        }
     if (document.getElementById("_" + square + "_").innerHTML === "Black Rook") {
-        for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").style.backgroundColor = "#FFF370"
+        for (mr1 = 1; ((square) + mr1) % 8 != "1" && document.getElementById("_" + (square + mr1) + "_").innerHTML == ""; mr1 += 1) {
+          document.getElementById("_" + (square + mr1) + "_").style.backgroundColor = "#FFF370"
           rookmove = 1
-        } for (mr2 = -1; ((parseInt(square.replace("_", ""))) + mr2) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML == ""; mr2 += -1) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").style.backgroundColor = "#FFF370"
+        } for (mr2 = -1; ((square) + mr2) % 8 != "0" && document.getElementById("_" + (square + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          document.getElementById("_" + (square + mr2) + "_").style.backgroundColor = "#FFF370"
           rookmove = 1
-        } for (mr3 = 8; document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").innerHTML == ""; mr3 += 8) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").style.backgroundColor = "#FFF370"
+        } for (mr3 = 8; document.getElementById("_" + (square + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          document.getElementById("_" + (square + mr3) + "_").style.backgroundColor = "#FFF370"
           rookmove = 1
-        } for (mr4 = -8; document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").innerHTML == ""; mr4 += -8) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").style.backgroundColor = "#FFF370"
+        } for (mr4 = -8; document.getElementById("_" + (square + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          document.getElementById("_" + (square + mr4) + "_").style.backgroundColor = "#FFF370"
           rookmove = 1
         }
       if (rookmove == 1) {
@@ -245,17 +244,17 @@ function move_piece(){
       piece = "Black Rook"
         }
     if (document.getElementById("_" + square + "_").innerHTML === "Black Bishop") {
-        for (mb1 = 9; ((parseInt(square.replace("_", ""))) + mb1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").innerHTML == ""; mb1 += 9) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").style.backgroundColor = "#FFF370"
+        for (mb1 = 9; ((square) + mb1) % 8 != "1" && document.getElementById("_" + (square + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          document.getElementById("_" + (square + mb1) + "_").style.backgroundColor = "#FFF370"
           bishopmove = 1
-        } for (mb2 = -9; ((parseInt(square.replace("_", ""))) + mb2) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").innerHTML == ""; mb2 += -9) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").style.backgroundColor = "#FFF370"
+        } for (mb2 = -9; ((square) + mb2) % 8 != "0" && document.getElementById("_" + (square + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          document.getElementById("_" + (square + mb2) + "_").style.backgroundColor = "#FFF370"
           bishopmove = 1
-        } for (mb3 = 7; (parseInt(square.replace("_", "")) + mb3) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").innerHTML == ""; mb3 += 7) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").style.backgroundColor = "#FFF370"
+        } for (mb3 = 7; (square + mb3) % 8 != "0" && document.getElementById("_" + (square + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          document.getElementById("_" + (square + mb3) + "_").style.backgroundColor = "#FFF370"
           bishopmove = 1
-        } for (mb4 = -7; (parseInt(square.replace("_", "")) + mb4) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").innerHTML == ""; mb4 += -7) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").style.backgroundColor = "#FFF370"
+        } for (mb4 = -7; (square + mb4) % 8 != "1" && document.getElementById("_" + (square + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          document.getElementById("_" + (square + mb4) + "_").style.backgroundColor = "#FFF370"
           bishopmove = 1
         }
       if (bishopmove == 1) {
@@ -265,29 +264,29 @@ function move_piece(){
       piece = "Black Bishop"
         }
     if (document.getElementById("_" + square + "_").innerHTML === "Black Queen") {
-      for (mr1 = 1; ((parseInt(square.replace("_", ""))) + mr1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").innerHTML == ""; mr1 += 1) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr1) + "_").style.backgroundColor = "#FFF370"
+      for (mr1 = 1; ((square) + mr1) % 8 != "1" && document.getElementById("_" + (square + mr1) + "_").innerHTML == ""; mr1 += 1) {
+          document.getElementById("_" + (square + mr1) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
-        } for (mr2 = -1; ((parseInt(square.replace("_", ""))) + mr2) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").innerHTML == ""; mr2 += -1) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr2) + "_").style.backgroundColor = "#FFF370"
+        } for (mr2 = -1; ((square) + mr2) % 8 != "0" && document.getElementById("_" + (square + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          document.getElementById("_" + (square + mr2) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
-        } for (mr3 = 8; document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").innerHTML == ""; mr3 += 8) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr3) + "_").style.backgroundColor = "#FFF370"
+        } for (mr3 = 8; document.getElementById("_" + (square + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          document.getElementById("_" + (square + mr3) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
-        } for (mr4 = -8; document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").innerHTML == ""; mr4 += -8) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mr4) + "_").style.backgroundColor = "#FFF370"
+        } for (mr4 = -8; document.getElementById("_" + (square + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          document.getElementById("_" + (square + mr4) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
-        } for (mb1 = 9; ((parseInt(square.replace("_", ""))) + mb1) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").innerHTML == ""; mb1 += 9) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb1) + "_").style.backgroundColor = "#FFF370"
+        } for (mb1 = 9; ((square) + mb1) % 8 != "1" && document.getElementById("_" + (square + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          document.getElementById("_" + (square + mb1) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
-        } for (mb2 = -9; ((parseInt(square.replace("_", ""))) + mb2) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").innerHTML == ""; mb2 += -9) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb2) + "_").style.backgroundColor = "#FFF370"
+        } for (mb2 = -9; ((square) + mb2) % 8 != "0" && document.getElementById("_" + (square + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          document.getElementById("_" + (square + mb2) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
-        } for (mb3 = 7; (parseInt(square.replace("_", "")) + mb3) % 8 != "0" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").innerHTML == ""; mb3 += 7) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb3) + "_").style.backgroundColor = "#FFF370"
+        } for (mb3 = 7; (square + mb3) % 8 != "0" && document.getElementById("_" + (square + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          document.getElementById("_" + (square + mb3) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
-        } for (mb4 = -7; (parseInt(square.replace("_", "")) + mb4) % 8 != "1" && document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").innerHTML == ""; mb4 += -7) {
-          document.getElementById("_" + (parseInt(square.replace("_", "")) + mb4) + "_").style.backgroundColor = "#FFF370"
+        } for (mb4 = -7; (square + mb4) % 8 != "1" && document.getElementById("_" + (square + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          document.getElementById("_" + (square + mb4) + "_").style.backgroundColor = "#FFF370"
           queenmove = 1
         }
       if (queenmove == 1) {
