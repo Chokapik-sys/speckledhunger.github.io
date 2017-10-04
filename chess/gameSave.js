@@ -373,7 +373,12 @@ function checkbeta() {
 function default_layout() {
   cnumget = "000"
   load()
+  if (checksave === 1) {
+    cnumset = "000"
+    save()
+  }
   cnumget = "001"
+  cnumset = "001"
   checkbeta()
 }
 function customsave() {
