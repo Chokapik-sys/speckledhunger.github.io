@@ -469,7 +469,8 @@ if (capture === 1 || pawnmove === 1 || knightmove === 1 || bishopmove === 1 || r
     capture = 0
 }
 }
-function king() {
+function king() { 
+  //White Check
   for (wk = 0; wk < 65; wk ++) {
     if (document.getElementById("_" + wk + "_").innerHTML === "White King") {
       break
@@ -709,7 +710,156 @@ function king() {
           if ((document.getElementById("_" + (wk + mb4 - 7) + "_").innerHTML === "Black Bishop" || document.getElementById("_" + (wk + mb4 - 7) + "_").innerHTML === "Black Queen") && (wk + mb4 - 7) % 8 != "1") {
       SE_whitecheck = 1
       }}
-  } if (document.getElementById("_" + square + "_").innerHTML === "Black King") {
-    console.log("BLACK KING")
-  } 
+  } for (bk = 0; bk < 65; bk ++) {
+    if (document.getElementById("_" + bk + "_").innerHTML === "Black King") {
+      break
+    }
+  } //Black Check
+  if (document.getElementById("_" + bk + "_").innerHTML === "Black King") {
+    //Immediate Threat
+    for (mr1 = 1; (bk + mr1) % 8 != "1" && document.getElementById("_" + (bk + mr1) + "_").innerHTML == ""; mr1 += 1) {
+      if ((document.getElementById("_" + (bk + mr1 + 1) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr1 + 1) + "_").innerHTML === "White Queen") && (bk + mr1 + 1) % 8 != "1") {
+        E_blackcheck = 1
+      } else {
+        E_blackcheck = 0
+      }} for (mr2 = -1; (bk + mr2) % 8 != "0" && document.getElementById("_" + (bk + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          if ((document.getElementById("_" + (bk + mr2 - 1) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr2 - 1) + "_").innerHTML === "White Queen") && (bk + mr2 - 1) % 8 != "0") {
+      W_blackcheck = 1
+      } else {
+        W_blackcheck = 0
+      }} for (mr3 = 8; document.getElementById("_" + (bk + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          if (document.getElementById("_" + (bk + mr3 + 8) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr3 + 8) + "_").innerHTML === "White Queen") {
+      S_blackcheck = 1
+      } else {
+        S_blackcheck = 0
+      }} for (mr4 = -8; document.getElementById("_" + (bk + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          if (document.getElementById("_" + (bk + mr4 - 8) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr4 - 8) + "_").innerHTML === "White Queen") {
+      N_blackcheck = 1
+      } else {
+        N_blackcheck = 0
+      }} for (mb1 = 9; (bk + mb1) % 8 != "1" && document.getElementById("_" + (bk + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          if ((document.getElementById("_" + (bk + mb1 + 9) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb1 + 9) + "_").innerHTML === "White Queen") && (bk + mb1 + 9) % 8 != "1") {
+      SE_blackcheck = 1
+      } else {
+        SE_blackcheck = 0
+      }} for (mb2 = -9; (bk + mb2) % 8 != "0" && document.getElementById("_" + (bk + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          if ((document.getElementById("_" + (bk + mb2 - 9) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb2 - 9) + "_").innerHTML === "White Queen") && (bk + mb2 - 9) % 8 != "0") {
+      NW_blackcheck = 1
+      } else {
+        NW_blackcheck = 0
+      }} for (mb3 = 7; (bk + mb3) % 8 != "0" && document.getElementById("_" + (bk + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          if ((document.getElementById("_" + (bk + mb3 + 7) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb3 + 7) + "_").innerHTML === "White Queen") && (bk + mb3 + 7) % 8 != "0") {
+      SW_blackcheck = 1
+      } else {
+        SW_blackcheck = 0
+      }} for (mb4 = -7; (bk + mb4) % 8 != "1" && document.getElementById("_" + (bk + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          if ((document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Queen") && (bk + mb4 - 7) % 8 != "1") {
+      NE_blackcheck = 1
+      } else {
+        NE_blackcheck = 0
+      }}
+    //Future Threat
+    if ((document.getElementById("_" + (bk - 26) + "_").innerHTML === "White Knight" && (bk - 26) % 8 != "7" && (bk - 26) % 8 != "0") || (document.getElementById("_" + (bk - 19) + "_").innerHTML === "White Knight" && (bk - 19) % 8 != "7" && (bk - 19) % 8 != "0") || (document.getElementById("_" + (bk - 15) + "_").innerHTML === "White Knight" && (bk - 15) % 8 != "1") || (document.getElementById("_" + (bk - 3) + "_").innerHTML === "White Knight" && (bk - 3) % 8 != "0" && (bk - 3) % 8 != "7" && (bk - 3) % 8 != "6") || (document.getElementById("_" + (bk + 6) + "_").innerHTML === "White Knight" && (bk + 6) % 8 != "0" && (bk + 6) % 8 != "7") || (document.getElementById("_" + (bk - 24) + "_").innerHTML === "White Knight")) {
+      NW_blackcheck = 1
+    }  if ((document.getElementById("_" + (bk - 25) + "_").innerHTML === "White Knight" && (bk - 25) % 8 != "0") || (document.getElementById("_" + (bk - 23) + "_").innerHTML === "White Knight" && (bk - 23) % 8 != "1") || (document.getElementById("_" + (bk - 18) + "_").innerHTML === "White Knight" && (bk - 18) % 8 != "0" && (bk - 18) % 8 != "7") || (document.getElementById("_" + (bk - 14) + "_").innerHTML === "White Knight" && (bk - 14) % 8 != "1" && (bk - 14) % 8 != "2") || (document.getElementById("_" + (bk - 2) + "_").innerHTML === "White Knight" && (bk - 2) % 8 != "0" && (bk - 2) % 8 != "7") || (document.getElementById("_" + (bk + 2) + "_").innerHTML === "White Knight" && (bk + 2) % 8 != "1" && (bk + 2) % 8 != "2")) {
+      N_blackcheck = 1
+    } if ((document.getElementById("_" + (bk - 22) + "_").innerHTML === "White Knight" && (bk - 22) % 8 != "1" && (bk - 22) % 8 != "2") || (document.getElementById("_" + (bk - 13) + "_").innerHTML === "White Knight" && (bk - 13) % 8 != "1" && (bk - 13) % 8 != "2" && (bk - 13) % 8 != "3") || (document.getElementById("_" + (bk - 17) + "_").innerHTML === "White Knight" && (bk - 17) % 8 != "0") || (document.getElementById("_" + (bk + 3) + "_").innerHTML === "White Knight" && (bk + 3) % 8 != "1" && (bk + 3) % 8 != "2" && (bk + 3) % 8 != "3") || (document.getElementById("_" + (bk + 10) + "_").innerHTML === "White Knight" && (bk + 10) % 8 != "1" && (bk + 10) % 8 != "2") || (document.getElementById("_" + (bk - 24) + "_").innerHTML === "White Knight")) {
+      NE_blackcheck = 1
+    }  if ((document.getElementById("_" + (bk - 18) + "_").innerHTML === "White Knight" && (bk - 18) % 8 != "7" && (bk - 18) % 8 != "0") || (document.getElementById("_" + (bk - 16) + "_").innerHTML === "White Knight") || (document.getElementById("_" + (bk - 11) + "_").innerHTML === "White Knight" && (bk - 11) % 8 != "6" && (bk - 11) % 8 != "7" && (bk - 11) % 8 != "0") || (document.getElementById("_" + (bk + 5) + "_").innerHTML === "White Knight" && (bk + 5) % 8 != "6" && (bk + 5) % 8 != "7" && (bk + 5) % 8 != "0") || (document.getElementById("_" + (bk + 14) + "_").innerHTML === "White Knight" && (bk + 14) % 8 != "7" && (bk + 14) % 8 != "0") || (document.getElementById("_" + (bk + 16) + "_").innerHTML === "White Knight")) {
+      W_blackcheck = 1
+    } if ((document.getElementById("_" + (bk - 14) + "_").innerHTML === "White Knight" && (bk - 14) % 8 != "1" && (bk - 14) % 8 != "2") || (document.getElementById("_" + (bk - 16) + "_").innerHTML === "White Knight") || (document.getElementById("_" + (bk - 5) + "_").innerHTML === "White Knight" && (bk - 5) % 8 != "1" && (bk - 5) % 8 != "2" && (bk - 5) % 8 != "3") || (document.getElementById("_" + (bk + 11) + "_").innerHTML === "White Knight" && (bk + 11) % 8 != "1" && (bk + 11) % 8 != "2" && (bk + 11) % 8 != "3") || (document.getElementById("_" + (bk + 18) + "_").innerHTML === "White Knight" && (bk + 18) % 8 != "1" && (bk + 18) % 8 != "2") || (document.getElementById("_" + (bk + 16) + "_").innerHTML === "White Knight")) {
+      E_blackcheck = 1
+    } if ((document.getElementById("_" + (bk + 22) + "_").innerHTML === "White Knight" && (bk + 22) % 8 != "7" && (bk - 22) % 8 != "0") || (document.getElementById("_" + (bk + 13) + "_").innerHTML === "White Knight" && (bk + 13) % 8 != "6" && (bk + 13) % 8 != "7" && (bk + 13) % 8 != "0") || (document.getElementById("_" + (bk + 17) + "_").innerHTML === "White Knight" && (bk + 17) % 8 != "1") || (document.getElementById("_" + (bk - 3) + "_").innerHTML === "White Knight" && (bk - 3) % 8 != "6" && (bk - 3) % 8 != "7" && (bk - 3) % 8 != "0") || (document.getElementById("_" + (bk - 10) + "_").innerHTML === "White Knight" && (bk - 10) % 8 != "7" && (bk - 10) % 8 != "0") || (document.getElementById("_" + (bk + 24) + "_").innerHTML === "White Knight")) {
+      SW_blackcheck = 1
+    }  if ((document.getElementById("_" + (bk + 25) + "_").innerHTML === "White Knight" && (bk + 25) % 8 != "1") || (document.getElementById("_" + (bk + 23) + "_").innerHTML === "White Knight" && (bk + 23) % 8 != "0") || (document.getElementById("_" + (bk + 18) + "_").innerHTML === "White Knight" && (bk + 18) % 8 != "1" && (bk + 18) % 8 != "2") || (document.getElementById("_" + (bk + 14) + "_").innerHTML === "White Knight" && (bk + 14) % 8 != "7" && (bk + 14) % 8 != "0") || (document.getElementById("_" + (bk + 2) + "_").innerHTML === "White Knight" && (bk + 2) % 8 != "1" && (bk + 2) % 8 != "2") || (document.getElementById("_" + (bk - 2) + "_").innerHTML === "White Knight" && (bk - 2) % 8 != "7" && (bk - 2) % 8 != "0")) {
+      S_blackcheck = 1
+    } if ((document.getElementById("_" + (bk + 26) + "_").innerHTML === "White Knight" && (bk + 26) % 8 != "1" && (bk + 26) % 8 != "2") || (document.getElementById("_" + (bk + 19) + "_").innerHTML === "White Knight" && (bk + 19) % 8 != "1" && (bk + 19) % 8 != "2") || (document.getElementById("_" + (bk + 15) + "_").innerHTML === "White Knight" && (bk + 15) % 8 != "0") || (document.getElementById("_" + (bk + 3) + "_").innerHTML === "White Knight" && (bk + 3) % 8 != "1" && (bk + 3) % 8 != "2" && (bk + 3) % 8 != "3") || (document.getElementById("_" + (bk - 6) + "_").innerHTML === "White Knight" && (bk - 6) % 8 != "1" && (bk - 6) % 8 != "2") || (document.getElementById("_" + (bk + 24) + "_").innerHTML === "White Knight")) {
+      SE_blackcheck = 1
+    } 
+    for (mr1= -9; (bk + mr1) % 8 != "1" && document.getElementById("_" + (bk + mr1) + "_").innerHTML == ""; mr1 += 1) {
+      if (document.getElementById("_" + (bk + mr1 + 1) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr1 + 1) + "_").innerHTML === "White Queen" && (bk + mr1 + 1) % 8 != "1") {
+        NW_blackcheck = 1 
+      }} for (mr2 = -9; (bk + mr2) % 8 != "0" && document.getElementById("_" + (bk + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          if ((document.getElementById("_" + (bk + mr2 - 1) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr2 - 1) + "_").innerHTML === "White Queen") && (bk + mr2 - 1) % 8 != "0") {
+      NW_blackcheck = 1
+      }} for (mr3 = -9; document.getElementById("_" + (bk + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          if (document.getElementById("_" + (bk + mr3 + 8) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr3 + 8) + "_").innerHTML === "White Queen") {
+      NW_blackcheck = 1
+      }} for (mr4 = -9; document.getElementById("_" + (bk + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          if (document.getElementById("_" + (bk + mr4 - 8) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr4 - 8) + "_").innerHTML === "White Queen") {
+      NW_blackcheck = 1
+      }} for (mb2 = -9; (bk + mb2) % 8 != "0" && document.getElementById("_" + (bk + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          if ((document.getElementById("_" + (bk + mb2 - 9) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb2 - 9) + "_").innerHTML === "White Queen") && (bk + mb2 - 9) % 8 != "0") {
+      NW_blackcheck = 1
+      }} for (mb3 = -9; (bk + mb3) % 8 != "0" && document.getElementById("_" + (bk + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          if ((document.getElementById("_" + (bk + mb3 + 7) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb3 + 7) + "_").innerHTML === "White Queen") && (bk + mb3 + 7) % 8 != "0") {
+      NW_blackcheck = 1
+      }} for (mb4 = -9; (bk + mb4) % 8 != "1" && document.getElementById("_" + (bk + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          if ((document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Queen") && (bk + mb4 - 7) % 8 != "1") {
+      NW_blackcheck = 1
+      }} 
+    for (mr1= -8; (bk + mr1) % 8 != "1" && document.getElementById("_" + (bk + mr1) + "_").innerHTML == ""; mr1 += 1) {
+      if (document.getElementById("_" + (bk + mr1 + 1) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr1 + 1) + "_").innerHTML === "White Queen" && (bk + mr1 + 1) % 8 != "1") {
+        N_blackcheck = 1 
+      }} for (mr2 = -8; (bk + mr2) % 8 != "0" && document.getElementById("_" + (bk + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          if ((document.getElementById("_" + (bk + mr2 - 1) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr2 - 1) + "_").innerHTML === "White Queen") && (bk + mr2 - 1) % 8 != "0") {
+      N_blackcheck = 1
+      }} for (mb1 = -8; (bk + mb1) % 8 != "1" && document.getElementById("_" + (bk + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          if ((document.getElementById("_" + (bk + mb1 + 9) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb1 + 9) + "_").innerHTML === "White Queen") && (bk + mb1 + 9) % 8 != "1") {
+      N_blackcheck = 1
+      }} for (mb2 = -8; (bk + mb2) % 8 != "0" && document.getElementById("_" + (bk + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          if ((document.getElementById("_" + (bk + mb2 - 9) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb2 - 9) + "_").innerHTML === "White Queen") && (bk + mb2 - 9) % 8 != "0") {
+      N_blackcheck = 1
+      }} for (mb3 = -8; (bk + mb3) % 8 != "0" && document.getElementById("_" + (bk + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          if ((document.getElementById("_" + (bk + mb3 + 7) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb3 + 7) + "_").innerHTML === "White Queen") && (bk + mb3 + 7) % 8 != "0") {
+      N_blackcheck = 1
+      }} for (mb4 = -8; (bk + mb4) % 8 != "1" && document.getElementById("_" + (bk + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          if ((document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Queen") && (bk + mb4 - 7) % 8 != "1") {
+      N_blackcheck = 1
+      }}
+    for (mr1= -7; (bk + mr1) % 8 != "1" && document.getElementById("_" + (bk + mr1) + "_").innerHTML == ""; mr1 += 1) {
+      if (document.getElementById("_" + (bk + mr1 + 1) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr1 + 1) + "_").innerHTML === "White Queen" && (bk + mr1 + 1) % 8 != "1") {
+        NE_blackcheck = 1 
+      }} for (mr2 = -7; (bk + mr2) % 8 != "0" && document.getElementById("_" + (bk + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          if ((document.getElementById("_" + (bk + mr2 - 1) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr2 - 1) + "_").innerHTML === "White Queen") && (bk + mr2 - 1) % 8 != "0") {
+      NE_blackcheck = 1
+      }} for (mr3 = -7; document.getElementById("_" + (bk + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          if (document.getElementById("_" + (bk + mr3 + 8) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr3 + 8) + "_").innerHTML === "White Queen") {
+      NE_blackcheck = 1
+      }} for (mr4 = -7; document.getElementById("_" + (bk + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          if (document.getElementById("_" + (bk + mr4 - 8) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr4 - 8) + "_").innerHTML === "White Queen") {
+      NE_blackcheck = 1
+      }} for (mb1 = -7; (bk + mb1) % 8 != "1" && document.getElementById("_" + (bk + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          if ((document.getElementById("_" + (bk + mb1 + 9) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb1 + 9) + "_").innerHTML === "White Queen") && (bk + mb1 + 9) % 8 != "1") {
+      NE_blackcheck = 1
+      }} for (mb2 = -7; (bk + mb2) % 8 != "0" && document.getElementById("_" + (bk + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          if ((document.getElementById("_" + (bk + mb2 - 9) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb2 - 9) + "_").innerHTML === "White Queen") && (bk + mb2 - 9) % 8 != "0") {
+      NE_blackcheck = 1
+      }} for (mb4 = -7; (bk + mb4) % 8 != "1" && document.getElementById("_" + (bk + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          if ((document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Queen") && (bk + mb4 - 7) % 8 != "1") {
+      NE_blackcheck = 1
+      }} 
+    for (mr2 = -1; (bk + mr2) % 8 != "0" && document.getElementById("_" + (bk + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          if ((document.getElementById("_" + (bk + mr2 - 1) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr2 - 1) + "_").innerHTML === "White Queen") && (bk + mr2 - 1) % 8 != "0") {
+      W_blackcheck = 1
+      }} for (mr3 = -1; document.getElementById("_" + (bk + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          if (document.getElementById("_" + (bk + mr3 + 8) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr3 + 8) + "_").innerHTML === "White Queen") {
+      W_blackcheck = 1
+      }} for (mr4 = -1; document.getElementById("_" + (bk + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          if (document.getElementById("_" + (bk + mr4 - 8) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr4 - 8) + "_").innerHTML === "White Queen") {
+      W_blackcheck = 1
+      }} for (mb1 = -1; (bk + mb1) % 8 != "1" && document.getElementById("_" + (bk + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          if ((document.getElementById("_" + (bk + mb1 + 9) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb1 + 9) + "_").innerHTML === "White Queen") && (bk + mb1 + 9) % 8 != "1") {
+      W_blackcheck = 1
+      }} for (mb2 = -1; (bk + mb2) % 8 != "0" && document.getElementById("_" + (bk + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          if ((document.getElementById("_" + (bk + mb2 - 9) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb2 - 9) + "_").innerHTML === "White Queen") && (bk + mb2 - 9) % 8 != "0") {
+      W_blackcheck = 1
+      }} for (mb3 = -1; (bk + mb3) % 8 != "0" && document.getElementById("_" + (bk + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          if ((document.getElementById("_" + (bk + mb3 + 7) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb3 + 7) + "_").innerHTML === "White Queen") && (bk + mb3 + 7) % 8 != "0") {
+      W_blackcheck = 1
+      }} for (mb4 = -1; (bk + mb4) % 8 != "1" && document.getElementById("_" + (bk + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          if ((document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Queen") && (bk + mb4 - 7) % 8 != "1") {
+      W_blackcheck = 1
+      }} 
+  }
 }
