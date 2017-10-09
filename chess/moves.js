@@ -1,3 +1,4 @@
+var piececolour = "White"
 var piecetaken = ""
 var pawnmove = 0
 var knightmove = 0
@@ -338,6 +339,12 @@ function move_piece(){
     if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 243, 112)") {
       document.getElementById("_" + prev_square + "_").innerHTML = ""
       document.getElementById("_" + square + "_").innerHTML = piece
+      if (piececolour === "Black") {
+       piececolour = "White" 
+      } if (piececolour === "White") {
+       piececolour = "Black" 
+      }
+      console.log(piececolour)
       phase_change()
       phase_4()
       king()
@@ -346,6 +353,12 @@ function move_piece(){
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = ""
       document.getElementById("report").innerHTML += "<br>" + piecetaken + " has been taken by " + piece
+      if (piececolour === "Black") {
+       piececolour = "White" 
+      } if (piececolour === "White") {
+       piececolour = "Black" 
+      }
+      console.log(piececolour)
       phase_change()
       phase_4()
       king()
