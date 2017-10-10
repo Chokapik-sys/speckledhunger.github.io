@@ -342,10 +342,16 @@ function move_piece(){
       document.getElementById("_" + prev_square + "_").innerHTML = ""
       document.getElementById("_" + square + "_").innerHTML = piece
       if (piececolour === "Black" && colourchange === 1) {
-       piececolour = "White"
+        piececolour = "White"
+        document.getElementById("colour").innerHTML = "White"
+        document.getElementById("colour").style.background = "#FFFFFF"
+        document.getElementById("colour").style.color = "#000000"
         colourchange = 0
       } if (piececolour === "White" && colourchange === 1) {
-       piececolour = "Black"
+        piececolour = "Black"
+        document.getElementById("colour").innerHTML = "Black"
+        document.getElementById("colour").style.background = "#000000"
+        document.getElementById("colour").style.color = "#FFFFFF"
         colourchange = 0
       }
       console.log(piececolour)
@@ -359,10 +365,16 @@ function move_piece(){
       document.getElementById("_" + prev_square + "_").innerHTML = ""
       document.getElementById("report").innerHTML += "<br>" + piecetaken + " has been taken by " + piece
       if (piececolour === "Black" && colourchange === 1) {
-       piececolour = "White"
+        piececolour = "White"
+        document.getElementById("colour").innerHTML = "White"
+        document.getElementById("colour").style.background = "#FFFFFF"
+        document.getElementById("colour").style.color = "#000000"
         colourchange = 0
       } if (piececolour === "White" && colourchange === 1) {
-       piececolour = "Black"
+        piececolour = "Black"
+        document.getElementById("colour").innerHTML = "Black"
+        document.getElementById("colour").style.background = "#000000"
+        document.getElementById("colour").style.color = "#FFFFFF"
         colourchange = 0
       }
       console.log(piececolour)
