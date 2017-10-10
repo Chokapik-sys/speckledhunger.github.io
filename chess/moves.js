@@ -340,46 +340,16 @@ function move_piece(){
   //phase3
   if (phase === 3) {
     if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 243, 112)") {
-      colourchange = 1
       document.getElementById("_" + prev_square + "_").innerHTML = ""
       document.getElementById("_" + square + "_").innerHTML = piece
-      if (piececolour === "Black" && colourchange === 1) {
-        piececolour = "White"
-        document.getElementById("piececolour").innerHTML = "White"
-        document.getElementById("piececolour").style.background = "#FFFFFF"
-        document.getElementById("piececolour").style.color = "#000000"
-        colourchange = 0
-      } if (piececolour === "White" && colourchange === 1) {
-        piececolour = "Black"
-        document.getElementById("piececolour").innerHTML = "Black"
-        document.getElementById("piececolour").style.background = "#000000"
-        document.getElementById("piececolour").style.color = "#FFFFFF"
-        colourchange = 0
-      }
-      console.log(piececolour)
       phase_change()
       phase_4()
       king()
     } if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 132, 102)") {
-      colourchange = 1
       piecetaken = document.getElementById("_" + square + "_").innerHTML
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = ""
       document.getElementById("report").innerHTML += "<br>" + piecetaken + " has been taken by " + piece
-      if (piececolour === "Black" && colourchange === 1) {
-        piececolour = "White"
-        document.getElementById("piececolour").innerHTML = "White"
-        document.getElementById("piececolour").style.background = "#FFFFFF"
-        document.getElementById("piececolour").style.color = "#000000"
-        colourchange = 0
-      } if (piececolour === "White" && colourchange === 1) {
-        piececolour = "Black"
-        document.getElementById("piececolour").innerHTML = "Black"
-        document.getElementById("piececolour").style.background = "#000000"
-        document.getElementById("piececolour").style.color = "#FFFFFF"
-        colourchange = 0
-      }
-      console.log(piececolour)
       phase_change()
       phase_4()
       king()
