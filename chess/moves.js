@@ -27,10 +27,11 @@ function move_piece(){
   if (phase === 1) {
     king()
     //Blank Square
-    if (document.getElementById("_" + square + "_").innerHTML === "") {
+    if (document.getElementById("_" + square + "_").innerHTML === "" || piececolour[0] !== document.getElementById("_" + square + "_").innerHTML[0]) {
       piece = ""
     }
     //White Pieces
+    if (piececolour === "White") {
     if (document.getElementById("_" + square + "_").innerHTML === "White Pawn") {
       if (document.getElementById("_" + (square + 8) + "_").innerHTML === ""){
         document.getElementById("_" + (square + 8) + "_").style.backgroundColor = "#FFF370"
@@ -179,8 +180,9 @@ function move_piece(){
         console.log(constant3 + prev_square)
       }
       piece = "White King"
-    }
+    }}
     //Black Pieces
+    if (piececolour === "Black") {
     if (document.getElementById("_" + square + "_").innerHTML === "Black Pawn") {
       if (document.getElementById("_" + (square - 8) + "_").innerHTML === ""){
         document.getElementById("_" + (square - 8) + "_").style.backgroundColor = "#FFF370"
@@ -328,7 +330,7 @@ function move_piece(){
         console.log(constant3 + prev_square)
       }
       piece = "Black King"
-    }
+    }}
     phase = 2
   }
   //phase2
