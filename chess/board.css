@@ -1,5 +1,5 @@
 /*--Checkerboard--*/
-.A , .B , #resetTurn , #reportbox , #advanced , .saveoption , #customsave , #customdelete , #savefilesave , #savefileload , #savefiledelete , #selectfile{
+.A , .B , #resetTurn , #reportbox , #advanced , .saveoption , #customsave , #customdelete , #savefilesave , #savefileload , #savefiledelete , #selectfile , #colour{
   border-color: #898989;
   border-style: solid;
   border-width: 1px;
@@ -153,6 +153,14 @@
 }
 #delete {
   top: 419px;
+}
+#colour {
+  position: absolute;
+  background-color: #FFFFFF;
+  width: 128px;
+  height: 64px;
+  left: 557px;
+  top: 212px;
 }
 /*Main Board*/
 /*--row1--*/
