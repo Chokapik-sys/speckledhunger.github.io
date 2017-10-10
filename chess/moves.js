@@ -343,15 +343,15 @@ function move_piece(){
       document.getElementById("_" + square + "_").innerHTML = piece
       if (piececolour === "Black" && colourchange === 1) {
         piececolour = "White"
-        document.getElementById("colour").innerHTML = "White"
-        document.getElementById("colour").style.background = "#FFFFFF"
-        document.getElementById("colour").style.color = "#000000"
+        document.getElementById("piececolour").innerHTML = "White"
+        document.getElementById("piececolour").style.background = "#FFFFFF"
+        document.getElementById("piececolour").style.color = "#000000"
         colourchange = 0
       } if (piececolour === "White" && colourchange === 1) {
         piececolour = "Black"
-        document.getElementById("colour").innerHTML = "Black"
-        document.getElementById("colour").style.background = "#000000"
-        document.getElementById("colour").style.color = "#FFFFFF"
+        document.getElementById("piececolour").innerHTML = "Black"
+        document.getElementById("piececolour").style.background = "#000000"
+        document.getElementById("piececolour").style.color = "#FFFFFF"
         colourchange = 0
       }
       console.log(piececolour)
@@ -366,15 +366,15 @@ function move_piece(){
       document.getElementById("report").innerHTML += "<br>" + piecetaken + " has been taken by " + piece
       if (piececolour === "Black" && colourchange === 1) {
         piececolour = "White"
-        document.getElementById("colour").innerHTML = "White"
-        document.getElementById("colour").style.background = "#FFFFFF"
-        document.getElementById("colour").style.color = "#000000"
+        document.getElementById("piececolour").innerHTML = "White"
+        document.getElementById("piececolour").style.background = "#FFFFFF"
+        document.getElementById("piececolour").style.color = "#000000"
         colourchange = 0
       } if (piececolour === "White" && colourchange === 1) {
         piececolour = "Black"
-        document.getElementById("colour").innerHTML = "Black"
-        document.getElementById("colour").style.background = "#000000"
-        document.getElementById("colour").style.color = "#FFFFFF"
+        document.getElementById("piececolour").innerHTML = "Black"
+        document.getElementById("piececolour").style.background = "#000000"
+        document.getElementById("piececolour").style.color = "#FFFFFF"
         colourchange = 0
       }
       console.log(piececolour)
