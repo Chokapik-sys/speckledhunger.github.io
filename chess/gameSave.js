@@ -199,6 +199,7 @@ function save() {
   if (document.getElementById("report").innerHTML !== "<b>Attack Log</b>") {
     document.cookie = (cnumset + "log=" + document.getElementById("report").innerHTML + "; expires=" + expire)
   }
+  document.cookie = (cnumset + "piececolour=" + piececolour + "; expires=" + expire)
   WPAcur = 0
   WROcur = 0
   WKNcur = 0
@@ -240,6 +241,18 @@ function load() {
       if (cnumget == cnumfetch) {
         if (cacr === "log") {
           document.getElementById("report").innerHTML = readc[cl]
+        }
+        if (cname === "piececolour") {
+          piececolour = readc[cl]
+          if (readc[cl] === "White") {
+        document.getElementById("piececolour").innerHTML = "White"
+        document.getElementById("piececolour").style.background = "#FFFFFF"
+        document.getElementById("piececolour").style.color = "#000000"
+      } if (readc[cl] === "Black") {
+        document.getElementById("piececolour").innerHTML = "Black"
+        document.getElementById("piececolour").style.background = "#000000"
+        document.getElementById("piececolour").style.color = "#FFFFFF"
+      }
         }
       if (readc[cl][readc[cl].length - 3] !== "_") {
         if (cacr === "WRO") {
@@ -338,6 +351,8 @@ function clearsave() {
   document.cookie = cnumset + "BKI1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
   //Clear Attack Log Cookie
   document.cookie = cnumset + "log=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  //Clear piececolour Cookie
+  document.cookie = cnumset = "piececolour=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
 }
 function fullread() {
   readc = document.cookie.split("; ")
