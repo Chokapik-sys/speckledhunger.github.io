@@ -1,5 +1,5 @@
 /*--Checkerboard--*/
-.A , .B , #resetTurn , #reportbox , #advanced , .saveoption , #customsave , #customdelete , #savefilesave , #savefileload , #savefiledelete , #selectfile , #colour{
+.A , .B , #resetTurn , #reportbox , #advanced , .saveoption , #customsave , #customdelete , #savefilesave , #savefileload , #savefiledelete , #selectfile , #piececolour{
   border-color: #898989;
   border-style: solid;
   border-width: 1px;
@@ -154,7 +154,7 @@
 #delete {
   top: 419px;
 }
-#colour {
+#piececolour {
   position: absolute;
   background-color: #FFFFFF;
   width: 128px;
