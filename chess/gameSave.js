@@ -241,7 +241,7 @@ function load() {
       if (cnumget == cnumfetch) {
         if (cacr === "log") {
           document.getElementById("report").innerHTML = readc[cl]
-        } if (cname === "colour") {
+        } if (cacr === "col") {
           if (readc[cl] === "White") {
         piececolour = "White"
         document.getElementById("piececolour").innerHTML = "White"
