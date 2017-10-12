@@ -196,6 +196,7 @@ function save() {
       }
     }
   }
+  document.cookie = (cnumset + "colour=" + piececolour + " expires=" + expire)
   if (document.getElementById("report").innerHTML !== "<b>Attack Log</b>") {
     document.cookie = (cnumset + "log=" + document.getElementById("report").innerHTML + "; expires=" + expire)
   }
@@ -240,6 +241,8 @@ function load() {
       if (cnumget == cnumfetch) {
         if (cacr === "log") {
           document.getElementById("report").innerHTML = readc[cl]
+        } if (cname === "colour") {
+          console.log(readc[cl])
         }
       if (readc[cl][readc[cl].length - 3] !== "_") {
         if (cacr === "WRO") {
@@ -338,6 +341,8 @@ function clearsave() {
   document.cookie = cnumset + "BKI1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
   //Clear Attack Log Cookie
   document.cookie = cnumset + "log=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  //Clear Colour Cookie
+  document.cookie = cnumset + "colour=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
 }
 function fullread() {
   readc = document.cookie.split("; ")
