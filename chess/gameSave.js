@@ -242,7 +242,17 @@ function load() {
         if (cacr === "log") {
           document.getElementById("report").innerHTML = readc[cl]
         } if (cname === "colour") {
-          console.log(readc[cl])
+          if (readc[cl] === "White") {
+        piececolour = "White"
+        document.getElementById("piececolour").innerHTML = "White"
+        document.getElementById("piececolour").style.background = "#FFFFFF"
+        document.getElementById("piececolour").style.color = "#000000"
+      } if (readc[cl] === "Black") {
+        piececolour = "Black"
+        document.getElementById("piececolour").innerHTML = "Black"
+        document.getElementById("piececolour").style.background = "#000000"
+        document.getElementById("piececolour").style.color = "#FFFFFF"
+      }
         }
       if (readc[cl][readc[cl].length - 3] !== "_") {
         if (cacr === "WRO") {
