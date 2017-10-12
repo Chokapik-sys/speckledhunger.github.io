@@ -196,7 +196,7 @@ function save() {
       }
     }
   }
-  document.cookie = (cnumset + "colour=" + piececolour + " expires=" + expire)
+  document.cookie = (cnumset + "colour=" + piececolour + "; expires=" + expire)
   if (document.getElementById("report").innerHTML !== "<b>Attack Log</b>") {
     document.cookie = (cnumset + "log=" + document.getElementById("report").innerHTML + "; expires=" + expire)
   }
