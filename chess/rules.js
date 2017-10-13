@@ -956,6 +956,7 @@ function king() {
 function changecolour() {
   colourchange = 1
       if (piececolour === "Black" && colourchange === 1) {
+        piececolour = "White"
         document.getElementById("piececolour").innerHTML = "White"
         document.getElementById("piececolour").style.background = "#FFFFFF"
         document.getElementById("piececolour").style.color = "#000000"
