@@ -344,15 +344,6 @@ function move_piece(){
   if (phase === 3) {
     if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 243, 112)") {
       colourchange = 1
-      if (document.getElementById("_" + square + "_").innerHTML === "White Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 7 && whitepromote === 0 && autopromote === 1) {
-        piece = "White Queen"
-        whitepromote = 1
-      } if (document.getElementById("_" + square + "_").innerHTML === "Black Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 0 && blackpromote === 0 && autopromote === 1) {
-        piece = "Black Queen"
-        blackpromote = 1
-      }
-      document.getElementById("_" + square + "_").innerHTML = piece
-      document.getElementById("_" + prev_square + "_").innerHTML = ""
       if (piececolour === "Black" && colourchange === 1) {
         document.getElementById("piececolour").innerHTML = "White"
         document.getElementById("piececolour").style.background = "#FFFFFF"
@@ -365,6 +356,15 @@ function move_piece(){
         document.getElementById("piececolour").style.color = "#FFFFFF"
         colourchange = 0
       }
+      if (piece === "White Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 7 && whitepromote === 0 && autopromote === 1) {
+        piece = "White Queen"
+        whitepromote = 1
+      } if (piece === "Black Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 0 && blackpromote === 0 && autopromote === 1) {
+        piece = "Black Queen"
+        blackpromote = 1
+      }
+      document.getElementById("_" + square + "_").innerHTML = piece
+      document.getElementById("_" + prev_square + "_").innerHTML = ""
       console.log(piececolour)
       phase_change()
       phase_4()
@@ -372,18 +372,7 @@ function move_piece(){
     } if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 132, 102)") {
       colourchange = 1
       piecetaken = document.getElementById("_" + square + "_").innerHTML
-      if (document.getElementById("_" + square + "_").innerHTML === "White Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 7 && whitepromote === 0 && autopromote === 1) {
-        piece = "White Queen"
-        whitepromote = 1
-      } if (document.getElementById("_" + square + "_").innerHTML === "Black Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 0 && blackpromote === 0 && autopromote === 1) {
-        piece = "Black Queen"
-        blackpromote = 1
-      }
-      document.getElementById("_" + square + "_").innerHTML = piece
-      document.getElementById("_" + prev_square + "_").innerHTML = ""
-      document.getElementById("report").innerHTML += "<br>" + piecetaken + " has been taken by " + piece
       if (piececolour === "Black" && colourchange === 1) {
-        piececolour = "White"
         document.getElementById("piececolour").innerHTML = "White"
         document.getElementById("piececolour").style.background = "#FFFFFF"
         document.getElementById("piececolour").style.color = "#000000"
@@ -395,6 +384,16 @@ function move_piece(){
         document.getElementById("piececolour").style.color = "#FFFFFF"
         colourchange = 0
       }
+      if (piece === "White Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 7 && whitepromote === 0 && autopromote === 1) {
+        piece = "White Queen"
+        whitepromote = 1
+      } if (piece === "Black Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 0 && blackpromote === 0 && autopromote === 1) {
+        piece = "Black Queen"
+        blackpromote = 1
+      }
+      document.getElementById("_" + square + "_").innerHTML = piece
+      document.getElementById("_" + prev_square + "_").innerHTML = ""
+      document.getElementById("report").innerHTML += "<br>" + piecetaken + " has been taken by " + piece
       console.log(piececolour)
       phase_change()
       phase_4()
