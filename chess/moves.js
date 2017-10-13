@@ -19,6 +19,9 @@ var square = "0"
 var prev_square = 0
 var piece = ""
 var phase = 0
+var whitepromote = 0
+var blackpromote = 0
+var autopromote = 0
 var constant1 = "Square: "
 var constant2 = "Phase: "
 var constant3 = "Moving from: "
@@ -341,10 +344,19 @@ function move_piece(){
   if (phase === 3) {
     if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 243, 112)") {
       colourchange = 1
-      document.getElementById("_" + prev_square + "_").innerHTML = ""
+      if (document.getElementById("_" + square + "_").innerHTML === "White Pawn" && square / 8 - (square % 8) === 8 && whitepromote === 0 && autopromote === 1) {
+       piece = "White Queen
+        whitepromote = 1
+      }
       document.getElementById("_" + square + "_").innerHTML = piece
-      if (piececolour === "Black" && colourchange === 1) {
-        piececolour = "White"
+      document.getElementById("_" + prev_square + "_").innerHTML = ""
+      if (document.getElementById("_" + square + "_").innerHTML === "White Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 0 && whitepromote === 0 && autopromote === 1) {
+        piece = "White Queen
+        whitepromote = 1
+      } if (document.getElementById("_" + square + "_").innerHTML === "Black Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 7 && blackpromote === 0 && autopromote === 1) {
+        piece = "Black Queen
+        blackpromote = 1
+      }
         document.getElementById("piececolour").innerHTML = "White"
         document.getElementById("piececolour").style.background = "#FFFFFF"
         document.getElementById("piececolour").style.color = "#000000"
@@ -363,6 +375,13 @@ function move_piece(){
     } if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 132, 102)") {
       colourchange = 1
       piecetaken = document.getElementById("_" + square + "_").innerHTML
+      if (document.getElementById("_" + square + "_").innerHTML === "White Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 0 && whitepromote === 0 && autopromote === 1) {
+        piece = "White Queen
+        whitepromote = 1
+      } if (document.getElementById("_" + square + "_").innerHTML === "Black Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 7 && blackpromote === 0 && autopromote === 1) {
+        piece = "Black Queen
+        blackpromote = 1
+      }
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = ""
       document.getElementById("report").innerHTML += "<br>" + piecetaken + " has been taken by " + piece
