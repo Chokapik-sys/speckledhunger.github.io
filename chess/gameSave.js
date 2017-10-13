@@ -381,6 +381,7 @@ function checkbeta() {
     } readc[cl] = readc[cl].replace(cname + "=", "")
       if (cname === "beta" && readc[cl] === "true") {
         console.log("Beta active")
+        autopremote === 1
       }
     }
   }
