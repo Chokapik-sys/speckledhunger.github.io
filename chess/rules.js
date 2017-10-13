@@ -1,3 +1,5 @@
+var piececolour = "White"
+var colourchange = 0
 var capture = 0
 var blackcheck = 0
 var N_blackcheck = 0
@@ -950,4 +952,19 @@ function king() {
       SE_blackcheck = 1
       }}
   }
+}
+function changecolour() {
+  colourchange = 1
+      if (piececolour === "Black" && colourchange === 1) {
+        document.getElementById("piececolour").innerHTML = "White"
+        document.getElementById("piececolour").style.background = "#FFFFFF"
+        document.getElementById("piececolour").style.color = "#000000"
+        colourchange = 0
+      } if (piececolour === "White" && colourchange === 1) {
+        piececolour = "Black"
+        document.getElementById("piececolour").innerHTML = "Black"
+        document.getElementById("piececolour").style.background = "#000000"
+        document.getElementById("piececolour").style.color = "#FFFFFF"
+        colourchange = 0
+      }
 }
