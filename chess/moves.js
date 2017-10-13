@@ -352,7 +352,7 @@ function move_piece(){
       } if (document.getElementById("_" + square + "_").innerHTML === "Black Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 7 && blackpromote === 0 && autopromote === 1) {
         piece = "Black Queen"
         blackpromote = 1
-      }
+      } if (piececolour === "Black" && colourchange === 1) {
         document.getElementById("piececolour").innerHTML = "White"
         document.getElementById("piececolour").style.background = "#FFFFFF"
         document.getElementById("piececolour").style.color = "#000000"
