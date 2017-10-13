@@ -1,5 +1,3 @@
-var piececolour = "White"
-var colourchange = 0
 var piecetaken = ""
 var pawnmove = 0
 var knightmove = 0
@@ -343,19 +341,7 @@ function move_piece(){
   //phase3
   if (phase === 3) {
     if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 243, 112)") {
-      colourchange = 1
-      if (piececolour === "Black" && colourchange === 1) {
-        document.getElementById("piececolour").innerHTML = "White"
-        document.getElementById("piececolour").style.background = "#FFFFFF"
-        document.getElementById("piececolour").style.color = "#000000"
-        colourchange = 0
-      } if (piececolour === "White" && colourchange === 1) {
-        piececolour = "Black"
-        document.getElementById("piececolour").innerHTML = "Black"
-        document.getElementById("piececolour").style.background = "#000000"
-        document.getElementById("piececolour").style.color = "#FFFFFF"
-        colourchange = 0
-      }
+      changecolour()
       if (piece === "White Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 7 && whitepromote === 0 && autopromote === 1) {
         piece = "White Queen"
         whitepromote = 1
@@ -370,20 +356,7 @@ function move_piece(){
       phase_4()
       king()
     } if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 132, 102)") {
-      colourchange = 1
-      piecetaken = document.getElementById("_" + square + "_").innerHTML
-      if (piececolour === "Black" && colourchange === 1) {
-        document.getElementById("piececolour").innerHTML = "White"
-        document.getElementById("piececolour").style.background = "#FFFFFF"
-        document.getElementById("piececolour").style.color = "#000000"
-        colourchange = 0
-      } if (piececolour === "White" && colourchange === 1) {
-        piececolour = "Black"
-        document.getElementById("piececolour").innerHTML = "Black"
-        document.getElementById("piececolour").style.background = "#000000"
-        document.getElementById("piececolour").style.color = "#FFFFFF"
-        colourchange = 0
-      }
+      changecolour()
       if (piece === "White Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 7 && whitepromote === 0 && autopromote === 1) {
         piece = "White Queen"
         whitepromote = 1
