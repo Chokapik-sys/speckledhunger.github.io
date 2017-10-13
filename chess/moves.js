@@ -365,7 +365,7 @@ function move_piece(){
       piecetaken = document.getElementById("_" + square + "_").innerHTML
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = ""
-      document.getElementById("report").innerHTML += "<br>" + piecetaken + " has been taken by " + piece
+      document.getElementById("report").innerHTML += "<br><b>" + piecetaken + "</b> has been taken by <b>" + piece + </b>
       if (piececolour === "Black" && colourchange === 1) {
         piececolour = "White"
         document.getElementById("piececolour").innerHTML = "White"
