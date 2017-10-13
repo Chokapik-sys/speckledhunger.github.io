@@ -348,11 +348,11 @@ function move_piece(){
       } if (piece === "Black Pawn" && (prev_square - 1) / 8 - ((prev_square - 1) % 8) === 0 && blackpromote === 0 && autopromote === 1) {
         piece = "Black Queen"
         blackpromote = 1
-      }
+      } else {
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = ""
+      }
       console.log(piececolour)
-      console.log(piece)
       phase_change()
       phase_4()
       king()
@@ -364,12 +364,12 @@ function move_piece(){
       } if (piece === "Black Pawn" && (prev_square - 1) / 8 - ((prev_square - 1) % 8) === 0 && blackpromote === 0 && autopromote === 1) {
         piece = "Black Queen"
         blackpromote = 1
-      }
+      } else {
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = ""
       document.getElementById("report").innerHTML += "<br>" + piecetaken + " has been taken by " + piece
+      }
       console.log(piececolour)
-      console.log(piece)
       phase_change()
       phase_4()
       king()
