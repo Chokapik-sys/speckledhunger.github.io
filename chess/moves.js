@@ -344,10 +344,10 @@ function move_piece(){
   if (phase === 3) {
     if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 243, 112)") {
       colourchange = 1
-      if (document.getElementById("_" + square + "_").innerHTML === "White Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 0 && whitepromote === 0 && autopromote === 1) {
+      if (document.getElementById("_" + square + "_").innerHTML === "White Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 7 && whitepromote === 0 && autopromote === 1) {
         piece = "White Queen"
         whitepromote = 1
-      } if (document.getElementById("_" + square + "_").innerHTML === "Black Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 7 && blackpromote === 0 && autopromote === 1) {
+      } if (document.getElementById("_" + square + "_").innerHTML === "Black Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 0 && blackpromote === 0 && autopromote === 1) {
         piece = "Black Queen"
         blackpromote = 1
       }
@@ -372,10 +372,10 @@ function move_piece(){
     } if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 132, 102)") {
       colourchange = 1
       piecetaken = document.getElementById("_" + square + "_").innerHTML
-      if (document.getElementById("_" + square + "_").innerHTML === "White Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 0 && whitepromote === 0 && autopromote === 1) {
+      if (document.getElementById("_" + square + "_").innerHTML === "White Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 7 && whitepromote === 0 && autopromote === 1) {
         piece = "White Queen"
         whitepromote = 1
-      } if (document.getElementById("_" + square + "_").innerHTML === "Black Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 7 && blackpromote === 0 && autopromote === 1) {
+      } if (document.getElementById("_" + square + "_").innerHTML === "Black Pawn" && (square - 1) / 8 - ((square - 1) % 8) === 0 && blackpromote === 0 && autopromote === 1) {
         piece = "Black Queen"
         blackpromote = 1
       }
