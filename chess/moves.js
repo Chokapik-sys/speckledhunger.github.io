@@ -352,6 +352,7 @@ function move_piece(){
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = ""
       console.log(piececolour)
+      console.log(piece)
       phase_change()
       phase_4()
       king()
@@ -368,6 +369,7 @@ function move_piece(){
       document.getElementById("_" + prev_square + "_").innerHTML = ""
       document.getElementById("report").innerHTML += "<br>" + piecetaken + " has been taken by " + piece
       console.log(piececolour)
+      console.log(piece)
       phase_change()
       phase_4()
       king()
