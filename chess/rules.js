@@ -969,3 +969,12 @@ function changecolour() {
         colourchange = 0
       }
 }
+function promote() {
+  if (piece === "White Pawn" && (prev_square - 1) / 8 - ((prev_square - 1) % 8) === 7 && whitepromote === 0 && autopromote === 1) {
+        piece = "White Queen"
+        whitepromote = 1
+      } if (piece === "Black Pawn" && (prev_square - 1) / 8 - ((prev_square - 1) % 8) === 0 && blackpromote === 0 && autopromote === 1) {
+        piece = "Black Queen"
+        blackpromote = 1
+      }
+}
