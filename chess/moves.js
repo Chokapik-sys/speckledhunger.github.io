@@ -342,33 +342,19 @@ function move_piece(){
   if (phase === 3) {
     if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 243, 112)") {
       changecolour()
-      if (piece === "White Pawn" && (prev_square - 1) / 8 - ((prev_square - 1) % 8) === 7 && whitepromote === 0 && autopromote === 1) {
-        piece = "White Queen"
-        whitepromote = 1
-      } if (piece === "Black Pawn" && (prev_square - 1) / 8 - ((prev_square - 1) % 8) === 0 && blackpromote === 0 && autopromote === 1) {
-        piece = "Black Queen"
-        blackpromote = 1
-      } else {
+      
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = ""
-      }
       console.log(piececolour)
       phase_change()
       phase_4()
       king()
     } if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 132, 102)") {
       changecolour()
-      if (piece === "White Pawn" && (prev_square - 1) / 8 - ((prev_square - 1) % 8) === 7 && whitepromote === 0 && autopromote === 1) {
-        piece = "White Queen"
-        whitepromote = 1
-      } if (piece === "Black Pawn" && (prev_square - 1) / 8 - ((prev_square - 1) % 8) === 0 && blackpromote === 0 && autopromote === 1) {
-        piece = "Black Queen"
-        blackpromote = 1
-      } else {
+      
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = ""
       document.getElementById("report").innerHTML += "<br>" + piecetaken + " has been taken by " + piece
-      }
       console.log(piececolour)
       phase_change()
       phase_4()
