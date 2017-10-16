@@ -970,6 +970,11 @@ function changecolour() {
       }
 }
 function promote() {
+  if (document.getElementById("promote").checked) {
+    autopromote = 1
+  } else {
+    autopromote = 0
+  }
   if (piece === "White Pawn" && ((square -1) - (square - 1) % 8) / 8 === 7 && whitepromote === 0 && autopromote === 1) {
         piece = "White Queen"
         whitepromote = 1
