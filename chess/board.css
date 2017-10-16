@@ -169,6 +169,11 @@
   top: 80px;
   left: 10px;
 }
+#promote {
+  position: absolute;
+  top: 80px;
+  left: 32px;
+}
 /*Main Board*/
 /*--row1--*/
 #_1_ {
