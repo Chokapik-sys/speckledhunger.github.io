@@ -162,6 +162,13 @@
   left: 557px;
   top: 212px;
 }
+#promote {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 80px;
+  left: 10px;
+}
 /*Main Board*/
 /*--row1--*/
 #_1_ {
