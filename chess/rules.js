@@ -951,7 +951,7 @@ function king() {
           if ((document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Queen") && (bk + mb4 - 7) % 8 != "1") {
       SE_blackcheck = 1
       }}
-  }
+  } //Castling
 }
 function changecolour() {
   colourchange = 1
