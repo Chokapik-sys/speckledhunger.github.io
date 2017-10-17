@@ -4,7 +4,7 @@
   border-style: solid;
   border-width: 1px;
 }
-.A , .B , #resetTurn , #selectOption, .saveoption , #customsave , #customdelete , #savefilesave , #savefileload , #savefiledelete , #selectfile , #promote{
+.A , .B , #resetTurn , #selectOption, .saveoption , #customsave , #customdelete , #savefilesave , #savefileload , #savefiledelete , #selectfile , #promote , #castle{
   cursor: pointer;
 }
 .A , .B {
@@ -178,12 +178,12 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 94px;
+  top: 96px;
   left: 6px;
 }
 #castledescrip {
   position: absolute;
-  top: 83px;
+  top: 85px;
   left: 34px;
 }
 /*Main Board*/
