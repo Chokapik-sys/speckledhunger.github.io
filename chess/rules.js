@@ -959,6 +959,12 @@ function king() {
   } else {
     autocastle = 0
   }
+  if (document.getElementById("_4_").innerHTML = "White King" && document.getElementById("_8_").innerHTML = "White Rook" && autocastle === 1) {
+        for (mr1= 8; (wk + mr1) % 8 != "1" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
+      if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "White Rook") {
+         alert("White King available for castling")
+      }}
+  }
 }
 function changecolour() {
   colourchange = 1
