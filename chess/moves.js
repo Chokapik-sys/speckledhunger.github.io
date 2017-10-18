@@ -19,7 +19,6 @@ var piece = ""
 var phase = 0
 var whitepromote = 0
 var blackpromote = 0
-var autopromote = 0
 var constant1 = "Square: "
 var constant2 = "Phase: "
 var constant3 = "Moving from: "
