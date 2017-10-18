@@ -24,6 +24,8 @@ var wk = 1
 var bk = 1
 var autopromote = 0
 var autocastle = 0
+var blackcastle = ""
+var whitecastle = ""
 function phase_2() {
   if (phase === 2) {
     //Blank Square
@@ -962,7 +964,10 @@ function king() {
   if (document.getElementById("_4_").innerHTML = "White King" && document.getElementById("_8_").innerHTML = "White Rook" && autocastle === 1) {
         for (mr1= 8; (wk + mr1) % 8 != "1" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "White Rook") {
-         alert("White King available for castling")
+         whitecastle = "Queenside"
+      }} for (mr2 = 9; (bk + mr2) % 8 != "0" && document.getElementById("_" + (bk + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          if ((document.getElementById("_" + (bk + mr2 - 1) + "_").innerHTML === "White Rook") {
+              
       }}
   }
 }
