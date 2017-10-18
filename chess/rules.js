@@ -22,6 +22,8 @@ var NW_whitecheck = 0
 var newevent = 0
 var wk = 1
 var bk = 1
+var autopromote = 0
+var autocastle = 0
 function phase_2() {
   if (phase === 2) {
     //Blank Square
@@ -952,6 +954,11 @@ function king() {
       SE_blackcheck = 1
       }}
   } //Castling
+  if (document.getElementById("castle").checked) {
+    autocastle = 1
+  } else {
+    autocastle = 0
+  }
 }
 function changecolour() {
   colourchange = 1
