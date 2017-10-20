@@ -346,6 +346,7 @@ function move_piece(){
       castle()
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = prev_inner
+      prev_inner = ""
       console.log(piececolour)
       phase_change()
       phase_4()
@@ -357,6 +358,7 @@ function move_piece(){
       piecetaken = document.getElementById("_" + square + "_").innerHTML
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = prev_inner
+      prev_inner = ""
       document.getElementById("report").innerHTML += "<br>" + piecetaken + " has been taken by " + piece
       console.log(piececolour)
       phase_change()
