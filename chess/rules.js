@@ -1005,9 +1005,11 @@ function castle() {
       }}
     if ((whitecastle.split(" ")[0] === "Kingside" || whitecastle.split(" ")[1] === "Kingside") && square === 3) {
       prev_square = 2
+      document.getElementById("_4_").innerHTML = ""
       prev_inner = "White King"
     } if ((whitecastle.split(" ")[0] === "Queenside" || whitecastle.split(" ")[1] === "Queenside") && square === 5) {
       prev_square = 6
+      document.getElementById("_4_").innerHTML = ""
       prev_inner = "White King"
     }
   }
