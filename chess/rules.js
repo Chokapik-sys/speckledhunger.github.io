@@ -955,22 +955,6 @@ function king() {
           if ((document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Queen") && (bk + mb4 - 7) % 8 != "1") {
       SE_blackcheck = 1
       }}
-  } //Castling
-  if (document.getElementById("castle").checked) {
-    autocastle = 1
-  } else {
-    autocastle = 0
-  }
-  if (document.getElementById("_4_").innerHTML === "White King" && autocastle === 1) {
-    whitecastle = ""
-    blackcastle = ""
-    for (mr1= 1; (wk + mr1) % 8 != "1" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
-      if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "White Rook" && wk+mr1+1 === 8) {
-        whitecastle += "Queenside "
-      }} for (mr2 = -1; (wk + mr2) % 8 != "0" && document.getElementById("_" + (wk + mr2) + "_").innerHTML == ""; mr2 += -1) {
-        if (document.getElementById("_" + (wk + mr2 - 1) + "_").innerHTML === "White Rook" && wk+mr2-1 === 1) {
-          whitecastle += "Kingside "
-      }}
   }
 }
 function changecolour() {
@@ -1002,4 +986,29 @@ function promote() {
         piece = "Black Queen"
         blackpromote = 1
       }
+}
+function castle() {
+  if (document.getElementById("castle").checked) {
+    autocastle = 1
+  } else {
+    autocastle = 0
+  }
+  if (document.getElementById("_4_").innerHTML === "White King" && autocastle === 1) {
+    whitecastle = ""
+    blackcastle = ""
+    for (mr1= 1; (wk + mr1) % 8 != "1" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
+      if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "White Rook" && wk+mr1+1 === 8) {
+        whitecastle += "Queenside "
+      }} for (mr2 = -1; (wk + mr2) % 8 != "0" && document.getElementById("_" + (wk + mr2) + "_").innerHTML == ""; mr2 += -1) {
+        if (document.getElementById("_" + (wk + mr2 - 1) + "_").innerHTML === "White Rook" && wk+mr2-1 === 1) {
+          whitecastle += "Kingside "
+      }}
+    if ((whitecastle.split(" ")[0] === "Kingside" || whitecastle.split(" ")[1] === "Kingside") && square === 3) {
+      prev_square = 2
+      prev_inner = "White King"
+    } if ((whitecastle.split(" ")[0] === "Queenside" || whitecastle.split(" ")[1] === "Queenside") && square === 5) {
+      prev_square = 6
+      prev_inner = "White King"
+    }
+  }
 }
