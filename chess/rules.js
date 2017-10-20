@@ -1009,5 +1009,21 @@ function castle() {
       document.getElementById("_6_").innerHTML = "White King"
       document.getElementById("_4_").innerHTML = ""
     }
+  } if (document.getElementById("_60_").innerHTML === "Black King" && autocastle === 1) {
+    blackcastle = ""
+    for (mr1= 1; (bk + mr1) % 8 != "1" && document.getElementById("_" + (bk + mr1) + "_").innerHTML == ""; mr1 += 1) {
+      if (document.getElementById("_" + (bk + mr1 + 1) + "_").innerHTML === "Black Rook" && bk+mr1+1 === 8) {
+        blackcastle += "Queenside "
+      }} for (mr2 = -1; (bk + mr2) % 8 != "0" && document.getElementById("_" + (bk + mr2) + "_").innerHTML == ""; mr2 += -1) {
+        if (document.getElementById("_" + (bk + mr2 - 1) + "_").innerHTML === "Black Rook" && bk+mr2-1 === 1) {
+          blackcastle += "Kingside "
+      }}
+    if (blackecastle.split(" ")[0] === "Kingside" || blackcastle.split(" ")[1] === "Kingside") && square === 59) {
+      document.getElementById("_58_").innerHTML = "Black King"
+      document.getElementById("_60_").innerHTML = ""
+    } if ((blackcastle.split(" ")[0] === "Queenside" || blackcastle.split(" ")[1] === "Queenside") && square === 61) {
+      document.getElementById("_62_").innerHTML = "Black King"
+      document.getElementById("_60_").innerHTML = ""
+    }
   }
 }
