@@ -1018,7 +1018,7 @@ function castle() {
         if (document.getElementById("_" + (bk + mr2 - 1) + "_").innerHTML === "Black Rook" && bk+mr2-1 === 1) {
           blackcastle += "Kingside "
       }}
-    if (blackecastle.split(" ")[0] === "Kingside" || blackcastle.split(" ")[1] === "Kingside") && square === 59) {
+    if ((blackcastle.split(" ")[0] === "Kingside" || blackcastle.split(" ")[1] === "Kingside") && square === 59) {
       document.getElementById("_58_").innerHTML = "Black King"
       document.getElementById("_60_").innerHTML = ""
     } if ((blackcastle.split(" ")[0] === "Queenside" || blackcastle.split(" ")[1] === "Queenside") && square === 61) {
