@@ -16,6 +16,7 @@ var mr4 = -8
 var square = "0"
 var prev_square = 0
 var piece = ""
+var prev_inner = ""
 var phase = 0
 var whitepromote = 0
 var blackpromote = 0
@@ -343,7 +344,7 @@ function move_piece(){
       changecolour()
       promote()
       document.getElementById("_" + square + "_").innerHTML = piece
-      document.getElementById("_" + prev_square + "_").innerHTML = ""
+      document.getElementById("_" + prev_square + "_").innerHTML = prev_inner
       console.log(piececolour)
       phase_change()
       phase_4()
@@ -353,7 +354,7 @@ function move_piece(){
       promote()
       piecetaken = document.getElementById("_" + square + "_").innerHTML
       document.getElementById("_" + square + "_").innerHTML = piece
-      document.getElementById("_" + prev_square + "_").innerHTML = ""
+      document.getElementById("_" + prev_square + "_").innerHTML = prev_inner
       document.getElementById("report").innerHTML += "<br>" + piecetaken + " has been taken by " + piece
       console.log(piececolour)
       phase_change()
