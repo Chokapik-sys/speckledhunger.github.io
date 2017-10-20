@@ -994,8 +994,7 @@ function castle() {
     autocastle = 0
   }
   if (document.getElementById("_4_").innerHTML === "White King" && autocastle === 1) {
-    whitecastle = ""
-    blackcastle = ""
+    whitecastle = "
     for (mr1= 1; (wk + mr1) % 8 != "1" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "White Rook" && wk+mr1+1 === 8) {
         whitecastle += "Queenside "
@@ -1004,13 +1003,11 @@ function castle() {
           whitecastle += "Kingside "
       }}
     if ((whitecastle.split(" ")[0] === "Kingside" || whitecastle.split(" ")[1] === "Kingside") && square === 3) {
-      prev_square = 2
+      document.getElementById("_2_").innerHTML = "White King"
       document.getElementById("_4_").innerHTML = ""
-      prev_inner = "White King"
     } if ((whitecastle.split(" ")[0] === "Queenside" || whitecastle.split(" ")[1] === "Queenside") && square === 5) {
-      prev_square = 6
+      document.getElementById("_6_").innerHTML = "White King"
       document.getElementById("_4_").innerHTML = ""
-      prev_inner = "White King"
     }
   }
 }
