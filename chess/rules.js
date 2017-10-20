@@ -994,7 +994,7 @@ function castle() {
     autocastle = 0
   }
   if (document.getElementById("_4_").innerHTML === "White King" && autocastle === 1) {
-    whitecastle = "
+    whitecastle = ""
     for (mr1= 1; (wk + mr1) % 8 != "1" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "White Rook" && wk+mr1+1 === 8) {
         whitecastle += "Queenside "
