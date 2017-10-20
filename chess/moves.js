@@ -90,10 +90,6 @@ function move_piece(){
         } for (mr4 = -8; document.getElementById("_" + (square + mr4) + "_").innerHTML == ""; mr4 += -8) {
           document.getElementById("_" + (square + mr4) + "_").style.backgroundColor = "#FFF370"
           rookmove = 1
-        } if (autopromote = 1 && (whitecastle.split(" ")[0] === "Kingside" || whitecastle.split(" ")[1] === "Kingside")) {
-          document.getElementById("_5_").style.backgroundColor = "#FFF370"
-        } if (autopromote = 1 && (whitecastle.split(" ")[0] === "Queenside" || whitecastle.split(" ")[1] === "Queenside")) {
-          document.getElementById("_3_").style.backgroundColor = "#FFF370"
         }
       if (rookmove == 1) {
         prev_square = square
