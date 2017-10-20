@@ -960,14 +960,15 @@ function king() {
     autocastle = 1
   } else {
     autocastle = 0
-  }
+  } whitecastle = ""
+  blackcastle = ""
   if (document.getElementById("_4_").innerHTML === "White King" && autocastle === 1) {
         for (mr1= 1; (wk + mr1) % 8 != "1" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "White Rook" && wk+mr1+1 === 8) {
-        whitecastle = "Queenside"
+        whitecastle += "Queenside "
       }} for (mr2 = -1; (wk + mr2) % 8 != "0" && document.getElementById("_" + (wk + mr2) + "_").innerHTML == ""; mr2 += -1) {
         if (document.getElementById("_" + (wk + mr2 - 1) + "_").innerHTML === "White Rook" && wk+mr2-1 === 1) {
-          whitecastle = "Kingside"
+          whitecastle += "Kingside "
       }}
   }
 }
