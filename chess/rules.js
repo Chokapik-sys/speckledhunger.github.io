@@ -1012,10 +1012,10 @@ function castle() {
   } if (document.getElementById("_60_").innerHTML === "Black King" && autocastle === 1) {
     blackcastle = ""
     for (mr1= 1; (bk + mr1) % 8 != "1" && document.getElementById("_" + (bk + mr1) + "_").innerHTML == ""; mr1 += 1) {
-      if (document.getElementById("_" + (bk + mr1 + 1) + "_").innerHTML === "Black Rook" && bk+mr1+1 === 8) {
+      if (document.getElementById("_" + (bk + mr1 + 1) + "_").innerHTML === "Black Rook" && bk+mr1+1 === 64) {
         blackcastle += "Queenside "
       }} for (mr2 = -1; (bk + mr2) % 8 != "0" && document.getElementById("_" + (bk + mr2) + "_").innerHTML == ""; mr2 += -1) {
-        if (document.getElementById("_" + (bk + mr2 - 1) + "_").innerHTML === "Black Rook" && bk+mr2-1 === 1) {
+        if (document.getElementById("_" + (bk + mr2 - 1) + "_").innerHTML === "Black Rook" && bk+mr2-1 === 57) {
           blackcastle += "Kingside "
       }}
     if ((blackcastle.split(" ")[0] === "Kingside" || blackcastle.split(" ")[1] === "Kingside") && square === 59) {
