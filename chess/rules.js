@@ -993,8 +993,9 @@ function castle() {
   } else {
     autocastle = 0
   }
+  whitecastle = ""
+  blackcastle = ""
   if (document.getElementById("_4_").innerHTML === "White King" && autocastle === 1) {
-    whitecastle = ""
     for (mr1= 1; (wk + mr1) % 8 != "1" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "White Rook" && wk+mr1+1 === 8) {
         whitecastle += "Queenside "
@@ -1010,7 +1011,6 @@ function castle() {
       document.getElementById("_4_").innerHTML = ""
     }
   } if (document.getElementById("_60_").innerHTML === "Black King" && autocastle === 1) {
-    blackcastle = ""
     for (mr1= 1; (bk + mr1) % 8 != "1" && document.getElementById("_" + (bk + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if (document.getElementById("_" + (bk + mr1 + 1) + "_").innerHTML === "Black Rook" && bk+mr1+1 === 64) {
         blackcastle += "Queenside "
