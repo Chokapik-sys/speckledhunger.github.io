@@ -360,8 +360,8 @@ function clearsave() {
   //Clear Colour Cookie
   document.cookie = cnumset + "colour=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
   //Clear Promote and Castle Cookies
-  document.cookie = cnumset + "promote=; expires=Thu, 01 Jan 1970 00:00:00 UTC")
-  document.cookie = cnumset + "castle=; expires=Thu, 01 Jan 1970 00:00:00 UTC")
+  document.cookie = cnumset + "promote=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  document.cookie = cnumset + "castle=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
 }
 function fullread() {
   readc = document.cookie.split("; ")
