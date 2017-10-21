@@ -256,9 +256,17 @@ function load() {
         document.getElementById("piececolour").style.color = "#FFFFFF"
       }
         } if (cacr = "pro") {
-          document.getElementById("promote").checked = readc[cl]
+          if (readc[cl] === "true") {
+          document.getElementById("promote").checked = true
+        } if (readc[cl] === "false") {
+          document.getElementById("promote").checked = false
+        }
         } if (cacr = "cas") {
-          document.getElementById("castle").checked = readc[cl]
+          if (readc[cl] === "true") {
+          document.getElementById("castle").checked = true
+        } if (readc[cl] === "false") {
+          document.getElementById("castle").checked = false
+        }
         }
       if (readc[cl][readc[cl].length - 3] !== "_") {
         if (cacr === "WRO") {
