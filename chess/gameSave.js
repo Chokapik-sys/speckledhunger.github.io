@@ -197,6 +197,8 @@ function save() {
     }
   }
   document.cookie = (cnumset + "colour=" + piececolour + "; expires=" + expire)
+  document.cookie = (cnumset + "promote=" + document.getElementById("promote").checked + "; expires=" + expire)
+  document.cookie = (cnumset + "castle=" + document.getElementById("castle").checked + "; expires=" + expire)
   if (document.getElementById("report").innerHTML !== "<b>Attack Log</b>") {
     document.cookie = (cnumset + "log=" + document.getElementById("report").innerHTML + "; expires=" + expire)
   }
@@ -253,6 +255,10 @@ function load() {
         document.getElementById("piececolour").style.background = "#000000"
         document.getElementById("piececolour").style.color = "#FFFFFF"
       }
+        } if (cacr = "pro") {
+          document.getElementById("promote").checked = readc[cl]
+        } if (cacr = "cas") {
+          document.getElementById("castle").checked = readc[cl]
         }
       if (readc[cl][readc[cl].length - 3] !== "_") {
         if (cacr === "WRO") {
