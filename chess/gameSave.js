@@ -255,13 +255,13 @@ function load() {
         document.getElementById("piececolour").style.background = "#000000"
         document.getElementById("piececolour").style.color = "#FFFFFF"
       }
-        } if (cacr = "pro") {
+        } if (cacr === "pro") {
           if (readc[cl] === "true") {
           document.getElementById("promote").checked = true
         } if (readc[cl] === "false") {
           document.getElementById("promote").checked = false
         }
-        } if (cacr = "cas") {
+        } if (cacr === "cas") {
           if (readc[cl] === "true") {
           document.getElementById("castle").checked = true
         } if (readc[cl] === "false") {
