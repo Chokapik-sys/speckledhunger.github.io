@@ -1005,8 +1005,14 @@ function castle() {
           whitecastle += "Kingside "
       }}
     if ((whitecastle.split(" ")[0] === "Kingside" || whitecastle.split(" ")[1] === "Kingside") && square === 3) {
+      confirmcastle = prompt("Do you wish to Castle with this Rook? (Yes / No)")
+      if (confirmcastle.toLocaleLowerCase() === "yes") {
       document.getElementById("_2_").innerHTML = "White King"
       document.getElementById("_4_").innerHTML = ""
+      } if (confirmcastle.toLocaleLowerCase() !== "yes" || confirmcastle.toLocaleLowerCase() !== "no") {
+        alert("Invalid Option")
+        castle()
+      }
     } if ((whitecastle.split(" ")[0] === "Queenside" || whitecastle.split(" ")[1] === "Queenside") && square === 5) {
       document.getElementById("_6_").innerHTML = "White King"
       document.getElementById("_4_").innerHTML = ""
