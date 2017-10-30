@@ -1014,8 +1014,14 @@ function castle() {
         castle()
       }
     } if ((whitecastle.split(" ")[0] === "Queenside" || whitecastle.split(" ")[1] === "Queenside") && square === 5) {
+      confirmcastle = prompt("Do you wish to Castle with this Rook? (Yes / No)")
+      if (confirmcastle.toLocaleLowerCase() === "yes") {
       document.getElementById("_6_").innerHTML = "White King"
       document.getElementById("_4_").innerHTML = ""
+      } if (confirmcastle.toLocaleLowerCase() !== "yes" && confirmcastle.toLocaleLowerCase() !== "no") {
+        alert("Invalid Option")
+        castle()
+      }
     }
   } if (document.getElementById("_60_").innerHTML === "Black King" && autocastle === 1) {
     for (mr1= 1; (bk + mr1) % 8 != "1" && document.getElementById("_" + (bk + mr1) + "_").innerHTML == ""; mr1 += 1) {
@@ -1026,11 +1032,23 @@ function castle() {
           blackcastle += "Kingside "
       }}
     if ((blackcastle.split(" ")[0] === "Kingside" || blackcastle.split(" ")[1] === "Kingside") && square === 59) {
+      confirmcastle = prompt("Do you wish to Castle with this Rook? (Yes / No)")
+      if (confirmcastle.toLocaleLowerCase() === "yes") {
       document.getElementById("_58_").innerHTML = "Black King"
       document.getElementById("_60_").innerHTML = ""
+      } if (confirmcastle.toLocaleLowerCase() !== "yes" && confirmcastle.toLocaleLowerCase() !== "no") {
+        alert("Invalid Option")
+        castle()
+      }
     } if ((blackcastle.split(" ")[0] === "Queenside" || blackcastle.split(" ")[1] === "Queenside") && square === 61) {
+      confirmcastle = prompt("Do you wish to Castle with this Rook? (Yes / No)")
+      if (confirmcastle.toLocaleLowerCase() === "yes") {
       document.getElementById("_62_").innerHTML = "Black King"
       document.getElementById("_60_").innerHTML = ""
+      } if (confirmcastle.toLocaleLowerCase() !== "yes" && confirmcastle.toLocaleLowerCase() !== "no") {
+        alert("Invalid Option")
+        castle()
+      }
     }
   }
 }
