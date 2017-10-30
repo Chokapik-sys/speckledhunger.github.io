@@ -24,6 +24,7 @@ var wk = 1
 var bk = 1
 var autopromote = 0
 var autocastle = 0
+var confirmcastle = ""
 var blackcastle = ""
 var whitecastle = ""
 function phase_2() {
