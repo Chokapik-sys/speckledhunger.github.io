@@ -1009,7 +1009,7 @@ function castle() {
       if (confirmcastle.toLocaleLowerCase() === "yes") {
       document.getElementById("_2_").innerHTML = "White King"
       document.getElementById("_4_").innerHTML = ""
-      } if (confirmcastle.toLocaleLowerCase() !== "yes" || confirmcastle.toLocaleLowerCase() !== "no") {
+      } if (confirmcastle.toLocaleLowerCase() !== "yes" && confirmcastle.toLocaleLowerCase() !== "no") {
         alert("Invalid Option")
         castle()
       }
