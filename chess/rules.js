@@ -719,6 +719,12 @@ function king() {
       }}
     if (NW_whitecheck === 1 || N_whitecheck === 1 || NE_whitecheck === 1 || W_whitecheck === 1 || E_whitecheck === 1 || SW_whitecheck === 1 || S_whitecheck === 1 || SE_whitecheck === 1) {
        document.getElementById("report").innerHTML += "<br>White King in check"
+    } if (NW_whitecheck === 1 && N_whitecheck === 1 && NE_whitecheck === 1 && W_whitecheck === 1 && E_whitecheck === 1 && SW_whitecheck === 1 && S_whitecheck === 1 && SE_whitecheck === 1) {
+       document.getElementById("report").innerHTML += "<br>White King in checkmate"
+      piececolour = "Black Won"
+      document.getElementById("piececolour").innerHTML = "Black won !!!"
+      document.getElementById("piececolour").style.background = "#000000"
+      document.getElementById("piececolour").style.color = "#FFFFFF"
     }
   } for (bk = 0; bk < 65; bk ++) {
     if (document.getElementById("_" + bk + "_").innerHTML === "Black King") {
@@ -961,6 +967,12 @@ function king() {
       }}
     if (NW_blackcheck === 1 || N_blackcheck === 1 || NE_blackcheck === 1 || W_blackcheck === 1 || E_blackcheck === 1 || SW_blackcheck === 1 || S_blackcheck === 1 || SE_blackcheck === 1) {
        document.getElementById("report").innerHTML += "<br>Black King in check"
+    } if (NW_blackcheck === 1 && N_blackcheck === 1 && NE_blackcheck === 1 && W_blackcheck === 1 && E_blackcheck === 1 && SW_blackcheck === 1 && S_blackcheck === 1 && SE_blackcheck === 1) {
+       document.getElementById("report").innerHTML += "<br>Black King in checkmate"
+      piececolour = "White Won"
+      document.getElementById("piececolour").innerHTML = "White won"
+      document.getElementById("piececolour").style.background = "#FFFFFF"
+      document.getElementById("piececolour").style.color = "#000000"
     }
   }
 }
