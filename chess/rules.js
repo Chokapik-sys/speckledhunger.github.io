@@ -717,6 +717,9 @@ function king() {
           if ((document.getElementById("_" + (wk + mb4 - 7) + "_").innerHTML === "Black Bishop" || document.getElementById("_" + (wk + mb4 - 7) + "_").innerHTML === "Black Queen") && (wk + mb4 - 7) % 8 != "1") {
       SE_whitecheck = 1
       }}
+    if (NW_whitecheck === 1 || N_whitecheck === 1 || NE_whitecheck === 1 || W_whitecheck === 1 || E_whitecheck === 1 || SW_whitecheck === 1 || S_whitecheck === 1 || SE_whitecheck === 1) {
+       document.getElementById("report").innerHTML += "<br>White King in check"
+    }
   } for (bk = 0; bk < 65; bk ++) {
     if (document.getElementById("_" + bk + "_").innerHTML === "Black King") {
       break
@@ -956,6 +959,9 @@ function king() {
           if ((document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Queen") && (bk + mb4 - 7) % 8 != "1") {
       SE_blackcheck = 1
       }}
+    if (NW_blackcheck === 1 || N_blackcheck === 1 || NE_blackcheck === 1 || W_blackcheck === 1 || E_blackcheck === 1 || SW_blackcheck === 1 || S_blackcheck === 1 || SE_blackcheck === 1) {
+       document.getElementById("report").innerHTML += "<br>Black King in check"
+    }
   }
 }
 function changecolour() {
