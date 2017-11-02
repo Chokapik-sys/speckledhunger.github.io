@@ -24,7 +24,7 @@ var constant1 = "Square: "
 var constant2 = "Phase: "
 var constant3 = "Moving from: "
 function move_piece(){
-  if (checkmate === 1) {
+  if (checkmate === 0) {
   //phase1
   if (phase === 1) {
     king()
