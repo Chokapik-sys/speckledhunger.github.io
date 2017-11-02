@@ -27,6 +27,7 @@ var autocastle = 0
 var confirmcastle = ""
 var blackcastle = ""
 var whitecastle = ""
+var checkmate = 0
 function phase_2() {
   if (phase === 2) {
     //Blank Square
