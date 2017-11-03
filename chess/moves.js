@@ -20,6 +20,7 @@ var prev_inner = ""
 var phase = 0
 var whitepromote = 0
 var blackpromote = 0
+var aftercheckmate = 0
 var constant1 = "Square: "
 var constant2 = "Phase: "
 var constant3 = "Moving from: "
