@@ -20,7 +20,6 @@ var prev_inner = ""
 var phase = 0
 var whitepromote = 0
 var blackpromote = 0
-var aftercheckmate = 0
 var constant1 = "Square: "
 var constant2 = "Phase: "
 var constant3 = "Moving from: "
@@ -346,7 +345,6 @@ function move_piece(){
       changecolour()
       promote()
       castle()
-      aftercheckmate = 1
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = prev_inner
       prev_inner = ""
@@ -358,7 +356,6 @@ function move_piece(){
       changecolour()
       promote()
       castle()
-      aftercheckmate = 1
       piecetaken = document.getElementById("_" + square + "_").innerHTML
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = prev_inner
