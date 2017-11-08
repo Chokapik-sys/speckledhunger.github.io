@@ -985,7 +985,11 @@ function king() {
     whitecheckpattern = NW_whitecheck.toString() + N_whitecheck.toString() + NE_whitecheck.toString() + W_whitecheck.toString() + E_whitecheck.toString() + SW_whitecheck.toString() + S_whitecheck.toString() + SE_whitecheck.toString()
   }
   if (aftercheckmate === 1) {
-    if (piececolour === "White") {
+    aftercheck()
+  }
+}
+function aftercheck() {
+  if (piececolour === "White") {
       if (blackcheckpattern !== NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString()) {
        document.getElementById("_" + prev_square + "_").innerHTML = piece
       document.getElementById("_" + square + "_").innerHTML = prev_inner
@@ -1000,7 +1004,6 @@ function king() {
       changecolour()
     }
     }
-  }
 }
 function changecolour() {
   colourchange = 1
