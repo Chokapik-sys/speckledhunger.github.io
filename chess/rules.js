@@ -28,6 +28,7 @@ var confirmcastle = ""
 var blackcastle = ""
 var whitecastle = ""
 var checkmate = 0
+var checkpattern = 0
 function phase_2() {
   if (phase === 2) {
     //Blank Square
@@ -977,12 +978,15 @@ function king() {
       document.getElementById("piececolour").style.color = "#000000"
       checkmate = 1
     }
+  } if aftercheckmate === 0) {
+    checkpattern = NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString()
   }
-  if (aftercheckmate = 1) {
+  if (aftercheckmate === 1) {
     if (piececolour === "White") {
-      if (NW_blackcheck === 1 || N_blackcheck === 1 || NE_blackcheck === 1 || W_blackcheck === 1 || E_blackcheck === 1 || SW_blackcheck === 1 || S_blackcheck === 1 || SE_blackcheck === 1) {
+      if (checkpattern !== NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString()) {
        document.getElementById("_" + prev_square + "_").innerHTML = piece
       document.getElementById("_" + square + "_").innerHTML = prev_inner
+        alert("King cannot be moved into check")
       changecolour()
     }
     } if (piececolour === "Black") {
