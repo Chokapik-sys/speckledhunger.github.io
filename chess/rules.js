@@ -989,14 +989,14 @@ function king() {
   }
 }
 function aftercheck() {
-  if (piececolour === "White") {
+  if (piececolour === "Black") {
       if (blackcheckpattern !== NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString()) {
        document.getElementById("_" + prev_square + "_").innerHTML = piece
       document.getElementById("_" + square + "_").innerHTML = prev_inner
         alert("King cannot be moved into check")
       changecolour()
     }
-    } if (piececolour === "Black") {
+    } if (piececolour === "White") {
       if (whitecheckpattern !== NW_whitecheck.toString() + N_whitecheck.toString() + NE_whitecheck.toString() + W_whitecheck.toString() + E_whitecheck.toString() + SW_whitecheck.toString() + S_whitecheck.toString() + SE_whitecheck.toString()) {
        document.getElementById("_" + prev_square + "_").innerHTML = piece
       document.getElementById("_" + square + "_").innerHTML = prev_inner
