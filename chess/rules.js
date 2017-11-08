@@ -999,7 +999,7 @@ function king() {
         alert("King cannot be moved into check")
       changecolour()
     }
-    } aftercheckmate = 0
+    }
   }
 }
 function changecolour() {
