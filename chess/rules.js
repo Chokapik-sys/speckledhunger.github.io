@@ -480,7 +480,10 @@ if (capture === 1 || pawnmove === 1 || knightmove === 1 || bishopmove === 1 || r
     capture = 0
 }
 }
-function king() { 
+function king() {
+  //Reset all values
+  NW_whitecheck = N_whitecheck = NE_whitecheck = W_whitecheck = E_whitecheck = SW_whitecheck = S_whitecheck = SE_whitecheck = 0
+  NW_blackcheck = N_blackcheck = NE_blackcheck = W_blackcheck = E_blackcheck = SW_blackcheck = S_blackcheck = SE_blackcheck = 0
   //White Check
   for (wk = 0; wk < 65; wk ++) {
     if (document.getElementById("_" + wk + "_").innerHTML === "White King") {
