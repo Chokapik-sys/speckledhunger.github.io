@@ -991,6 +991,7 @@ function king() {
       document.getElementById("_" + square + "_").innerHTML = prev_inner
         alert("King cannot be moved into check")
       changecolour()
+        aftercheckmate = 0
     }
     } if (piececolour === "Black") {
       if (whitecheckpattern !== NW_whitecheck.toString() + N_whitecheck.toString() + NE_whitecheck.toString() + W_whitecheck.toString() + E_whitecheck.toString() + SW_whitecheck.toString() + S_whitecheck.toString() + SE_whitecheck.toString()) {
@@ -998,6 +999,7 @@ function king() {
       document.getElementById("_" + square + "_").innerHTML = prev_inner
         alert("King cannot be moved into check")
       changecolour()
+        aftercheckmate = 0
     }
     }
   }
