@@ -342,7 +342,6 @@ function move_piece(){
   //phase3
   if (phase === 3) {
     if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 243, 112)") {
-      changecolour()
       promote()
       castle()
       document.getElementById("_" + square + "_").innerHTML = piece
@@ -353,8 +352,8 @@ function move_piece(){
       phase_4()
       aftercheckmate = 1
       king()
-    } if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 132, 102)") {
       changecolour()
+    } if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 132, 102)") {
       promote()
       castle()
       piecetaken = document.getElementById("_" + square + "_").innerHTML
@@ -367,6 +366,7 @@ function move_piece(){
       phase_4()
       aftercheckmate = 1
       king()
+      changecolour()
     }
   }
   //end of phase3
