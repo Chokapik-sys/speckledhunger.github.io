@@ -345,6 +345,7 @@ function move_piece(){
       changecolour()
       promote()
       castle()
+      aftercheckmate = 1
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = prev_inner
       prev_inner = ""
@@ -356,6 +357,7 @@ function move_piece(){
       changecolour()
       promote()
       castle()
+      aftercheckmate = 1
       piecetaken = document.getElementById("_" + square + "_").innerHTML
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = prev_inner
