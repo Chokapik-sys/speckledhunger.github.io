@@ -978,6 +978,17 @@ function king() {
       checkmate = 1
     }
   }
+  if (aftercheckmate = 1) {
+    if (piececolour === "White") {
+      if (NW_blackcheck === 1 || N_blackcheck === 1 || NE_blackcheck === 1 || W_blackcheck === 1 || E_blackcheck === 1 || SW_blackcheck === 1 || S_blackcheck === 1 || SE_blackcheck === 1) {
+       document.getElementById("_" + prev_square + "_").innerHTML = piece
+      document.getElementById("_" + square + "_").innerHTML = prev_inner
+      changecolour()
+    }
+    } if (piececolour === "Black") {
+      
+    }
+  }
 }
 function changecolour() {
   colourchange = 1
