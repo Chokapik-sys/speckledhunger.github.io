@@ -1017,6 +1017,7 @@ function changecolour() {
         document.getElementById("piececolour").style.color = "#FFFFFF"
         colourchange = 0
       }
+  aftercheckmate = 0
 }
 function promote() {
   if (document.getElementById("promote").checked) {
