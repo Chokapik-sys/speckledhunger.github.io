@@ -28,7 +28,8 @@ var confirmcastle = ""
 var blackcastle = ""
 var whitecastle = ""
 var checkmate = 0
-var checkpattern = 0
+var blackcheckpattern = 0
+var whitecheckpattern = 0
 function phase_2() {
   if (phase === 2) {
     //Blank Square
@@ -979,18 +980,24 @@ function king() {
       checkmate = 1
     }
   } if aftercheckmate === 0) {
-    checkpattern = NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString()
+    blackcheckpattern = NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString()
+    whitecheckpattern = NW_whitecheck.toString() + N_whitecheck.toString() + NE_whitecheck.toString() + W_whitecheck.toString() + E_whitecheck.toString() + SW_whitecheck.toString() + S_whitecheck.toString() + SE_whitecheck.toString()
   }
   if (aftercheckmate === 1) {
     if (piececolour === "White") {
-      if (checkpattern !== NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString()) {
+      if (blackcheckpattern !== NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString()) {
        document.getElementById("_" + prev_square + "_").innerHTML = piece
       document.getElementById("_" + square + "_").innerHTML = prev_inner
         alert("King cannot be moved into check")
       changecolour()
     }
     } if (piececolour === "Black") {
-      
+      if (whitecheckpattern !== NW_whitecheck.toString() + N_whitecheck.toString() + NE_whitecheck.toString() + W_whitecheck.toString() + E_whitecheck.toString() + SW_whitecheck.toString() + S_whitecheck.toString() + SE_whitecheck.toString()) {
+       document.getElementById("_" + prev_square + "_").innerHTML = piece
+      document.getElementById("_" + square + "_").innerHTML = prev_inner
+        alert("King cannot be moved into check")
+      changecolour()
+    }
     }
   }
 }
