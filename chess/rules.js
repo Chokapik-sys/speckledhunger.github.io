@@ -30,6 +30,7 @@ var whitecastle = ""
 var checkmate = 0
 var blackcheckpattern = 0
 var whitecheckpattern = 0
+var aftercheckmate = 0
 function phase_2() {
   if (phase === 2) {
     //Blank Square
