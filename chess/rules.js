@@ -979,7 +979,7 @@ function king() {
       document.getElementById("piececolour").style.color = "#000000"
       checkmate = 1
     }
-  } if aftercheckmate === 0) {
+  } if (aftercheckmate === 0) {
     blackcheckpattern = NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString()
     whitecheckpattern = NW_whitecheck.toString() + N_whitecheck.toString() + NE_whitecheck.toString() + W_whitecheck.toString() + E_whitecheck.toString() + SW_whitecheck.toString() + S_whitecheck.toString() + SE_whitecheck.toString()
   }
