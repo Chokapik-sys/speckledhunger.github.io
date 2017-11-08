@@ -353,7 +353,6 @@ function move_piece(){
       phase_4()
       aftercheckmate = 1
       king()
-      aftercheckmate = 0
     } if (document.getElementById("_" + square + "_").style.backgroundColor == "rgb(255, 132, 102)") {
       changecolour()
       promote()
@@ -368,7 +367,6 @@ function move_piece(){
       phase_4()
       aftercheckmate = 1
       king()
-      aftercheckmate = 0
     }
   }
   //end of phase3
