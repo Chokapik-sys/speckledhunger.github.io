@@ -33,7 +33,7 @@ function move_piece(){
       piece = "_"
     }
     //White Pieces
-    if (piececolour === "White") {
+    if (piececolour === "White" && piece !== "_") {
     if (document.getElementById("_" + square + "_").innerHTML === "White Pawn") {
       if (document.getElementById("_" + (square + 8) + "_").innerHTML === ""){
         document.getElementById("_" + (square + 8) + "_").style.backgroundColor = "#FFF370"
