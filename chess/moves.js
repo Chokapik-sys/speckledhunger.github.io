@@ -30,7 +30,7 @@ function move_piece(){
     king()
     //Blank Square
     if (document.getElementById("_" + square + "_").innerHTML === "" || piececolour[0] !== document.getElementById("_" + square + "_").innerHTML[0] || (piececolour === "Black" && document.getElementById("_" + square + "_").innerHTML !== "Black King" && blackcheckpattern !== "00000000") || (piececolour === "White" && document.getElementById("_" + square + "_").innerHTML !== "White King" && whitecheckpattern !== "00000000")) {
-      piece = ""
+      piece = "_"
     }
     //White Pieces
     if (piececolour === "White") {
