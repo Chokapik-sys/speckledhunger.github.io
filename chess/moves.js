@@ -184,7 +184,7 @@ function move_piece(){
       piece = "White King"
     }}
     //Black Pieces
-    if (piececolour === "Black") {
+    if (piececolour === "Black" && piece !== "_") {
     if (document.getElementById("_" + square + "_").innerHTML === "Black Pawn") {
       if (document.getElementById("_" + (square - 8) + "_").innerHTML === ""){
         document.getElementById("_" + (square - 8) + "_").style.backgroundColor = "#FFF370"
@@ -347,6 +347,7 @@ function move_piece(){
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = prev_inner
       prev_inner = ""
+      piece = ""
       console.log(piececolour)
       phase_change()
       phase_4()
@@ -360,6 +361,7 @@ function move_piece(){
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = prev_inner
       prev_inner = ""
+      piece = ""
       document.getElementById("report").innerHTML += "<br>" + piecetaken + " has been taken by " + piece
       console.log(piececolour)
       phase_change()
