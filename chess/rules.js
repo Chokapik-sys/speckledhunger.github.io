@@ -469,6 +469,7 @@ if (capture === 1 || pawnmove === 1 || knightmove === 1 || bishopmove === 1 || r
       move_piece()
 } if (newevent = 1 && capture === 0 && pawnmove === 0 && knightmove === 0 && bishopmove === 0 && rookmove === 0 && queenmove === 0 && kingmove === 0) {
     resetTurn()
+  piece = ""
   }
     pawnmove = 0
     rookmove = 0
