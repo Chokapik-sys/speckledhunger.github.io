@@ -31,8 +31,6 @@ var checkmate = 0
 var blackcheckpattern = 0
 var whitecheckpattern = 0
 var aftercheckmate = 0
-var blackking = 0
-var whiteking = 0
 function phase_2() {
   if (phase === 2) {
     //Blank Square
@@ -992,7 +990,6 @@ function king() {
   if (aftercheckmate === 1) {
     aftercheck()
   }
-  kingcheckforce()
 }
 function aftercheck() {
   if (piececolour === "Black") {
@@ -1104,12 +1101,5 @@ function castle() {
         castle()
       }
     }
-  }
-}
-function kingcheckforce() {
-  if (whitecheckpattern !== "00000000") {
-    whiteking = 1
-  } else {
-    whiteking = 0
   }
 }
