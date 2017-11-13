@@ -34,7 +34,7 @@ var aftercheckmate = 0
 function phase_2() {
   if (phase === 2) {
     //Blank Square
-    if (piece === "") {
+    if (piece === "_") {
       newevent = 1
     }
     //White Pieces
