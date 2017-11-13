@@ -33,7 +33,7 @@ function move_piece(){
       piece = ""
     }
     //White Pieces
-    if (piececolour === "White" && document.getElementById("_" + square + "_").innerHTML === "White King" && whitecheckpattern === "00000000") {
+    if (piececolour === "White") {
     if (document.getElementById("_" + square + "_").innerHTML === "White Pawn") {
       if (document.getElementById("_" + (square + 8) + "_").innerHTML === ""){
         document.getElementById("_" + (square + 8) + "_").style.backgroundColor = "#FFF370"
@@ -184,7 +184,7 @@ function move_piece(){
       piece = "White King"
     }}
     //Black Pieces
-    if (piececolour === "Black" && document.getElementById("_" + square + "_").innerHTML !== "Black King" && blackcheckpattern !== "00000000") {
+    if (piececolour === "Black") {
     if (document.getElementById("_" + square + "_").innerHTML === "Black Pawn") {
       if (document.getElementById("_" + (square - 8) + "_").innerHTML === ""){
         document.getElementById("_" + (square - 8) + "_").style.backgroundColor = "#FFF370"
