@@ -15,7 +15,7 @@ var mr3 = 8
 var mr4 = -8
 var square = "0"
 var prev_square = 0
-var piece = ""
+var piece = "_"
 var prev_inner = ""
 var phase = 0
 var whitepromote = 0
@@ -30,10 +30,10 @@ function move_piece(){
     king()
     //Blank Square
     if (document.getElementById("_" + square + "_").innerHTML === "" || piececolour[0] !== document.getElementById("_" + square + "_").innerHTML[0]) {
-      piece = "_"
+      piece = ""
     }
     //White Pieces
-    if (piececolour === "White" && piece !== "_") {
+    if (piececolour === "White" && piece !== "") {
     if (document.getElementById("_" + square + "_").innerHTML === "White Pawn") {
       if (document.getElementById("_" + (square + 8) + "_").innerHTML === ""){
         document.getElementById("_" + (square + 8) + "_").style.backgroundColor = "#FFF370"
@@ -347,7 +347,7 @@ function move_piece(){
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = prev_inner
       prev_inner = ""
-      piece = ""
+      piece = "_"
       console.log(piececolour)
       phase_change()
       phase_4()
@@ -361,7 +361,7 @@ function move_piece(){
       document.getElementById("_" + square + "_").innerHTML = piece
       document.getElementById("_" + prev_square + "_").innerHTML = prev_inner
       prev_inner = ""
-      piece = ""
+      piece = "_"
       document.getElementById("report").innerHTML += "<br>" + piecetaken + " has been taken by " + piece
       console.log(piececolour)
       phase_change()
