@@ -994,7 +994,7 @@ function king() {
 }
 function aftercheck() {
   if (piececolour === "Black") {
-      if (blackcheckpattern !== NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString()) {
+      if (blackcheckpattern !== NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString() && NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString() !== "00000000") {
        document.getElementById("_" + prev_square + "_").innerHTML = piece
       document.getElementById("_" + square + "_").innerHTML = prev_inner
         alert("King cannot be moved into check")
