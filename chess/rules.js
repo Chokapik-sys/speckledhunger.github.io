@@ -1011,7 +1011,7 @@ function aftercheck() {
       document.getElementById("_" + square + "_").innerHTML = prev_inner
       alert("King cannot be moved into check")
       changecolour()
-    } if (whitecheckpattern !== "00000000" && NW_whitecheck.toString() + N_whitecheck.toString() + NE_whitecheck.toString() + W_whitecheck.toString() + E_whitecheck.toString() + SW_whitecheck.toString() + S_whitecheck.toString() + SE_whitecheck.toString() && NW_whitecheck.toString() + N_whitecheck.toString() + NE_whitecheck.toString() + W_whitecheck.toString() + E_whitecheck.toString() + SW_whitecheck.toString() + S_whitecheck.toString() + SE_whitecheck.toString() !== "00000000"") {
+    } if (whitecheckpattern !== "00000000" && NW_whitecheck.toString() + N_whitecheck.toString() + NE_whitecheck.toString() + W_whitecheck.toString() + E_whitecheck.toString() + SW_whitecheck.toString() + S_whitecheck.toString() + SE_whitecheck.toString() && NW_whitecheck.toString() + N_whitecheck.toString() + NE_whitecheck.toString() + W_whitecheck.toString() + E_whitecheck.toString() + SW_whitecheck.toString() + S_whitecheck.toString() + SE_whitecheck.toString() !== "00000000") {
       document.getElementById("_" + prev_square + "_").innerHTML = piece
       document.getElementById("_" + square + "_").innerHTML = prev_inner
       alert("King must be moved out of check")
