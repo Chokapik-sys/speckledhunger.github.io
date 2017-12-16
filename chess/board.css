@@ -1,10 +1,10 @@
 /*--Checkerboard--*/
-.A , .B , #resetTurn , #reportbox , #advanced , .saveoption , #customsave , #customdelete , #savefilesave , #savefileload , #savefiledelete , #selectfile , #piececolour{
+.A , .B , #resetTurn , #reportbox , #advanced , .saveoption , #customsave , #customdelete , #savefilesave , #savefileload , #savefiledelete , #selectfile , #piececolour , #instruct{
   border-color: #898989;
   border-style: solid;
   border-width: 1px;
 }
-.A , .B , #resetTurn , #selectOption, .saveoption , #customsave , #customdelete , #savefilesave , #savefileload , #savefiledelete , #selectfile , #promote , #castle{
+.A , .B , #resetTurn , #selectOption, .saveoption , #customsave , #customdelete , #savefilesave , #savefileload , #savefiledelete , #selectfile , #promote , #castle , #instruct{
   cursor: pointer;
 }
 .A , .B {
@@ -22,6 +22,14 @@
   display: none;
 }
 /*Control buttons*/
+#instruct {
+  position: absolute;
+  background-color: #D8FF6D;
+  width: 128px;
+  height: 64px;
+  top: 143px;
+  left: 557px;
+}
 #resetTurn {
   position: absolute;
   background-color: #ACA3FF;
