@@ -1,6 +1,7 @@
 var piececolour = "White"
 var colourchange = 0
 var capture = 0
+//Check vars
 var blackcheck = 0
 var N_blackcheck = 0
 var E_blackcheck = 0
@@ -19,6 +20,24 @@ var NE_whitecheck = 0
 var SE_whitecheck = 0
 var SW_whitecheck  = 0
 var NW_whitecheck = 0
+//Text vars
+var N_blacktext = 0
+var E_blacktext = 0
+var S_blacktext = 0
+var W_blacktext = 0
+var NE_blacktext = 0
+var SE_blacktext = 0
+var SW_blacktext  = 0
+var NW_blacktext = 0
+var N_whitetext = 0
+var E_whitetext = 0
+var S_whitetext = 0
+var W_whitetext = 0
+var NE_whitetext = 0
+var SE_whitetext = 0
+var SW_whitetext  = 0
+var NW_whitetext = 0
+//
 var newevent = 0
 var wk = 1
 var bk = 1
@@ -486,6 +505,8 @@ function king() {
   //Reset all values
   NW_whitecheck = N_whitecheck = NE_whitecheck = W_whitecheck = E_whitecheck = SW_whitecheck = S_whitecheck = SE_whitecheck = 0
   NW_blackcheck = N_blackcheck = NE_blackcheck = W_blackcheck = E_blackcheck = SW_blackcheck = S_blackcheck = SE_blackcheck = 0
+  NW_whitetext = N_whitetext = NE_whitetext = W_whitetext = E_whitetext = SW_whitetext = S_whitetext = SE_whitetext = 0
+  NW_blacktext = N_blacktext = NE_blacktext = W_blacktext = E_blacktext = SW_blacktext = S_blacktext = SE_blacktext = 0
   //White Check
   for (wk = 0; wk < 65; wk ++) {
     if (document.getElementById("_" + wk + "_").innerHTML === "White King") {
