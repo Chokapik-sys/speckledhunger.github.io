@@ -37,6 +37,8 @@ var NE_whitetext = 0
 var SE_whitetext = 0
 var SW_whitetext  = 0
 var NW_whitetext = 0
+var blacktextpattern = 0
+var blacktextpattern = 0
 //
 var newevent = 0
 var wk = 1
@@ -747,6 +749,24 @@ function king() {
           if ((document.getElementById("_" + (wk + mb4 - 7) + "_").innerHTML === "Black Bishop" || document.getElementById("_" + (wk + mb4 - 7) + "_").innerHTML === "Black Queen") && (wk + mb4 - 7) % 8 != "1") {
       SE_whitecheck = 1
       }}
+    //Surround Text
+    if (document.getElementById("_" + (wk - 9) + "_").innerHTML !== "") {
+      NW_whitetext = 1
+    } if (document.getElementById("_" + (wk - 8) + "_").innerHTML !== "") {
+      N_whitetext = 1
+    } if (document.getElementById("_" + (wk - 7) + "_").innerHTML !== "") {
+      NE_whitetext = 1
+    } if (document.getElementById("_" + (wk - 1) + "_").innerHTML !== "") {
+      W_whitetext = 1
+    } if (document.getElementById("_" + (wk + 1) + "_").innerHTML !== "") {
+      E_whitetext = 1
+    } if (document.getElementById("_" + (wk + 7) + "_").innerHTML !== "") {
+      SW_whitetext = 1
+    } if (document.getElementById("_" + (wk + 8) + "_").innerHTML !== "") {
+      S_whitetext = 1
+    } if (document.getElementById("_" + (wk + 9) + "_").innerHTML !== "") {
+      SE_whitetext = 1
+    }
     if (NW_whitecheck === 1 || N_whitecheck === 1 || NE_whitecheck === 1 || W_whitecheck === 1 || E_whitecheck === 1 || SW_whitecheck === 1 || S_whitecheck === 1 || SE_whitecheck === 1) {
        document.getElementById("report").innerHTML += "<br>White King in check"
     } if (NW_whitecheck === 1 && N_whitecheck === 1 && NE_whitecheck === 1 && W_whitecheck === 1 && E_whitecheck === 1 && SW_whitecheck === 1 && S_whitecheck === 1 && SE_whitecheck === 1) {
@@ -996,6 +1016,24 @@ function king() {
           if ((document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Bishop" || document.getElementById("_" + (bk + mb4 - 7) + "_").innerHTML === "White Queen") && (bk + mb4 - 7) % 8 != "1") {
       SE_blackcheck = 1
       }}
+    //Surround Text
+    if (document.getElementById("_" + (bk - 9) + "_").innerHTML !== "") {
+      NW_blacktext = 1
+    } if (document.getElementById("_" + (bk - 8) + "_").innerHTML !== "") {
+      N_blacktext = 1
+    } if (document.getElementById("_" + (bk - 7) + "_").innerHTML !== "") {
+      NE_blacktext = 1
+    } if (document.getElementById("_" + (bk - 1) + "_").innerHTML !== "") {
+      W_blacktext = 1
+    } if (document.getElementById("_" + (bk + 1) + "_").innerHTML !== "") {
+      E_blacktext = 1
+    } if (document.getElementById("_" + (bk + 7) + "_").innerHTML !== "") {
+      SW_blacktext = 1
+    } if (document.getElementById("_" + (bk + 8) + "_").innerHTML !== "") {
+      S_blacktext = 1
+    } if (document.getElementById("_" + (bk + 9) + "_").innerHTML !== "") {
+      SE_blacktext = 1
+    }
     if (NW_blackcheck === 1 || N_blackcheck === 1 || NE_blackcheck === 1 || W_blackcheck === 1 || E_blackcheck === 1 || SW_blackcheck === 1 || S_blackcheck === 1 || SE_blackcheck === 1) {
        document.getElementById("report").innerHTML += "<br>Black King in check"
     } if (NW_blackcheck === 1 && N_blackcheck === 1 && NE_blackcheck === 1 && W_blackcheck === 1 && E_blackcheck === 1 && SW_blackcheck === 1 && S_blackcheck === 1 && SE_blackcheck === 1) {
@@ -1013,6 +1051,8 @@ function king() {
   if (aftercheckmate === 1) {
     aftercheck()
   }
+  blacktextpattern = NW_blacktext.toString() + N_blacktext.toString() + NE_blacktext.toString() + W_blacktext.toString() + E_blacktext.toString() + SW_blacktext.toString() + S_blacktext.toString() + SE_blacktext.toString()
+    whitetextpattern = NW_whitetext.toString() + N_whitetext.toString() + NE_whitetext.toString() + W_whitetext.toString() + E_whitetext.toString() + SW_whitetext.toString() + S_whitetext.toString() + SE_whitetext.toString()
 }
 function aftercheck() {
   afterproceed = 1
