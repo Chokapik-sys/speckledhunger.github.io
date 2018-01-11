@@ -3,6 +3,7 @@ var colourchange = 0
 var capture = 0
 //Check vars
 var blackcheck = 0
+var whiteattacked = []
 var N_blackcheck = 0
 var E_blackcheck = 0
 var S_blackcheck = 0
@@ -12,6 +13,7 @@ var SE_blackcheck = 0
 var SW_blackcheck  = 0
 var NW_blackcheck = 0
 var whitecheck = 0
+var whiteattacked = []
 var N_whitecheck = 0
 var E_whitecheck = 0
 var S_whitecheck = 0
@@ -64,13 +66,11 @@ function phase_2() {
     //White Pieces
   if (piece === "White Pawn") {
     if  (document.getElementById("_" + (square + 9) + "_").innerHTML === "Black King" && (square + 9) % 8 != "1"){
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + 9) + "_").innerHTML[0] === "B" && (square + 9) % 8 != "1"){
       document.getElementById("_" + (square + 9) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + 7) + "_").innerHTML === "Black King" && (square + 7) % 8 != "0"){
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + 7) + "_").innerHTML[0] === "B" && (square + 7) % 8 != "0"){
       document.getElementById("_" + (square + 7) + "_").style.backgroundColor = "#FF8466"
@@ -80,49 +80,41 @@ function phase_2() {
   }
     if (piece === "White Knight") {
     if (document.getElementById("_" + (square - 10) + "_").innerHTML === "Black King" && (square - 10) % 8 != "7" && (square - 10) % 8 != "0") {
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square - 10) + "_").innerHTML[0] === "B" && (square - 10) % 8 != "7" && (square - 10) % 8 != "0") {
       document.getElementById("_" + (square - 10) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + 10) + "_").innerHTML === "Black King" && (square + 10) % 8 != "1" && (square + 10) % 8 != "2") {
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + 10) + "_").innerHTML[0] === "B" && (square + 10) % 8 != "1" && (square + 10) % 8 != "2") {
       document.getElementById("_" + (square + 10) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square - 6) + "_").innerHTML === "Black King" && (square - 6) % 8 != "1" && (square - 6) % 8 != "2") {
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square - 6) + "_").innerHTML[0] === "B" && (square - 6) % 8 != "1" && (square - 6) % 8 != "2") {
       document.getElementById("_" + (square - 6) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + 6) + "_").innerHTML === "Black King" && (square + 6) % 8 != "7" && (square + 6) % 8 != "0") {
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + 6) + "_").innerHTML[0] === "B" && (square + 6) % 8 != "7" && (square + 6) % 8 != "0") {
       document.getElementById("_" + (square + 6) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square - 17) + "_").innerHTML === "Black King" && (square - 17) % 8 != "0") {
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square - 17) + "_").innerHTML[0] === "B" && (square - 17) % 8 != "0") {
       document.getElementById("_" + (square - 17) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + 17) + "_").innerHTML === "Black King" && (square + 17) % 8 != "1") {
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + 17) + "_").innerHTML[0] === "B" && (square + 17) % 8 != "1") {
       document.getElementById("_" + (square + 17) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square - 15) + "_").innerHTML === "Black King" && (square - 15) % 8 != "1") {
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square - 15) + "_").innerHTML[0] === "B" && (square - 15) % 8 != "1") {
       document.getElementById("_" + (square - 15) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + 15) + "_").innerHTML === "Black King" && (square + 15) % 8 != "0") {
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + 15) + "_").innerHTML[0] === "B" && (square + 15) % 8 != "0") {
       document.getElementById("_" + (square + 15) + "_").style.backgroundColor = "#FF8466"
@@ -132,25 +124,21 @@ function phase_2() {
     }
     if (piece === "White Rook") {
     if (document.getElementById("_" + (square + mr1) + "_").innerHTML === "Black King" && (square + mr1) % 8 != "1"){
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + mr1) + "_").innerHTML[0] === "B" && (square + mr1) % 8 != "1"){
       document.getElementById("_" + (square + mr1) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mr2) + "_").innerHTML === "Black King" && (square + mr2) % 8 != "0"){
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + mr2) + "_").innerHTML[0] === "B" && (square + mr2) % 8 != "0"){
       document.getElementById("_" + (square + mr2) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mr3) + "_").innerHTML === "Black King"){
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + mr3) + "_").innerHTML[0] === "B"){
       document.getElementById("_" + (square + mr3) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mr4) + "_").innerHTML === "Black King"){
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + mr4) + "_").innerHTML[0] === "B"){
       document.getElementById("_" + (square + mr4) + "_").style.backgroundColor = "#FF8466"
@@ -160,25 +148,21 @@ function phase_2() {
   }
     if (piece === "White Bishop") {
     if (document.getElementById("_" + (square + mb1) + "_").innerHTML === "Black King" && (square + mb1) % 8 != "1"){
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + mb1) + "_").innerHTML[0] === "B" && (square + mb1) % 8 != "1"){
       document.getElementById("_" + (square + mb1) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mb2) + "_").innerHTML === "Black King" && (square + mb2) % 8 != "0"){
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + mb2) + "_").innerHTML[0] === "B" && (square + mb2) % 8 != "0"){
       document.getElementById("_" + (square + mb2) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mb3) + "_").innerHTML === "Black King" && (square + mb3) % 8 != "0"){
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + mb3) + "_").innerHTML[0] === "B" && (square + mb3) % 8 != "0"){
       document.getElementById("_" + (square + mb3) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mb4) + "_").innerHTML === "Black King" && (square + mb4) % 8 != "1"){
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + mb4) + "_").innerHTML[0] === "B" && (square + mb4) % 8 != "1"){
       document.getElementById("_" + (square + mb4) + "_").style.backgroundColor = "#FF8466"
@@ -188,7 +172,6 @@ function phase_2() {
   }
     if (piece === "White Queen") {
     if (document.getElementById("_" + (square + mr1) + "_").innerHTML === "Black King" && (square + mr1) % 8 != "1"){
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + mr1) + "_").innerHTML[0] === "B" && (square + mr1) % 8 != "1"){
       document.getElementById("_" + (square + mr1) + "_").style.backgroundColor = "#FF8466"
@@ -212,25 +195,21 @@ function phase_2() {
       document.getElementById("_" + (square + mr4) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mb1) + "_").innerHTML === "Black King" && (square + mb1) % 8 != "1"){
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + mb1) + "_").innerHTML[0] === "B" && (square + mb1) % 8 != "1"){
       document.getElementById("_" + (square + mb1) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mb2) + "_").innerHTML === "Black King" && (square + mb2) % 8 != "0"){
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + mb2) + "_").innerHTML[0] === "B" && (square + mb2) % 8 != "0"){
       document.getElementById("_" + (square + mb2) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mb3) + "_").innerHTML === "Black King" && (square + mb3) % 8 != "0"){
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + mb3) + "_").innerHTML[0] === "B" && (square + mb3) % 8 != "0"){
       document.getElementById("_" + (square + mb3) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mb4) + "_").innerHTML === "Black King" && (square + mb4) % 8 != "1"){
-      blackcheck = 1
       console.log("Black King in check")
     } else if (document.getElementById("_" + (square + mb4) + "_").innerHTML[0] === "B" && (square + mb4) % 8 != "1"){
       document.getElementById("_" + (square + mb4) + "_").style.backgroundColor = "#FF8466"
@@ -277,13 +256,11 @@ function phase_2() {
 //Black Pieces
     if (piece === "Black Pawn") {
     if  (document.getElementById("_" + (square - 9) + "_").innerHTML === "White King" && (square - 9) % 8 != "0"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square - 9) + "_").innerHTML[0] === "W" && (square - 9) % 8 != "0"){
       document.getElementById("_" + (square - 9) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square - 7) + "_").innerHTML === "White King" && (square - 7) % 8 != "1"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square - 7) + "_").innerHTML[0] === "W" && (square - 7) % 8 != "1"){
       document.getElementById("_" + (square - 7) + "_").style.backgroundColor = "#FF8466"
@@ -293,49 +270,41 @@ function phase_2() {
   }
     if (piece === "Black Knight") {
     if (document.getElementById("_" + (square - 10) + "_").innerHTML === "White King" && (square - 10) % 8 != "7" && (square - 10) % 8 != "0") {
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square - 10) + "_").innerHTML[0] === "W" && (square - 10) % 8 != "7" && (square - 10) % 8 != "0") {
       document.getElementById("_" + (square - 10) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + 10) + "_").innerHTML === "White King" && (square + 10) % 8 != "1" && (square + 10) % 8 != "2") {
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + 10) + "_").innerHTML[0] === "W" && (square + 10) % 8 != "1" && (square + 10) % 8 != "2") {
       document.getElementById("_" + (square + 10) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square - 6) + "_").innerHTML === "White King" && (square - 6) % 8 != "1" && (square - 6) % 8 != "2") {
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square - 6) + "_").innerHTML[0] === "W" && (square - 6) % 8 != "1" && (square - 6) % 8 != "2") {
       document.getElementById("_" + (square - 6) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + 6) + "_").innerHTML === "White King" && (square + 6) % 8 != "7" && (square + 6) % 8 != "0") {
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + 6) + "_").innerHTML[0] === "W" && (square + 6) % 8 != "7" && (square + 6) % 8 != "0") {
       document.getElementById("_" + (square + 6) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square - 17) + "_").innerHTML === "White King" && (square - 17) % 8 != "0") {
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square - 17) + "_").innerHTML[0] === "W" && (square - 17) % 8 != "0") {
       document.getElementById("_" + (square - 17) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + 17) + "_").innerHTML === "White King" && (square + 17) % 8 != "1") {
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + 17) + "_").innerHTML[0] === "W" && (square + 17) % 8 != "1") {
       document.getElementById("_" + (square + 17) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square - 15) + "_").innerHTML === "White King" && (square - 15) % 8 != "1") {
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square - 15) + "_").innerHTML[0] === "W" && (square - 15) % 8 != "1") {
       document.getElementById("_" + (square - 15) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + 15) + "_").innerHTML === "White King" && (square + 15) % 8 != "0") {
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + 15) + "_").innerHTML[0] === "W" && (square + 15) % 8 != "0") {
       document.getElementById("_" + (square + 15) + "_").style.backgroundColor = "#FF8466"
@@ -345,25 +314,21 @@ function phase_2() {
     }
     if (piece === "Black Rook") {
     if (document.getElementById("_" + (square + mr1) + "_").innerHTML === "White King" && (square + mr1) % 8 != "1"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + mr1) + "_").innerHTML[0] === "W" && (square + mr1) % 8 != "1"){
       document.getElementById("_" + (square + mr1) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mr2) + "_").innerHTML === "White King" && (square + mr2) % 8 != "0"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + mr2) + "_").innerHTML[0] === "W" && (square + mr2) % 8 != "0"){
       document.getElementById("_" + (square + mr2) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mr3) + "_").innerHTML === "White King"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + mr3) + "_").innerHTML[0] === "W"){
       document.getElementById("_" + (square + mr3) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mr4) + "_").innerHTML === "White King"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + mr4) + "_").innerHTML[0] === "W"){
       document.getElementById("_" + (square + mr4) + "_").style.backgroundColor = "#FF8466"
@@ -373,25 +338,21 @@ function phase_2() {
   }
     if (piece === "Black Bishop") {
     if (document.getElementById("_" + (square + mb1) + "_").innerHTML === "White King" && (square + mb1) % 8 != "1"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + mb1) + "_").innerHTML[0] === "W" && (square + mb1) % 8 != "1"){
       document.getElementById("_" + (square + mb1) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mb2) + "_").innerHTML === "White King" && (square + mb2) % 8 != "0"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + mb2) + "_").innerHTML[0] === "W" && (square + mb2) % 8 != "0"){
       document.getElementById("_" + (square + mb2) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mb3) + "_").innerHTML === "White King" && (square + mb3) % 8 != "0"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + mb3) + "_").innerHTML[0] === "W" && (square + mb3) % 8 != "0"){
       document.getElementById("_" + (square + mb3) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mb4) + "_").innerHTML === "White King" && (square + mb4) % 8 != "1"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + mb4) + "_").innerHTML[0] === "W" && (square + mb4) % 8 != "1"){
       document.getElementById("_" + (square + mb4) + "_").style.backgroundColor = "#FF8466"
@@ -401,49 +362,41 @@ function phase_2() {
   }
     if (piece === "Black Queen") {
     if (document.getElementById("_" + (square + mr1) + "_").innerHTML === "White King" && (square + mr1) % 8 != "1"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + mr1) + "_").innerHTML[0] === "W" && (square + mr1) % 8 != "1"){
       document.getElementById("_" + (square + mr1) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mr2) + "_").innerHTML === "White King" && (square + mr2) % 8 != "0"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + mr2) + "_").innerHTML[0] === "W" && (square + mr2) % 8 != "0"){
       document.getElementById("_" + (square + mr2) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mr3) + "_").innerHTML === "White King"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + mr3) + "_").innerHTML[0] === "W"){
       document.getElementById("_" + (square + mr3) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mr4) + "_").innerHTML === "White King"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + mr4) + "_").innerHTML[0] === "W"){
       document.getElementById("_" + (square + mr4) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mb1) + "_").innerHTML === "White King" && (square + mb1) % 8 != "1"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + mb1) + "_").innerHTML[0] === "W" && (square + mb1) % 8 != "1"){
       document.getElementById("_" + (square + mb1) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mb2) + "_").innerHTML === "White King" && (square + mb2) % 8 != "0"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + mb2) + "_").innerHTML[0] === "W" && (square + mb2) % 8 != "0"){
       document.getElementById("_" + (square + mb2) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mb3) + "_").innerHTML === "White King" && (square + mb3) % 8 != "0"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + mb3) + "_").innerHTML[0] === "W" && (square + mb3) % 8 != "0"){
       document.getElementById("_" + (square + mb3) + "_").style.backgroundColor = "#FF8466"
       capture = 1
     } if (document.getElementById("_" + (square + mb4) + "_").innerHTML === "White King" && (square + mb4) % 8 != "1"){
-      whitecheck = 1
       console.log("White King in check")
     } else if (document.getElementById("_" + (square + mb4) + "_").innerHTML[0] === "W" && (square + mb4) % 8 != "1"){
       document.getElementById("_" + (square + mb4) + "_").style.backgroundColor = "#FF8466"
