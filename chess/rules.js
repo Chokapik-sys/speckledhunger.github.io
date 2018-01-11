@@ -2,7 +2,6 @@ var piececolour = "White"
 var colourchange = 0
 var capture = 0
 //Check vars
-var blackcheck = 0
 var whiteattacked = []
 var N_blackcheck = 0
 var E_blackcheck = 0
@@ -12,7 +11,6 @@ var NE_blackcheck = 0
 var SE_blackcheck = 0
 var SW_blackcheck  = 0
 var NW_blackcheck = 0
-var whitecheck = 0
 var whiteattacked = []
 var N_whitecheck = 0
 var E_whitecheck = 0
