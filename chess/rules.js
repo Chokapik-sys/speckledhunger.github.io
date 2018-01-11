@@ -1011,6 +1011,7 @@ function invasion() {
   if (whitecheckpattern !== "00000000") {
     if (NW_whitecheck === 0) {
       
+    }
   } if (blackcheckpattern !== "00000000") {
     
   }
