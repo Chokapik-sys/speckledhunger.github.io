@@ -43,6 +43,8 @@ var blacktextpattern = 0
 var newevent = 0
 var wk = 1
 var bk = 1
+var bex = 0
+var wex = 0
 var autopromote = 0
 var autocastle = 0
 var confirmcastle = ""
@@ -1055,7 +1057,12 @@ function king() {
     whitetextpattern = NW_whitetext.toString() + N_whitetext.toString() + NE_whitetext.toString() + W_whitetext.toString() + E_whitetext.toString() + SW_whitetext.toString() + S_whitetext.toString() + SE_whitetext.toString()
 }
 function invasion() {
-  
+  if (whitecheckpattern !== "00000000") {
+    if (NW_whitecheck === 0) {
+      
+  } if (blackcheckpattern !== "00000000") {
+    
+  }
 }
 function aftercheck() {
   afterproceed = 1
