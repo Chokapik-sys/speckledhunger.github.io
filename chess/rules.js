@@ -2,7 +2,7 @@ var piececolour = "White"
 var colourchange = 0
 var capture = 0
 //Check vars
-var whiteattacked = []
+var blackattacked = []
 var N_blackcheck = 0
 var E_blackcheck = 0
 var S_blackcheck = 0
@@ -20,6 +20,8 @@ var NE_whitecheck = 0
 var SE_whitecheck = 0
 var SW_whitecheck  = 0
 var NW_whitecheck = 0
+var blackcheckpattern = 0
+var whitecheckpattern = 0
 //Text vars
 var N_blacktext = 0
 var E_blacktext = 0
@@ -51,8 +53,6 @@ var confirmcastle = ""
 var blackcastle = ""
 var whitecastle = ""
 var checkmate = 0
-var blackcheckpattern = 0
-var whitecheckpattern = 0
 var aftercheckmate = 0
 var afterproceed = 0
 function phase_2() {
