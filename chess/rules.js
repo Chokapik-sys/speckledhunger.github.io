@@ -1079,7 +1079,6 @@ function king() {
   }
   blacktextpattern = NW_blacktext.toString() + N_blacktext.toString() + NE_blacktext.toString() + W_blacktext.toString() + E_blacktext.toString() + SW_blacktext.toString() + S_blacktext.toString() + SE_blacktext.toString()
     whitetextpattern = NW_whitetext.toString() + N_whitetext.toString() + NE_whitetext.toString() + W_whitetext.toString() + E_whitetext.toString() + SW_whitetext.toString() + S_whitetext.toString() + SE_whitetext.toString()
-  attackfilter()
 }
 function invasion() {
   if (whitecheckpattern !== "00000000") {
@@ -1218,37 +1217,4 @@ function castle() {
       }
     }
   }
-}
-function attackfilter() {
-var single = [,]
-for (var i = 0; i < whiteattacked.length; i++) {
-var output = 1
-var proceed = 0
-if (i === 0) {
-single = [,]
-} for (var j = 0; j < single.length; j++) {
-if (whiteattacked[i] === single[j]) {
-output = 0
-}
-proceed = 1
-} if (output === 1 && proceed === 1) {
-single.push(whiteattacked[i])
-}
-} single.shift()
-whiteattacked = single
-for (var i = 0; i < blackattacked.length; i++) {
-var output = 1
-var proceed = 0
-if (i === 0) {
-single = [,]
-} for (var j = 0; j < single.length; j++) {
-if (blackattacked[i] === single[j]) {
-output = 0
-}
-proceed = 1
-} if (output === 1 && proceed === 1) {
-single.push(blackattacked[i])
-}
-} single.shift()
-blackattacked = single
 }
