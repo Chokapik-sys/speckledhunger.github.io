@@ -22,6 +22,8 @@ var SW_whitecheck  = 0
 var NW_whitecheck = 0
 var blackcheckpattern = 0
 var whitecheckpattern = 0
+var blackcheckcoord = 0
+var whitechcheckcoord = 0
 //Text vars
 var N_blacktext = 0
 var E_blacktext = 0
@@ -1150,8 +1152,10 @@ function king() {
   }
   blacktextpattern = NW_blacktext.toString() + N_blacktext.toString() + NE_blacktext.toString() + W_blacktext.toString() + E_blacktext.toString() + SW_blacktext.toString() + S_blacktext.toString() + SE_blacktext.toString()
     whitetextpattern = NW_whitetext.toString() + N_whitetext.toString() + NE_whitetext.toString() + W_whitetext.toString() + E_whitetext.toString() + SW_whitetext.toString() + S_whitetext.toString() + SE_whitetext.toString()
+  invasion()
 }
 function invasion() {
+  whitecheckcoord = blackcheckcoord = "0000000000000000000000000000000000000000000000000000000000000000"
   if (whitecheckpattern !== "00000000") {
     if (NW_whitecheck === 0) {
       
