@@ -23,7 +23,7 @@ var NW_whitecheck = 0
 var blackcheckpattern = 0
 var whitecheckpattern = 0
 var blackcheckcoord = 0
-var whitechcheckcoord = 0
+var whitecheckcoord = 0
 //Text vars
 var N_blacktext = 0
 var E_blacktext = 0
