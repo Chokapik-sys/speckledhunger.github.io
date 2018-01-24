@@ -1156,6 +1156,11 @@ function king() {
 }
 function invasion() {
   whitecheckcoord = blackcheckcoord = "0000000000000000000000000000000000000000000000000000000000000000"
+  for (var i = 0; i < whiteattacked.length; i++) {
+    whitecheckcoord.substr(0, whiteattacked[i] - 1) + '1' + whitecheckcoord.substr(whiteattacked[i]);
+  } for (var i = 0; i < blackattacked.length; i++) {
+    blackcheckcoord.substr(0, blackattacked[i] - 1) + '1' + blackcheckcoord.substr(blackattacked[i]);
+  }
   if (whitecheckpattern !== "00000000") {
     if (NW_whitecheck === 0) {
       
