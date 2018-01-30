@@ -1161,7 +1161,7 @@ function invasion() {
   } for (var i = 0; i < blackattacked.length; i++) {
     blackcheckcoord = blackcheckcoord.substr(0, blackattacked[i] - 1) + '1' + blackcheckcoord.substr(blackattacked[i]);
   }
-  for (var i = 0; i < 65; i++) {
+  for (var i = 1; i < 65; i++) {
    trapped(i) 
   }
 }
