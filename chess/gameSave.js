@@ -323,9 +323,9 @@ function load() {
       }
       }
     }
-   king()
   }
     checksave = 0
+  king()
 }
 function clearsave() {
   //Clear White Cookies
