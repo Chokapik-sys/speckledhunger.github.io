@@ -1162,9 +1162,9 @@ function invasion() {
     blackcheckcoord = blackcheckcoord.substr(0, blackattacked[i] - 1) + '1' + blackcheckcoord.substr(blackattacked[i]);
   }
   for (var i = 0; i < 64; i++) {
-    if (whitecheckcoord[i] = 1) {
+    if (whitecheckcoord[i] === "1") {
    trapped("White",i + 1)
-    } if (blackcheckcoord[i] = 1) {
+    } if (blackcheckcoord[i] === "1") {
    trapped("Black",i + 1)
     }
   }
