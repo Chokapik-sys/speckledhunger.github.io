@@ -1161,12 +1161,16 @@ function invasion() {
   } for (var i = 0; i < blackattacked.length; i++) {
     blackcheckcoord = blackcheckcoord.substr(0, blackattacked[i] - 1) + '1' + blackcheckcoord.substr(blackattacked[i]);
   }
-  for (var i = 1; i < 65; i++) {
-   trapped(i) 
+  for (var i = 0; i < 64; i++) {
+    if (whitecheckcoord[i] = 1) {
+   trapped("White",i + 1)
+    } if (blackcheckcoord[i] = 1) {
+   trapped("Black",i + 1)
+    }
   }
 }
-function trapped(trapcoord) {
-  console.log(trapcoord)
+function trapped(colour,trapcoord) {
+  console.log(colour + " trapped:" trapcoord)
 }
 function aftercheck() {
   afterproceed = 1
