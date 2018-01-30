@@ -323,6 +323,7 @@ function load() {
       }
       }
     }
+   king()
   }
     checksave = 0
 }
@@ -403,7 +404,6 @@ function checkbeta() {
   }
 }
 function default_layout() {
-  king()
   cnumget = "000"
   load()
   cnumget = "001"
