@@ -1170,7 +1170,7 @@ function invasion() {
   }
 }
 function trapped(colour,trapcoord) {
-  console.log(colour + " trapped:" trapcoord)
+  console.log(colour + " trapped:" + trapcoord)
 }
 function aftercheck() {
   afterproceed = 1
