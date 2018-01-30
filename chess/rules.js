@@ -1161,13 +1161,12 @@ function invasion() {
   } for (var i = 0; i < blackattacked.length; i++) {
     blackcheckcoord = blackcheckcoord.substr(0, blackattacked[i] - 1) + '1' + blackcheckcoord.substr(blackattacked[i]);
   }
-  if (whitecheckpattern !== "00000000") {
-    if (NW_whitecheck === 0) {
-      
-    }
-  } if (blackcheckpattern !== "00000000") {
-    
+  for (var i = 0; i < 65; i++) {
+   trapped(i) 
   }
+}
+function trapped(trapcoord) {
+  console.log(trapcoord)
 }
 function aftercheck() {
   afterproceed = 1
