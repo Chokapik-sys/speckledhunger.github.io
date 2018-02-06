@@ -1171,7 +1171,7 @@ function invasion() {
     }
   }
 }
-function trapped(colour,inverse, trapcoord) {
+function trapped(inverse, colour, trapcoord) {
   console.log(colour + " trapped:" + trapcoord)
   //Immediate Threat
     for (mr1 = 1; (trapcoord + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + mr1) + "_").innerHTML == ""; mr1 += 1) {
