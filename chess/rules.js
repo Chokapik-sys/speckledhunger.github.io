@@ -1165,9 +1165,9 @@ function invasion() {
   }
   for (var i = 0; i < 64; i++) {
     if (whitecheckcoord[i] === "1") {
-   whitetrapped = whitetrapped.substr(0, i - 1) + trapped("White","Black", i+1) + whitetrapped.substr(i);
+   whitetrapped = whitetrapped.substr(0, i) + trapped("White","Black", i+1) + whitetrapped.substr(i + 1);
     } if (blackcheckcoord[i] === "1") {
-    blacktrapped = blacktrapped.substr(0, i - 1) + trapped("Black","White", i+1) + blacktrapped.substr(i);
+    blacktrapped = blacktrapped.substr(0, i) + trapped("Black","White", i+1) + blacktrapped.substr(i + 1);
     }
   }
 }
