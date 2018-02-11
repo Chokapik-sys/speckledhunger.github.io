@@ -1165,245 +1165,245 @@ function invasion() {
   }
   for (var i = 0; i < 64; i++) {
     if (whitecheckcoord[i] === "1") {
-   whitetrapped = whitetrapped.substr(0, i) + trapped("White","Black", i+1, 0) + whitetrapped.substr(i + 1);
+   whitetrapped = whitetrapped.substr(0, i) + trapped("White","Black", i+1) + whitetrapped.substr(i + 1);
     } if (blackcheckcoord[i] === "1") {
-    blacktrapped = blacktrapped.substr(0, i) + trapped("Black","White", i+1, 0) + blacktrapped.substr(i + 1);
+    blacktrapped = blacktrapped.substr(0, i) + trapped("Black","White", i+1) + blacktrapped.substr(i + 1);
     }
   }
 }
-function trapped(inverse, colour, trapcoord, offset) {
+function trapped(inverse, colour, trapcoord) {
   console.log(inverse + " trapped:" + trapcoord)
- //Immediate Threat
-    for (mr1 = 1; (trapcoord + offset + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mr1) + "_").innerHTML == ""; mr1 += 1) {
-      if ((document.getElementById("_" + (trapcoord + offset + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr1 + 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mr1 + 1) % 8 != "1") {
+  //Immediate Threat
+    for (mr1 = 1; (trapcoord + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + mr1) + "_").innerHTML == ""; mr1 += 1) {
+      if ((document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + mr1 + 1) % 8 != "1") {
   trapped_check = 0
       } else {
         trapped_check = 1
-      }} for (mr2 = -1; (trapcoord + offset + mr2) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mr2) + "_").innerHTML == ""; mr2 += -1) {
-          if ((document.getElementById("_" + (trapcoord + offset + mr2 - 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr2 - 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mr2 - 1) % 8 != "0") {
+      }} for (mr2 = -1; (trapcoord + mr2) % 8 != "0" && document.getElementById("_" + (trapcoord + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          if ((document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + mr2 - 1) % 8 != "0") {
       trapped_check = 0
       } else {
         trapped_check = 1
-      }} for (mr3 = 8; document.getElementById("_" + (trapcoord + offset + mr3) + "_").innerHTML == ""; mr3 += 8) {
-          if (document.getElementById("_" + (trapcoord + offset + mr3 + 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr3 + 8) + "_").innerHTML === inverse + " Queen") {
+      }} for (mr3 = 8; document.getElementById("_" + (trapcoord + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          if (document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Queen") {
       trapped_check = 0
       } else {
         trapped_check = 1
-      }} for (mr4 = -8; document.getElementById("_" + (trapcoord + offset + mr4) + "_").innerHTML == ""; mr4 += -8) {
-          if (document.getElementById("_" + (trapcoord + offset + mr4 - 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr4 - 8) + "_").innerHTML === inverse + " Queen") {
+      }} for (mr4 = -8; document.getElementById("_" + (trapcoord + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          if (document.getElementById("_" + (trapcoord + mr4 - 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr4 - 8) + "_").innerHTML === inverse + " Queen") {
       trapped_check = 0
       } else {
         trapped_check = 1
-      }} for (mb1 = 9; (trapcoord + offset + mb1) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mb1) + "_").innerHTML == ""; mb1 += 9) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb1 + 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb1 + 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb1 + 9) % 8 != "1") {
+      }} for (mb1 = 9; (trapcoord + mb1) % 8 != "1" && document.getElementById("_" + (trapcoord + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          if ((document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb1 + 9) % 8 != "1") {
       trapped_check = 0
       } else {
         trapped_check = 1
-      }} for (mb2 = -9; (trapcoord + offset + mb2) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mb2) + "_").innerHTML == ""; mb2 += -9) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb2 - 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb2 - 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb2 - 9) % 8 != "0") {
+      }} for (mb2 = -9; (trapcoord + mb2) % 8 != "0" && document.getElementById("_" + (trapcoord + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          if ((document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb2 - 9) % 8 != "0") {
       trapped_check = 0
       } else {
         trapped_check = 1
-      }} for (mb3 = 7; (trapcoord + offset + mb3) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mb3) + "_").innerHTML == ""; mb3 += 7) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb3 + 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb3 + 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb3 + 7) % 8 != "0") {
+      }} for (mb3 = 7; (trapcoord + mb3) % 8 != "0" && document.getElementById("_" + (trapcoord + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          if ((document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb3 + 7) % 8 != "0") {
       trapped_check = 0
       } else {
         trapped_check = 1
-      }} for (mb4 = -7; (trapcoord + offset + mb4) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mb4) + "_").innerHTML == ""; mb4 += -7) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb4 - 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb4 - 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb4 - 7) % 8 != "1") {
+      }} for (mb4 = -7; (trapcoord + mb4) % 8 != "1" && document.getElementById("_" + (trapcoord + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          if ((document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb4 - 7) % 8 != "1") {
       trapped_check = 0
       } else {
         trapped_check = 1
       }}
     //Future Threat
-    if (((document.getElementById("_" + (trapcoord + offset - 26) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 26) % 8 != "7" && (trapcoord + offset - 26) % 8 != "0") || (document.getElementById("_" + (trapcoord + offset - 19) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 19) % 8 != "7" && (trapcoord + offset - 19) % 8 != "0") || (document.getElementById("_" + (trapcoord + offset - 15) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 15) % 8 != "1") || (document.getElementById("_" + (trapcoord + offset - 3) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 3) % 8 != "0" && (trapcoord + offset - 3) % 8 != "7" && (trapcoord + offset - 3) % 8 != "6") || (document.getElementById("_" + (trapcoord + offset + 6) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 6) % 8 != "0" && (trapcoord + offset + 6) % 8 != "7") || (document.getElementById("_" + (trapcoord + offset - 24) + "_").innerHTML === inverse + " Knight")) && document.getElementById("_" + (trapcoord + offset - 9) + "_").innerHTML === "") {
+    if (((document.getElementById("_" + (trapcoord - 26) + "_").innerHTML === inverse + " Knight" && (trapcoord - 26) % 8 != "7" && (trapcoord - 26) % 8 != "0") || (document.getElementById("_" + (trapcoord - 19) + "_").innerHTML === inverse + " Knight" && (trapcoord - 19) % 8 != "7" && (trapcoord - 19) % 8 != "0") || (document.getElementById("_" + (trapcoord - 15) + "_").innerHTML === inverse + " Knight" && (trapcoord - 15) % 8 != "1") || (document.getElementById("_" + (trapcoord - 3) + "_").innerHTML === inverse + " Knight" && (trapcoord - 3) % 8 != "0" && (trapcoord - 3) % 8 != "7" && (trapcoord - 3) % 8 != "6") || (document.getElementById("_" + (trapcoord + 6) + "_").innerHTML === inverse + " Knight" && (trapcoord + 6) % 8 != "0" && (trapcoord + 6) % 8 != "7") || (document.getElementById("_" + (trapcoord - 24) + "_").innerHTML === inverse + " Knight")) && document.getElementById("_" + (trapcoord - 9) + "_").innerHTML === "") {
       trapped_check = 0
-    }  if (((document.getElementById("_" + (trapcoord + offset - 25) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 25) % 8 != "0") || (document.getElementById("_" + (trapcoord + offset - 23) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 23) % 8 != "1") || (document.getElementById("_" + (trapcoord + offset - 18) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 18) % 8 != "0" && (trapcoord + offset - 18) % 8 != "7") || (document.getElementById("_" + (trapcoord + offset - 14) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 14) % 8 != "1" && (trapcoord + offset - 14) % 8 != "2") || (document.getElementById("_" + (trapcoord + offset - 2) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 2) % 8 != "0" && (trapcoord + offset - 2) % 8 != "7") || (document.getElementById("_" + (trapcoord + offset + 2) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 2) % 8 != "1" && (trapcoord + offset + 2) % 8 != "2")) && document.getElementById("_" + (trapcoord + offset - 8) + "_").innerHTML === "") {
+    }  if (((document.getElementById("_" + (trapcoord - 25) + "_").innerHTML === inverse + " Knight" && (trapcoord - 25) % 8 != "0") || (document.getElementById("_" + (trapcoord - 23) + "_").innerHTML === inverse + " Knight" && (trapcoord - 23) % 8 != "1") || (document.getElementById("_" + (trapcoord - 18) + "_").innerHTML === inverse + " Knight" && (trapcoord - 18) % 8 != "0" && (trapcoord - 18) % 8 != "7") || (document.getElementById("_" + (trapcoord - 14) + "_").innerHTML === inverse + " Knight" && (trapcoord - 14) % 8 != "1" && (trapcoord - 14) % 8 != "2") || (document.getElementById("_" + (trapcoord - 2) + "_").innerHTML === inverse + " Knight" && (trapcoord - 2) % 8 != "0" && (trapcoord - 2) % 8 != "7") || (document.getElementById("_" + (trapcoord + 2) + "_").innerHTML === inverse + " Knight" && (trapcoord + 2) % 8 != "1" && (trapcoord + 2) % 8 != "2")) && document.getElementById("_" + (trapcoord - 8) + "_").innerHTML === "") {
       trapped_check = 0
-    } if (((document.getElementById("_" + (trapcoord + offset - 22) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 22) % 8 != "1" && (trapcoord + offset - 22) % 8 != "2") || (document.getElementById("_" + (trapcoord + offset - 13) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 13) % 8 != "1" && (trapcoord + offset - 13) % 8 != "2" && (trapcoord + offset - 13) % 8 != "3") || (document.getElementById("_" + (trapcoord + offset - 17) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 17) % 8 != "0") || (document.getElementById("_" + (trapcoord + offset + 3) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 3) % 8 != "1" && (trapcoord + offset + 3) % 8 != "2" && (trapcoord + offset + 3) % 8 != "3") || (document.getElementById("_" + (trapcoord + offset + 10) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 10) % 8 != "1" && (trapcoord + offset + 10) % 8 != "2") || (document.getElementById("_" + (trapcoord + offset - 24) + "_").innerHTML === inverse + " Knight")) && document.getElementById("_" + (trapcoord + offset - 7) + "_").innerHTML === "") {
+    } if (((document.getElementById("_" + (trapcoord - 22) + "_").innerHTML === inverse + " Knight" && (trapcoord - 22) % 8 != "1" && (trapcoord - 22) % 8 != "2") || (document.getElementById("_" + (trapcoord - 13) + "_").innerHTML === inverse + " Knight" && (trapcoord - 13) % 8 != "1" && (trapcoord - 13) % 8 != "2" && (trapcoord - 13) % 8 != "3") || (document.getElementById("_" + (trapcoord - 17) + "_").innerHTML === inverse + " Knight" && (trapcoord - 17) % 8 != "0") || (document.getElementById("_" + (trapcoord + 3) + "_").innerHTML === inverse + " Knight" && (trapcoord + 3) % 8 != "1" && (trapcoord + 3) % 8 != "2" && (trapcoord + 3) % 8 != "3") || (document.getElementById("_" + (trapcoord + 10) + "_").innerHTML === inverse + " Knight" && (trapcoord + 10) % 8 != "1" && (trapcoord + 10) % 8 != "2") || (document.getElementById("_" + (trapcoord - 24) + "_").innerHTML === inverse + " Knight")) && document.getElementById("_" + (trapcoord - 7) + "_").innerHTML === "") {
       trapped_check = 0
-    }  if (((document.getElementById("_" + (trapcoord + offset - 18) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 18) % 8 != "7" && (trapcoord + offset - 18) % 8 != "0") || (document.getElementById("_" + (trapcoord + offset - 16) + "_").innerHTML === inverse + " Knight") || (document.getElementById("_" + (trapcoord + offset - 11) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 11) % 8 != "6" && (trapcoord + offset - 11) % 8 != "7" && (trapcoord + offset - 11) % 8 != "0") || (document.getElementById("_" + (trapcoord + offset + 5) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 5) % 8 != "6" && (trapcoord + offset + 5) % 8 != "7" && (trapcoord + offset + 5) % 8 != "0") || (document.getElementById("_" + (trapcoord + offset + 14) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 14) % 8 != "7" && (trapcoord + offset + 14) % 8 != "0") || (document.getElementById("_" + (trapcoord + offset + 16) + "_").innerHTML === inverse + " Knight")) && document.getElementById("_" + (trapcoord + offset - 1) + "_").innerHTML === "") {
+    }  if (((document.getElementById("_" + (trapcoord - 18) + "_").innerHTML === inverse + " Knight" && (trapcoord - 18) % 8 != "7" && (trapcoord - 18) % 8 != "0") || (document.getElementById("_" + (trapcoord - 16) + "_").innerHTML === inverse + " Knight") || (document.getElementById("_" + (trapcoord - 11) + "_").innerHTML === inverse + " Knight" && (trapcoord - 11) % 8 != "6" && (trapcoord - 11) % 8 != "7" && (trapcoord - 11) % 8 != "0") || (document.getElementById("_" + (trapcoord + 5) + "_").innerHTML === inverse + " Knight" && (trapcoord + 5) % 8 != "6" && (trapcoord + 5) % 8 != "7" && (trapcoord + 5) % 8 != "0") || (document.getElementById("_" + (trapcoord + 14) + "_").innerHTML === inverse + " Knight" && (trapcoord + 14) % 8 != "7" && (trapcoord + 14) % 8 != "0") || (document.getElementById("_" + (trapcoord + 16) + "_").innerHTML === inverse + " Knight")) && document.getElementById("_" + (trapcoord - 1) + "_").innerHTML === "") {
       trapped_check = 0
-    } if (((document.getElementById("_" + (trapcoord + offset - 14) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 14) % 8 != "1" && (trapcoord + offset - 14) % 8 != "2") || (document.getElementById("_" + (trapcoord + offset - 16) + "_").innerHTML === inverse + " Knight") || (document.getElementById("_" + (trapcoord + offset - 5) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 5) % 8 != "1" && (trapcoord + offset - 5) % 8 != "2" && (trapcoord + offset - 5) % 8 != "3") || (document.getElementById("_" + (trapcoord + offset + 11) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 11) % 8 != "1" && (trapcoord + offset + 11) % 8 != "2" && (trapcoord + offset + 11) % 8 != "3") || (document.getElementById("_" + (trapcoord + offset + 18) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 18) % 8 != "1" && (trapcoord + offset + 18) % 8 != "2") || (document.getElementById("_" + (trapcoord + offset + 16) + "_").innerHTML === inverse + " Knight")) && document.getElementById("_" + (trapcoord + offset + 1) + "_").innerHTML === "") {
+    } if (((document.getElementById("_" + (trapcoord - 14) + "_").innerHTML === inverse + " Knight" && (trapcoord - 14) % 8 != "1" && (trapcoord - 14) % 8 != "2") || (document.getElementById("_" + (trapcoord - 16) + "_").innerHTML === inverse + " Knight") || (document.getElementById("_" + (trapcoord - 5) + "_").innerHTML === inverse + " Knight" && (trapcoord - 5) % 8 != "1" && (trapcoord - 5) % 8 != "2" && (trapcoord - 5) % 8 != "3") || (document.getElementById("_" + (trapcoord + 11) + "_").innerHTML === inverse + " Knight" && (trapcoord + 11) % 8 != "1" && (trapcoord + 11) % 8 != "2" && (trapcoord + 11) % 8 != "3") || (document.getElementById("_" + (trapcoord + 18) + "_").innerHTML === inverse + " Knight" && (trapcoord + 18) % 8 != "1" && (trapcoord + 18) % 8 != "2") || (document.getElementById("_" + (trapcoord + 16) + "_").innerHTML === inverse + " Knight")) && document.getElementById("_" + (trapcoord + 1) + "_").innerHTML === "") {
       trapped_check = 0
-    } if (((document.getElementById("_" + (trapcoord + offset + 22) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 22) % 8 != "7" && (trapcoord + offset - 22) % 8 != "0") || (document.getElementById("_" + (trapcoord + offset + 13) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 13) % 8 != "6" && (trapcoord + offset + 13) % 8 != "7" && (trapcoord + offset + 13) % 8 != "0") || (document.getElementById("_" + (trapcoord + offset + 17) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 17) % 8 != "1") || (document.getElementById("_" + (trapcoord + offset - 3) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 3) % 8 != "6" && (trapcoord + offset - 3) % 8 != "7" && (trapcoord + offset - 3) % 8 != "0") || (document.getElementById("_" + (trapcoord + offset - 10) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 10) % 8 != "7" && (trapcoord + offset - 10) % 8 != "0") || (document.getElementById("_" + (trapcoord + offset + 24) + "_").innerHTML === inverse + " Knight")) && document.getElementById("_" + (trapcoord + offset + 7) + "_").innerHTML === "") {
+    } if (((document.getElementById("_" + (trapcoord + 22) + "_").innerHTML === inverse + " Knight" && (trapcoord + 22) % 8 != "7" && (trapcoord - 22) % 8 != "0") || (document.getElementById("_" + (trapcoord + 13) + "_").innerHTML === inverse + " Knight" && (trapcoord + 13) % 8 != "6" && (trapcoord + 13) % 8 != "7" && (trapcoord + 13) % 8 != "0") || (document.getElementById("_" + (trapcoord + 17) + "_").innerHTML === inverse + " Knight" && (trapcoord + 17) % 8 != "1") || (document.getElementById("_" + (trapcoord - 3) + "_").innerHTML === inverse + " Knight" && (trapcoord - 3) % 8 != "6" && (trapcoord - 3) % 8 != "7" && (trapcoord - 3) % 8 != "0") || (document.getElementById("_" + (trapcoord - 10) + "_").innerHTML === inverse + " Knight" && (trapcoord - 10) % 8 != "7" && (trapcoord - 10) % 8 != "0") || (document.getElementById("_" + (trapcoord + 24) + "_").innerHTML === inverse + " Knight")) && document.getElementById("_" + (trapcoord + 7) + "_").innerHTML === "") {
       trapped_check = 0
-    }  if (((document.getElementById("_" + (trapcoord + offset + 25) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 25) % 8 != "1") || (document.getElementById("_" + (trapcoord + offset + 23) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 23) % 8 != "0") || (document.getElementById("_" + (trapcoord + offset + 18) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 18) % 8 != "1" && (trapcoord + offset + 18) % 8 != "2") || (document.getElementById("_" + (trapcoord + offset + 14) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 14) % 8 != "7" && (trapcoord + offset + 14) % 8 != "0") || (document.getElementById("_" + (trapcoord + offset + 2) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 2) % 8 != "1" && (trapcoord + offset + 2) % 8 != "2") || (document.getElementById("_" + (trapcoord + offset - 2) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 2) % 8 != "7" && (trapcoord + offset - 2) % 8 != "0")) && document.getElementById("_" + (trapcoord + offset + 8) + "_").innerHTML === "") {
+    }  if (((document.getElementById("_" + (trapcoord + 25) + "_").innerHTML === inverse + " Knight" && (trapcoord + 25) % 8 != "1") || (document.getElementById("_" + (trapcoord + 23) + "_").innerHTML === inverse + " Knight" && (trapcoord + 23) % 8 != "0") || (document.getElementById("_" + (trapcoord + 18) + "_").innerHTML === inverse + " Knight" && (trapcoord + 18) % 8 != "1" && (trapcoord + 18) % 8 != "2") || (document.getElementById("_" + (trapcoord + 14) + "_").innerHTML === inverse + " Knight" && (trapcoord + 14) % 8 != "7" && (trapcoord + 14) % 8 != "0") || (document.getElementById("_" + (trapcoord + 2) + "_").innerHTML === inverse + " Knight" && (trapcoord + 2) % 8 != "1" && (trapcoord + 2) % 8 != "2") || (document.getElementById("_" + (trapcoord - 2) + "_").innerHTML === inverse + " Knight" && (trapcoord - 2) % 8 != "7" && (trapcoord - 2) % 8 != "0")) && document.getElementById("_" + (trapcoord + 8) + "_").innerHTML === "") {
       trapped_check = 0
-    } if (((document.getElementById("_" + (trapcoord + offset + 26) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 26) % 8 != "1" && (trapcoord + offset + 26) % 8 != "2") || (document.getElementById("_" + (trapcoord + offset + 19) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 19) % 8 != "1" && (trapcoord + offset + 19) % 8 != "2") || (document.getElementById("_" + (trapcoord + offset + 15) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 15) % 8 != "0") || (document.getElementById("_" + (trapcoord + offset + 3) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset + 3) % 8 != "1" && (trapcoord + offset + 3) % 8 != "2" && (trapcoord + offset + 3) % 8 != "3") || (document.getElementById("_" + (trapcoord + offset - 6) + "_").innerHTML === inverse + " Knight" && (trapcoord + offset - 6) % 8 != "1" && (trapcoord + offset - 6) % 8 != "2") || (document.getElementById("_" + (trapcoord + offset + 24) + "_").innerHTML === inverse + " Knight")) && document.getElementById("_" + (trapcoord + offset + 9) + "_").innerHTML === "") {
+    } if (((document.getElementById("_" + (trapcoord + 26) + "_").innerHTML === inverse + " Knight" && (trapcoord + 26) % 8 != "1" && (trapcoord + 26) % 8 != "2") || (document.getElementById("_" + (trapcoord + 19) + "_").innerHTML === inverse + " Knight" && (trapcoord + 19) % 8 != "1" && (trapcoord + 19) % 8 != "2") || (document.getElementById("_" + (trapcoord + 15) + "_").innerHTML === inverse + " Knight" && (trapcoord + 15) % 8 != "0") || (document.getElementById("_" + (trapcoord + 3) + "_").innerHTML === inverse + " Knight" && (trapcoord + 3) % 8 != "1" && (trapcoord + 3) % 8 != "2" && (trapcoord + 3) % 8 != "3") || (document.getElementById("_" + (trapcoord - 6) + "_").innerHTML === inverse + " Knight" && (trapcoord - 6) % 8 != "1" && (trapcoord - 6) % 8 != "2") || (document.getElementById("_" + (trapcoord + 24) + "_").innerHTML === inverse + " Knight")) && document.getElementById("_" + (trapcoord + 9) + "_").innerHTML === "") {
       trapped_check = 0
     } 
-    for (mr1= -9; (trapcoord + offset + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mr1) + "_").innerHTML == ""; mr1 += 1) {
-      if (document.getElementById("_" + (trapcoord + offset + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr1 + 1) + "_").innerHTML === inverse + " Queen" && (trapcoord + offset + mr1 + 1) % 8 != "1") {
+    for (mr1= -9; (trapcoord + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + mr1) + "_").innerHTML == ""; mr1 += 1) {
+      if (document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Queen" && (trapcoord + mr1 + 1) % 8 != "1") {
         trapped_check = 0
-      }} for (mr2 = -9; (trapcoord + offset + mr2) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mr2) + "_").innerHTML == ""; mr2 += -1) {
-          if ((document.getElementById("_" + (trapcoord + offset + mr2 - 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr2 - 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mr2 - 1) % 8 != "0") {
+      }} for (mr2 = -9; (trapcoord + mr2) % 8 != "0" && document.getElementById("_" + (trapcoord + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          if ((document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + mr2 - 1) % 8 != "0") {
       trapped_check = 0
-      }} for (mr3 = -9; document.getElementById("_" + (trapcoord + offset + mr3) + "_").innerHTML == ""; mr3 += 8) {
-          if (document.getElementById("_" + (trapcoord + offset + mr3 + 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr3 + 8) + "_").innerHTML === inverse + " Queen") {
+      }} for (mr3 = -9; document.getElementById("_" + (trapcoord + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          if (document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Queen") {
       trapped_check = 0
-      }} for (mr4 = -9; document.getElementById("_" + (trapcoord + offset + mr4) + "_").innerHTML == ""; mr4 += -8) {
-          if (document.getElementById("_" + (trapcoord + offset + mr4 - 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr4 - 8) + "_").innerHTML === inverse + " Queen") {
+      }} for (mr4 = -9; document.getElementById("_" + (trapcoord + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          if (document.getElementById("_" + (trapcoord + mr4 - 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr4 - 8) + "_").innerHTML === inverse + " Queen") {
       trapped_check = 0
-      }} for (mb2 = -9; (trapcoord + offset + mb2) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mb2) + "_").innerHTML == ""; mb2 += -9) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb2 - 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb2 - 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb2 - 9) % 8 != "0") {
+      }} for (mb2 = -9; (trapcoord + mb2) % 8 != "0" && document.getElementById("_" + (trapcoord + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          if ((document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb2 - 9) % 8 != "0") {
       trapped_check = 0
-      }} for (mb3 = -9; (trapcoord + offset + mb3) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mb3) + "_").innerHTML == ""; mb3 += 7) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb3 + 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb3 + 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb3 + 7) % 8 != "0") {
+      }} for (mb3 = -9; (trapcoord + mb3) % 8 != "0" && document.getElementById("_" + (trapcoord + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          if ((document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb3 + 7) % 8 != "0") {
       trapped_check = 0
-      }} for (mb4 = -9; (trapcoord + offset + mb4) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mb4) + "_").innerHTML == ""; mb4 += -7) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb4 - 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb4 - 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb4 - 7) % 8 != "1") {
+      }} for (mb4 = -9; (trapcoord + mb4) % 8 != "1" && document.getElementById("_" + (trapcoord + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          if ((document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb4 - 7) % 8 != "1") {
       trapped_check = 0
       }} 
-    for (mr1= -8; (trapcoord + offset + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mr1) + "_").innerHTML == ""; mr1 += 1) {
-      if (document.getElementById("_" + (trapcoord + offset + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr1 + 1) + "_").innerHTML === inverse + " Queen" && (trapcoord + offset + mr1 + 1) % 8 != "1") {
+    for (mr1= -8; (trapcoord + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + mr1) + "_").innerHTML == ""; mr1 += 1) {
+      if (document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Queen" && (trapcoord + mr1 + 1) % 8 != "1") {
         trapped_check = 0
-      }} for (mr2 = -8; (trapcoord + offset + mr2) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mr2) + "_").innerHTML == ""; mr2 += -1) {
-          if ((document.getElementById("_" + (trapcoord + offset + mr2 - 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr2 - 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mr2 - 1) % 8 != "0") {
+      }} for (mr2 = -8; (trapcoord + mr2) % 8 != "0" && document.getElementById("_" + (trapcoord + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          if ((document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + mr2 - 1) % 8 != "0") {
       trapped_check = 0
-      }} for (mb1 = -8; (trapcoord + offset + mb1) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mb1) + "_").innerHTML == ""; mb1 += 9) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb1 + 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb1 + 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb1 + 9) % 8 != "1") {
+      }} for (mb1 = -8; (trapcoord + mb1) % 8 != "1" && document.getElementById("_" + (trapcoord + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          if ((document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb1 + 9) % 8 != "1") {
       trapped_check = 0
-      }} for (mb2 = -8; (trapcoord + offset + mb2) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mb2) + "_").innerHTML == ""; mb2 += -9) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb2 - 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb2 - 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb2 - 9) % 8 != "0") {
+      }} for (mb2 = -8; (trapcoord + mb2) % 8 != "0" && document.getElementById("_" + (trapcoord + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          if ((document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb2 - 9) % 8 != "0") {
       trapped_check = 0
-      }} for (mb3 = -8; (trapcoord + offset + mb3) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mb3) + "_").innerHTML == ""; mb3 += 7) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb3 + 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb3 + 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb3 + 7) % 8 != "0") {
+      }} for (mb3 = -8; (trapcoord + mb3) % 8 != "0" && document.getElementById("_" + (trapcoord + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          if ((document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb3 + 7) % 8 != "0") {
       trapped_check = 0
-      }} for (mb4 = -8; (trapcoord + offset + mb4) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mb4) + "_").innerHTML == ""; mb4 += -7) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb4 - 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb4 - 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb4 - 7) % 8 != "1") {
+      }} for (mb4 = -8; (trapcoord + mb4) % 8 != "1" && document.getElementById("_" + (trapcoord + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          if ((document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb4 - 7) % 8 != "1") {
       trapped_check = 0
       }}
-    for (mr1= -7; (trapcoord + offset + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mr1) + "_").innerHTML == ""; mr1 += 1) {
-      if (document.getElementById("_" + (trapcoord + offset + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr1 + 1) + "_").innerHTML === inverse + " Queen" && (trapcoord + offset + mr1 + 1) % 8 != "1") {
+    for (mr1= -7; (trapcoord + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + mr1) + "_").innerHTML == ""; mr1 += 1) {
+      if (document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Queen" && (trapcoord + mr1 + 1) % 8 != "1") {
         trapped_check = 0
-      }} for (mr2 = -7; (trapcoord + offset + mr2) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mr2) + "_").innerHTML == ""; mr2 += -1) {
-          if ((document.getElementById("_" + (trapcoord + offset + mr2 - 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr2 - 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mr2 - 1) % 8 != "0") {
+      }} for (mr2 = -7; (trapcoord + mr2) % 8 != "0" && document.getElementById("_" + (trapcoord + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          if ((document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + mr2 - 1) % 8 != "0") {
       trapped_check = 0
-      }} for (mr3 = -7; document.getElementById("_" + (trapcoord + offset + mr3) + "_").innerHTML == ""; mr3 += 8) {
-          if (document.getElementById("_" + (trapcoord + offset + mr3 + 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr3 + 8) + "_").innerHTML === inverse + " Queen") {
+      }} for (mr3 = -7; document.getElementById("_" + (trapcoord + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          if (document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Queen") {
       trapped_check = 0
-      }} for (mr4 = -7; document.getElementById("_" + (trapcoord + offset + mr4) + "_").innerHTML == ""; mr4 += -8) {
-          if (document.getElementById("_" + (trapcoord + offset + mr4 - 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr4 - 8) + "_").innerHTML === inverse + " Queen") {
+      }} for (mr4 = -7; document.getElementById("_" + (trapcoord + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          if (document.getElementById("_" + (trapcoord + mr4 - 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr4 - 8) + "_").innerHTML === inverse + " Queen") {
       trapped_check = 0
-      }} for (mb1 = -7; (trapcoord + offset + mb1) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mb1) + "_").innerHTML == ""; mb1 += 9) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb1 + 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb1 + 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb1 + 9) % 8 != "1") {
+      }} for (mb1 = -7; (trapcoord + mb1) % 8 != "1" && document.getElementById("_" + (trapcoord + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          if ((document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb1 + 9) % 8 != "1") {
       trapped_check = 0
-      }} for (mb2 = -7; (trapcoord + offset + mb2) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mb2) + "_").innerHTML == ""; mb2 += -9) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb2 - 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb2 - 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb2 - 9) % 8 != "0") {
+      }} for (mb2 = -7; (trapcoord + mb2) % 8 != "0" && document.getElementById("_" + (trapcoord + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          if ((document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb2 - 9) % 8 != "0") {
       trapped_check = 0
-      }} for (mb4 = -7; (trapcoord + offset + mb4) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mb4) + "_").innerHTML == ""; mb4 += -7) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb4 - 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb4 - 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb4 - 7) % 8 != "1") {
+      }} for (mb4 = -7; (trapcoord + mb4) % 8 != "1" && document.getElementById("_" + (trapcoord + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          if ((document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb4 - 7) % 8 != "1") {
       trapped_check = 0
       }} 
-    for (mr2 = -1; (trapcoord + offset + mr2) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mr2) + "_").innerHTML == ""; mr2 += -1) {
-          if ((document.getElementById("_" + (trapcoord + offset + mr2 - 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr2 - 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mr2 - 1) % 8 != "0") {
+    for (mr2 = -1; (trapcoord + mr2) % 8 != "0" && document.getElementById("_" + (trapcoord + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          if ((document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + mr2 - 1) % 8 != "0") {
       trapped_check = 0
-      }} for (mr3 = -1; document.getElementById("_" + (trapcoord + offset + mr3) + "_").innerHTML == ""; mr3 += 8) {
-          if (document.getElementById("_" + (trapcoord + offset + mr3 + 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr3 + 8) + "_").innerHTML === inverse + " Queen") {
+      }} for (mr3 = -1; document.getElementById("_" + (trapcoord + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          if (document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Queen") {
       trapped_check = 0
-      }} for (mr4 = -1; document.getElementById("_" + (trapcoord + offset + mr4) + "_").innerHTML == ""; mr4 += -8) {
-          if (document.getElementById("_" + (trapcoord + offset + mr4 - 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr4 - 8) + "_").innerHTML === inverse + " Queen") {
+      }} for (mr4 = -1; document.getElementById("_" + (trapcoord + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          if (document.getElementById("_" + (trapcoord + mr4 - 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr4 - 8) + "_").innerHTML === inverse + " Queen") {
       trapped_check = 0
-      }} for (mb1 = -1; (trapcoord + offset + mb1) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mb1) + "_").innerHTML == ""; mb1 += 9) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb1 + 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb1 + 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb1 + 9) % 8 != "1") {
+      }} for (mb1 = -1; (trapcoord + mb1) % 8 != "1" && document.getElementById("_" + (trapcoord + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          if ((document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb1 + 9) % 8 != "1") {
       trapped_check = 0
-      }} for (mb2 = -1; (trapcoord + offset + mb2) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mb2) + "_").innerHTML == ""; mb2 += -9) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb2 - 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb2 - 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb2 - 9) % 8 != "0") {
+      }} for (mb2 = -1; (trapcoord + mb2) % 8 != "0" && document.getElementById("_" + (trapcoord + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          if ((document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb2 - 9) % 8 != "0") {
       trapped_check = 0
-      }} for (mb3 = -1; (trapcoord + offset + mb3) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mb3) + "_").innerHTML == ""; mb3 += 7) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb3 + 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb3 + 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb3 + 7) % 8 != "0") {
+      }} for (mb3 = -1; (trapcoord + mb3) % 8 != "0" && document.getElementById("_" + (trapcoord + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          if ((document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb3 + 7) % 8 != "0") {
       trapped_check = 0
-      }} for (mb4 = -1; (trapcoord + offset + mb4) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mb4) + "_").innerHTML == ""; mb4 += -7) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb4 - 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb4 - 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb4 - 7) % 8 != "1") {
-      trapped_check = 0
-      }}
-    for (mr1= 1; (trapcoord + offset + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mr1) + "_").innerHTML == ""; mr1 += 1) {
-      if (document.getElementById("_" + (trapcoord + offset + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr1 + 1) + "_").innerHTML === inverse + " Queen" && (trapcoord + offset + mr1 + 1) % 8 != "1") {
-        trapped_check = 0
-      }} for (mr3 = 1; document.getElementById("_" + (trapcoord + offset + mr3) + "_").innerHTML == ""; mr3 += 8) {
-          if (document.getElementById("_" + (trapcoord + offset + mr3 + 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr3 + 8) + "_").innerHTML === inverse + " Queen") {
-      trapped_check = 0
-      }} for (mr4 = 1; document.getElementById("_" + (trapcoord + offset + mr4) + "_").innerHTML == ""; mr4 += -8) {
-          if (document.getElementById("_" + (trapcoord + offset + mr4 - 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr4 - 8) + "_").innerHTML === inverse + " Queen") {
-      trapped_check = 0
-      }} for (mb1 = 1; (trapcoord + offset + mb1) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mb1) + "_").innerHTML == ""; mb1 += 9) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb1 + 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb1 + 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb1 + 9) % 8 != "1") {
-      trapped_check = 0
-      }} for (mb2 = 1; (trapcoord + offset + mb2) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mb2) + "_").innerHTML == ""; mb2 += -9) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb2 - 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb2 - 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb2 - 9) % 8 != "0") {
-      trapped_check = 0
-      }} for (mb3 = 1; (trapcoord + offset + mb3) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mb3) + "_").innerHTML == ""; mb3 += 7) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb3 + 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb3 + 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb3 + 7) % 8 != "0") {
-      trapped_check = 0
-      }} for (mb4 = 1; (trapcoord + offset + mb4) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mb4) + "_").innerHTML == ""; mb4 += -7) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb4 - 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb4 - 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb4 - 7) % 8 != "1") {
+      }} for (mb4 = -1; (trapcoord + mb4) % 8 != "1" && document.getElementById("_" + (trapcoord + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          if ((document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb4 - 7) % 8 != "1") {
       trapped_check = 0
       }}
-    for (mr1= 7; (trapcoord + offset + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mr1) + "_").innerHTML == ""; mr1 += 1) {
-      if (document.getElementById("_" + (trapcoord + offset + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr1 + 1) + "_").innerHTML === inverse + " Queen" && (trapcoord + offset + mr1 + 1) % 8 != "1") {
+    for (mr1= 1; (trapcoord + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + mr1) + "_").innerHTML == ""; mr1 += 1) {
+      if (document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Queen" && (trapcoord + mr1 + 1) % 8 != "1") {
         trapped_check = 0
-      }} for (mr2 = 7; (trapcoord + offset + mr2) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mr2) + "_").innerHTML == ""; mr2 += -1) {
-          if ((document.getElementById("_" + (trapcoord + offset + mr2 - 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr2 - 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mr2 - 1) % 8 != "0") {
+      }} for (mr3 = 1; document.getElementById("_" + (trapcoord + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          if (document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Queen") {
       trapped_check = 0
-      }} for (mr3 = 7; document.getElementById("_" + (trapcoord + offset + mr3) + "_").innerHTML == ""; mr3 += 8) {
-          if (document.getElementById("_" + (trapcoord + offset + mr3 + 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr3 + 8) + "_").innerHTML === inverse + " Queen") {
+      }} for (mr4 = 1; document.getElementById("_" + (trapcoord + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          if (document.getElementById("_" + (trapcoord + mr4 - 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr4 - 8) + "_").innerHTML === inverse + " Queen") {
       trapped_check = 0
-      }} for (mr4 = 7; document.getElementById("_" + (trapcoord + offset + mr4) + "_").innerHTML == ""; mr4 += -8) {
-          if (document.getElementById("_" + (trapcoord + offset + mr4 - 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr4 - 8) + "_").innerHTML === inverse + " Queen") {
+      }} for (mb1 = 1; (trapcoord + mb1) % 8 != "1" && document.getElementById("_" + (trapcoord + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          if ((document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb1 + 9) % 8 != "1") {
       trapped_check = 0
-      }} for (mb1 = 7; (trapcoord + offset + mb1) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mb1) + "_").innerHTML == ""; mb1 += 9) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb1 + 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb1 + 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb1 + 9) % 8 != "1") {
+      }} for (mb2 = 1; (trapcoord + mb2) % 8 != "0" && document.getElementById("_" + (trapcoord + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          if ((document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb2 - 9) % 8 != "0") {
       trapped_check = 0
-      }} for (mb2 = 7; (trapcoord + offset + mb2) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mb2) + "_").innerHTML == ""; mb2 += -9) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb2 - 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb2 - 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb2 - 9) % 8 != "0") {
+      }} for (mb3 = 1; (trapcoord + mb3) % 8 != "0" && document.getElementById("_" + (trapcoord + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          if ((document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb3 + 7) % 8 != "0") {
       trapped_check = 0
-      }} for (mb3 = 7; (trapcoord + offset + mb3) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mb3) + "_").innerHTML == ""; mb3 += 7) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb3 + 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb3 + 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb3 + 7) % 8 != "0") {
+      }} for (mb4 = 1; (trapcoord + mb4) % 8 != "1" && document.getElementById("_" + (trapcoord + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          if ((document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb4 - 7) % 8 != "1") {
       trapped_check = 0
       }}
-    for (mr1= 8; (trapcoord + offset + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mr1) + "_").innerHTML == ""; mr1 += 1) {
-      if (document.getElementById("_" + (trapcoord + offset + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr1 + 1) + "_").innerHTML === inverse + " Queen" && (trapcoord + offset + mr1 + 1) % 8 != "1") {
+    for (mr1= 7; (trapcoord + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + mr1) + "_").innerHTML == ""; mr1 += 1) {
+      if (document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Queen" && (trapcoord + mr1 + 1) % 8 != "1") {
         trapped_check = 0
-      }} for (mr2 = 8; (trapcoord + offset + mr2) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mr2) + "_").innerHTML == ""; mr2 += -1) {
-          if ((document.getElementById("_" + (trapcoord + offset + mr2 - 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr2 - 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mr2 - 1) % 8 != "0") {
+      }} for (mr2 = 7; (trapcoord + mr2) % 8 != "0" && document.getElementById("_" + (trapcoord + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          if ((document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + mr2 - 1) % 8 != "0") {
       trapped_check = 0
-      }} for (mr3 = 8; document.getElementById("_" + (trapcoord + offset + mr3) + "_").innerHTML == ""; mr3 += 8) {
-          if (document.getElementById("_" + (trapcoord + offset + mr3 + 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr3 + 8) + "_").innerHTML === inverse + " Queen") {
+      }} for (mr3 = 7; document.getElementById("_" + (trapcoord + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          if (document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Queen") {
       trapped_check = 0
-      }} for (mb1 = 8; (trapcoord + offset + mb1) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mb1) + "_").innerHTML == ""; mb1 += 9) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb1 + 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb1 + 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb1 + 9) % 8 != "1") {
+      }} for (mr4 = 7; document.getElementById("_" + (trapcoord + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          if (document.getElementById("_" + (trapcoord + mr4 - 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr4 - 8) + "_").innerHTML === inverse + " Queen") {
       trapped_check = 0
-      }} for (mb2 = 8; (trapcoord + offset + mb2) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mb2) + "_").innerHTML == ""; mb2 += -9) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb2 - 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb2 - 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb2 - 9) % 8 != "0") {
+      }} for (mb1 = 7; (trapcoord + mb1) % 8 != "1" && document.getElementById("_" + (trapcoord + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          if ((document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb1 + 9) % 8 != "1") {
       trapped_check = 0
-      }} for (mb3 = 8; (trapcoord + offset + mb3) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mb3) + "_").innerHTML == ""; mb3 += 7) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb3 + 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb3 + 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb3 + 7) % 8 != "0") {
+      }} for (mb2 = 7; (trapcoord + mb2) % 8 != "0" && document.getElementById("_" + (trapcoord + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          if ((document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb2 - 9) % 8 != "0") {
       trapped_check = 0
-      }} for (mb4 = 8; (trapcoord + offset + mb4) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mb4) + "_").innerHTML == ""; mb4 += -7) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb4 - 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb4 - 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb4 - 7) % 8 != "1") {
+      }} for (mb3 = 7; (trapcoord + mb3) % 8 != "0" && document.getElementById("_" + (trapcoord + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          if ((document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb3 + 7) % 8 != "0") {
       trapped_check = 0
       }}
-    for (mr1= 9; (trapcoord + offset + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mr1) + "_").innerHTML == ""; mr1 += 1) {
-      if (document.getElementById("_" + (trapcoord + offset + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr1 + 1) + "_").innerHTML === inverse + " Queen" && (trapcoord + offset + mr1 + 1) % 8 != "1") {
+    for (mr1= 8; (trapcoord + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + mr1) + "_").innerHTML == ""; mr1 += 1) {
+      if (document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Queen" && (trapcoord + mr1 + 1) % 8 != "1") {
         trapped_check = 0
-      }} for (mr2 = 9; (trapcoord + offset + mr2) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mr2) + "_").innerHTML == ""; mr2 += -1) {
-          if ((document.getElementById("_" + (trapcoord + offset + mr2 - 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr2 - 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mr2 - 1) % 8 != "0") {
+      }} for (mr2 = 8; (trapcoord + mr2) % 8 != "0" && document.getElementById("_" + (trapcoord + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          if ((document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + mr2 - 1) % 8 != "0") {
       trapped_check = 0
-      }} for (mr3 = 9; document.getElementById("_" + (trapcoord + offset + mr3) + "_").innerHTML == ""; mr3 += 8) {
-          if (document.getElementById("_" + (trapcoord + offset + mr3 + 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr3 + 8) + "_").innerHTML === inverse + " Queen") {
+      }} for (mr3 = 8; document.getElementById("_" + (trapcoord + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          if (document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Queen") {
       trapped_check = 0
-      }} for (mr4 = 9; document.getElementById("_" + (trapcoord + offset + mr4) + "_").innerHTML == ""; mr4 += -8) {
-          if (document.getElementById("_" + (trapcoord + offset + mr4 - 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + offset + mr4 - 8) + "_").innerHTML === inverse + " Queen") {
+      }} for (mb1 = 8; (trapcoord + mb1) % 8 != "1" && document.getElementById("_" + (trapcoord + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          if ((document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb1 + 9) % 8 != "1") {
       trapped_check = 0
-      }} for (mb1 = 9; (trapcoord + offset + mb1) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mb1) + "_").innerHTML == ""; mb1 += 9) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb1 + 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb1 + 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb1 + 9) % 8 != "1") {
+      }} for (mb2 = 8; (trapcoord + mb2) % 8 != "0" && document.getElementById("_" + (trapcoord + mb2) + "_").innerHTML == ""; mb2 += -9) {
+          if ((document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb2 - 9) % 8 != "0") {
       trapped_check = 0
-      }} for (mb3 = 9; (trapcoord + offset + mb3) % 8 != "0" && document.getElementById("_" + (trapcoord + offset + mb3) + "_").innerHTML == ""; mb3 += 7) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb3 + 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb3 + 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb3 + 7) % 8 != "0") {
+      }} for (mb3 = 8; (trapcoord + mb3) % 8 != "0" && document.getElementById("_" + (trapcoord + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          if ((document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb3 + 7) % 8 != "0") {
       trapped_check = 0
-      }} for (mb4 = 9; (trapcoord + offset + mb4) % 8 != "1" && document.getElementById("_" + (trapcoord + offset + mb4) + "_").innerHTML == ""; mb4 += -7) {
-          if ((document.getElementById("_" + (trapcoord + offset + mb4 - 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + offset + mb4 - 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + offset + mb4 - 7) % 8 != "1") {
+      }} for (mb4 = 8; (trapcoord + mb4) % 8 != "1" && document.getElementById("_" + (trapcoord + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          if ((document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb4 - 7) % 8 != "1") {
+      trapped_check = 0
+      }}
+    for (mr1= 9; (trapcoord + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + mr1) + "_").innerHTML == ""; mr1 += 1) {
+      if (document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Queen" && (trapcoord + mr1 + 1) % 8 != "1") {
+        trapped_check = 0
+      }} for (mr2 = 9; (trapcoord + mr2) % 8 != "0" && document.getElementById("_" + (trapcoord + mr2) + "_").innerHTML == ""; mr2 += -1) {
+          if ((document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + mr2 - 1) % 8 != "0") {
+      trapped_check = 0
+      }} for (mr3 = 9; document.getElementById("_" + (trapcoord + mr3) + "_").innerHTML == ""; mr3 += 8) {
+          if (document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Queen") {
+      trapped_check = 0
+      }} for (mr4 = 9; document.getElementById("_" + (trapcoord + mr4) + "_").innerHTML == ""; mr4 += -8) {
+          if (document.getElementById("_" + (trapcoord + mr4 - 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr4 - 8) + "_").innerHTML === inverse + " Queen") {
+      trapped_check = 0
+      }} for (mb1 = 9; (trapcoord + mb1) % 8 != "1" && document.getElementById("_" + (trapcoord + mb1) + "_").innerHTML == ""; mb1 += 9) {
+          if ((document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb1 + 9) % 8 != "1") {
+      trapped_check = 0
+      }} for (mb3 = 9; (trapcoord + mb3) % 8 != "0" && document.getElementById("_" + (trapcoord + mb3) + "_").innerHTML == ""; mb3 += 7) {
+          if ((document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb3 + 7) % 8 != "0") {
+      trapped_check = 0
+      }} for (mb4 = 9; (trapcoord + mb4) % 8 != "1" && document.getElementById("_" + (trapcoord + mb4) + "_").innerHTML == ""; mb4 += -7) {
+          if ((document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb4 - 7) % 8 != "1") {
       trapped_check = 0
       }}
   return trapped_check
