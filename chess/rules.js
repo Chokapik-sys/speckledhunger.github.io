@@ -469,8 +469,8 @@ function king() {
   whiteattacked = []
   blackattacked = []
   //White Check
-  for (wk = 0; wk < 65; wk ++) {
-    if (document.getElementById("_" + wk + "_").innerHTML === "White King") {
+  for (wk = 0; wk < 103; wk ++) {
+    if (document.getElementById("_" + wk + "_").innerHTML === "White King" || wk === 76) {
       break
     }
   }
@@ -807,8 +807,8 @@ function king() {
       document.getElementById("piececolour").style.color = "#FFFFFF"
       checkmate = 1
     }
-  } for (bk = 0; bk < 65; bk ++) {
-    if (document.getElementById("_" + bk + "_").innerHTML === "Black King") {
+  } for (bk = 0; bk < 103; bk ++) {
+    if (document.getElementById("_" + bk + "_").innerHTML === "Black King" || bk === 76) {
       break
     }
   } //Black Check
