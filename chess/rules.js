@@ -2,7 +2,6 @@ var piececolour = "White"
 var colourchange = 0
 var capture = 0
 //Check vars
-var trapped_check
 var blackattacked = []
 var N_blackcheck = 0
 var E_blackcheck = 0
@@ -1174,6 +1173,7 @@ function invasion() {
 }
 function trapped(inverse, colour, trapcoord) {
   console.log(inverse + " trapped:" + trapcoord)
+  var trapped_check
   //Immediate Threat
     for (mr1 = 1; (trapcoord + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if ((document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + mr1 + 1) % 8 != "1") {
