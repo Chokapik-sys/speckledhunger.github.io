@@ -1173,6 +1173,7 @@ function invasion() {
 }
 function trapped(inverse, colour, trapcoord) {
   console.log(inverse + " trapped:" + trapcoord)
+  var trapped_check = 1
   //Immediate Threat
     for (mr1 = 1; (trapcoord + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if ((document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + mr1 + 1) % 8 != "1") {
