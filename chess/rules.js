@@ -544,28 +544,124 @@ function king() {
     //Future Threat
     if (((document.getElementById("_" + (wk - 26) + "_").innerHTML === "Black Knight" && (wk - 26) % 8 != "7" && (wk - 26) % 8 != "0") || (document.getElementById("_" + (wk - 19) + "_").innerHTML === "Black Knight" && (wk - 19) % 8 != "7" && (wk - 19) % 8 != "0") || (document.getElementById("_" + (wk - 15) + "_").innerHTML === "Black Knight" && (wk - 15) % 8 != "1") || (document.getElementById("_" + (wk - 3) + "_").innerHTML === "Black Knight" && (wk - 3) % 8 != "0" && (wk - 3) % 8 != "7" && (wk - 3) % 8 != "6") || (document.getElementById("_" + (wk + 6) + "_").innerHTML === "Black Knight" && (wk + 6) % 8 != "0" && (wk + 6) % 8 != "7") || (document.getElementById("_" + (wk - 24) + "_").innerHTML === "Black Knight")) && document.getElementById("_" + (wk - 9) + "_").innerHTML === "") {
       NW_whitecheck = 1
-      whiteattacked.push(wk - 26)
+      if (document.getElementById("_" + (wk - 26) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 26)
+      } if (document.getElementById("_" + (wk - 19) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 19)
+      } if (document.getElementById("_" + (wk - 15) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 15)
+      } if (document.getElementById("_" + (wk - 3) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 3)
+      } if (document.getElementById("_" + (wk + 6) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 6)
+      } if (document.getElementById("_" + (wk - 24) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 24)
+      }
     }  if (((document.getElementById("_" + (wk - 25) + "_").innerHTML === "Black Knight" && (wk - 25) % 8 != "0") || (document.getElementById("_" + (wk - 23) + "_").innerHTML === "Black Knight" && (wk - 23) % 8 != "1") || (document.getElementById("_" + (wk - 18) + "_").innerHTML === "Black Knight" && (wk - 18) % 8 != "0" && (wk - 18) % 8 != "7") || (document.getElementById("_" + (wk - 14) + "_").innerHTML === "Black Knight" && (wk - 14) % 8 != "1" && (wk - 14) % 8 != "2") || (document.getElementById("_" + (wk - 2) + "_").innerHTML === "Black Knight" && (wk - 2) % 8 != "0" && (wk - 2) % 8 != "7") || (document.getElementById("_" + (wk + 2) + "_").innerHTML === "Black Knight" && (wk + 2) % 8 != "1" && (wk + 2) % 8 != "2")) && document.getElementById("_" + (wk - 8) + "_").innerHTML === "") {
       N_whitecheck = 1
-      whiteattacked.push(wk - 25)
+      if (document.getElementById("_" + (wk - 25) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 25)
+      } if (document.getElementById("_" + (wk - 23) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 23)
+      } if (document.getElementById("_" + (wk - 18) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 18)
+      } if (document.getElementById("_" + (wk - 14) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 14)
+      } if (document.getElementById("_" + (wk - 2) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 2)
+      } if (document.getElementById("_" + (wk + 2) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 2)
+      }
     } if (((document.getElementById("_" + (wk - 22) + "_").innerHTML === "Black Knight" && (wk - 22) % 8 != "1" && (wk - 22) % 8 != "2") || (document.getElementById("_" + (wk - 13) + "_").innerHTML === "Black Knight" && (wk - 13) % 8 != "1" && (wk - 13) % 8 != "2" && (wk - 13) % 8 != "3") || (document.getElementById("_" + (wk - 17) + "_").innerHTML === "Black Knight" && (wk - 17) % 8 != "0") || (document.getElementById("_" + (wk + 3) + "_").innerHTML === "Black Knight" && (wk + 3) % 8 != "1" && (wk + 3) % 8 != "2" && (wk + 3) % 8 != "3") || (document.getElementById("_" + (wk + 10) + "_").innerHTML === "Black Knight" && (wk + 10) % 8 != "1" && (wk + 10) % 8 != "2") || (document.getElementById("_" + (wk - 24) + "_").innerHTML === "Black Knight")) && document.getElementById("_" + (wk - 7) + "_").innerHTML === "") {
       NE_whitecheck = 1
-      whiteattacked.push(wk - 22)
+      if (document.getElementById("_" + (wk - 22) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 22)
+      } if (document.getElementById("_" + (wk - 13) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 13)
+      } if (document.getElementById("_" + (wk - 17) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 17)
+      } if (document.getElementById("_" + (wk + 3) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 3)
+      } if (document.getElementById("_" + (wk + 10) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 10)
+      } if (document.getElementById("_" + (wk - 24) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 24)
+      }
     }  if (((document.getElementById("_" + (wk - 18) + "_").innerHTML === "Black Knight" && (wk - 18) % 8 != "7" && (wk - 18) % 8 != "0") || (document.getElementById("_" + (wk - 16) + "_").innerHTML === "Black Knight") || (document.getElementById("_" + (wk - 11) + "_").innerHTML === "Black Knight" && (wk - 11) % 8 != "6" && (wk - 11) % 8 != "7" && (wk - 11) % 8 != "0") || (document.getElementById("_" + (wk + 5) + "_").innerHTML === "Black Knight" && (wk + 5) % 8 != "6" && (wk + 5) % 8 != "7" && (wk + 5) % 8 != "0") || (document.getElementById("_" + (wk + 14) + "_").innerHTML === "Black Knight" && (wk + 14) % 8 != "7" && (wk + 14) % 8 != "0") || (document.getElementById("_" + (wk + 16) + "_").innerHTML === "Black Knight")) && document.getElementById("_" + (wk - 1) + "_").innerHTML === "") {
       W_whitecheck = 1
-      whiteattacked.push(wk - 18)
+      if (document.getElementById("_" + (wk - 18) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 18)
+      } if (document.getElementById("_" + (wk - 16) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 16)
+      } if (document.getElementById("_" + (wk - 11) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 11)
+      } if (document.getElementById("_" + (wk + 5) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 5)
+      } if (document.getElementById("_" + (wk + 14) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 14)
+      } if (document.getElementById("_" + (wk + 16) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 16)
+      }
     } if (((document.getElementById("_" + (wk - 14) + "_").innerHTML === "Black Knight" && (wk - 14) % 8 != "1" && (wk - 14) % 8 != "2") || (document.getElementById("_" + (wk - 16) + "_").innerHTML === "Black Knight") || (document.getElementById("_" + (wk - 5) + "_").innerHTML === "Black Knight" && (wk - 5) % 8 != "1" && (wk - 5) % 8 != "2" && (wk - 5) % 8 != "3") || (document.getElementById("_" + (wk + 11) + "_").innerHTML === "Black Knight" && (wk + 11) % 8 != "1" && (wk + 11) % 8 != "2" && (wk + 11) % 8 != "3") || (document.getElementById("_" + (wk + 18) + "_").innerHTML === "Black Knight" && (wk + 18) % 8 != "1" && (wk + 18) % 8 != "2") || (document.getElementById("_" + (wk + 16) + "_").innerHTML === "Black Knight")) && document.getElementById("_" + (wk + 1) + "_").innerHTML === "") {
       E_whitecheck = 1
-      whiteattacked.push(wk - 14)
-    } if (((document.getElementById("_" + (wk + 22) + "_").innerHTML === "Black Knight" && (wk + 22) % 8 != "7" && (wk - 22) % 8 != "0") || (document.getElementById("_" + (wk + 13) + "_").innerHTML === "Black Knight" && (wk + 13) % 8 != "6" && (wk + 13) % 8 != "7" && (wk + 13) % 8 != "0") || (document.getElementById("_" + (wk + 17) + "_").innerHTML === "Black Knight" && (wk + 17) % 8 != "1") || (document.getElementById("_" + (wk - 3) + "_").innerHTML === "Black Knight" && (wk - 3) % 8 != "6" && (wk - 3) % 8 != "7" && (wk - 3) % 8 != "0") || (document.getElementById("_" + (wk - 10) + "_").innerHTML === "Black Knight" && (wk - 10) % 8 != "7" && (wk - 10) % 8 != "0") || (document.getElementById("_" + (wk + 24) + "_").innerHTML === "Black Knight")) && document.getElementById("_" + (wk + 7) + "_").innerHTML === "") {
+      if (document.getElementById("_" + (wk - 14) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 14)
+      } if (document.getElementById("_" + (wk - 16) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 16)
+      } if (document.getElementById("_" + (wk - 5) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 5)
+      } if (document.getElementById("_" + (wk + 11) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 11)
+      } if (document.getElementById("_" + (wk + 18) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 18)
+      } if (document.getElementById("_" + (wk + 16) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 16)
+      }
+    } if (((document.getElementById("_" + (wk + 22) + "_").innerHTML === "Black Knight" && (wk + 22) % 8 != "7" && (wk + 22) % 8 != "0") || (document.getElementById("_" + (wk + 13) + "_").innerHTML === "Black Knight" && (wk + 13) % 8 != "6" && (wk + 13) % 8 != "7" && (wk + 13) % 8 != "0") || (document.getElementById("_" + (wk + 17) + "_").innerHTML === "Black Knight" && (wk + 17) % 8 != "1") || (document.getElementById("_" + (wk - 3) + "_").innerHTML === "Black Knight" && (wk - 3) % 8 != "6" && (wk - 3) % 8 != "7" && (wk - 3) % 8 != "0") || (document.getElementById("_" + (wk - 10) + "_").innerHTML === "Black Knight" && (wk - 10) % 8 != "7" && (wk - 10) % 8 != "0") || (document.getElementById("_" + (wk + 24) + "_").innerHTML === "Black Knight")) && document.getElementById("_" + (wk + 7) + "_").innerHTML === "") {
       SW_whitecheck = 1
-      whiteattacked.push(wk + 22)
+      if (document.getElementById("_" + (wk + 22) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 22)
+      } if (document.getElementById("_" + (wk + 13) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 13)
+      } if (document.getElementById("_" + (wk + 17) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 17)
+      } if (document.getElementById("_" + (wk - 3) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 3)
+      } if (document.getElementById("_" + (wk - 10) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 10)
+      } if (document.getElementById("_" + (wk + 24) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 24)
+      }
     }  if (((document.getElementById("_" + (wk + 25) + "_").innerHTML === "Black Knight" && (wk + 25) % 8 != "1") || (document.getElementById("_" + (wk + 23) + "_").innerHTML === "Black Knight" && (wk + 23) % 8 != "0") || (document.getElementById("_" + (wk + 18) + "_").innerHTML === "Black Knight" && (wk + 18) % 8 != "1" && (wk + 18) % 8 != "2") || (document.getElementById("_" + (wk + 14) + "_").innerHTML === "Black Knight" && (wk + 14) % 8 != "7" && (wk + 14) % 8 != "0") || (document.getElementById("_" + (wk + 2) + "_").innerHTML === "Black Knight" && (wk + 2) % 8 != "1" && (wk + 2) % 8 != "2") || (document.getElementById("_" + (wk - 2) + "_").innerHTML === "Black Knight" && (wk - 2) % 8 != "7" && (wk - 2) % 8 != "0")) && document.getElementById("_" + (wk + 8) + "_").innerHTML === "") {
       S_whitecheck = 1
-      whiteattacked.push(wk + 25)
+      if (document.getElementById("_" + (wk + 25) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 25)
+      } if (document.getElementById("_" + (wk + 23) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 23)
+      } if (document.getElementById("_" + (wk + 18) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 18)
+      } if (document.getElementById("_" + (wk + 14) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 14)
+      } if (document.getElementById("_" + (wk + 2) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 2)
+      } if (document.getElementById("_" + (wk - 2) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 2)
+      }
     } if (((document.getElementById("_" + (wk + 26) + "_").innerHTML === "Black Knight" && (wk + 26) % 8 != "1" && (wk + 26) % 8 != "2") || (document.getElementById("_" + (wk + 19) + "_").innerHTML === "Black Knight" && (wk + 19) % 8 != "1" && (wk + 19) % 8 != "2") || (document.getElementById("_" + (wk + 15) + "_").innerHTML === "Black Knight" && (wk + 15) % 8 != "0") || (document.getElementById("_" + (wk + 3) + "_").innerHTML === "Black Knight" && (wk + 3) % 8 != "1" && (wk + 3) % 8 != "2" && (wk + 3) % 8 != "3") || (document.getElementById("_" + (wk - 6) + "_").innerHTML === "Black Knight" && (wk - 6) % 8 != "1" && (wk - 6) % 8 != "2") || (document.getElementById("_" + (wk + 24) + "_").innerHTML === "Black Knight")) && document.getElementById("_" + (wk + 9) + "_").innerHTML === "") {
       SE_whitecheck = 1
-      whiteattacked.push(wk + 26)
+      if (document.getElementById("_" + (wk + 26) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 26)
+      } if (document.getElementById("_" + (wk + 19) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 19)
+      } if (document.getElementById("_" + (wk + 15) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 15)
+      } if (document.getElementById("_" + (wk + 3) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 3)
+      } if (document.getElementById("_" + (wk - 6) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk - 6)
+      } if (document.getElementById("_" + (wk + 24) + "_").innerHTML === "Black Knight") {
+        whiteattacked.push(wk + 24)
+      }
     } 
     for (mr1= -9; (wk + mr1) % 8 != "1" && document.getElementById("_" + (wk + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if (document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Rook" || document.getElementById("_" + (wk + mr1 + 1) + "_").innerHTML === "Black Queen" && (wk + mr1 + 1) % 8 != "1") {
@@ -880,30 +976,127 @@ function king() {
         NE_blackcheck = 0
       }}
     //Future Threat
-    if (((document.getElementById("_" + (bk - 26) + "_").innerHTML === "White Knight" && (bk - 26) % 8 != "7" && (bk - 26) % 8 != "0") || (document.getElementById("_" + (bk - 19) + "_").innerHTML === "White Knight" && (bk - 19) % 8 != "7" && (bk - 19) % 8 != "0") || (document.getElementById("_" + (bk - 15) + "_").innerHTML === "White Knight" && (bk - 15) % 8 != "1") || (document.getElementById("_" + (bk - 3) + "_").innerHTML === "White Knight" && (bk - 3) % 8 != "0" && (bk - 3) % 8 != "7" && (bk - 3) % 8 != "6") || (document.getElementById("_" + (bk + 6) + "_").innerHTML === "White Knight" && (bk + 6) % 8 != "0" && (bk + 6) % 8 != "7") || (document.getElementById("_" + (bk - 24) + "_").innerHTML === "White Knight"))  && document.getElementById("_" + (bk - 9) + "_").innerHTML === "") {
+        //Future Threat
+    if (((document.getElementById("_" + (bk - 26) + "_").innerHTML === "White Knight" && (bk - 26) % 8 != "7" && (bk - 26) % 8 != "0") || (document.getElementById("_" + (bk - 19) + "_").innerHTML === "White Knight" && (bk - 19) % 8 != "7" && (bk - 19) % 8 != "0") || (document.getElementById("_" + (bk - 15) + "_").innerHTML === "White Knight" && (bk - 15) % 8 != "1") || (document.getElementById("_" + (bk - 3) + "_").innerHTML === "White Knight" && (bk - 3) % 8 != "0" && (bk - 3) % 8 != "7" && (bk - 3) % 8 != "6") || (document.getElementById("_" + (bk + 6) + "_").innerHTML === "White Knight" && (bk + 6) % 8 != "0" && (bk + 6) % 8 != "7") || (document.getElementById("_" + (bk - 24) + "_").innerHTML === "White Knight")) && document.getElementById("_" + (bk - 9) + "_").innerHTML === "") {
       NW_blackcheck = 1
-      blackattacked.push(bk - 26)
-    }  if (((document.getElementById("_" + (bk - 25) + "_").innerHTML === "White Knight" && (bk - 25) % 8 != "0") || (document.getElementById("_" + (bk - 23) + "_").innerHTML === "White Knight" && (bk - 23) % 8 != "1") || (document.getElementById("_" + (bk - 18) + "_").innerHTML === "White Knight" && (bk - 18) % 8 != "0" && (bk - 18) % 8 != "7") || (document.getElementById("_" + (bk - 14) + "_").innerHTML === "White Knight" && (bk - 14) % 8 != "1" && (bk - 14) % 8 != "2") || (document.getElementById("_" + (bk - 2) + "_").innerHTML === "White Knight" && (bk - 2) % 8 != "0" && (bk - 2) % 8 != "7") || (document.getElementById("_" + (bk + 2) + "_").innerHTML === "White Knight" && (bk + 2) % 8 != "1" && (bk + 2) % 8 != "2"))  && document.getElementById("_" + (bk - 8) + "_").innerHTML === "") {
+      if (document.getElementById("_" + (bk - 26) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 26)
+      } if (document.getElementById("_" + (bk - 19) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 19)
+      } if (document.getElementById("_" + (bk - 15) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 15)
+      } if (document.getElementById("_" + (bk - 3) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 3)
+      } if (document.getElementById("_" + (bk + 6) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 6)
+      } if (document.getElementById("_" + (bk - 24) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 24)
+      }
+    }  if (((document.getElementById("_" + (bk - 25) + "_").innerHTML === "White Knight" && (bk - 25) % 8 != "0") || (document.getElementById("_" + (bk - 23) + "_").innerHTML === "White Knight" && (bk - 23) % 8 != "1") || (document.getElementById("_" + (bk - 18) + "_").innerHTML === "White Knight" && (bk - 18) % 8 != "0" && (bk - 18) % 8 != "7") || (document.getElementById("_" + (bk - 14) + "_").innerHTML === "White Knight" && (bk - 14) % 8 != "1" && (bk - 14) % 8 != "2") || (document.getElementById("_" + (bk - 2) + "_").innerHTML === "White Knight" && (bk - 2) % 8 != "0" && (bk - 2) % 8 != "7") || (document.getElementById("_" + (bk + 2) + "_").innerHTML === "White Knight" && (bk + 2) % 8 != "1" && (bk + 2) % 8 != "2")) && document.getElementById("_" + (bk - 8) + "_").innerHTML === "") {
       N_blackcheck = 1
-      blackattacked.push(bk - 25)
-    } if (((document.getElementById("_" + (bk - 22) + "_").innerHTML === "White Knight" && (bk - 22) % 8 != "1" && (bk - 22) % 8 != "2") || (document.getElementById("_" + (bk - 13) + "_").innerHTML === "White Knight" && (bk - 13) % 8 != "1" && (bk - 13) % 8 != "2" && (bk - 13) % 8 != "3") || (document.getElementById("_" + (bk - 17) + "_").innerHTML === "White Knight" && (bk - 17) % 8 != "0") || (document.getElementById("_" + (bk + 3) + "_").innerHTML === "White Knight" && (bk + 3) % 8 != "1" && (bk + 3) % 8 != "2" && (bk + 3) % 8 != "3") || (document.getElementById("_" + (bk + 10) + "_").innerHTML === "White Knight" && (bk + 10) % 8 != "1" && (bk + 10) % 8 != "2") || (document.getElementById("_" + (bk - 24) + "_").innerHTML === "White Knight"))  && document.getElementById("_" + (bk - 7) + "_").innerHTML === "") {
+      if (document.getElementById("_" + (bk - 25) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 25)
+      } if (document.getElementById("_" + (bk - 23) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 23)
+      } if (document.getElementById("_" + (bk - 18) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 18)
+      } if (document.getElementById("_" + (bk - 14) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 14)
+      } if (document.getElementById("_" + (bk - 2) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 2)
+      } if (document.getElementById("_" + (bk + 2) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 2)
+      }
+    } if (((document.getElementById("_" + (bk - 22) + "_").innerHTML === "White Knight" && (bk - 22) % 8 != "1" && (bk - 22) % 8 != "2") || (document.getElementById("_" + (bk - 13) + "_").innerHTML === "White Knight" && (bk - 13) % 8 != "1" && (bk - 13) % 8 != "2" && (bk - 13) % 8 != "3") || (document.getElementById("_" + (bk - 17) + "_").innerHTML === "White Knight" && (bk - 17) % 8 != "0") || (document.getElementById("_" + (bk + 3) + "_").innerHTML === "White Knight" && (bk + 3) % 8 != "1" && (bk + 3) % 8 != "2" && (bk + 3) % 8 != "3") || (document.getElementById("_" + (bk + 10) + "_").innerHTML === "White Knight" && (bk + 10) % 8 != "1" && (bk + 10) % 8 != "2") || (document.getElementById("_" + (bk - 24) + "_").innerHTML === "White Knight")) && document.getElementById("_" + (bk - 7) + "_").innerHTML === "") {
       NE_blackcheck = 1
-      blackattacked.push(bk - 22)
-    }  if (((document.getElementById("_" + (bk - 18) + "_").innerHTML === "White Knight" && (bk - 18) % 8 != "7" && (bk - 18) % 8 != "0") || (document.getElementById("_" + (bk - 16) + "_").innerHTML === "White Knight") || (document.getElementById("_" + (bk - 11) + "_").innerHTML === "White Knight" && (bk - 11) % 8 != "6" && (bk - 11) % 8 != "7" && (bk - 11) % 8 != "0") || (document.getElementById("_" + (bk + 5) + "_").innerHTML === "White Knight" && (bk + 5) % 8 != "6" && (bk + 5) % 8 != "7" && (bk + 5) % 8 != "0") || (document.getElementById("_" + (bk + 14) + "_").innerHTML === "White Knight" && (bk + 14) % 8 != "7" && (bk + 14) % 8 != "0") || (document.getElementById("_" + (bk + 16) + "_").innerHTML === "White Knight"))  && document.getElementById("_" + (bk - 1) + "_").innerHTML === "") {
+      if (document.getElementById("_" + (bk - 22) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 22)
+      } if (document.getElementById("_" + (bk - 13) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 13)
+      } if (document.getElementById("_" + (bk - 17) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 17)
+      } if (document.getElementById("_" + (bk + 3) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 3)
+      } if (document.getElementById("_" + (bk + 10) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 10)
+      } if (document.getElementById("_" + (bk - 24) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 24)
+      }
+    }  if (((document.getElementById("_" + (bk - 18) + "_").innerHTML === "White Knight" && (bk - 18) % 8 != "7" && (bk - 18) % 8 != "0") || (document.getElementById("_" + (bk - 16) + "_").innerHTML === "White Knight") || (document.getElementById("_" + (bk - 11) + "_").innerHTML === "White Knight" && (bk - 11) % 8 != "6" && (bk - 11) % 8 != "7" && (bk - 11) % 8 != "0") || (document.getElementById("_" + (bk + 5) + "_").innerHTML === "White Knight" && (bk + 5) % 8 != "6" && (bk + 5) % 8 != "7" && (bk + 5) % 8 != "0") || (document.getElementById("_" + (bk + 14) + "_").innerHTML === "White Knight" && (bk + 14) % 8 != "7" && (bk + 14) % 8 != "0") || (document.getElementById("_" + (bk + 16) + "_").innerHTML === "White Knight")) && document.getElementById("_" + (bk - 1) + "_").innerHTML === "") {
       W_blackcheck = 1
-      blackattacked.push(bk - 18)
-    } if (((document.getElementById("_" + (bk - 14) + "_").innerHTML === "White Knight" && (bk - 14) % 8 != "1" && (bk - 14) % 8 != "2") || (document.getElementById("_" + (bk - 16) + "_").innerHTML === "White Knight") || (document.getElementById("_" + (bk - 5) + "_").innerHTML === "White Knight" && (bk - 5) % 8 != "1" && (bk - 5) % 8 != "2" && (bk - 5) % 8 != "3") || (document.getElementById("_" + (bk + 11) + "_").innerHTML === "White Knight" && (bk + 11) % 8 != "1" && (bk + 11) % 8 != "2" && (bk + 11) % 8 != "3") || (document.getElementById("_" + (bk + 18) + "_").innerHTML === "White Knight" && (bk + 18) % 8 != "1" && (bk + 18) % 8 != "2") || (document.getElementById("_" + (bk + 16) + "_").innerHTML === "White Knight"))  && document.getElementById("_" + (bk + 1) + "_").innerHTML === "") {
+      if (document.getElementById("_" + (bk - 18) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 18)
+      } if (document.getElementById("_" + (bk - 16) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 16)
+      } if (document.getElementById("_" + (bk - 11) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 11)
+      } if (document.getElementById("_" + (bk + 5) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 5)
+      } if (document.getElementById("_" + (bk + 14) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 14)
+      } if (document.getElementById("_" + (bk + 16) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 16)
+      }
+    } if (((document.getElementById("_" + (bk - 14) + "_").innerHTML === "White Knight" && (bk - 14) % 8 != "1" && (bk - 14) % 8 != "2") || (document.getElementById("_" + (bk - 16) + "_").innerHTML === "White Knight") || (document.getElementById("_" + (bk - 5) + "_").innerHTML === "White Knight" && (bk - 5) % 8 != "1" && (bk - 5) % 8 != "2" && (bk - 5) % 8 != "3") || (document.getElementById("_" + (bk + 11) + "_").innerHTML === "White Knight" && (bk + 11) % 8 != "1" && (bk + 11) % 8 != "2" && (bk + 11) % 8 != "3") || (document.getElementById("_" + (bk + 18) + "_").innerHTML === "White Knight" && (bk + 18) % 8 != "1" && (bk + 18) % 8 != "2") || (document.getElementById("_" + (bk + 16) + "_").innerHTML === "White Knight")) && document.getElementById("_" + (bk + 1) + "_").innerHTML === "") {
       E_blackcheck = 1
-      blackattacked.push(bk - 14)
-    } if (((document.getElementById("_" + (bk + 22) + "_").innerHTML === "White Knight" && (bk + 22) % 8 != "7" && (bk - 22) % 8 != "0") || (document.getElementById("_" + (bk + 13) + "_").innerHTML === "White Knight" && (bk + 13) % 8 != "6" && (bk + 13) % 8 != "7" && (bk + 13) % 8 != "0") || (document.getElementById("_" + (bk + 17) + "_").innerHTML === "White Knight" && (bk + 17) % 8 != "1") || (document.getElementById("_" + (bk - 3) + "_").innerHTML === "White Knight" && (bk - 3) % 8 != "6" && (bk - 3) % 8 != "7" && (bk - 3) % 8 != "0") || (document.getElementById("_" + (bk - 10) + "_").innerHTML === "White Knight" && (bk - 10) % 8 != "7" && (bk - 10) % 8 != "0") || (document.getElementById("_" + (bk + 24) + "_").innerHTML === "White Knight"))  && document.getElementById("_" + (bk + 7) + "_").innerHTML === "") {
+      if (document.getElementById("_" + (bk - 14) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 14)
+      } if (document.getElementById("_" + (bk - 16) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 16)
+      } if (document.getElementById("_" + (bk - 5) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 5)
+      } if (document.getElementById("_" + (bk + 11) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 11)
+      } if (document.getElementById("_" + (bk + 18) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 18)
+      } if (document.getElementById("_" + (bk + 16) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 16)
+      }
+    } if (((document.getElementById("_" + (bk + 22) + "_").innerHTML === "White Knight" && (bk + 22) % 8 != "7" && (bk + 22) % 8 != "0") || (document.getElementById("_" + (bk + 13) + "_").innerHTML === "White Knight" && (bk + 13) % 8 != "6" && (bk + 13) % 8 != "7" && (bk + 13) % 8 != "0") || (document.getElementById("_" + (bk + 17) + "_").innerHTML === "White Knight" && (bk + 17) % 8 != "1") || (document.getElementById("_" + (bk - 3) + "_").innerHTML === "White Knight" && (bk - 3) % 8 != "6" && (bk - 3) % 8 != "7" && (bk - 3) % 8 != "0") || (document.getElementById("_" + (bk - 10) + "_").innerHTML === "White Knight" && (bk - 10) % 8 != "7" && (bk - 10) % 8 != "0") || (document.getElementById("_" + (bk + 24) + "_").innerHTML === "White Knight")) && document.getElementById("_" + (bk + 7) + "_").innerHTML === "") {
       SW_blackcheck = 1
-      blackattacked.push(bk + 22)
-    }  if (((document.getElementById("_" + (bk + 25) + "_").innerHTML === "White Knight" && (bk + 25) % 8 != "1") || (document.getElementById("_" + (bk + 23) + "_").innerHTML === "White Knight" && (bk + 23) % 8 != "0") || (document.getElementById("_" + (bk + 18) + "_").innerHTML === "White Knight" && (bk + 18) % 8 != "1" && (bk + 18) % 8 != "2") || (document.getElementById("_" + (bk + 14) + "_").innerHTML === "White Knight" && (bk + 14) % 8 != "7" && (bk + 14) % 8 != "0") || (document.getElementById("_" + (bk + 2) + "_").innerHTML === "White Knight" && (bk + 2) % 8 != "1" && (bk + 2) % 8 != "2") || (document.getElementById("_" + (bk - 2) + "_").innerHTML === "White Knight" && (bk - 2) % 8 != "7" && (bk - 2) % 8 != "0"))  && document.getElementById("_" + (bk + 8) + "_").innerHTML === "") {
+      if (document.getElementById("_" + (bk + 22) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 22)
+      } if (document.getElementById("_" + (bk + 13) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 13)
+      } if (document.getElementById("_" + (bk + 17) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 17)
+      } if (document.getElementById("_" + (bk - 3) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 3)
+      } if (document.getElementById("_" + (bk - 10) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 10)
+      } if (document.getElementById("_" + (bk + 24) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 24)
+      }
+    }  if (((document.getElementById("_" + (bk + 25) + "_").innerHTML === "White Knight" && (bk + 25) % 8 != "1") || (document.getElementById("_" + (bk + 23) + "_").innerHTML === "White Knight" && (bk + 23) % 8 != "0") || (document.getElementById("_" + (bk + 18) + "_").innerHTML === "White Knight" && (bk + 18) % 8 != "1" && (bk + 18) % 8 != "2") || (document.getElementById("_" + (bk + 14) + "_").innerHTML === "White Knight" && (bk + 14) % 8 != "7" && (bk + 14) % 8 != "0") || (document.getElementById("_" + (bk + 2) + "_").innerHTML === "White Knight" && (bk + 2) % 8 != "1" && (bk + 2) % 8 != "2") || (document.getElementById("_" + (bk - 2) + "_").innerHTML === "White Knight" && (bk - 2) % 8 != "7" && (bk - 2) % 8 != "0")) && document.getElementById("_" + (bk + 8) + "_").innerHTML === "") {
       S_blackcheck = 1
-      blackattacked.push(bk + 25)
-    } if (((document.getElementById("_" + (bk + 26) + "_").innerHTML === "White Knight" && (bk + 26) % 8 != "1" && (bk + 26) % 8 != "2") || (document.getElementById("_" + (bk + 19) + "_").innerHTML === "White Knight" && (bk + 19) % 8 != "1" && (bk + 19) % 8 != "2") || (document.getElementById("_" + (bk + 15) + "_").innerHTML === "White Knight" && (bk + 15) % 8 != "0") || (document.getElementById("_" + (bk + 3) + "_").innerHTML === "White Knight" && (bk + 3) % 8 != "1" && (bk + 3) % 8 != "2" && (bk + 3) % 8 != "3") || (document.getElementById("_" + (bk - 6) + "_").innerHTML === "White Knight" && (bk - 6) % 8 != "1" && (bk - 6) % 8 != "2") || (document.getElementById("_" + (bk + 24) + "_").innerHTML === "White Knight"))  && document.getElementById("_" + (bk + 9) + "_").innerHTML === "") {
+      if (document.getElementById("_" + (bk + 25) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 25)
+      } if (document.getElementById("_" + (bk + 23) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 23)
+      } if (document.getElementById("_" + (bk + 18) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 18)
+      } if (document.getElementById("_" + (bk + 14) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 14)
+      } if (document.getElementById("_" + (bk + 2) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 2)
+      } if (document.getElementById("_" + (bk - 2) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 2)
+      }
+    } if (((document.getElementById("_" + (bk + 26) + "_").innerHTML === "White Knight" && (bk + 26) % 8 != "1" && (bk + 26) % 8 != "2") || (document.getElementById("_" + (bk + 19) + "_").innerHTML === "White Knight" && (bk + 19) % 8 != "1" && (bk + 19) % 8 != "2") || (document.getElementById("_" + (bk + 15) + "_").innerHTML === "White Knight" && (bk + 15) % 8 != "0") || (document.getElementById("_" + (bk + 3) + "_").innerHTML === "White Knight" && (bk + 3) % 8 != "1" && (bk + 3) % 8 != "2" && (bk + 3) % 8 != "3") || (document.getElementById("_" + (bk - 6) + "_").innerHTML === "White Knight" && (bk - 6) % 8 != "1" && (bk - 6) % 8 != "2") || (document.getElementById("_" + (bk + 24) + "_").innerHTML === "White Knight")) && document.getElementById("_" + (bk + 9) + "_").innerHTML === "") {
       SE_blackcheck = 1
-      blackattacked.push(bk + 26)
+      if (document.getElementById("_" + (bk + 26) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 26)
+      } if (document.getElementById("_" + (bk + 19) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 19)
+      } if (document.getElementById("_" + (bk + 15) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 15)
+      } if (document.getElementById("_" + (bk + 3) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 3)
+      } if (document.getElementById("_" + (bk - 6) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk - 6)
+      } if (document.getElementById("_" + (bk + 24) + "_").innerHTML === "White Knight") {
+        blackattacked.push(bk + 24)
+      }
     } 
     for (mr1= -9; (bk + mr1) % 8 != "1" && document.getElementById("_" + (bk + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if (document.getElementById("_" + (bk + mr1 + 1) + "_").innerHTML === "White Rook" || document.getElementById("_" + (bk + mr1 + 1) + "_").innerHTML === "White Queen" && (bk + mr1 + 1) % 8 != "1") {
