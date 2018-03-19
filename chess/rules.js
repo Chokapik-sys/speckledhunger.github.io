@@ -1676,9 +1676,11 @@ function promote() {
     autopromote = 0
   }
   if (piece === "White Pawn" && ((square -1) - (square - 1) % 8) / 8 === 7 && whitepromote === 0 && autopromote === 1) {
+        document.getElementById("report").innerHTML += "<br>White Pawn promoted to Queen"
         piece = "White Queen"
         whitepromote = 1
       } if (piece === "Black Pawn" && ((square -1) - (square - 1) % 8) / 8 === 0 && blackpromote === 0 && autopromote === 1) {
+        document.getElementById("report").innerHTML += "<br>Black Pawn promoted to Queen"
         piece = "Black Queen"
         blackpromote = 1
       }
@@ -1702,6 +1704,7 @@ function castle() {
     if ((whitecastle.split(" ")[0] === "Kingside" || whitecastle.split(" ")[1] === "Kingside") && square === 3) {
       confirmcastle = prompt("Do you wish to Castle with this Rook? (Yes / No)")
       if (confirmcastle.toLocaleLowerCase() === "yes") {
+        document.getElementById("report").innerHTML += "<br>White Rook castled Kingside"
       document.getElementById("_2_").innerHTML = "White King"
       document.getElementById("_4_").innerHTML = ""
       } if (confirmcastle.toLocaleLowerCase() !== "yes" && confirmcastle.toLocaleLowerCase() !== "no") {
@@ -1711,6 +1714,7 @@ function castle() {
     } if ((whitecastle.split(" ")[0] === "Queenside" || whitecastle.split(" ")[1] === "Queenside") && square === 5) {
       confirmcastle = prompt("Do you wish to Castle with this Rook? (Yes / No)")
       if (confirmcastle.toLocaleLowerCase() === "yes") {
+        document.getElementById("report").innerHTML += "<br>White Rook castled Queenside"
       document.getElementById("_6_").innerHTML = "White King"
       document.getElementById("_4_").innerHTML = ""
       } if (confirmcastle.toLocaleLowerCase() !== "yes" && confirmcastle.toLocaleLowerCase() !== "no") {
@@ -1729,6 +1733,7 @@ function castle() {
     if ((blackcastle.split(" ")[0] === "Kingside" || blackcastle.split(" ")[1] === "Kingside") && square === 59) {
       confirmcastle = prompt("Do you wish to Castle with this Rook? (Yes / No)")
       if (confirmcastle.toLocaleLowerCase() === "yes") {
+        document.getElementById("report").innerHTML += "<br>Black Rook castled Kingside"
       document.getElementById("_58_").innerHTML = "Black King"
       document.getElementById("_60_").innerHTML = ""
       } if (confirmcastle.toLocaleLowerCase() !== "yes" && confirmcastle.toLocaleLowerCase() !== "no") {
@@ -1738,6 +1743,7 @@ function castle() {
     } if ((blackcastle.split(" ")[0] === "Queenside" || blackcastle.split(" ")[1] === "Queenside") && square === 61) {
       confirmcastle = prompt("Do you wish to Castle with this Rook? (Yes / No)")
       if (confirmcastle.toLocaleLowerCase() === "yes") {
+        document.getElementById("report").innerHTML += "<br>Black Rook castled Queenside"
       document.getElementById("_62_").innerHTML = "Black King"
       document.getElementById("_60_").innerHTML = ""
       } if (confirmcastle.toLocaleLowerCase() !== "yes" && confirmcastle.toLocaleLowerCase() !== "no") {
