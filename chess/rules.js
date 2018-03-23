@@ -1399,9 +1399,24 @@ function king() {
 }
 function invasion() {
   whitecheckcoord = blackcheckcoord = whitetrapped = blacktrapped = "0000000000000000000000000000000000000000000000000000000000000000"
-  for (var i = 0; i < whiteattacked.length; i++) {
-    whitecheckcoord = whitecheckcoord.substr(0, whiteattacked[i] - 1) + '1' + whitecheckcoord.substr(whiteattacked[i]);
-  } for (var i = 0; i < blackattacked.length; i++) {
+  for (var i = 0; i < _NWwhiteattacked.length; i++) {
+    NW_whitecheckcoord = NW_whitecheckcoord.substr(0, NW_whiteattacked[i] - 1) + '1' + NW_whitecheckcoord.substr(NW_whiteattacked[i]);
+  } for (var i = 0; i < N_whiteattacked.length; i++) {
+    N_whitecheckcoord = N_whitecheckcoord.substr(0, N_whiteattacked[i] - 1) + '1' + N_whitecheckcoord.substr(N_whiteattacked[i]);
+  } for (var i = 0; i < NE_whiteattacked.length; i++) {
+    NE_whitecheckcoord = NE_whitecheckcoord.substr(0, NE_whiteattacked[i] - 1) + '1' + NE_whitecheckcoord.substr(NE_whiteattacked[i]);
+  } for (var i = 0; i < W_whiteattacked.length; i++) {
+    W_whitecheckcoord = W_whitecheckcoord.substr(0, W_whiteattacked[i] - 1) + '1' + W_whitecheckcoord.substr(W_whiteattacked[i]);
+  } for (var i = 0; i < E_whiteattacked.length; i++) {
+    E_whitecheckcoord = E_whitecheckcoord.substr(0, E_whiteattacked[i] - 1) + '1' + _whitecheckcoord.substr(E_whiteattacked[i]);
+  } for (var i = 0; i < SW_whiteattacked.length; i++) {
+    SW_whitecheckcoord = SW_whitecheckcoord.substr(0, SW_whiteattacked[i] - 1) + '1' +SW _whitecheckcoord.substr(SW_whiteattacked[i]);
+  } for (var i = 0; i < S_whiteattacked.length; i++) {
+    S_whitecheckcoord = S_whitecheckcoord.substr(0, S_whiteattacked[i] - 1) + '1' + S_whitecheckcoord.substr(S_whiteattacked[i]);
+  } for (var i = 0; i < SE_whiteattacked.length; i++) {
+    SE_whitecheckcoord = SE_whitecheckcoord.substr(0, SE_whiteattacked[i] - 1) + '1' + SE_whitecheckcoord.substr(SE_whiteattacked[i]);
+  }
+  for (var i = 0; i < blackattacked.length; i++) {
     blackcheckcoord = blackcheckcoord.substr(0, blackattacked[i] - 1) + '1' + blackcheckcoord.substr(blackattacked[i]);
   }
   for (var i = 0; i < 64; i++) {
