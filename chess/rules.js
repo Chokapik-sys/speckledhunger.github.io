@@ -1408,9 +1408,9 @@ function invasion() {
   } for (var i = 0; i < W_whiteattacked.length; i++) {
     W_whitecheckcoord = W_whitecheckcoord.substr(0, W_whiteattacked[i] - 1) + '1' + W_whitecheckcoord.substr(W_whiteattacked[i]);
   } for (var i = 0; i < E_whiteattacked.length; i++) {
-    E_whitecheckcoord = E_whitecheckcoord.substr(0, E_whiteattacked[i] - 1) + '1' + _whitecheckcoord.substr(E_whiteattacked[i]);
+    E_whitecheckcoord = E_whitecheckcoord.substr(0, E_whiteattacked[i] - 1) + '1' + E_whitecheckcoord.substr(E_whiteattacked[i]);
   } for (var i = 0; i < SW_whiteattacked.length; i++) {
-    SW_whitecheckcoord = SW_whitecheckcoord.substr(0, SW_whiteattacked[i] - 1) + '1' +SW _whitecheckcoord.substr(SW_whiteattacked[i]);
+    SW_whitecheckcoord = SW_whitecheckcoord.substr(0, SW_whiteattacked[i] - 1) + '1' + SW_whitecheckcoord.substr(SW_whiteattacked[i]);
   } for (var i = 0; i < S_whiteattacked.length; i++) {
     S_whitecheckcoord = S_whitecheckcoord.substr(0, S_whiteattacked[i] - 1) + '1' + S_whitecheckcoord.substr(S_whiteattacked[i]);
   } for (var i = 0; i < SE_whiteattacked.length; i++) {
