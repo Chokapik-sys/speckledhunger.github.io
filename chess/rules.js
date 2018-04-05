@@ -1398,7 +1398,7 @@ function king() {
   invasion()
 }
 function invasion() {
-  whitecheckcoord = NW_whitecheckcoord = N_whitecheckcoord = NE_whitecheckcoord = W_whitecheckcoord = E_whitecheckcoord = SW_whitecheckcoord = S_whitecheckcoord = SE_whitecheckcoord = blackcheckcoord = whitetrapped = blacktrapped = "0000000000000000000000000000000000000000000000000000000000000000"
+  whitecheckcoord = NW_whitecheckcoord = N_whitecheckcoord = NE_whitecheckcoord = W_whitecheckcoord = E_whitecheckcoord = SW_whitecheckcoord = S_whitecheckcoord = SE_whitecheckcoord = blackcheckcoord = whitetrapped = NW_whitetrapped = N_whitetrapped = NE_whitetrapped = W_whitetrapped = E_whitetrapped = SW_whitetrapped = S_whitetrapped = SE_whitetrapped = blacktrapped = "0000000000000000000000000000000000000000000000000000000000000000"
   for (var i = 0; i < NW_whiteattacked.length; i++) {
     NW_whitecheckcoord = NW_whitecheckcoord.substr(0, NW_whiteattacked[i] - 1) + '1' + NW_whitecheckcoord.substr(NW_whiteattacked[i]);
   } for (var i = 0; i < N_whiteattacked.length; i++) {
