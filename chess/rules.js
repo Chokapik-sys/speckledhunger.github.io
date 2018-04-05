@@ -1415,8 +1415,22 @@ function invasion() {
   } for (var i = 0; i < SE_whiteattacked.length; i++) {
     SE_whitecheckcoord = SE_whitecheckcoord.substr(0, SE_whiteattacked[i] - 1) + '1' + SE_whitecheckcoord.substr(SE_whiteattacked[i]);
   }
-  for (var i = 0; i < blackattacked.length; i++) {
-    blackcheckcoord = blackcheckcoord.substr(0, blackattacked[i] - 1) + '1' + blackcheckcoord.substr(blackattacked[i]);
+  for (var i = 0; i < NW_blackattacked.length; i++) {
+    NW_blackcheckcoord = NW_blackcheckcoord.substr(0, NW_blackattacked[i] - 1) + '1' + NW_blackcheckcoord.substr(NW_blackattacked[i]);
+  } for (var i = 0; i < N_blackattacked.length; i++) {
+    N_blackcheckcoord = N_blackcheckcoord.substr(0, N_blackattacked[i] - 1) + '1' + N_blackcheckcoord.substr(N_blackattacked[i]);
+  } for (var i = 0; i < NE_blackattacked.length; i++) {
+    NE_blackcheckcoord = NE_blackcheckcoord.substr(0, NE_blackattacked[i] - 1) + '1' + NE_blackcheckcoord.substr(NE_blackattacked[i]);
+  } for (var i = 0; i < W_blackattacked.length; i++) {
+    W_blackcheckcoord = W_blackcheckcoord.substr(0, W_blackattacked[i] - 1) + '1' + W_blackcheckcoord.substr(W_blackattacked[i]);
+  } for (var i = 0; i < E_blackattacked.length; i++) {
+    E_blackcheckcoord = E_blackcheckcoord.substr(0, E_blackattacked[i] - 1) + '1' + E_blackcheckcoord.substr(E_blackattacked[i]);
+  } for (var i = 0; i < SW_blackattacked.length; i++) {
+    SW_blackcheckcoord = SW_blackcheckcoord.substr(0, SW_blackattacked[i] - 1) + '1' + SW_blackcheckcoord.substr(SW_blackattacked[i]);
+  } for (var i = 0; i < S_blackattacked.length; i++) {
+    S_blackcheckcoord = S_blackcheckcoord.substr(0, S_blackattacked[i] - 1) + '1' + S_blackcheckcoord.substr(S_blackattacked[i]);
+  } for (var i = 0; i < SE_blackattacked.length; i++) {
+    SE_blackcheckcoord = SE_blackcheckcoord.substr(0, SE_blackattacked[i] - 1) + '1' + SE_blackcheckcoord.substr(SE_blackattacked[i]);
   }
   for (var i = 0; i < 64; i++) {
     if (NW_whitecheckcoord[i] === "1") {
@@ -1436,8 +1450,22 @@ function invasion() {
     } if (SE_whitecheckcoord[i] === "1") {
    SE_whitetrapped = SE_whitetrapped.substr(0, i) + trapped("White","Black", i+1) + SE_whitetrapped.substr(i + 1);
     }
-    if (blackcheckcoord[i] === "1") {
-    blacktrapped = blacktrapped.substr(0, i) + trapped("Black","White", i+1) + blacktrapped.substr(i + 1);
+    if (NW_blackcheckcoord[i] === "1") {
+   NW_blacktrapped = NW_blacktrapped.substr(0, i) + trapped("Black","White", i+1) + NW_blacktrapped.substr(i + 1);
+    } if (N_blackcheckcoord[i] === "1") {
+   N_blacktrapped = N_blacktrapped.substr(0, i) + trapped("Black","White", i+1) + N_blacktrapped.substr(i + 1);
+    } if (NE_blackcheckcoord[i] === "1") {
+   NE_blacktrapped = NE_blacktrapped.substr(0, i) + trapped("Black","White", i+1) + NE_blacktrapped.substr(i + 1);
+    } if (W_blackcheckcoord[i] === "1") {
+   W_blacktrapped = W_blacktrapped.substr(0, i) + trapped("Black","White", i+1) + W_blacktrapped.substr(i + 1);
+    } if (E_blackcheckcoord[i] === "1") {
+   E_blacktrapped = E_blacktrapped.substr(0, i) + trapped("Black","White", i+1) + E_blacktrapped.substr(i + 1);
+    } if (SW_blackcheckcoord[i] === "1") {
+   SW_blacktrapped = SW_blacktrapped.substr(0, i) + trapped("Black","White", i+1) + SW_blacktrapped.substr(i + 1);
+    } if (S_blackcheckcoord[i] === "1") {
+   S_blacktrapped = S_blacktrapped.substr(0, i) + trapped("Black","White", i+1) + S_blacktrapped.substr(i + 1);
+    } if (SE_blackcheckcoord[i] === "1") {
+   SE_blacktrapped = SE_blacktrapped.substr(0, i) + trapped("Black","White", i+1) + SE_blacktrapped.substr(i + 1);
     }
   }
 }
