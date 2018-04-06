@@ -941,16 +941,6 @@ function king() {
     } if (document.getElementById("_" + (wk + 9) + "_").innerHTML !== "") {
       SE_whitetext = 1
     }
-    if (NW_whitecheck === 1 || N_whitecheck === 1 || NE_whitecheck === 1 || W_whitecheck === 1 || E_whitecheck === 1 || SW_whitecheck === 1 || S_whitecheck === 1 || SE_whitecheck === 1) {
-       document.getElementById("report").innerHTML += "<br>White King in check"
-    } if (NW_whitecheck === 1 && N_whitecheck === 1 && NE_whitecheck === 1 && W_whitecheck === 1 && E_whitecheck === 1 && SW_whitecheck === 1 && S_whitecheck === 1 && SE_whitecheck === 1) {
-       document.getElementById("report").innerHTML += "<br>White King in checkmate"
-      piececolour = "Black Won"
-      document.getElementById("piececolour").innerHTML = "Black won"
-      document.getElementById("piececolour").style.background = "#000000"
-      document.getElementById("piececolour").style.color = "#FFFFFF"
-      checkmate = 1
-    }
   } for (bk = 0; bk < 103; bk ++) {
     if (document.getElementById("_" + bk + "_").innerHTML === "Black King" || bk === 76) {
       break
@@ -1375,16 +1365,6 @@ function king() {
     } if (document.getElementById("_" + (bk + 9) + "_").innerHTML !== "") {
       SE_blacktext = 1
     }
-    if (NW_blackcheck === 1 || N_blackcheck === 1 || NE_blackcheck === 1 || W_blackcheck === 1 || E_blackcheck === 1 || SW_blackcheck === 1 || S_blackcheck === 1 || SE_blackcheck === 1) {
-       document.getElementById("report").innerHTML += "<br>Black King in check"
-    } if (NW_blackcheck === 1 && N_blackcheck === 1 && NE_blackcheck === 1 && W_blackcheck === 1 && E_blackcheck === 1 && SW_blackcheck === 1 && S_blackcheck === 1 && SE_blackcheck === 1) {
-       document.getElementById("report").innerHTML += "<br>Black King in checkmate"
-      piececolour = "White Won"
-      document.getElementById("piececolour").innerHTML = "White won"
-      document.getElementById("piececolour").style.background = "#FFFFFF"
-      document.getElementById("piececolour").style.color = "#000000"
-      checkmate = 1
-    }
   } if (aftercheckmate === 0) {
     blackcheckpattern = NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString()
     whitecheckpattern = NW_whitecheck.toString() + N_whitecheck.toString() + NE_whitecheck.toString() + W_whitecheck.toString() + E_whitecheck.toString() + SW_whitecheck.toString() + S_whitecheck.toString() + SE_whitecheck.toString()
@@ -1469,6 +1449,26 @@ function invasion() {
    SE_blacktrapped = SE_blacktrapped.substr(0, i) + trapped("Black","White", i+1) + SE_blacktrapped.substr(i + 1);
     }
   }
+      if (NW_whitecheck === 1 || N_whitecheck === 1 || NE_whitecheck === 1 || W_whitecheck === 1 || E_whitecheck === 1 || SW_whitecheck === 1 || S_whitecheck === 1 || SE_whitecheck === 1) {
+       document.getElementById("report").innerHTML += "<br>White King in check"
+    } if (NW_whitecheck === 1 && N_whitecheck === 1 && NE_whitecheck === 1 && W_whitecheck === 1 && E_whitecheck === 1 && SW_whitecheck === 1 && S_whitecheck === 1 && SE_whitecheck === 1) {
+       document.getElementById("report").innerHTML += "<br>White King in checkmate"
+      piececolour = "Black Won"
+      document.getElementById("piececolour").innerHTML = "Black won"
+      document.getElementById("piececolour").style.background = "#000000"
+      document.getElementById("piececolour").style.color = "#FFFFFF"
+      checkmate = 1
+    }
+      if (NW_blackcheck === 1 || N_blackcheck === 1 || NE_blackcheck === 1 || W_blackcheck === 1 || E_blackcheck === 1 || SW_blackcheck === 1 || S_blackcheck === 1 || SE_blackcheck === 1) {
+       document.getElementById("report").innerHTML += "<br>Black King in check"
+    } if (NW_blackcheck === 1 && N_blackcheck === 1 && NE_blackcheck === 1 && W_blackcheck === 1 && E_blackcheck === 1 && SW_blackcheck === 1 && S_blackcheck === 1 && SE_blackcheck === 1) {
+       document.getElementById("report").innerHTML += "<br>Black King in checkmate"
+      piececolour = "White Won"
+      document.getElementById("piececolour").innerHTML = "White won"
+      document.getElementById("piececolour").style.background = "#FFFFFF"
+      document.getElementById("piececolour").style.color = "#000000"
+      checkmate = 1
+    }
 }
 function trapped(inverse, colour, trapcoord) {
   console.log(inverse + " trapped:" + trapcoord)
