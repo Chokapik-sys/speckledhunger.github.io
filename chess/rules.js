@@ -65,6 +65,14 @@ var NE_blacktrapped = 0
 var NW_blacktrapped = 0
 var SE_blacktrapped = 0
 var SW_blacktrapped = 0
+var N_blacktrapcoord = 0
+var E_blacktrapcoord = 0
+var S_blacktrapcoord = 0
+var W_blacktrapcoord = 0
+var NE_blacktrapcoord = 0
+var NW_blacktrapcoord = 0
+var SE_blacktrapcoord = 0
+var SW_blacktrapcoord = 0
 var whitetrapped = 0
 var N_whitetrapped = 0
 var E_whitetrapped = 0
@@ -74,6 +82,14 @@ var NE_whitetrapped = 0
 var NW_whitetrapped = 0
 var SE_whitetrapped = 0
 var SW_whitetrapped = 0
+var N_whitetrapcoord = 0
+var E_whitetrapcoord = 0
+var S_whitetrapcoord = 0
+var W_whitetrapcoord = 0
+var NE_whitetrapcoord = 0
+var NW_whitetrapcoord = 0
+var SE_whitetrapcoord = 0
+var SW_whitetrapcoord = 0
 //Text vars
 var N_blacktext = 0
 var E_blacktext = 0
@@ -92,7 +108,9 @@ var SE_whitetext = 0
 var SW_whitetext  = 0
 var NW_whitetext = 0
 var blacktextpattern = 0
-var blacktextpattern = 0
+var blacktrappattern = 0
+var whitetextpattern = 0
+var whitetrappattern = 0
 //
 var newevent = 0
 var wk = 1
@@ -1378,7 +1396,7 @@ function king() {
 }
 function invasion() {
   whitecheckcoord = NW_whitecheckcoord = N_whitecheckcoord = NE_whitecheckcoord = W_whitecheckcoord = E_whitecheckcoord = SW_whitecheckcoord = S_whitecheckcoord = SE_whitecheckcoord = blackcheckcoord = NW_blackcheckcoord = N_blackcheckcoord = NE_blackcheckcoord = W_blackcheckcoord = E_blackcheckcoord = SW_blackcheckcoord = S_blackcheckcoord = SE_blackcheckcoord = "0000000000000000000000000000000000000000000000000000000000000000"
-  whitetrapped = NW_whitetrapped = N_whitetrapped = NE_whitetrapped = W_whitetrapped = E_whitetrapped = SW_whitetrapped = S_whitetrapped = SE_whitetrapped = blacktrapped = NW_blacktrapped = N_blacktrapped = NE_blacktrapped = W_blacktrapped = E_blacktrapped = SW_blacktrapped = S_blacktrapped = SE_blacktrapped = "0000000000000000000000000000000000000000000000000000000000000000"
+  whitetrapcoord = NW_whitetrapcoord = N_whitetrapcoord = NE_whitetrapcoord = W_whitetrapcoord = E_whitetrapcoord = SW_whitetrapcoord = S_whitetrapcoord = SE_whitetrapcoord = blacktrapcoord = NW_blacktrapcoord = N_blacktrapcoord = NE_blacktrapcoord = W_blacktrapcoord = E_blacktrapcoord = SW_blacktrapcoord = S_blacktrapcoord = SE_blacktrapcoord = "0000000000000000000000000000000000000000000000000000000000000000"
   for (var i = 0; i < NW_whiteattacked.length; i++) {
     NW_whitecheckcoord = NW_whitecheckcoord.substr(0, NW_whiteattacked[i] - 1) + '1' + NW_whitecheckcoord.substr(NW_whiteattacked[i]);
   } for (var i = 0; i < N_whiteattacked.length; i++) {
@@ -1415,43 +1433,43 @@ function invasion() {
   }
   for (var i = 0; i < 64; i++) {
     if (NW_whitecheckcoord[i] === "1") {
-   NW_whitetrapped = NW_whitetrapped.substr(0, i) + trapped("White","Black", i+1) + NW_whitetrapped.substr(i + 1);
+   NW_whitetrapcoord = NW_whitetrapcoord.substr(0, i) + trapcoord("White","Black", i+1) + NW_whitetrapcoord.substr(i + 1);
     } if (N_whitecheckcoord[i] === "1") {
-   N_whitetrapped = N_whitetrapped.substr(0, i) + trapped("White","Black", i+1) + N_whitetrapped.substr(i + 1);
+   N_whitetrapcoord = N_whitetrapcoord.substr(0, i) + trapcoord("White","Black", i+1) + N_whitetrapcoord.substr(i + 1);
     } if (NE_whitecheckcoord[i] === "1") {
-   NE_whitetrapped = NE_whitetrapped.substr(0, i) + trapped("White","Black", i+1) + NE_whitetrapped.substr(i + 1);
+   NE_whitetrapcoord = NE_whitetrapcoord.substr(0, i) + trapcoord("White","Black", i+1) + NE_whitetrapcoord.substr(i + 1);
     } if (W_whitecheckcoord[i] === "1") {
-   W_whitetrapped = W_whitetrapped.substr(0, i) + trapped("White","Black", i+1) + W_whitetrapped.substr(i + 1);
+   W_whitetrapcoord = W_whitetrapcoord.substr(0, i) + trapcoord("White","Black", i+1) + W_whitetrapcoord.substr(i + 1);
     } if (E_whitecheckcoord[i] === "1") {
-   E_whitetrapped = E_whitetrapped.substr(0, i) + trapped("White","Black", i+1) + E_whitetrapped.substr(i + 1);
+   E_whitetrapcoord = E_whitetrapcoord.substr(0, i) + trapcoord("White","Black", i+1) + E_whitetrapcoord.substr(i + 1);
     } if (SW_whitecheckcoord[i] === "1") {
-   SW_whitetrapped = SW_whitetrapped.substr(0, i) + trapped("White","Black", i+1) + SW_whitetrapped.substr(i + 1);
+   SW_whitetrapcoord = SW_whitetrapcoord.substr(0, i) + trapcoord("White","Black", i+1) + SW_whitetrapcoord.substr(i + 1);
     } if (S_whitecheckcoord[i] === "1") {
-   S_whitetrapped = S_whitetrapped.substr(0, i) + trapped("White","Black", i+1) + S_whitetrapped.substr(i + 1);
+   S_whitetrapcoord = S_whitetrapcoord.substr(0, i) + trapcoord("White","Black", i+1) + S_whitetrapcoord.substr(i + 1);
     } if (SE_whitecheckcoord[i] === "1") {
-   SE_whitetrapped = SE_whitetrapped.substr(0, i) + trapped("White","Black", i+1) + SE_whitetrapped.substr(i + 1);
+   SE_whitetrapcoord = SE_whitetrapcoord.substr(0, i) + trapcoord("White","Black", i+1) + SE_whitetrapcoord.substr(i + 1);
     }
     if (NW_blackcheckcoord[i] === "1") {
-   NW_blacktrapped = NW_blacktrapped.substr(0, i) + trapped("Black","White", i+1) + NW_blacktrapped.substr(i + 1);
+   NW_blacktrapcoord = NW_blacktrapcoord.substr(0, i) + trapcoord("Black","White", i+1) + NW_blacktrapcoord.substr(i + 1);
     } if (N_blackcheckcoord[i] === "1") {
-   N_blacktrapped = N_blacktrapped.substr(0, i) + trapped("Black","White", i+1) + N_blacktrapped.substr(i + 1);
+   N_blacktrapcoord = N_blacktrapcoord.substr(0, i) + trapcoord("Black","White", i+1) + N_blacktrapcoord.substr(i + 1);
     } if (NE_blackcheckcoord[i] === "1") {
-   NE_blacktrapped = NE_blacktrapped.substr(0, i) + trapped("Black","White", i+1) + NE_blacktrapped.substr(i + 1);
+   NE_blacktrapcoord = NE_blacktrapcoord.substr(0, i) + trapcoord("Black","White", i+1) + NE_blacktrapcoord.substr(i + 1);
     } if (W_blackcheckcoord[i] === "1") {
-   W_blacktrapped = W_blacktrapped.substr(0, i) + trapped("Black","White", i+1) + W_blacktrapped.substr(i + 1);
+   W_blacktrapcoord = W_blacktrapcoord.substr(0, i) + trapcoord("Black","White", i+1) + W_blacktrapcoord.substr(i + 1);
     } if (E_blackcheckcoord[i] === "1") {
-   E_blacktrapped = E_blacktrapped.substr(0, i) + trapped("Black","White", i+1) + E_blacktrapped.substr(i + 1);
+   E_blacktrapcoord = E_blacktrapcoord.substr(0, i) + trapcoord("Black","White", i+1) + E_blacktrapcoord.substr(i + 1);
     } if (SW_blackcheckcoord[i] === "1") {
-   SW_blacktrapped = SW_blacktrapped.substr(0, i) + trapped("Black","White", i+1) + SW_blacktrapped.substr(i + 1);
+   SW_blacktrapcoord = SW_blacktrapcoord.substr(0, i) + trapcoord("Black","White", i+1) + SW_blacktrapcoord.substr(i + 1);
     } if (S_blackcheckcoord[i] === "1") {
-   S_blacktrapped = S_blacktrapped.substr(0, i) + trapped("Black","White", i+1) + S_blacktrapped.substr(i + 1);
+   S_blacktrapcoord = S_blacktrapcoord.substr(0, i) + trapcoord("Black","White", i+1) + S_blacktrapcoord.substr(i + 1);
     } if (SE_blackcheckcoord[i] === "1") {
-   SE_blacktrapped = SE_blacktrapped.substr(0, i) + trapped("Black","White", i+1) + SE_blacktrapped.substr(i + 1);
+   SE_blacktrapcoord = SE_blacktrapcoord.substr(0, i) + trapcoord("Black","White", i+1) + SE_blacktrapcoord.substr(i + 1);
     }
   }
    if (NW_whitecheck === 1 || N_whitecheck === 1 || NE_whitecheck === 1 || W_whitecheck === 1 || E_whitecheck === 1 || SW_whitecheck === 1 || S_whitecheck === 1 || SE_whitecheck === 1) {
        document.getElementById("report").innerHTML += "<br>White King in check"
-    } if ((NW_whitetrapped && N_whitetrapped && NE_whitetrapped && W_whitetrapped && E_whitetrapped && SW_whitetrapped && S_whitetrapped && SE_whitetrapped !== "0000000000000000000000000000000000000000000000000000000000000000")) {
+    } if ((NW_whitetrapcoord && N_whitetrapcoord && NE_whitetrapcoord && W_whitetrapcoord && E_whitetrapcoord && SW_whitetrapcoord && S_whitetrapcoord && SE_whitetrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000")) {
        document.getElementById("report").innerHTML += "<br>White King in checkmate"
       piececolour = "Black Won"
       document.getElementById("piececolour").innerHTML = "Black won"
