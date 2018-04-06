@@ -216,6 +216,7 @@ function save() {
   BKIcur = 0
 }
 function load() {
+  checkmate = 0
   readc = document.cookie.split("; ")
   if (readc.toString() !== "") {
     for (cl = 0; cl < readc.length; cl++) {
