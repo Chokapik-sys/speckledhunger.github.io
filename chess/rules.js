@@ -1403,8 +1403,9 @@ function king() {
   invasion()
 }
 function invasion() {
-  whitecheckcoord = NW_whitecheckcoord = N_whitecheckcoord = NE_whitecheckcoord = W_whitecheckcoord = E_whitecheckcoord = SW_whitecheckcoord = S_whitecheckcoord = SE_whitecheckcoord = blackcheckcoord = NW_blackcheckcoord = N_blackcheckcoord = NE_blackcheckcoord = W_blackcheckcoord = E_blackcheckcoord = SW_blackcheckcoord = S_blackcheckcoord = SE_blackcheckcoord = "0000000000000000000000000000000000000000000000000000000000000000"
-  whitetrapcoord = NW_whitetrapcoord = N_whitetrapcoord = NE_whitetrapcoord = W_whitetrapcoord = E_whitetrapcoord = SW_whitetrapcoord = S_whitetrapcoord = SE_whitetrapcoord = blacktrapcoord = NW_blacktrapcoord = N_blacktrapcoord = NE_blacktrapcoord = W_blacktrapcoord = E_blacktrapcoord = SW_blacktrapcoord = S_blacktrapcoord = SE_blacktrapcoord = "0000000000000000000000000000000000000000000000000000000000000000"
+  NW_whitecheckcoord = N_whitecheckcoord = NE_whitecheckcoord = W_whitecheckcoord = E_whitecheckcoord = SW_whitecheckcoord = S_whitecheckcoord = SE_whitecheckcoord = NW_blackcheckcoord = N_blackcheckcoord = NE_blackcheckcoord = W_blackcheckcoord = E_blackcheckcoord = SW_blackcheckcoord = S_blackcheckcoord = SE_blackcheckcoord = "0000000000000000000000000000000000000000000000000000000000000000"
+  NW_whitetrapcoord = N_whitetrapcoord = NE_whitetrapcoord = W_whitetrapcoord = E_whitetrapcoord = SW_whitetrapcoord = S_whitetrapcoord = SE_whitetrapcoord = NW_blacktrapcoord = N_blacktrapcoord = NE_blacktrapcoord = W_blacktrapcoord = E_blacktrapcoord = SW_blacktrapcoord = S_blacktrapcoord = SE_blacktrapcoord = "0000000000000000000000000000000000000000000000000000000000000000"
+  NW_whitetrapped = N_whitetrapped = NE_whitetrapped = W_whitetrapped = E_whitetrapped = SW_whitetrapped = S_whitetrapped = SE_whitetrapped = NW_blacktrapped = N_blacktrapped = NE_blacktrapped = W_blacktrapped = E_blacktrapped = SW_blacktrapped = S_blacktrapped = SE_blacktrapped = 0
   for (var i = 0; i < NW_whiteattacked.length; i++) {
     NW_whitecheckcoord = NW_whitecheckcoord.substr(0, NW_whiteattacked[i] - 1) + '1' + NW_whitecheckcoord.substr(NW_whiteattacked[i]);
   } for (var i = 0; i < N_whiteattacked.length; i++) {
