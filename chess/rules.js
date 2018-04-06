@@ -11,6 +11,7 @@ var NE_blackattacked = []
 var SE_blackattacked = []
 var SW_blackattacked = []
 var NW_blackattacked = []
+//
 var N_blackcheck = 0
 var E_blackcheck = 0
 var S_blackcheck = 0
@@ -19,6 +20,7 @@ var NE_blackcheck = 0
 var SE_blackcheck = 0
 var SW_blackcheck  = 0
 var NW_blackcheck = 0
+//
 var whiteattacked = []
 var N_whiteattacked = []
 var E_whiteattacked = []
@@ -28,6 +30,7 @@ var NE_whiteattacked = []
 var SE_whiteattacked = []
 var SW_whiteattacked = []
 var NW_whiteattacked = []
+//
 var N_whitecheck = 0
 var E_whitecheck = 0
 var S_whitecheck = 0
@@ -36,9 +39,10 @@ var NE_whitecheck = 0
 var SE_whitecheck = 0
 var SW_whitecheck  = 0
 var NW_whitecheck = 0
+//
 var blackcheckpattern = 0
 var whitecheckpattern = 0
-var blackcheckcoord = 0
+//
 var N_blackcheckcoord = 0
 var E_blackcheckcoord = 0
 var S_blackcheckcoord = 0
@@ -47,7 +51,7 @@ var NE_blackcheckcoord = 0
 var NW_blackcheckcoord = 0
 var SE_blackcheckcoord = 0
 var SW_blackcheckcoord = 0
-var whitecheckcoord = 0
+//
 var N_whitecheckcoord = 0
 var E_whitecheckcoord = 0
 var S_whitecheckcoord = 0
@@ -56,6 +60,7 @@ var NE_whitecheckcoord = 0
 var NW_whitecheckcoord = 0
 var SE_whitecheckcoord = 0
 var SW_whitecheckcoord = 0
+//
 var blacktrapped = 0
 var N_blacktrapped = 0
 var E_blacktrapped = 0
@@ -65,6 +70,7 @@ var NE_blacktrapped = 0
 var NW_blacktrapped = 0
 var SE_blacktrapped = 0
 var SW_blacktrapped = 0
+//
 var N_blacktrapcoord = 0
 var E_blacktrapcoord = 0
 var S_blacktrapcoord = 0
@@ -73,6 +79,7 @@ var NE_blacktrapcoord = 0
 var NW_blacktrapcoord = 0
 var SE_blacktrapcoord = 0
 var SW_blacktrapcoord = 0
+//
 var whitetrapped = 0
 var N_whitetrapped = 0
 var E_whitetrapped = 0
@@ -82,6 +89,7 @@ var NE_whitetrapped = 0
 var NW_whitetrapped = 0
 var SE_whitetrapped = 0
 var SW_whitetrapped = 0
+//
 var N_whitetrapcoord = 0
 var E_whitetrapcoord = 0
 var S_whitetrapcoord = 0
@@ -1395,8 +1403,8 @@ function king() {
   invasion()
 }
 function invasion() {
-  whitecheckcoord = NW_whitecheckcoord = N_whitecheckcoord = NE_whitecheckcoord = W_whitecheckcoord = E_whitecheckcoord = SW_whitecheckcoord = S_whitecheckcoord = SE_whitecheckcoord = blackcheckcoord = NW_blackcheckcoord = N_blackcheckcoord = NE_blackcheckcoord = W_blackcheckcoord = E_blackcheckcoord = SW_blackcheckcoord = S_blackcheckcoord = SE_blackcheckcoord = "0000000000000000000000000000000000000000000000000000000000000000"
-  whitetrapcoord = NW_whitetrapcoord = N_whitetrapcoord = NE_whitetrapcoord = W_whitetrapcoord = E_whitetrapcoord = SW_whitetrapcoord = S_whitetrapcoord = SE_whitetrapcoord = blacktrapcoord = NW_blacktrapcoord = N_blacktrapcoord = NE_blacktrapcoord = W_blacktrapcoord = E_blacktrapcoord = SW_blacktrapcoord = S_blacktrapcoord = SE_blacktrapcoord = "0000000000000000000000000000000000000000000000000000000000000000"
+  NW_whitecheckcoord = N_whitecheckcoord = NE_whitecheckcoord = W_whitecheckcoord = E_whitecheckcoord = SW_whitecheckcoord = S_whitecheckcoord = SE_whitecheckcoord = NW_blackcheckcoord = N_blackcheckcoord = NE_blackcheckcoord = W_blackcheckcoord = E_blackcheckcoord = SW_blackcheckcoord = S_blackcheckcoord = SE_blackcheckcoord = "0000000000000000000000000000000000000000000000000000000000000000"
+  NW_whitetrapcoord = N_whitetrapcoord = NE_whitetrapcoord = W_whitetrapcoord = E_whitetrapcoord = SW_whitetrapcoord = S_whitetrapcoord = SE_whitetrapcoord = NW_blacktrapcoord = N_blacktrapcoord = NE_blacktrapcoord = W_blacktrapcoord = E_blacktrapcoord = SW_blacktrapcoord = S_blacktrapcoord = SE_blacktrapcoord = "0000000000000000000000000000000000000000000000000000000000000000"
   for (var i = 0; i < NW_whiteattacked.length; i++) {
     NW_whitecheckcoord = NW_whitecheckcoord.substr(0, NW_whiteattacked[i] - 1) + '1' + NW_whitecheckcoord.substr(NW_whiteattacked[i]);
   } for (var i = 0; i < N_whiteattacked.length; i++) {
