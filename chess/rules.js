@@ -1476,9 +1476,27 @@ function invasion() {
    SE_blacktrapcoord = SE_blacktrapcoord.substr(0, i) + trapped("Black","White", i+1) + SE_blacktrapcoord.substr(i + 1);
     }
   }
+  if (NW_whitetrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
+   NW_whitetrapped = 1 
+  } if (N_whitetrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
+   N_whitetrapped = 1 
+  } if (NE_whitetrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
+   NE_whitetrapped = 1 
+  } if (W_whitetrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
+   W_whitetrapped = 1 
+  } if (E_whitetrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
+   E_whitetrapped = 1 
+  } if (SW_whitetrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
+   SW_whitetrapped = 1 
+  } if (S_whitetrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
+   S_whitetrapped = 1 
+  } if (SE_whitetrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
+   SE_whitetrapped = 1 
+  }
+  whitetrappattern = NW_whitetrapped.toString() + N_whitetrapped.toString() + NE_whitetrapped.toString() + W_whitetrapped.toString() + E_whitetrapped.toString() + SW_whitetrapped.toString() + S_whitetrapped.toString() + SE_whitetrapped.toString()
    if (NW_whitecheck === 1 || N_whitecheck === 1 || NE_whitecheck === 1 || W_whitecheck === 1 || E_whitecheck === 1 || SW_whitecheck === 1 || S_whitecheck === 1 || SE_whitecheck === 1) {
        document.getElementById("report").innerHTML += "<br>White King in check"
-    } if ((NW_whitetrapcoord && N_whitetrapcoord && NE_whitetrapcoord && W_whitetrapcoord && E_whitetrapcoord && SW_whitetrapcoord && S_whitetrapcoord && SE_whitetrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000")) {
+    } if (whitetrappattern === "11111111" || (parseInt(whitetrappattern,2) + parseInt(whitetextpattern,2) === 255 && whitetrappattern !== "00000000")) {
        document.getElementById("report").innerHTML += "<br>White King in checkmate"
       piececolour = "Black Won"
       document.getElementById("piececolour").innerHTML = "Black won"
