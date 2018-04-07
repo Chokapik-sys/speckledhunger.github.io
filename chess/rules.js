@@ -540,8 +540,8 @@ function king() {
   NW_blackcheck = N_blackcheck = NE_blackcheck = W_blackcheck = E_blackcheck = SW_blackcheck = S_blackcheck = SE_blackcheck = 0
   NW_whitetext = N_whitetext = NE_whitetext = W_whitetext = E_whitetext = SW_whitetext = S_whitetext = SE_whitetext = 0
   NW_blacktext = N_blacktext = NE_blacktext = W_blacktext = E_blacktext = SW_blacktext = S_blacktext = SE_blacktext = 0
-  whiteattacked = []
-  blackattacked = []
+  NW_whiteattacked = N_whiteattacked = NE_whiteattacked = W_whiteattacked = E_whiteattacked = SW_whiteattacked = S_whiteattacked = SE_whiteattacked = []
+  NW_blackattacked = N_blackattacked = NE_blackattacked = W_blackattacked = E_blackattacked = SW_blackattacked = S_blackattacked = SE_blackattacked = []
   //White Check
   for (wk = 0; wk < 103; wk ++) {
     if (document.getElementById("_" + wk + "_").innerHTML === "White King" || wk === 76) {
