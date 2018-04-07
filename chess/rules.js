@@ -1403,6 +1403,7 @@ function king() {
   invasion()
 }
 function invasion() {
+  checkmate = 0
   NW_whitecheckcoord = N_whitecheckcoord = NE_whitecheckcoord = W_whitecheckcoord = E_whitecheckcoord = SW_whitecheckcoord = S_whitecheckcoord = SE_whitecheckcoord = NW_blackcheckcoord = N_blackcheckcoord = NE_blackcheckcoord = W_blackcheckcoord = E_blackcheckcoord = SW_blackcheckcoord = S_blackcheckcoord = SE_blackcheckcoord = "0000000000000000000000000000000000000000000000000000000000000000"
   NW_whitetrapcoord = N_whitetrapcoord = NE_whitetrapcoord = W_whitetrapcoord = E_whitetrapcoord = SW_whitetrapcoord = S_whitetrapcoord = SE_whitetrapcoord = NW_blacktrapcoord = N_blacktrapcoord = NE_blacktrapcoord = W_blacktrapcoord = E_blacktrapcoord = SW_blacktrapcoord = S_blacktrapcoord = SE_blacktrapcoord = "0000000000000000000000000000000000000000000000000000000000000000"
   NW_whitetrapped = N_whitetrapped = NE_whitetrapped = W_whitetrapped = E_whitetrapped = SW_whitetrapped = S_whitetrapped = SE_whitetrapped = NW_blacktrapped = N_blacktrapped = NE_blacktrapped = W_blacktrapped = E_blacktrapped = SW_blacktrapped = S_blacktrapped = SE_blacktrapped = 0
