@@ -1520,7 +1520,7 @@ function invasion() {
       document.getElementById("piececolour").style.color = "#FFFFFF"
       checkmate = 1
     }
-    if (NW_blacktrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
+  if (NW_blacktrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
    NW_blacktrapped = 1 
   } if (N_blacktrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
    N_blacktrapped = 1 
@@ -1539,13 +1539,13 @@ function invasion() {
   }
   blacktrappattern = NW_blacktrapped.toString() + N_blacktrapped.toString() + NE_blacktrapped.toString() + W_blacktrapped.toString() + E_blacktrapped.toString() + SW_blacktrapped.toString() + S_blacktrapped.toString() + SE_blacktrapped.toString()
    if (NW_blackcheck === 1 || N_blackcheck === 1 || NE_blackcheck === 1 || W_blackcheck === 1 || E_blackcheck === 1 || SW_blackcheck === 1 || S_blackcheck === 1 || SE_blackcheck === 1) {
-       document.getElementBlackyId("report").innerHTML += "<br>Black King in check"
+       document.getElementById("report").innerHTML += "<br>Black King in check"
     } if (blacktrappattern === "11111111" || (parseInt(blacktrappattern,2) + parseInt(blacktextpattern,2) === 255 && blacktrappattern !== "00000000")) {
-       document.getElementBlackyId("report").innerHTML += "<br>Black King in checkmate"
+       document.getElementById("report").innerHTML += "<br>Black King in checkmate"
       piececolour = "White Won"
-      document.getElementBlackyId("piececolour").innerHTML = "White won"
-      document.getElementBlackyId("piececolour").style.background = "#000000"
-      document.getElementBlackyId("piececolour").style.color = "#FFFFFF"
+      document.getElementById("piececolour").innerHTML = "White won"
+      document.getElementById("piececolour").style.background = "#000000"
+      document.getElementById("piececolour").style.color = "#FFFFFF"
       checkmate = 1
     }
 }
