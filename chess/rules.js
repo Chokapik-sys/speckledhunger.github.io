@@ -1520,6 +1520,34 @@ function invasion() {
       document.getElementById("piececolour").style.color = "#FFFFFF"
       checkmate = 1
     }
+    if (NW_blacktrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
+   NW_blacktrapped = 1 
+  } if (N_blacktrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
+   N_blacktrapped = 1 
+  } if (NE_blacktrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
+   NE_blacktrapped = 1 
+  } if (W_blacktrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
+   W_blacktrapped = 1 
+  } if (E_blacktrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
+   E_blacktrapped = 1 
+  } if (SW_blacktrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
+   SW_blacktrapped = 1 
+  } if (S_blacktrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
+   S_blacktrapped = 1 
+  } if (SE_blacktrapcoord !== "0000000000000000000000000000000000000000000000000000000000000000") {
+   SE_blacktrapped = 1 
+  }
+  blacktrappattern = NW_blacktrapped.toString() + N_blacktrapped.toString() + NE_blacktrapped.toString() + W_blacktrapped.toString() + E_blacktrapped.toString() + SW_blacktrapped.toString() + S_blacktrapped.toString() + SE_blacktrapped.toString()
+   if (NW_blackcheck === 1 || N_blackcheck === 1 || NE_blackcheck === 1 || W_blackcheck === 1 || E_blackcheck === 1 || SW_blackcheck === 1 || S_blackcheck === 1 || SE_blackcheck === 1) {
+       document.getElementBlackyId("report").innerHTML += "<br>Black King in check"
+    } if (blacktrappattern === "11111111" || (parseInt(blacktrappattern,2) + parseInt(blacktextpattern,2) === 255 && blacktrappattern !== "00000000")) {
+       document.getElementBlackyId("report").innerHTML += "<br>Black King in checkmate"
+      piececolour = "White Won"
+      document.getElementBlackyId("piececolour").innerHTML = "White won"
+      document.getElementBlackyId("piececolour").style.background = "#000000"
+      document.getElementBlackyId("piececolour").style.color = "#FFFFFF"
+      checkmate = 1
+    }
 }
 function trapped(inverse, colour, trapcoord) {
   console.log(inverse + " trapped:" + trapcoord)
