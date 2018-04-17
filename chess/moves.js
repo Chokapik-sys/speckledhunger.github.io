@@ -366,6 +366,11 @@ function move_piece(){
       king()
       changecolour()
     }
+    else if (prev_square !== square) {
+      resetTurn()
+      phase_change()
+      move_piece()
+    }
   }
   //end of phase3
   }
