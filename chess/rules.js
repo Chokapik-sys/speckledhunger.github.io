@@ -1552,7 +1552,6 @@ function invasion() {
 function trapped(inverse, colour, trapcoord) {
   console.log(inverse + " trapped:" + trapcoord)
   var trapped_check
-  //Immediate Threat
     for (mr1 = 1; (trapcoord + mr1) % 8 != "1" && document.getElementById("_" + (trapcoord + mr1) + "_").innerHTML == ""; mr1 += 1) {
       if ((document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr1 + 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + mr1 + 1) % 8 != "1") {
   trapped_check = 0
@@ -1594,9 +1593,12 @@ function trapped(inverse, colour, trapcoord) {
       } else {
         trapped_check = 1
       }}
-     if ((document.getElementById("_" + (square - 10) + "_").innerHTML === inverse + "Knight" && (square - 10) % 8 != "7" && (square - 10) % 8 != "0")||(document.getElementById("_" + (square + 10) + "_").innerHTML === inverse + "Knight" && (square + 10) % 8 != "1" && (square + 10) % 8 != "2")||(document.getElementById("_" + (square - 6) + "_").innerHTML === inverse + "Knight" && (square - 6) % 8 != "1" && (square - 6) % 8 != "2")||(document.getElementById("_" + (square + 6) + "_").innerHTML === inverse + "Knight" && (square + 6) % 8 != "7" && (square + 6) % 8 != "0")||(document.getElementById("_" + (square - 17) + "_").innerHTML === inverse + "Knight" && (square - 17) % 8 != "0")||(document.getElementById("_" + (square + 17) + "_").innerHTML === inverse + "Knight" && (square + 17) % 8 != "1")||(document.getElementById("_" + (square - 15) + "_").innerHTML === inverse + "Knight" && (square - 15) % 8 != "1")||(document.getElementById("_" + (square + 15) + "_").innerHTML === inverse + "Knight" && (square + 15) % 8 != "0")){
+     if ((document.getElementById("_" + (trapcoord - 10) + "_").innerHTML === inverse + " Knight" && (trapcoord - 10) % 8 != "7" && (trapcoord - 10) % 8 != "0")||(document.getElementById("_" + (trapcoord + 10) + "_").innerHTML === inverse + " Knight" && (trapcoord + 10) % 8 != "1" && (trapcoord + 10) % 8 != "2")||(document.getElementById("_" + (trapcoord - 6) + "_").innerHTML === inverse + " Knight" && (trapcoord - 6) % 8 != "1" && (trapcoord - 6) % 8 != "2")||(document.getElementById("_" + (trapcoord + 6) + "_").innerHTML === inverse + " Knight" && (trapcoord + 6) % 8 != "7" && (trapcoord + 6) % 8 != "0")||(document.getElementById("_" + (trapcoord - 17) + "_").innerHTML === inverse + " Knight" && (trapcoord - 17) % 8 != "0")||(document.getElementById("_" + (trapcoord + 17) + "_").innerHTML === inverse + " Knight" && (trapcoord + 17) % 8 != "1")||(document.getElementById("_" + (trapcoord - 15) + "_").innerHTML === inverse + " Knight" && (trapcoord - 15) % 8 != "1")||(document.getElementById("_" + (trapcoord + 15) + "_").innerHTML === inverse + " Knight" && (trapcoord + 15) % 8 != "0")){
          trapped_check = 0
        }
+  if ((document.getElementById(trapcoord - 9).innerHTML === inverse + " Pawn" && trapcoord - 9 % 8 !== 0)||(document.getElementById(trapcoord - 8).innerHTML === inverse + " Pawn)||(document.getElementById(trapcoord - 7).innerHTML === inverse + " Pawn" && trapcoord - 7 % 8 !== 1)||(document.getElementById(trapcoord - 1).innerHTML === inverse + " Pawn" && trapcoord - 1 % 8 !== 0)||(document.getElementById(trapcoord + 1).innerHTML === inverse + " Pawn" && trapcoord + 1 % 8 !== 1)||(document.getElementById(trapcoord + 7).innerHTML === inverse + " Pawn" && trapcoord + 7 % 8 !== 0)||(document.getElementById(trapcoord + 8).innerHTML === inverse + " Pawn")||(document.getElementById(trapcoord + 9).innerHTML === inverse + " Pawn" && trapcoord + 9 % 8 !== 1)) {
+      trapped_check = 0
+      }
   return trapped_check
 }
 function aftercheck() {
