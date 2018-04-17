@@ -324,6 +324,7 @@ function load() {
       }
       }
     }
+    save()
   }
     checksave = 0
   king()
