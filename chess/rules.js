@@ -1596,6 +1596,9 @@ function trapped(inverse, colour, trapcoord) {
      if ((document.getElementById("_" + (trapcoord - 10) + "_").innerHTML === inverse + " Knight" && (trapcoord - 10) % 8 != "7" && (trapcoord - 10) % 8 != "0")||(document.getElementById("_" + (trapcoord + 10) + "_").innerHTML === inverse + " Knight" && (trapcoord + 10) % 8 != "1" && (trapcoord + 10) % 8 != "2")||(document.getElementById("_" + (trapcoord - 6) + "_").innerHTML === inverse + " Knight" && (trapcoord - 6) % 8 != "1" && (trapcoord - 6) % 8 != "2")||(document.getElementById("_" + (trapcoord + 6) + "_").innerHTML === inverse + " Knight" && (trapcoord + 6) % 8 != "7" && (trapcoord + 6) % 8 != "0")||(document.getElementById("_" + (trapcoord - 17) + "_").innerHTML === inverse + " Knight" && (trapcoord - 17) % 8 != "0")||(document.getElementById("_" + (trapcoord + 17) + "_").innerHTML === inverse + " Knight" && (trapcoord + 17) % 8 != "1")||(document.getElementById("_" + (trapcoord - 15) + "_").innerHTML === inverse + " Knight" && (trapcoord - 15) % 8 != "1")||(document.getElementById("_" + (trapcoord + 15) + "_").innerHTML === inverse + " Knight" && (trapcoord + 15) % 8 != "0")){
          trapped_check = 0
        }
+    if ((document.getElementById("_" + (trapcoord - 9) + "_").innerHTML === inverse + " Pawn" && (trapcoord - 9) % 8 !== 0 && inverse === "White")||(document.getElementById("_" + (trapcoord - 7) + "_").innerHTML === inverse + " Pawn" && (trapcoord - 7) % 8 !== 1 && inverse === "White")||(document.getElementById("_" + (trapcoord + 9) + "_").innerHTML === inverse + " Pawn" && (trapcoord + 9) % 8 !== 1 && inverse === "Black")||(document.getElementById("_" + (trapcoord + 7) + "_").innerHTML === inverse + " Pawn" && (trapcoord + 7) % 8 !== 0 && inverse === "Black")) {
+      trapped_check = 0
+      }
   return trapped_check
 }
 function aftercheck() {
