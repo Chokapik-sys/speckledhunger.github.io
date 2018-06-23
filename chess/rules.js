@@ -534,7 +534,7 @@ if (capture === 1 || pawnmove === 1 || knightmove === 1 || bishopmove === 1 || r
     capture = 0
 }
 }
-function king() {
+function king(runafter) {
   //Reset all values
   NW_whitecheck = N_whitecheck = NE_whitecheck = W_whitecheck = E_whitecheck = SW_whitecheck = S_whitecheck = SE_whitecheck = 0
   NW_blackcheck = N_blackcheck = NE_blackcheck = W_blackcheck = E_blackcheck = SW_blackcheck = S_blackcheck = SE_blackcheck = 0
@@ -1410,7 +1410,7 @@ function king() {
     blackcheckpattern = NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString()
     whitecheckpattern = NW_whitecheck.toString() + N_whitecheck.toString() + NE_whitecheck.toString() + W_whitecheck.toString() + E_whitecheck.toString() + SW_whitecheck.toString() + S_whitecheck.toString() + SE_whitecheck.toString()
   }
-  if (aftercheckmate === 1) {
+  if (aftercheckmate === 1 && runafter !== 1) {
     aftercheck()
   }
   blacktextpattern = NW_blacktext.toString() + N_blacktext.toString() + NE_blacktext.toString() + W_blacktext.toString() + E_blacktext.toString() + SW_blacktext.toString() + S_blacktext.toString() + SE_blacktext.toString()
@@ -1608,14 +1608,14 @@ function aftercheck() {
       if (blackcheckpattern !== NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString() && NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString() !== "00000000") {
       document.getElementById("_" + prev_square + "_").innerHTML = piece
       document.getElementById("_" + square + "_").innerHTML = prev_inner
-      king()
+      king(1)
       alert("King cannot be moved into check")
       piececolour = "White"
         afterproceed = 0
     } if (blackcheckpattern !== "00000000" && NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString() && NW_blackcheck.toString() + N_blackcheck.toString() + NE_blackcheck.toString() + W_blackcheck.toString() + E_blackcheck.toString() + SW_blackcheck.toString() + S_blackcheck.toString() + SE_blackcheck.toString() !== "00000000") {
       document.getElementById("_" + prev_square + "_").innerHTML = piece
       document.getElementById("_" + square + "_").innerHTML = prev_inner
-      king()
+      king(1)
       alert("King must be moved out of check")
       piececolour = "White"
       afterproceed = 0
@@ -1624,14 +1624,14 @@ function aftercheck() {
       if (whitecheckpattern !== NW_whitecheck.toString() + N_whitecheck.toString() + NE_whitecheck.toString() + W_whitecheck.toString() + E_whitecheck.toString() + SW_whitecheck.toString() + S_whitecheck.toString() + SE_whitecheck.toString() && NW_whitecheck.toString() + N_whitecheck.toString() + NE_whitecheck.toString() + W_whitecheck.toString() + E_whitecheck.toString() + SW_whitecheck.toString() + S_whitecheck.toString() + SE_whitecheck.toString() !== "00000000") {
       document.getElementById("_" + prev_square + "_").innerHTML = piece
       document.getElementById("_" + square + "_").innerHTML = prev_inner
-      king()
+      king(1)
       alert("King cannot be moved into check")
       piececolour = "Black"
         afterproceed = 0
     } if (whitecheckpattern !== "00000000" && NW_whitecheck.toString() + N_whitecheck.toString() + NE_whitecheck.toString() + W_whitecheck.toString() + E_whitecheck.toString() + SW_whitecheck.toString() + S_whitecheck.toString() + SE_whitecheck.toString() && NW_whitecheck.toString() + N_whitecheck.toString() + NE_whitecheck.toString() + W_whitecheck.toString() + E_whitecheck.toString() + SW_whitecheck.toString() + S_whitecheck.toString() + SE_whitecheck.toString() !== "00000000") {
       document.getElementById("_" + prev_square + "_").innerHTML = piece
       document.getElementById("_" + square + "_").innerHTML = prev_inner
-      king()
+      king(1)
       alert("King must be moved out of check")
       piececolour = "Black"
       afterproceed = 0
