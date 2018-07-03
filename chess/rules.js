@@ -1560,38 +1560,24 @@ function trapped(inverse, colour, trapcoord) {
       }} for (mr2 = -1; (trapcoord + mr2) % 8 != "0" && document.getElementById("_" + (trapcoord + mr2) + "_").innerHTML == ""; mr2 += -1) {
           if ((document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr2 - 1) + "_").innerHTML === inverse + " Queen") && (trapcoord + mr2 - 1) % 8 != "0") {
       trapped_check = 0
-      } else {
-        trapped_check = 1
       }} for (mr3 = 8; document.getElementById("_" + (trapcoord + mr3) + "_").innerHTML == ""; mr3 += 8) {
           if (document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr3 + 8) + "_").innerHTML === inverse + " Queen") {
       trapped_check = 0
-      } else {
-        trapped_check = 1
       }} for (mr4 = -8; document.getElementById("_" + (trapcoord + mr4) + "_").innerHTML == ""; mr4 += -8) {
           if (document.getElementById("_" + (trapcoord + mr4 - 8) + "_").innerHTML === inverse + " Rook" || document.getElementById("_" + (trapcoord + mr4 - 8) + "_").innerHTML === inverse + " Queen") {
       trapped_check = 0
-      } else {
-        trapped_check = 1
       }} for (mb1 = 9; (trapcoord + mb1) % 8 != "1" && document.getElementById("_" + (trapcoord + mb1) + "_").innerHTML == ""; mb1 += 9) {
           if ((document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb1 + 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb1 + 9) % 8 != "1") {
       trapped_check = 0
-      } else {
-        trapped_check = 1
       }} for (mb2 = -9; (trapcoord + mb2) % 8 != "0" && document.getElementById("_" + (trapcoord + mb2) + "_").innerHTML == ""; mb2 += -9) {
           if ((document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb2 - 9) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb2 - 9) % 8 != "0") {
       trapped_check = 0
-      } else {
-        trapped_check = 1
       }} for (mb3 = 7; (trapcoord + mb3) % 8 != "0" && document.getElementById("_" + (trapcoord + mb3) + "_").innerHTML == ""; mb3 += 7) {
           if ((document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb3 + 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb3 + 7) % 8 != "0") {
       trapped_check = 0
-      } else {
-        trapped_check = 1
       }} for (mb4 = -7; (trapcoord + mb4) % 8 != "1" && document.getElementById("_" + (trapcoord + mb4) + "_").innerHTML == ""; mb4 += -7) {
           if ((document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Bishop" || document.getElementById("_" + (trapcoord + mb4 - 7) + "_").innerHTML === inverse + " Queen") && (trapcoord + mb4 - 7) % 8 != "1") {
       trapped_check = 0
-      } else {
-        trapped_check = 1
       }}
      if ((document.getElementById("_" + (trapcoord - 10) + "_").innerHTML === inverse + " Knight" && (trapcoord - 10) % 8 != "7" && (trapcoord - 10) % 8 != "0")||(document.getElementById("_" + (trapcoord + 10) + "_").innerHTML === inverse + " Knight" && (trapcoord + 10) % 8 != "1" && (trapcoord + 10) % 8 != "2")||(document.getElementById("_" + (trapcoord - 6) + "_").innerHTML === inverse + " Knight" && (trapcoord - 6) % 8 != "1" && (trapcoord - 6) % 8 != "2")||(document.getElementById("_" + (trapcoord + 6) + "_").innerHTML === inverse + " Knight" && (trapcoord + 6) % 8 != "7" && (trapcoord + 6) % 8 != "0")||(document.getElementById("_" + (trapcoord - 17) + "_").innerHTML === inverse + " Knight" && (trapcoord - 17) % 8 != "0")||(document.getElementById("_" + (trapcoord + 17) + "_").innerHTML === inverse + " Knight" && (trapcoord + 17) % 8 != "1")||(document.getElementById("_" + (trapcoord - 15) + "_").innerHTML === inverse + " Knight" && (trapcoord - 15) % 8 != "1")||(document.getElementById("_" + (trapcoord + 15) + "_").innerHTML === inverse + " Knight" && (trapcoord + 15) % 8 != "0")){
          trapped_check = 0
