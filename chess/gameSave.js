@@ -334,7 +334,7 @@ function clearsave() {
   if (curCookie[0] != "") {
   for (var i=0;i<curCookie.length;i++) {
     if (curCookie[i].substring(0,3) === cnumset) {
-     result.append(curCookie[i]) 
+     result.push(curCookie[i]) 
     }
   }
   for (var l=0;l<result.length;l++) {
