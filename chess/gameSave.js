@@ -330,49 +330,25 @@ function load() {
   king()
 }
 function clearsave() {
-  //Clear White Cookies
-  document.cookie = cnumset + "WPA1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "WPA2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "WPA3=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "WPA4=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "WPA5=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "WPA6=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "WPA7=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "WPA8=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "WRO1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "WRO2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "WKN1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "WKN2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "WBI1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "WBI2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "WQU1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "WQU2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "WKI1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  //Clear Black Cookies
-  document.cookie = cnumset + "BPA1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "BPA2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "BPA3=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "BPA4=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "BPA5=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "BPA6=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "BPA7=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "BPA8=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "BRO1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "BRO2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "BKN1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "BKN2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "BBI1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "BBI2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "BQU1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "BQU2=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "BKI1=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  //Clear Attack Log Cookie
-  document.cookie = cnumset + "log=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  //Clear Colour Cookie
-  document.cookie = cnumset + "colour=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  //Clear Promote and Castle Cookies
-  document.cookie = cnumset + "promote=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
-  document.cookie = cnumset + "castle=; expires=Thu, 01 Jan 1970 00:00:00 UTC"
+  var curCookie = document.cookie.split("; ");var result = [];var repeat = 0;var pos; var cursearch; var ca = 0, var arr = 0; var search;
+  function checkarray() { //From Array_Search in JS-Tools repo
+    if (True) {
+      search = cnumset
+      for (ca = 0; ca < curCookie.length ; ca ++) {
+        repeat = 0
+        for (arr = 0; arr <  curCookie[ca].length && repeat === 0; arr ++) {
+          cursearch = ""
+          for (pos = 0; pos < document.getElementById("search").value.length; pos ++) {
+            cursearch += curCookie[ca][arr + pos]
+          }
+          if (search === cursearch.toLocaleLowerCase()) {
+            result.push(curCookie[ca])
+            repeat = 1
+          }}}}}
+  //
+  for (var l=0;l<result.length;l++) {
+   document.cookie = result[l] +"; expires=Thu, 01 Jan 1970 00:00:00 UTC" 
+  }
 }
 function fullread() {
   readc = document.cookie.split("; ")
