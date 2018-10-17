@@ -331,20 +331,20 @@ function load() {
 }
 function clearsave() {
   var curCookie = document.cookie.split("; ");var result = [];var repeat = 0;var pos; var cursearch; var ca = 0, var arr = 0; var search;
-  function checkarray() { //From Array_Search in JS-Tools repo
-    if (True) {
-      search = cnumset
-      for (ca = 0; ca < curCookie.length ; ca ++) {
-        repeat = 0
-        for (arr = 0; arr <  curCookie[ca].length && repeat === 0; arr ++) {
-          cursearch = ""
-          for (pos = 0; pos < document.getElementById("search").value.length; pos ++) {
-            cursearch += curCookie[ca][arr + pos]
-          }
-          if (search === cursearch.toLocaleLowerCase()) {
-            result.push(curCookie[ca])
-            repeat = 1
-          }}}}}
+ //From Array_Search in JS-Tools repo
+  if (True) {
+    search = cnumset
+    for (ca = 0; ca < curCookie.length ; ca ++) {
+      repeat = 0
+      for (arr = 0; arr <  curCookie[ca].length && repeat === 0; arr ++) {
+        cursearch = ""
+        for (pos = 0; pos < document.getElementById("search").value.length; pos ++) {
+          cursearch += curCookie[ca][arr + pos]
+        }
+        if (search === cursearch.toLocaleLowerCase()) {
+          result.push(curCookie[ca])
+          repeat = 1
+        }}}}
   //
   for (var l=0;l<result.length;l++) {
    document.cookie = result[l] +"; expires=Thu, 01 Jan 1970 00:00:00 UTC" 
