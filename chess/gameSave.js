@@ -330,7 +330,7 @@ function load() {
   king()
 }
 function clearsave() {
-  var curCookie = document.cookie.split("; ");var result = [];var repeat = 0;var pos; var cursearch; var ca = 0, var arr = 0; var search;
+  var curCookie = document.cookie.split("; ");var result = [];var repeat = 0;var pos; var cursearch; var ca = 0; var arr = 0; var search;
  //From Array_Search in JS-Tools repo
   if (True) {
     search = cnumset
