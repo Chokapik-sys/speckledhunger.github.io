@@ -337,7 +337,7 @@ function clearsave() {
       repeat = 0
       for (arr = 0; arr <  curCookie[ca].length && repeat === 0; arr ++) {
         cursearch = ""
-        for (pos = 0; pos < document.getElementById("search").value.length; pos ++) {
+        for (pos = 0; pos < 12; pos ++) {
           cursearch += curCookie[ca][arr + pos]
         }
         if (search === cursearch.toLocaleLowerCase()) {
