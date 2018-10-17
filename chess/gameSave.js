@@ -330,23 +330,16 @@ function load() {
   king()
 }
 function clearsave() {
-  var curCookie = document.cookie.split("; ");var result = [];var repeat = 0;var pos; var cursearch; var ca = 0; var arr = 0; var search;
- //From Array_Search in JS-Tools repo
-    search = cnumset
-    for (ca = 0; ca < curCookie.length ; ca ++) {
-      repeat = 0
-      for (arr = 0; arr <  curCookie[ca].length && repeat === 0; arr ++) {
-        cursearch = ""
-        for (pos = 0; pos < 12; pos ++) {
-          cursearch += curCookie[ca][arr + pos]
-        }
-        if (search === cursearch.toLocaleLowerCase()) {
-          result.push(curCookie[ca])
-          repeat = 1
-        }}}
-  //
+  var curCookie = document.cookie.split("; "); var result = []
+  if (curCookie[0] != "") {
+  for (var i=0;i<curCookie.length;i++) {
+    if (curCookie[i].substring(0,3) === cnumset) {
+     result.append(curCookie[i]) 
+    }
+  }
   for (var l=0;l<result.length;l++) {
    document.cookie = result[l] +"; expires=Thu, 01 Jan 1970 00:00:00 UTC" 
+  }
   }
 }
 function fullread() {
