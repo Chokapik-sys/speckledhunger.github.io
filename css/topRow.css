@@ -3,10 +3,10 @@ z-index: 1;
 position: absolute;
 margin-top: 10px;
 height: 60px;
-background-color: #61B7ED;
+background-color: #61B7ED70;
 }
 body{
-background-color: #FEFEFE;
+background-color: #FEFEEF;
 }
 #title{
 font-family: Consolas;
@@ -39,7 +39,7 @@ display: block;
 width: 125px;
 height: 25px;
 line-height: 25px;
-background-color: #FEFEFE;
+background-color: #F9F9F9;
 border-bottom: 1px solid #DBDBDB;
 }
 ul#navmenu .sub1 a{
@@ -88,8 +88,8 @@ right: 4px;
 }
 /* Navigation Menu End*/
 #topRow{
-background-color: #01AEBB;
+background-color: #01AEBBBA;
 width: 100%-10px;
 height: 60px;
-border: 10px solid #7FC9FF;
+border: 10px solid #7FC9FF9F;
 }
