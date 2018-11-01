@@ -5,4 +5,3 @@ function updatesize() {
   document.getElementById("box").style.height = window.innerHeight * (60/678) + "px";document.getElementById("topRow").style.height = window.innerHeight * (60/678) + "px"
   document.getElementById('navmenu').style.top = parseFloat(document.getElementById("box").style.height) + 23 + "px"
 }
-updatesize()
