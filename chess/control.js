@@ -5,6 +5,7 @@ var B = "#D0FFB6"
 var charnum = ""
 var charcoord = ""
 var charsavefile = ""
+var focused = 1
 function resetTurn() {
   phase = 4
   phase_4()
@@ -57,5 +58,7 @@ function keycontrol(press,key,square) {
     square.click()
   }
 } function keycontrolmatrix(event) {
-  keycontrol(event,'1',document.getElementById('_1_'))
+  if (focused===1){
+  /*Row 1*/keycontrol(event,'1',document.getElementById('_1_'));keycontrol(event,'2',document.getElementById('_2_'));keycontrol(event,'3',document.getElementById('_3_'));keycontrol(event,'4',document.getElementById('_4_'));keycontrol(event,'5',document.getElementById('_5_'));keycontrol(event,'6',document.getElementById('_6_'));keycontrol(event,'7',document.getElementById('_7_'));keycontrol(event,'8',document.getElementById('_8_'));
+  }
 }
