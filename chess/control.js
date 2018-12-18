@@ -60,5 +60,6 @@ function keycontrol(press,key,square) {
 } function keycontrolmatrix(event) {
   if (focused===1){
   /*Row 1*/keycontrol(event,'1',document.getElementById('_1_'));keycontrol(event,'2',document.getElementById('_2_'));keycontrol(event,'3',document.getElementById('_3_'));keycontrol(event,'4',document.getElementById('_4_'));keycontrol(event,'5',document.getElementById('_5_'));keycontrol(event,'6',document.getElementById('_6_'));keycontrol(event,'7',document.getElementById('_7_'));keycontrol(event,'8',document.getElementById('_8_'));
+  /*Row 2*/keycontrol(event,'q',document.getElementById('_9_'));keycontrol(event,'w',document.getElementById('_10_'));keycontrol(event,'e',document.getElementById('_11_'));keycontrol(event,'r',document.getElementById('_12_'));keycontrol(event,'t',document.getElementById('_13_'));keycontrol(event,'y',document.getElementById('_14_'));keycontrol(event,'u',document.getElementById('_15_'));keycontrol(event,'i',document.getElementById('_16_'));
   }
 }
