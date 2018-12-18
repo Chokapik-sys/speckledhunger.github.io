@@ -52,3 +52,8 @@ function checkkey() {
       document.getElementById("savefile").value = document.getElementById("savefile").value.replace(charsavefile, "")
   }
 }
+function keycontrol(press,key,square) {
+  if (press.key===key){
+    square.click()
+  }
+}
