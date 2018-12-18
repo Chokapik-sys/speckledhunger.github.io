@@ -10,7 +10,7 @@
   <script src="control.js"></script>
   <script src="gameSave.js"></script>
 </head>
-<body onload="default_layout()">
+<body onload="default_layout()" onkeydown="keycontrolmatrix(event)">
     <!--Boundaries-->
   <button id="_-25_" class="none">A</button>
   <button id="_-24_" class="none">A</button>
@@ -160,11 +160,11 @@
       <div id="container">
       <select id="colour"><option value="W">White</option><option value="B">Black</option></select>
       <select id="piece"><option value="RO">Rook</option><option value="PA">Pawn</option><option value="KN">Knight</option><option value="BI">Bishop</option><option value="KI">King</option><option value="QU">Queen</option></select>
-      <input type="text" id="num" maxlength="3" onkeyup="checkkey()" onkeydown="checkkey()" onkeypress="checkkey()" placeholder="#">
-      <input type="text" id="coord" maxlength="4" onkeyup="checkkey()" onkeydown="checkkey()" onkeypress="checkkey()" placeholder="_x_">
+      <input type="text" id="num" maxlength="3" onkeyup="checkkey()" onkeydown="checkkey()" onkeypress="checkkey()" placeholder="#" onfocus="focused=0" onblur="focused=1">
+      <input type="text" id="coord" maxlength="4" onkeyup="checkkey()" onkeydown="checkkey()" onkeypress="checkkey()" placeholder="_x_" onfocus="focused=0" onblur="focused=1">
       <button id="customsave" onclick="customsave()">Save</button>
       <button id="customdelete" onclick="customdelete()">Delete</button>
-      <input type="text" id="savefile" maxlength="3" onkeyup="checkkey()" onkeydown="checkkey()" onkeypress="checkkey()" placeholder="#">
+      <input type="text" id="savefile" maxlength="3" onkeyup="checkkey()" onkeydown="checkkey()" onkeypress="checkkey()" placeholder="#" onfocus="focused=0" onblur="focused=1">
       <button id="savefilesave" onclick="savefilesave()">Save</button>
       <button id="savefileload" onclick="savefileload()">Load</button>
       <button id="savefiledelete" onclick="savefiledelete()">Delete</button>
