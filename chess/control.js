@@ -56,4 +56,6 @@ function keycontrol(press,key,square) {
   if (press.key===key){
     square.click()
   }
+} function keycontrolmatrix(event) {
+  keycontrol(event,'1',document.getElementById('_1_'))
 }
