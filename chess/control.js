@@ -13,12 +13,14 @@ function resetTurn() {
 function phase_4() {
   if (phase === 4){
     for (cc = 0; cc < 33; cc++) {
-      document.getElementsByClassName("A")[cc].style.backgroundColor = A
+      classA = document.getElementsByClassName("A")[cc]
+      classA.style.backgroundColor = A
       if (document.getElementById("_" + cc + "_").innerHTML === " "){
         document.getElementById("_" + cc + "_").innerHTML = ""
       }
     } for (cc = 0; cc < 33; cc++) {
-      document.getElementsByClassName("B")[cc].style.backgroundColor = B
+      classB = document.getElementsByClassName("B")[cc]
+      classB.style.backgroundColor = B
       if (document.getElementById("_" + cc + "_").innerHTML === " "){
     document.getElementById("_" + cc + "_").innerHTML = ""
       }
