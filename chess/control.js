@@ -15,14 +15,14 @@ function phase_4() {
     for (cc = 0; cc < 32; cc++) {
       classA = document.getElementsByClassName("A")[cc]
       classA.style.backgroundColor = A
-      if (document.getElementById("_" + cc + "_").innerHTML === " "){
-        document.getElementById("_" + cc + "_").innerHTML = ""
+      if (classA.innerHTML === " "){
+        classA.innerHTML = ""
       }
     } for (cc = 0; cc < 32; cc++) {
       classB = document.getElementsByClassName("B")[cc]
       classB.style.backgroundColor = B
-      if (document.getElementById("_" + cc + "_").innerHTML === " "){
-    document.getElementById("_" + cc + "_").innerHTML = ""
+      if (classB.innerHTML === " "){
+    classB.innerHTML = ""
       }
     } phase = 0
   }
@@ -68,5 +68,6 @@ function keycontrol(press,key,square) {
   /*Row 6*/keycontrol(event,'Q',document.getElementById('_41_'));keycontrol(event,'W',document.getElementById('_42_'));keycontrol(event,'E',document.getElementById('_43_'));keycontrol(event,'R',document.getElementById('_44_'));keycontrol(event,'T',document.getElementById('_45_'));keycontrol(event,'Y',document.getElementById('_46_'));keycontrol(event,'U',document.getElementById('_47_'));keycontrol(event,'I',document.getElementById('_48_'));
   /*Row 7*/keycontrol(event,'A',document.getElementById('_49_'));keycontrol(event,'S',document.getElementById('_50_'));keycontrol(event,'D',document.getElementById('_51_'));keycontrol(event,'F',document.getElementById('_52_'));keycontrol(event,'G',document.getElementById('_53_'));keycontrol(event,'H',document.getElementById('_54_'));keycontrol(event,'J',document.getElementById('_55_'));keycontrol(event,'K',document.getElementById('_56_'));
   /*Row 8*/keycontrol(event,'Z',document.getElementById('_57_'));keycontrol(event,'X',document.getElementById('_58_'));keycontrol(event,'C',document.getElementById('_59_'));keycontrol(event,'V',document.getElementById('_60_'));keycontrol(event,'B',document.getElementById('_61_'));keycontrol(event,'N',document.getElementById('_62_'));keycontrol(event,'M',document.getElementById('_63_'));keycontrol(event,'<',document.getElementById('_64_'));
+  keycontrol(event,'Backspace',document.getElementById('resetTurn'));
   }
 }
