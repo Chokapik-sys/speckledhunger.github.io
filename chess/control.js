@@ -12,18 +12,17 @@ function resetTurn() {
 }
 function phase_4() {
   if (phase === 4){
-    for (cc = 1; cc < 65; cc++) {
-      if (document.getElementById("_" + cc + "_").className === "A"){
-    document.getElementById("_" + cc + "_").style.backgroundColor = A
+    for (cc = 0; cc < 33; cc++) {
+      document.getElementsByClassName("A")[cc].style.backgroundColor = A
+      if (document.getElementById("_" + cc + "_").innerHTML === " "){
+        document.getElementById("_" + cc + "_").innerHTML = ""
       }
-      if (document.getElementById("_" + cc + "_").className === "B"){
-    document.getElementById("_" + cc + "_").style.backgroundColor = B
-      }
+    } for (cc = 0; cc < 33; cc++) {
+      document.getElementsByClassName("B")[cc].style.backgroundColor = B
       if (document.getElementById("_" + cc + "_").innerHTML === " "){
     document.getElementById("_" + cc + "_").innerHTML = ""
       }
-      phase = 0
-    }
+    } phase = 0
   }
 }
 function clearboard(){
